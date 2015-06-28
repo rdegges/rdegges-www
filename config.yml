@@ -1,3 +1,5 @@
-baseurl = "https://www.rdegges.com/"
-languageCode = "en-us"
-title = "Randall Degges"
+baseurl: "https://www.rdegges.com/"
+languageCode: "en-us"
+title: "Randall Degges"
+contentdir: "/Users/rdegges/Code/rdegges/rdegges-blog/articles"
+staticdir: "/Users/rdegges/Code/rdegges/rdegges-blog/"
