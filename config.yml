@@ -1,5 +1,10 @@
 baseurl: "https://www.rdegges.com/"
 languageCode: "en-us"
 title: "Randall Degges"
-contentdir: "/Users/rdegges/Code/rdegges/rdegges-blog/articles"
-staticdir: "/Users/rdegges/Code/rdegges/rdegges-blog/"
+theme: "rdegges"
+params:
+  author: "Randall Degges"
+  copyrightstart: "2009"
+  copyrightstop: "2015"
+  description: "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
+  subtitle: "Random thoughts of a happy programmer."
