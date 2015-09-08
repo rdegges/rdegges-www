@@ -4,7 +4,8 @@ title: "Randall Degges"
 theme: "rdegges"
 params:
   author: "Randall Degges"
-  copyrightstart: "2009"
-  copyrightstop: "2015"
+  copyrightStart: "2009"
+  copyrightStop: "2015"
   description: "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
+  socialLinks: {"Twitter": "https://twitter.com/rdegges", "Facebook": "https://www.facebook.com/rdegges", "Google+": "https://plus.google.com/109157194342162880262", "Github": "https://github.com/rdegges"}
   subtitle: "Random thoughts of a happy programmer."
