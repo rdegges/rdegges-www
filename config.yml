@@ -7,5 +7,6 @@ params:
   copyrightStart: "2009"
   copyrightStop: "2015"
   description: "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
+  email: "r@rdegges.com"
   socialLinks: {"Twitter": "https://twitter.com/rdegges", "Facebook": "https://www.facebook.com/rdegges", "Google+": "https://plus.google.com/109157194342162880262", "Github": "https://github.com/rdegges"}
   subtitle: "Random thoughts of a happy programmer."
