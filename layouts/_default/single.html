@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-8">
+          <article>
+            <header>
+              <h1>{{ .Title }}</h1>
+              <section class="published">
+                <!--<time datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Date.Format "January 2, 2006" }}</time>-->
+              </section>
+            </header>
+            {{ .Content }}
+            <section class="subscribe">
+              <p>
+                PS:
+                If you read this far, you might want to follow me on
+                <a href="https://twitter.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Randall Degges on Twitter" type="text/html">twitter</a> and
+                <a href="https://github.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Randall Degges on Github" type="text/html">github</a>,
+                or subscribe below for updates (<i>I'll email you new essays when I publish them</i>).
+              </p>
+              <form action="{{ .Site.Params.mailchimpForm }}" class="mailchimp-subscribe form-inline" method="post" role="form" target="_blank" novalidate>
+                <div class="form-group">
+                  <input class="form-control" type="email" name="EMAIL" placeholder="Email Address" size="20" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+    {{ partial "footer.html" . }}
+  </body>
+  {{ partial "footer-includes.html" . }}
+</html>

@@ -1,0 +1,220 @@
+/* Generic styles. */
+body {
+  font-family: "Archer SSm A", "Archer SSm B", Georgia, serif;
+  background-color: #fff;
+}
+
+h1 {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+}
+
+h1 a:active,
+h1 a:hover,
+h1 a:link,
+h1 a:visited {
+  text-decoration: none;
+}
+
+pre {
+  word-wrap: normal;
+  overflow-x: auto;
+}
+
+
+/* Header styles. */
+header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+/* Navbar styles. */
+nav.navbar-default {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+.navbar-nav.nav-justified {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav.nav-justified > li {
+  float: none;
+  vertical-align: top;
+  text-align: center;
+}
+
+.navbar-header {
+  text-align: center;
+}
+
+.navbar-header button {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+ol.breadcrumb {
+  min-height: 3.2em;
+}
+
+
+/* Big intro styles. */
+.hi .well {
+  background-color: #fcfcfc;
+}
+
+.hi .col-md-4 {
+  margin-top: .5em;
+}
+
+.hi img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .5em;
+}
+
+.mailchimp-subscribe {
+  margin-top: 1em;
+}
+
+
+/* Styles for quotes. */
+article blockquote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 26px;
+  padding-bottom: 0em;
+  padding-top: 0em;
+}
+
+article blockquote ul,
+article blockquote ol {
+  margin-left: 3em;
+}
+
+article blockquote p,
+article blockquote li {
+  margin-bottom: .5em;
+}
+
+
+/* Styles for articles. */
+article {
+  color: #424242;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: justify;
+}
+
+article,
+article img,
+article p,
+article ul,
+article ol,
+article .highlight,
+article .metadata p,
+article .published,
+article blockquote {
+  margin-bottom: 2em;
+}
+
+article li {
+  margin-bottom: 1em;
+  margin-left: -1.2em;
+}
+
+article p, .subscribe form {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+article img {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100% !important;
+}
+
+/*article .metadata p {
+  font-size: 14px;
+  margin-top: 2em;
+  text-align: center;
+}*/
+
+article .published time {
+  font-weight: bold;
+  margin-bottom: 10em;
+}
+
+.subscribe p {
+  font-weight: bold;
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+/* Home page styles. */
+.index a,
+.archives a {
+  font-weight: bold;
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.index .archive-button {
+  float: right;
+  font-family: "Helvetia Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  margin-bottom: 1em;
+}
+
+.index a {
+  font-size: 18px;
+}
+
+.index p {
+  margin-top: 1em;
+}
+
+.index h2 {
+  margin-bottom: 1em;
+}
+
+
+/* Archives page styles. */
+.archives time {
+  padding-right: 5em;
+}
+
+@media only screen and (max-width: 40em) {
+  .archives time {
+    padding-right: 2em;
+  }
+}

@@ -1,0 +1,22 @@
+<footer>
+  <ol class="breadcrumb">
+    <div class="row">
+      <div class="col-xs-6">
+        <p class="text-left">
+          &copy;
+          <a href="{{ .Site.BaseURL }}" hreflang="{{ .Site.LanguageCode }}" title="{{ .Site.Params.author }}" type="text/html">{{ .Site.Params.author }}</a>
+          <time datetime="{{ .Site.Params.copyrightStart }}">{{ .Site.Params.copyrightStart }}</time> - <time datetime="{{ .Site.Params.copyrightStop }}">{{ .Site.Params.copyrightStop }}</time>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p class="text-right">
+          Follow me on: [
+          {{ range $network, $url := .Site.Params.socialLinks }}
+            "<a href="{{ $url }}" hreflang="{{ $.Site.LanguageCode }}" title="{{ title $network }}">{{ title $network }}</a>",
+          {{ end }}
+          ]
+        </p>
+      </div>
+    </div>
+  </ol>
+</footer>

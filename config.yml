@@ -10,3 +10,4 @@ params:
   email: "r@rdegges.com"
   socialLinks: {"Twitter": "https://twitter.com/rdegges", "Facebook": "https://www.facebook.com/rdegges", "Google+": "https://plus.google.com/109157194342162880262", "Github": "https://github.com/rdegges"}
   subtitle: "Random thoughts of a happy programmer."
+  mailchimpForm: "http://rdegges.us5.list-manage.com/subscribe/post?u=ac8a69447e872cf6ddf171977&amp;id=62ec9e2b1c"
