@@ -94,7 +94,7 @@ we have both really been wanting to see the frozen tundra for quite some time
 having fun.
 
 
-  [Wolf Sketch]: /static/images/2010/wolf-sketch.png "Wolf Sketch"
+  [Wolf Sketch]: /static/blog/images/2010/wolf-sketch.png "Wolf Sketch"
   [http://globalroute.net/]: http://globalroute.net/ "GlobalRoute"
   [PostgreSQL]: http://www.postgresql.org/ "PostgreSQL"
   [Django]: http://www.djangoproject.com/ "Django"

@@ -248,17 +248,17 @@ feedback on *my own behavior* from a stranger.  It's incredibly enlightening to
 have that sort of feedback, and it isn't something I'll forget anytime soon.
 
 
-  [Horse Creature Sketch]: /static/images/2014/horse-creature-sketch.jpg "Horse Creature Sketch"
+  [Horse Creature Sketch]: /static/blog/images/2014/horse-creature-sketch.jpg "Horse Creature Sketch"
   [Flask subreddit]: http://www.reddit.com/r/flask "Flask Subreddit"
   [here]: http://www.reddit.com/r/flask/comments/277lxl/flask_auth_in_one_line_of_code/ "Offending Reddit Post"
   [Stormpath blog]: https://stormpath.com/blog/flask-auth-in-one-loc/ "Flask Auth in One Line of Code"
   [Flask library]: http://flask-stormpath.readthedocs.org/en/latest/ "Flask-Stormpath"
   [joining]: {filename}/articles/2014/moving-on.md "Moving On"
   [Stormpath]: https://stormpath.com/ "Stormpath"
-  [Big Dinosaur Sketch]: /static/images/2014/big-dinosaur-sketch.jpg "Big Dinosaur Sketch" [blog]: https://stormpath.com/blog/ "Stormpath Blog"
+  [Big Dinosaur Sketch]: /static/blog/images/2014/big-dinosaur-sketch.jpg "Big Dinosaur Sketch" [blog]: https://stormpath.com/blog/ "Stormpath Blog"
   [blog]: https://stormpath.com/blog/ "Stormpath Blog"
-  [Hellish Demon Sketch]: /static/images/2014/hellish-demon-sketch.jpg "Hellish Demon Sketch"
+  [Hellish Demon Sketch]: /static/blog/images/2014/hellish-demon-sketch.jpg "Hellish Demon Sketch"
   [Hacker News]: https://news.ycombinator.com/ "Hacker News"
   [Reddit]: http://www.reddit.com/ "Reddit"
-  [Sharded Robot Sketch]: /static/images/2014/sharded-robot-sketch.png "Sharded Robot Sketch"
-  [Aye Aye Sketch]: /static/images/2014/aye-aye-sketch.jpg "Aye Aye Sketch"
+  [Sharded Robot Sketch]: /static/blog/images/2014/sharded-robot-sketch.png "Sharded Robot Sketch"
+  [Aye Aye Sketch]: /static/blog/images/2014/aye-aye-sketch.jpg "Aye Aye Sketch"

@@ -92,7 +92,7 @@ As I learn more about Javascript, I'll keep you all updated!
 weekend.  You should check it out.
 
 
-  [Ninja Warrior]: /static/images/2012/ninja-warrior.png "Ninja Warrior"
+  [Ninja Warrior]: /static/blog/images/2012/ninja-warrior.png "Ninja Warrior"
   [Javascript: The Good Parts]: http://www.amazon.com/gp/product/0596517742/ref=as_li_ss_tl?ie=UTF8&tag=rdegges-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596517742 "Javascript: The Good Parts"
   [nodejs]: http://nodejs.org/ "nodejs"
   [npm]: http://npmjs.org/ "npm"

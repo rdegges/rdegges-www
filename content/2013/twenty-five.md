@@ -168,4 +168,4 @@ more compassionate, smarter, and more open minded.
 Life is a crazy journey, but I'm enjoying it so far :)
 
 
-  [Reaper Sketch]: /static/images/2013/reaper-sketch.jpg "Reaper Sketch"
+  [Reaper Sketch]: /static/blog/images/2013/reaper-sketch.jpg "Reaper Sketch"

@@ -33,4 +33,4 @@ writer and a thinker, and I'm looking forward to it.
 Writing is hard.
 
 
-  [Man Writing Sketch]: /static/images/2010/man-writing-sketch.png "Man Writing Sketch"
+  [Man Writing Sketch]: /static/blog/images/2010/man-writing-sketch.png "Man Writing Sketch"

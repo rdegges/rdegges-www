@@ -305,14 +305,14 @@ deployment solution I discovered.
 **UPDATE**: I finished part 3 of the series, you can read it [here][].
 
 
-  [Pyramid Head Sketch]: /static/images/2011/pyramid-head-sketch.png "Pyramid Head Sketch"
+  [Pyramid Head Sketch]: /static/blog/images/2011/pyramid-head-sketch.png "Pyramid Head Sketch"
   [first article]: {filename}/articles/2011/devops-django-part-1-goals.md "DevOps Django - Part 1 - Goals"
   [Ubuntu server]: http://www.ubuntu.com/business/server/overview "Ubuntu Server"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [OpenSIPS]: http://opensips.org/ "OpenSIPS"
   [NFSd]: http://en.wikipedia.org/wiki/Network_File_System_(protocol) "NFS"
   [dial plan]: http://www.voip-info.org/wiki/view/Asterisk+Dialplan+Introduction "Dial Plan Wiki"
-  [Telephony Infrastructure]: /static/images/2011/telephony-infrastructure.png "Telephony Infrastructure"
+  [Telephony Infrastructure]: /static/blog/images/2011/telephony-infrastructure.png "Telephony Infrastructure"
   [PSTN]: http://en.wikipedia.org/wiki/Public_switched_telephone_network "PSTN"
   [VoIP]: http://en.wikipedia.org/wiki/Voice_over_IP "VoIP"
   [Python]: http://python.org/ "Python"
@@ -334,6 +334,6 @@ deployment solution I discovered.
   [Gunicorn]: http://gunicorn.org/ "Gunicorn"
   [Jenkins]: http://jenkins-ci.org/ "Jenkins"
   [Rackspace]: http://www.rackspacecloud.com/3149.html "Rackspace"
-  [Web Infrastructure]: /static/images/2011/web-infrastructure.png "Web Infrastructure"
+  [Web Infrastructure]: /static/blog/images/2011/web-infrastructure.png "Web Infrastructure"
   [nines of availability]: http://en.wikipedia.org/wiki/High_availability "Five Nines"
   [here]: {filename}/articles/2011/devops-django-part-3-the-heroku-way.md "DevOps Django - Part 3 - The Heroku Way"

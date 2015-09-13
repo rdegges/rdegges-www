@@ -71,7 +71,7 @@ separate ideas at a time.  I have a relatively small list of projects that are
 really meaningful to me, which is what I'm talking about in this article.
 
 
-  [Bane Sketch]: /static/images/2012/bane-sketch.png "Bane Sketch"
+  [Bane Sketch]: /static/blog/images/2012/bane-sketch.png "Bane Sketch"
   [my startup]: https://www.opencnam.com/ "OpenCNAM"
   [GitHub projects]: https://github.com/rdegges "GitHub"
   [my book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

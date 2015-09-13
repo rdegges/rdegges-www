@@ -238,5 +238,5 @@ It's just a matter of configuring a few settings options, and then adding a URL
 pattern if needed.
 
 
-  [Static Sketch]: /static/images/2010/static-sketch.png "Static Sketch"
+  [Static Sketch]: /static/blog/images/2010/static-sketch.png "Static Sketch"
   [official documentation]: https://docs.djangoproject.com/en/dev/ "Django Documentation"

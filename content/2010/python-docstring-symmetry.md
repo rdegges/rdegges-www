@@ -142,6 +142,6 @@ opening triple quotes, and there is no blank line before the end of the
 docstring.
 
 
-  [Ruler Sketch]: /static/images/2010/ruler-sketch.png "Ruler Sketch"
+  [Ruler Sketch]: /static/blog/images/2010/ruler-sketch.png "Ruler Sketch"
   [PEP-8]: http://www.python.org/dev/peps/pep-0008/ "PEP-8"
   [PEP-257]: http://www.python.org/dev/peps/pep-0257 "PEP-257"

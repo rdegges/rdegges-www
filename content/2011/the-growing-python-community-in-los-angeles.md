@@ -88,7 +88,7 @@ and chat with other developers.  The `#pyladies` IRC channel is an *amazing*
 resource, it's filled with the coolest pythonistas in the LA area.
 
 
-  [Hollywood Sign Sketch]: /static/images/2011/hollywood-sign-sketch.png "Hollywood Sign Sketch"
+  [Hollywood Sign Sketch]: /static/blog/images/2011/hollywood-sign-sketch.png "Hollywood Sign Sketch"
   [@audreyr]: https://twitter.com/audreyr "audreyr"
   [@pydanny]: https://twitter.com/pydanny "pydanny"
   [@sandymahalo]: https://twitter.com/sandymahalo "sandymahalo"

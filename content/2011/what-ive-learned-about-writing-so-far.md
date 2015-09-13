@@ -66,6 +66,6 @@ natural for me, and I'll be able to experience a greater feeling of relief and
 happiness while writing.
 
 
-  [Writer Sketch]: /static/images/2011/writer-sketch.png "Writer Sketch"
+  [Writer Sketch]: /static/blog/images/2011/writer-sketch.png "Writer Sketch"
   [writing habit]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
   [Talent is Overrated]: http://www.amazon.com/gp/product/1591842948/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1591842948&linkCode=as2&tag=rdegges-20 "Talent is Overrated"

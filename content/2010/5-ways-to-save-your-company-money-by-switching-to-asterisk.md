@@ -144,6 +144,6 @@ large PBX companies (Cisco, Avaya, Shoretel) advertise, and costs nothing.
 If you want to learn more, check out [Asterisk's official website][Asterisk].
 
 
-  [Money Sketch]: /static/images/2010/money-sketch.png "Money Sketch"
+  [Money Sketch]: /static/blog/images/2010/money-sketch.png "Money Sketch"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [Shoretel PBX system price list (pdf)]: http://www.peppm.org/Products/ShoreTel/price.pdf  "ShorTel Price List"

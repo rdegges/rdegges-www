@@ -120,7 +120,7 @@ Change your perspective of yourself, and you can change your very nature.
 of the Buddha, I'd highly recommend reading *[The Life of the Buddha][]*.
 
 
-  [Buddha Sketch]: /static/images/2013/buddha-sketch.jpg "Buddha Sketch"
+  [Buddha Sketch]: /static/blog/images/2013/buddha-sketch.jpg "Buddha Sketch"
   [being positive]: {filename}/articles/2013/the-positive-programmer.md "The Positive Programmer"
   [Siddhattha Buddha]: http://en.wikipedia.org/wiki/Gautama_Buddha "The Buddha"
   [The Life of the Buddha]: http://www.amazon.com/gp/product/1928706126/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1928706126&linkCode=as2&tag=rdegges-20 "The Life of the Buddha"

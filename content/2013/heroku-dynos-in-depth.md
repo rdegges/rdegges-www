@@ -96,9 +96,9 @@ book: [The Heroku Hacker's Guide][].  I'm currently working on the second
 edition, which I promise you'll love >:)
 
 
-  [T-Rex Sketch]: /static/images/2013/t-rex-sketch.png "T-Rex Sketch"
+  [T-Rex Sketch]: /static/blog/images/2013/t-rex-sketch.png "T-Rex Sketch"
   [Heroku]: http://www.heroku.com/ "Heroku"
   [resque]: https://github.com/defunkt/resque "resque"
-  [Triceratops Sketch]: /static/images/2013/triceratops-sketch.png "Triceratops Sketch"
+  [Triceratops Sketch]: /static/blog/images/2013/triceratops-sketch.png "Triceratops Sketch"
   [Amazon Web Services]: http://aws.amazon.com/ "Amazon Web Services"
   [The Heroku Hacker's Guide]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

@@ -304,15 +304,15 @@ Regardless of where you are in your programming career: always have fun, and
 keep pushing yourself!
 
 
-  [Glider]: /static/images/2012/glider.png "Glider"
-  [Linux Penguin]: /static/images/2012/linux-penguin.png "Linux Penguin"
-  [Programming]: /static/images/2012/programming.gif "Programming"
-  [Horse Painting]: /static/images/2012/horse-painting.png "Horse Painting"
-  [Snoopy Programming]: /static/images/2012/snoopy-programming.png "Snoopy Programming"
-  [Writer Sketch]: /static/images/2012/writer-sketch.png "Writer Sketch"
-  [XKCD Impostor]: /static/images/2012/xkcd-impostor.png "XKCD Impostor"
+  [Glider]: /static/blog/images/2012/glider.png "Glider"
+  [Linux Penguin]: /static/blog/images/2012/linux-penguin.png "Linux Penguin"
+  [Programming]: /static/blog/images/2012/programming.gif "Programming"
+  [Horse Painting]: /static/blog/images/2012/horse-painting.png "Horse Painting"
+  [Snoopy Programming]: /static/blog/images/2012/snoopy-programming.png "Snoopy Programming"
+  [Writer Sketch]: /static/blog/images/2012/writer-sketch.png "Writer Sketch"
+  [XKCD Impostor]: /static/blog/images/2012/xkcd-impostor.png "XKCD Impostor"
   [IRC]: http://en.wikipedia.org/wiki/Internet_Relay_Chat "IRC"
   [#heapify]: irc://irc.oftc.net/#heapify "#heapify"
-  [Program All the Things]: /static/images/2012/program-all-the-things.png "Program All the Things"
+  [Program All the Things]: /static/blog/images/2012/program-all-the-things.png "Program All the Things"
   [python]: http://python.org/ "python"
   [Dive Into Python]: http://www.amazon.com/gp/product/1441413022/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1441413022&linkCode=as2&tag=rdegges-20 "Dive Into Python"

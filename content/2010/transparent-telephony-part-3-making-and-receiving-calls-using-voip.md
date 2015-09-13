@@ -620,7 +620,7 @@ Telephony series, we'll have significantly shorter, more targeted articles, so
 following along should be easier.
 
 
-  [Old Telephone Sketch]: /static/images/2010/old-telephone-sketch.png "Old Telephone Sketch"
+  [Old Telephone Sketch]: /static/blog/images/2010/old-telephone-sketch.png "Old Telephone Sketch"
   [Part 1 - An Introduction]: {filename}/articles/2009/transparent-telephony-part-1-an-introduction.md "Transparent Telephony - Part 1 - An Introduction"
   [previous installment]: {filename}/articles/2010/transparent-telephony-part-2-installing-asterisk.md "Transparent Telephony - Part 2 - Installing Asterisk"
   [Flowroute]: http://www.flowroute.com/ "Flowroute"

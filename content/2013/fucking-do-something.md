@@ -47,4 +47,4 @@ That's what I thought.
 Now get out there, and be awesome.
 
 
-  [Fear Sketch]: /static/images/2013/fear-sketch.jpg "Fear Sketch"
+  [Fear Sketch]: /static/blog/images/2013/fear-sketch.jpg "Fear Sketch"

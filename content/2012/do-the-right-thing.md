@@ -67,4 +67,4 @@ than the alternatives.
 Do the right thing.
 
 
-  [Dark Angel]: /static/images/2012/dark-angel.png "Dark Angel"
+  [Dark Angel]: /static/blog/images/2012/dark-angel.png "Dark Angel"

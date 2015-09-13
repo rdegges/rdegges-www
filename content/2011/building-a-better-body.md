@@ -68,7 +68,7 @@ To everyone who wants to get in shape, just do it.  It's all in the mind.
 I'll leave you all with this [awesome music video from Dead Prez][].
 
 
-  [Bodybuilder Sketch]: /static/images/2011/bodybuilder-sketch.png "Bodybuilder Sketch"
+  [Bodybuilder Sketch]: /static/blog/images/2011/bodybuilder-sketch.png "Bodybuilder Sketch"
   [The Hacker's Diet]: http://www.fourmilab.ch/hackdiet/ "The Hacker's Diet"
   [The Paleo Solution]: http://www.amazon.com/gp/product/0982565844/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0982565844&linkCode=as2&tag=rdegges-20 "The Paleo Solution"
   [Good Calories, Bad Calories]: http://www.amazon.com/gp/product/1400033462/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1400033462&linkCode=as2&tag=rdegges-20 "Good Calories, Bad Calories"

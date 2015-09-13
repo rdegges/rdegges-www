@@ -59,5 +59,5 @@ yourself to be better than the day before.  Strive for perfection in every act
 you perform.
 
 
-  [Tiger Sketch]: /static/images/2012/tiger-sketch.png "Tiger Sketch"
+  [Tiger Sketch]: /static/blog/images/2012/tiger-sketch.png "Tiger Sketch"
   [Jiro Dreams of Sushi]: http://www.amazon.com/gp/product/B007UW9WOQ/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B007UW9WOQ&linkCode=as2&tag=rdegges-20 "Jiro Dreams of Sushi"

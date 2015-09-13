@@ -342,5 +342,5 @@ it will push you to your limits, and past.  It will both challenge and relax
 you, and above all else: it will help you unlock a better version of yourself.
 
 
-  [Bodybuilder Back Sketch]: /static/images/2015/bodybuilder-back-sketch.jpg "Bodybuilder Back Sketch"
+  [Bodybuilder Back Sketch]: /static/blog/images/2015/bodybuilder-back-sketch.jpg "Bodybuilder Back Sketch"
   [bodybuilding subreddit]: http://www.reddit.com/r/bodybuilding "Bodybuilding Subreddit"

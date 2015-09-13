@@ -41,4 +41,4 @@ Don't let external factors hold you back.  If you want to do something, make
 the choice to do it.
 
 
-  [Sad Grim Reaper Sketch]: /static/images/2012/sad-grim-reaper-sketch.png "Sad Grim Reaper Sketch"
+  [Sad Grim Reaper Sketch]: /static/blog/images/2012/sad-grim-reaper-sketch.png "Sad Grim Reaper Sketch"

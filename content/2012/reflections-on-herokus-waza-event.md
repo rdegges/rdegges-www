@@ -130,11 +130,11 @@ place.  It was a great experience, and I had a ton of fun.
 I hope the Heroku guys throw another one sometime soon.
 
 
-  [Heroku Logo]: /static/images/2012/heroku-logo.png "Heroku Logo"
+  [Heroku Logo]: /static/blog/images/2012/heroku-logo.png "Heroku Logo"
   [Heroku's]: http://www.heroku.com/ "Heroku"
   [Waza]: http://waza.heroku.com/ "Heroku Waza"
   [Django]: https://www.djangoproject.com/ "Django"
-  [A Day in the Life of a Programmer]: /static/images/2012/a-day-in-the-life-of-a-programmer.png "A Day in the Life of a Programmer"
+  [A Day in the Life of a Programmer]: /static/blog/images/2012/a-day-in-the-life-of-a-programmer.png "A Day in the Life of a Programmer"
   [Yoshi's]: http://www.yoshis.com/sanfrancisco "Yoshi's Jazz Club"
   [Kenneth Reitz]: http://kennethreitz.org/ "Kenneth Reitz"
   [Flickr album]: http://www.flickr.com/photos/kennethreitz/sets/72157628841270129/ "Waza Flickr"
@@ -148,5 +148,5 @@ I hope the Heroku guys throw another one sometime soon.
   [The UNIX Programming Environment]: http://www.amazon.com/gp/product/013937681X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=013937681X&linkCode=as2&tag=rdegges-20 "The UNIX Programming Environment"
   [Brian Kernighan]: http://www.cs.princeton.edu/~bwk/ "Brian Kernighan"
   [Dennis Ritchie]: http://cm.bell-labs.com/who/dmr/ "Dennis Ritchie"
-  [Green Tea Leaves]: /static/images/2012/green-tea-leaves.png "Green Tea Leaves"
+  [Green Tea Leaves]: /static/blog/images/2012/green-tea-leaves.png "Green Tea Leaves"
   [teance]: http://www.teance.com/ "teance"

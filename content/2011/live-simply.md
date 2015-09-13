@@ -216,6 +216,6 @@ consciousness to control complexity and make myself a better person.
 Regardless of how you live your life, I hope you enjoy it.
 
 
-  [Monk Sketch]: /static/images/2011/monk-sketch.png "Monk Sketch"
+  [Monk Sketch]: /static/blog/images/2011/monk-sketch.png "Monk Sketch"
   [first organisms]: http://en.wikipedia.org/wiki/Prokaryote "Prokaryotes Wiki"
   [list of common misconceptions]: http://en.wikipedia.org/wiki/List_of_common_misconceptions "List of Common Misconceptions Wiki"

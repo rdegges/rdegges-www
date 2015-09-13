@@ -79,5 +79,5 @@ yours now!
 Hope to see you there >:)
 
 
-  [Axe Warrior Sketch]: /static/images/2012/axe-warrior-sketch.png "Axe Warrior Sketch"
+  [Axe Warrior Sketch]: /static/blog/images/2012/axe-warrior-sketch.png "Axe Warrior Sketch"
   [LA Hackathon]: http://www.meetup.com/LA-Hackathons/events/85658952/ "LA Hackathon"

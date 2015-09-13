@@ -155,14 +155,14 @@ If you'd like to get in touch, you can always hit me up on [Twitter][] or via
 [email][].
 
 
-  [Barbarian Sketch]: /static/images/2014/barbarian-sketch.jpg "Barbarian Sketch"
+  [Barbarian Sketch]: /static/blog/images/2014/barbarian-sketch.jpg "Barbarian Sketch"
   [the other day]: {filename}/articles/2014/my-startup-a-retrospective.md "My Startup, a Retrospective"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
   [military phone lines]: https://speakerdeck.com/rdegges/bring-down-the-system-1 "Bring Down the System! - Shutting down military phone lines to save lives, in Python."
-  [Mountain Sketch]: /static/images/2014/mountain-sketch.jpg "Mountain Sketch"
+  [Mountain Sketch]: /static/blog/images/2014/mountain-sketch.jpg "Mountain Sketch"
   [Stormpath]: https://stormpath.com/ "Stormpath - User Management and Authentication for Developers"
   [Hacker News]: https://news.ycombinator.com/ "Hacker News"
   [Service Oriented Architecture]: http://www.rdegges.com/service-oriented-side-effects/ "Service Oriented Side Effects"
-  [Stormpath Icon]: /static/images/2014/stormpath-icon.jpg "Stormpath Icon"
+  [Stormpath Icon]: /static/blog/images/2014/stormpath-icon.jpg "Stormpath Icon"
   [Twitter]: https://twitter.com/rdegges "Randall Degges on Twitter"
   [email]: mailto:r@rdegges.com "Randall Degges' Email"

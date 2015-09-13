@@ -71,4 +71,4 @@ die in peace knowing that I didn't care about the rest of the world and spent
 all of my effort doing what *I think* is right, regardless of what others think.
 
 
-  [Zoro Sketch]: /static/images/2013/zoro-sketch.jpg "Zoro Sketch"
+  [Zoro Sketch]: /static/blog/images/2013/zoro-sketch.jpg "Zoro Sketch"

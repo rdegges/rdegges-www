@@ -161,4 +161,4 @@ those activities, they're able to live to their fullest potential and build a
 life they'll be happy with.
 
 
-  [Soul Inside Sketch]: /static/images/2015/soul-inside-sketch.jpg "Soul Inside Sketch"
+  [Soul Inside Sketch]: /static/blog/images/2015/soul-inside-sketch.jpg "Soul Inside Sketch"

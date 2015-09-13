@@ -396,5 +396,5 @@ Django project that you can use as a project *base*.  It's called
 production ready settings module.  Take a look!
 
 
-  [Turtle Sketch]: /static/images/2011/turtle-sketch.png "Turtle Sketch"
+  [Turtle Sketch]: /static/blog/images/2011/turtle-sketch.png "Turtle Sketch"
   [GitHub Page]: https://github.com/rdegges/django-skel "django-skel on GitHub"

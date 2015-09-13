@@ -252,7 +252,7 @@ arsenal.  The next time you start a project, be sure to get continuous delivery
 working from the very beginning, and save yourself from a lot of wasted time.
 
 
-  [Tron Light Cycle Sketch]: /static/images/2013/tron-light-cycle-sketch.jpg "Tron Light Cycle Sketch"
+  [Tron Light Cycle Sketch]: /static/blog/images/2013/tron-light-cycle-sketch.jpg "Tron Light Cycle Sketch"
   [CD]: https://en.wikipedia.org/wiki/Continuous_delivery "Continuous Delivery"
   [The Pragmatic Programmer]: http://www.amazon.com/gp/product/020161622X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=020161622X&linkCode=as2&tag=rdegges-20] "The Pragmatic Programmer on Amazon"
   [Git]: http://git-scm.com/ "Git"

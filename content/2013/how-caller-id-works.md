@@ -122,7 +122,7 @@ causing further pain in the industry.
 Got any questions?  Feel free to [shoot me an email][], would be happy to help.
 
 
-  [Demon Horse Sketch]: /static/images/2013/demon-horse-sketch.jpg "Demon Horse Sketch"
+  [Demon Horse Sketch]: /static/blog/images/2013/demon-horse-sketch.jpg "Demon Horse Sketch"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
   [LIDB]: http://en.wikipedia.org/wiki/LIDB "LIDB Database on Wikipedia"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

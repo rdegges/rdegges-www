@@ -51,5 +51,5 @@ motivates me, and makes me love what I do so much.
 **Never stop hacking.**
 
 
-  [Grim Reaper Sketch]: /static/images/2012/grim-reaper-sketch.png "Grim Reaper Sketch"
+  [Grim Reaper Sketch]: /static/blog/images/2012/grim-reaper-sketch.png "Grim Reaper Sketch"
   [IRC]: irc://irc.oftc.net/#heapify "#heapify"

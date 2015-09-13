@@ -234,16 +234,16 @@ And oh yeah, have a lot of fun :)
 -Randall
 
 
-  [Blah Sketch]: /static/images/2014/lion-face-sketch.jpg "Lion Face Sketch"
+  [Blah Sketch]: /static/blog/images/2014/lion-face-sketch.jpg "Lion Face Sketch"
   [Stormpath]: https://stormpath.com "Stormpath - Simple Authentication and User Management for Developers"
-  [Large Robot Sketch]: /static/images/2014/large-robot-sketch.jpg "Large Robot Sketch"
+  [Large Robot Sketch]: /static/blog/images/2014/large-robot-sketch.jpg "Large Robot Sketch"
   [blog post]: http://stormpath.com/blog/hello-stormpath "Hello, Stormpath!"
   [Python SDK]: https://github.com/stormpath/stormpath-sdk-python "Stormpath Python SDK"
   [Rocket Space]: http://rocket-space.com/ "Rocket Space"
   [Flask SDK]: https://github.com/stormpath/stormpath-flask "Stormpath Flask SDK"
   [sample application]: https://github.com/stormpath/stormpath-flask-sample "Stormpath Flask Sample Application"
-  [Bodybuilder Sketch]: /static/images/2014/bodybuilder-sketch.jpg "Bodybuilder Sketch"
-  [Happy Moose Sketch]: /static/images/2014/happy-moose-sketch.jpg "Happy Moose Sketch"
-  [Beast Sketch]: /static/images/2014/beast-sketch.jpg "Beast Sketch"
+  [Bodybuilder Sketch]: /static/blog/images/2014/bodybuilder-sketch.jpg "Bodybuilder Sketch"
+  [Happy Moose Sketch]: /static/blog/images/2014/happy-moose-sketch.jpg "Happy Moose Sketch"
+  [Beast Sketch]: /static/blog/images/2014/beast-sketch.jpg "Beast Sketch"
   [Trello]: https://trello.com/ "Trello"
-  [Door Sketch]: /static/images/2014/door-sketch.jpg "Door Sketch"
+  [Door Sketch]: /static/blog/images/2014/door-sketch.jpg "Door Sketch"

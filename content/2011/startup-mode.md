@@ -119,7 +119,7 @@ next 90 days, in order to share our insights, and help clarify my own thoughts
 [share them][]!
 
 
-  [Monster Sketch]: /static/images/2011/monster-sketch.png "Monster Sketch"
+  [Monster Sketch]: /static/blog/images/2011/monster-sketch.png "Monster Sketch"
   [MySQL]: http://www.mysql.com/ "MySQL"
   [PostgreSQL]: http://www.postgresql.org/ "PostgreSQL"
   [Python]: http://python.org/ "Python"

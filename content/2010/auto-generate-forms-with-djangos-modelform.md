@@ -164,5 +164,5 @@ If you're interested in Django's `ModelForm`, read the
 [official documentation][], it will answer all of your more in-depth questions.
 
 
-  [Mannequin Sketch]: /static/images/2010/mannequin-sketch.png "Mannequin Sketch"
+  [Mannequin Sketch]: /static/blog/images/2010/mannequin-sketch.png "Mannequin Sketch"
   [official documentation]: https://docs.djangoproject.com/en/dev/topics/forms/modelforms/ "Django ModelForms"

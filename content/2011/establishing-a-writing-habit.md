@@ -79,7 +79,7 @@ the 21 days without fail.  I wrote another post which also includes some tips
 and thoughts, you can read it [right here][].
 
 
-  [Feather Pen Sketch]: /static/images/2011/feather-pen-sketch.png "Feather Pen Sketch"
+  [Feather Pen Sketch]: /static/blog/images/2011/feather-pen-sketch.png "Feather Pen Sketch"
   [HabitForge]: http://habitforge.com/ "HabitForge"
   [break-the-chain]: http://lifehacker.com/281626/jerry-seinfelds-productivity-secret "Jerry Seinfeld's Productivity Secret"
   [Leonardo DaVinci]: http://en.wikipedia.org/wiki/Leonardo_da_Vinci "Leonardo DaVinci"

@@ -51,4 +51,4 @@ way too short for that.
 From now on I'm just going to do stuff, and have fun.  Forget everything else.
 
 
-  [Kangaroos]: /static/images/2012/kangaroos.png "Kangaroos"
+  [Kangaroos]: /static/blog/images/2012/kangaroos.png "Kangaroos"

@@ -264,12 +264,12 @@ discussing the various pitfalls of both OAuth and Basic Auth, diving into more
 in-depth technical reasons for my opinions.*
 
 
-  [Wall-e Sketch]: /static/images/2015/wall-e-sketch.jpg "Wall-e Sketch"
-  [Wall-e and Eve Sketch]: /static/images/2015/wall-e-and-eve-sketch.jpg "Wall-e and Eve Sketch"
-  [Wall-e Eyes Sketch]: /static/images/2015/wall-e-eyes-sketch.png "Wall-e Eyes Sketch"
-  [Wall-e Love Sketch]: /static/images/2015/wall-e-love-sketch.jpg "Wall-e Love Sketch"
-  [Wall-e Happy Sketch]: /static/images/2015/wall-e-happy-sketch.jpg "Wall-e Happy Sketch"
-  [Wall-e Upside Down Sketch]: /static/images/2015/wall-e-upside-down-sketch.jpg "Wall-e Upside Down Sketch"
+  [Wall-e Sketch]: /static/blog/images/2015/wall-e-sketch.jpg "Wall-e Sketch"
+  [Wall-e and Eve Sketch]: /static/blog/images/2015/wall-e-and-eve-sketch.jpg "Wall-e and Eve Sketch"
+  [Wall-e Eyes Sketch]: /static/blog/images/2015/wall-e-eyes-sketch.png "Wall-e Eyes Sketch"
+  [Wall-e Love Sketch]: /static/blog/images/2015/wall-e-love-sketch.jpg "Wall-e Love Sketch"
+  [Wall-e Happy Sketch]: /static/blog/images/2015/wall-e-happy-sketch.jpg "Wall-e Happy Sketch"
+  [Wall-e Upside Down Sketch]: /static/blog/images/2015/wall-e-upside-down-sketch.jpg "Wall-e Upside Down Sketch"
   [OAuth]: http://oauth.net/ "OAuth"
   [specification]: http://tools.ietf.org/html/rfc2617 "HTTP Basic Auth / Digest Auth Spec"
   [uuid]: http://en.wikipedia.org/wiki/Universally_unique_identifier "UUID on Wikipedia"

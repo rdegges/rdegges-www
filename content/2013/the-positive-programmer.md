@@ -168,6 +168,6 @@ If you're stuck in a rut and want someone to chat with, feel free to
 [shoot me an email][], I'd love to help!
 
 
-  [Kenpachi Smiling Sketch]: /static/images/2013/kenpachi-smiling-sketch.png "Kenpachi Smiling Sketch"
+  [Kenpachi Smiling Sketch]: /static/blog/images/2013/kenpachi-smiling-sketch.png "Kenpachi Smiling Sketch"
   [Hacker News]: https://news.ycombinator.com/ "Hacker News"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

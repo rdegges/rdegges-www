@@ -255,7 +255,7 @@ If you want to enjoy your life, you can!  It's 100% up to you.
 -Randall
 
 
-  [Crane Sketch]: /static/images/2015/crane-sketch.jpg "Crane Sketch"
+  [Crane Sketch]: /static/blog/images/2015/crane-sketch.jpg "Crane Sketch"
   [The Power of Less]: http://www.amazon.com/gp/product/1401309704/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1401309704&linkCode=as2&tag=randdegg-20&linkId=5KWW7VJAVB6HERC5 "The Power of Less"
   [via Audible]: http://www.amazon.com/Audible-Free-Trial-Digital-Membership/dp/B00NB86OYE/?ref_=assoc_tag_ph_1422899139880&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=randdegg-20&linkId=XYWF4NH7FSXM53HF "Audible"
   [this link]: http://www.amazon.com/Audible-Free-Trial-Digital-Membership/dp/B00NB86OYE/?ref_=assoc_tag_ph_1422899139880&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=randdegg-20&linkId=XYWF4NH7FSXM53HF "Audible"

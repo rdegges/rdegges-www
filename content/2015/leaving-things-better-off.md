@@ -71,5 +71,5 @@ If you're currently dealing with a big problem, maybe the solution doesn't have
 to be so hard: just make it a little bit less of a problem every day =)
 
 
-  [Robot Character Sketch]: /static/images/2015/robot-character-sketch.jpg "Robot Character Sketch"
+  [Robot Character Sketch]: /static/blog/images/2015/robot-character-sketch.jpg "Robot Character Sketch"
   [The Joy of Less]: http://www.amazon.com/gp/product/0984087311/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0984087311&linkCode=as2&tag=randdegg-20&linkId=PNLDD6DVTWQ66KG6 "The Joy of Less"

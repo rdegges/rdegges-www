@@ -166,6 +166,6 @@ practices, and never giving in to anything less.
 You can do it.
 
 
-  [Computer Sketch]: /static/images/2011/computer-sketch.png "Computer Sketch"
+  [Computer Sketch]: /static/blog/images/2011/computer-sketch.png "Computer Sketch"
   [The Pragmatic Programmer]: http://www.amazon.com/gp/product/020161622X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=020161622X&linkCode=as2&tag=rdegges-20 "The Pragmatic Programmer"
   [Wikipedia article]: http://en.wikipedia.org/wiki/Test-driven_development "test-driven Development Wiki"

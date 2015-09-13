@@ -150,5 +150,5 @@ The next time you're looking to get started on that new idea, don't forget to
 make a sacrifice.
 
 
-  [Demon Sketch]: /static/images/2013/demon-sketch.png "Demon Sketch"
+  [Demon Sketch]: /static/blog/images/2013/demon-sketch.png "Demon Sketch"
   [Ron Swanson]: http://en.wikipedia.org/wiki/Ron_Swanson "Ron Swanson on Wikipedia"

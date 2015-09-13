@@ -60,4 +60,4 @@ myself through the day that I *want* to be focusing on the quality of my work,
 and push myself to be better in that regard.
 
 
-  [Warrior with Sword Sketch]: /static/images/2014/warrior-with-sword-sketch.jpg "Warrior with Sword Sketch"
+  [Warrior with Sword Sketch]: /static/blog/images/2014/warrior-with-sword-sketch.jpg "Warrior with Sword Sketch"

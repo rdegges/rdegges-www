@@ -147,7 +147,7 @@ somewhat undocumented.  Hopefully the code presented above helps clarify how to
 do it properly, and why it works the way it does.
 
 
-  [Pony Sketch]: /static/images/2010/pony-sketch.png "Pony Sketch"
+  [Pony Sketch]: /static/blog/images/2010/pony-sketch.png "Pony Sketch"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [Freeswitch]: http://freeswitch.org/ "Freeswitch"
   [Python]: http://python.org/ "Python"

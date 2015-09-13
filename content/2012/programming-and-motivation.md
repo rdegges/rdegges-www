@@ -125,5 +125,5 @@ your mood greatly effects your work.
 Now get out there and write some code!
 
 
-  [Bleach Sketch]: /static/images/2012/bleach-sketch.png "Bleach Sketch"
+  [Bleach Sketch]: /static/blog/images/2012/bleach-sketch.png "Bleach Sketch"
   [Rockstar No Carb]: http://www.amazon.com/gp/product/B000NGNEKY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000NGNEKY&linkCode=as2&tag=rdegges-20 "Rockstar No Carb"

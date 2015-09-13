@@ -68,7 +68,7 @@ project sometime this week.  Be merciless with your execution.  [Let me know][]
 how it works out, I'm extremely interested in this sort of thing.
 
 
-  [Barbarian Sketch]: /static/images/2011/barbarian-sketch.png "Barbarian Sketch"
+  [Barbarian Sketch]: /static/blog/images/2011/barbarian-sketch.png "Barbarian Sketch"
   [Ghengis Khan and the Making of the Modern World]: http://www.amazon.com/gp/product/0609809644/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0609809644&linkCode=as2&tag=rdegges-20 "Ghengis Khan and the Making of the Modern World"
   [Ghengis Khan]: http://en.wikipedia.org/wiki/Ghengis_Khan "Ghengis Khan Wiki"
   [Mongols]: http://en.wikipedia.org/wiki/Mongols "Mongols Wiki"

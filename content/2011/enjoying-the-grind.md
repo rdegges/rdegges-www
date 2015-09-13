@@ -56,4 +56,4 @@ and disappointments along the way are what make the journey worthwhile.  It's
 the growing you do as you work towards your goals that makes you happy.
 
 
-  [Runner Sketch]: /static/images/2011/runner-sketch.png "Runner Sketch"
+  [Runner Sketch]: /static/blog/images/2011/runner-sketch.png "Runner Sketch"

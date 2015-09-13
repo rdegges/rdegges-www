@@ -377,7 +377,7 @@ but I assure you I'll write some future articles which cover those parts in
 extreme depth.
 
 
-  [Daemon Sketch]: /static/images/2010/daemon-sketch.png "Daemon Sketch"
+  [Daemon Sketch]: /static/blog/images/2010/daemon-sketch.png "Daemon Sketch"
   [pycall]: http://pycall.org/ "pycall"
   [Asterisk call files]: http://www.voip-info.org/wiki/view/Asterisk+auto-dial+out "Asterisk Call Files Wiki Page"
   [latest Asterisk release]: http://www.asterisk.org/downloads "Asterisk Downloads"

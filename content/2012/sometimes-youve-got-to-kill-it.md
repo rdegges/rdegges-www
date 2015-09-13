@@ -45,4 +45,4 @@ to advance, you're falling into the abyss.
 Get out there, and kill it.
 
 
-  [Lion Sketch]: /static/images/2012/lion-sketch.png "Lion Sketch"
+  [Lion Sketch]: /static/blog/images/2012/lion-sketch.png "Lion Sketch"

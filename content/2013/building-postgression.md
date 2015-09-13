@@ -251,7 +251,7 @@ If you'd like to know more about postgression, feel free to leave a comment or
 shoot me an email ([r@rdegges.com][]).
 
 
-  [Dragon Sketch]: /static/images/2013/dragon-sketch.png "Dragon Sketch"
+  [Dragon Sketch]: /static/blog/images/2013/dragon-sketch.png "Dragon Sketch"
   [Last week]: {filename}/articles/2013/postgression-a-postgresql-database-for-every-test-case.md "Postgression - a PostgreSQL Database for Every Test Case"
   [Alven]: https://twitter.com/zaidos "Alven on Twitter"
   [postgression]: http://www.postgression.com/ "postgression"
@@ -276,11 +276,11 @@ shoot me an email ([r@rdegges.com][]).
   [Redis To Go]: https://addons.heroku.com/redistogo "Redistogo Add-on"
   [DNSimple]: https://dnsimple.com/r/d9a8f0b92dfb78 "DNSimple"
   [pgbackups]: https://devcenter.heroku.com/articles/pgbackups "PGbackups Add-on"
-  [postgression Core]: /static/images/2013/postgression-core.png "postgression Core"
+  [postgression Core]: /static/blog/images/2013/postgression-core.png "postgression Core"
   [https://api-docs.heroku.com/addons]: https://api-docs.heroku.com/addons "Heroku Add-on API"
   [https://api-docs.heroku.com/apps]: https://api-docs.heroku.com/apps "Heroku Apps API"
-  [postgression API]: /static/images/2013/postgression-api.png "postgression API"
-  [postgression Models]: /static/images/2013/postgression-models.png "postgression Models"
-  [postgression Ducksboard]: /static/images/2013/postgression-ducksboard.png "postgression Ducksboard"
-  [postgression Script]: /static/images/2013/postgression-script.png "postgression Script"
+  [postgression API]: /static/blog/images/2013/postgression-api.png "postgression API"
+  [postgression Models]: /static/blog/images/2013/postgression-models.png "postgression Models"
+  [postgression Ducksboard]: /static/blog/images/2013/postgression-ducksboard.png "postgression Ducksboard"
+  [postgression Script]: /static/blog/images/2013/postgression-script.png "postgression Script"
   [r@rdegges.com]: mailto:r@rdegges.com "Randall Degges' Email"

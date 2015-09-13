@@ -63,4 +63,4 @@ So, in conclusion: get outside every now and then.  It'll clear your head, help
 you program better, and keep your sanity in check.
 
 
-  [Park Sketch]: /static/images/2010/park-sketch.png "Park Sketch"
+  [Park Sketch]: /static/blog/images/2010/park-sketch.png "Park Sketch"

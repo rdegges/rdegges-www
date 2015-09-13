@@ -162,7 +162,7 @@ online purchases reduces a lot of the complexity associated with making online
 payments now (PCI compliance, etc.).
 
 
-  [Thinking Mask Sketch]: /static/images/2013/thinking-mask-sketch.jpg "Thinking Mask Sketch"
+  [Thinking Mask Sketch]: /static/blog/images/2013/thinking-mask-sketch.jpg "Thinking Mask Sketch"
   [official bitcoin website]: http://bitcoin.org/en/ "Bitcoin Website"
   [Bitcoin-Qt]: http://bitcoin.org/en/download "Bitcoin-Qt"
   [Daily Bitcoins]: http://dailybitcoins.org/index.php?aff=edcd9fb07dcd67c574bee2b1c26ec781 "Daily Bitcoins"

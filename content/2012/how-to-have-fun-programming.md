@@ -190,11 +190,11 @@ friends with today.  If you'd like to join a supportive group of enthusiastic
 developers, please drop by and say hi :)
 
 
-  [Kenpachi Sketch]: /static/images/2012/kenpachi-sketch.png "Kenpachi Sketch"
-  [Byakuya Sketch]: /static/images/2012/byakuya-sketch.png "Byakuya Sketch"
-  [Kenpachi Alternate Sketch]: /static/images/2012/kenpachi-alternate-sketch.png "Kenpachi Alternate Sketch"
-  [Kneeling Samurai Sketch]: /static/images/2012/kneeling-samurai-sketch.png "Kneeling Samurai Sketch"
-  [Kenpachi Back Sketch]: /static/images/2012/kenpachi-back-sketch.png "Kenpachi Back Sketch"
-  [Ichigo Hollow Sketch]: /static/images/2012/ichigo-hollow-sketch.png "Ichigo Hollow Sketch"
-  [Ichigo Hollow Screaming]: /static/images/2012/ichigo-hollow-screaming.png "Ichigo Hollow Screaming"
-  [Renji Sketch]: /static/images/2012/renji-sketch.png "Renji Sketch"
+  [Kenpachi Sketch]: /static/blog/images/2012/kenpachi-sketch.png "Kenpachi Sketch"
+  [Byakuya Sketch]: /static/blog/images/2012/byakuya-sketch.png "Byakuya Sketch"
+  [Kenpachi Alternate Sketch]: /static/blog/images/2012/kenpachi-alternate-sketch.png "Kenpachi Alternate Sketch"
+  [Kneeling Samurai Sketch]: /static/blog/images/2012/kneeling-samurai-sketch.png "Kneeling Samurai Sketch"
+  [Kenpachi Back Sketch]: /static/blog/images/2012/kenpachi-back-sketch.png "Kenpachi Back Sketch"
+  [Ichigo Hollow Sketch]: /static/blog/images/2012/ichigo-hollow-sketch.png "Ichigo Hollow Sketch"
+  [Ichigo Hollow Screaming]: /static/blog/images/2012/ichigo-hollow-screaming.png "Ichigo Hollow Screaming"
+  [Renji Sketch]: /static/blog/images/2012/renji-sketch.png "Renji Sketch"

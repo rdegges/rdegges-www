@@ -212,12 +212,12 @@ and experiment with the hundreds of awesome plugins that it has, be sure to
 read the [official documentation][].
 
 
-  [Butler Sketch]: /static/images/2011/butler-sketch.png "Butler Sketch"
+  [Butler Sketch]: /static/blog/images/2011/butler-sketch.png "Butler Sketch"
   [GitHub]: https://github.com/ "GitHub"
   [Jenkins CI]: http://jenkins-ci.org/ "Jenkins CI"
   [Hudson]: http://hudson-ci.org/ "Hudson CI"
   [continuous integration]: http://en.wikipedia.org/wiki/Continuous_integration "Continuous Integration Wiki Page"
-  [Jenkins Configuration]: /static/images/2011/jenkins-configuration.png "Jenkins Configuration"
+  [Jenkins Configuration]: /static/blog/images/2011/jenkins-configuration.png "Jenkins Configuration"
   [Git]: http://git-scm.com/ "Git"
   [crontab format]: http://adminschoice.com/crontab-quick-reference "crontab reference"
   [official documentation]: http://jenkins-ci.org/ "Jenkins Documentation"
