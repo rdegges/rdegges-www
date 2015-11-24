@@ -1,41 +1,5 @@
 <header>
-  <div class="page-header">
-    <h1>
-      <a href="{{ .Site.BaseURL }}" hreflang="{{ .Site.LanguageCode }}" title="{{ .Site.Title }}" type="text/html">
-        {{ .Site.Title }} <small>{{ .Site.Params.subtitle }}</small>
-      </a>
-    </h1>
-  </div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
-      <ul class="nav navbar-nav nav-justified">
-        <li>
-          <a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" title="{{ .Site.Title }}">Home</a>
-        </li>
-        <li>
-          <a href="{{ "/archives" | absURL }}" hreflang="{{ .Site.LanguageCode }}" title="Archives">Archives</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Twitter">Twitter</a>
-        </li>
-        <li>
-          <a href="https://github.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Code">Code</a>
-        </li>
-        <li>
-          <a href="https://speakerdeck.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Talks">Talks</a>
-        </li>
-        <li>
-          <a href="mailto:{{ .Site.Params.email }}" hreflang="{{ .Site.LanguageCode }}" title="Email">Email</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <h1><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Title }}</a></h1>
+  <h3><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Params.subtitle }}</a></h3>
+  {{ partial "nav.html" . }}
 </header>
