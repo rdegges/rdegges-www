@@ -1,74 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {{ partial "head.html" . }}
   <body>
     {{ partial "header.html" . }}
-    <div class="container">
-      <section class="hi">
-        <div class="well ">
-          <div class="row">
-            <div class="col-md-3">
-              <img alt="Randall Degges' Avatar (the Grim Reaper)" height="200" width="200" src="{{ "/static/theme/images/avatar.png" | absURL }}">
-            </div>
-            <div class="col-md-4">
-              <p class="lead hidden-xs">Yo, I'm Randall!  Thanks for checking out my website.</p>
-              <p class="hidden-xs">
-                I frequently write about programming, web stuff (APIs,
-                infrastructure, etc.), personal development, and motivation.
-              </p>
-              <p class="hidden-xs">
-                I love writing code, lifting weights, building APIs... and dogs &gt;:)
-              </p>
-
-              <p class="lead text-center visible-xs">Yo, I'm Randall!  Thanks for checking out my website.</p>
-              <p class="visible-xs text-justify">
-                I frequently write about programming, web stuff (APIs,
-                infrastructure, etc.), personal development, and motivation.
-
-                I love writing code, lifting weights, building APIs... and dogs &gt;:)
-              </p>
-            </div>
-            <div class="col-md-4 col-md-offset-1">
-              <p>
-                If you'd like to keep up with my writing, you can get my essays
-                delivered via email (just sign up below).
-              </p>
-              <form action="https://rdegges.us5.list-manage.com/subscribe/post?u=ac8a69447e872cf6ddf171977&amp;id=62ec9e2b1c" class="mailchimp-subscribe" method="post" role="form" target="_blank" novalidate>
-                <div class="form-group">
-                  <input class="form-control" type="email" name="EMAIL" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Subscribe</button>
-                </div>
-              </form>
-              <p>
-                Or, if you prefer, you can subscribe to my
-                <a href="{{ .RSSLink }}" hreflang="{{ .Site.LanguageCode }}" rel="alternate" title="Atom Feed" type="application/atom+xml">Atom</a>
-                or
-                <a href="{{ .RSSLink }}" hreflang="{{ .Site.LanguageCode }}" rel="alternate" title="RSS Feed" type="application/rss+xml">RSS</a>
-                feed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="index">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <h2>Recent Essays</h2>
-            {{ $paginator := .Paginator }}
-            {{ range $index, $page := .Paginator.Pages }}
-              <hr>
-              <a href="{{ .Permalink }}" hreflang="{{ .Site.LanguageCode }}" title="{{ .Title }}" type="text/html">{{ .Title }}</a><br>
-              <i>{{ .Description }}</i>
-            {{ end }}
-            <hr>
-            <a class="btn btn-primary archive-button" href="{{ "/archives" | absURL }}" hreflang="{{ .Site.LanguageCode }}" title="All Essays">All Essays</a>
-          </div>
-        </div>
-      </section>
-    </div>
+    <main>
+      <ul>
+        {{ range .Data.Pages }}
+          <li><a href="{{ .Permalink }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ .LinkTitle }}</a> - <time datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
+        {{ end }}
+      </ul>
+    </main>
     {{ partial "footer.html" . }}
+    {{ partial "footer-includes.html" . }}
   </body>
-  {{ partial "footer-includes.html" . }}
 </html>
