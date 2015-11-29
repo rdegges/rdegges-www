@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {{ partial "head.html" . }}
   <body>
     {{ partial "header.html" . }}
     <div class="container">
       <div class="row">
-        <div class="col-sm-offset-2 col-sm-8">
+        <main>
           <article>
             <header>
               <h1>{{ .Title }}</h1>
-              <section class="published">
-                <!--<time datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Date.Format "January 2, 2006" }}</time>-->
-              </section>
             </header>
             {{ .Content }}
             <section class="subscribe">
@@ -22,18 +19,13 @@
                 <a href="https://github.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Randall Degges on Github" type="text/html">github</a>,
                 or subscribe below for updates (<i>I'll email you new essays when I publish them</i>).
               </p>
-              <form action="{{ .Site.Params.mailchimpForm }}" class="mailchimp-subscribe form-inline" method="post" role="form" target="_blank" novalidate>
-                <div class="form-group">
-                  <input class="form-control" type="email" name="EMAIL" placeholder="Email Address" size="20" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-              </form>
+              {{ partial "mailchimp-subscribe.html" . }}
             </section>
           </article>
-        </div>
+        </main>
       </div>
     </div>
     {{ partial "footer.html" . }}
+    {{ partial "footer-includes.html" . }}
   </body>
-  {{ partial "footer-includes.html" . }}
 </html>
