@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Title }}</a></li>
+    <li><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">Home</a></li>
     {{ range $link := .Site.Params.navLinks }}
       <li><a href="{{ $link.url }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ $link.title }}" type="text/html">{{ $link.title }}</a></li>
     {{ end }}
