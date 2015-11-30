@@ -1,0 +1,121 @@
+/**
+ * General element styling.
+ */
+
+/**
+ * Header styling.
+ */
+header {
+  font-family: 'Raleway', sans-serif;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+header a:visited,
+header h1 a,
+header h2 a {
+  color: #515050;
+}
+
+header h1 a:hover,
+header h2 a:hover {
+  color: #BEBEBE;
+}
+
+/**
+ * Navigation bar styling.
+ */
+nav {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0em;
+  padding: 0em;
+}
+
+nav li {
+  display: inline;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+nav li:after {
+  content: ',';
+}
+
+nav li:last-child:after {
+  content: none;
+}
+
+nav a,
+nav a:hover,
+nav a:visited {
+  color: #515050;
+}
+
+/**
+ * Index page styling.
+ */
+.index {
+  font-family: 'Raleway', sans-serif;
+}
+
+.index main ul {
+  list-style-type: none;
+  margin: 0em;
+  padding: 0em;
+}
+
+.index main li {
+  margin-bottom: .5em;
+}
+
+.index main li a,
+.index main time {
+  font-size: 1.2em;
+}
+
+.index main li a {
+  font-weight: 700;
+}
+
+.index main li a,
+.index main li a:hover,
+.index main li a:visited {
+  color: #515050;
+}
+
+.index main time {
+  color: #BEBEBE;
+  font-weight: normal;
+}
+
+.index main li time {
+  float: right;
+}
