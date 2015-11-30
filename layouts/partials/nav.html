@@ -1,8 +1,8 @@
 <nav>
   <ul>
-    <li><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">Home</a></li>
+    <li><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }} - Home" type="text/html">HOME</a></li>
     {{ range $link := .Site.Params.navLinks }}
-      <li><a href="{{ $link.url }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ $link.title }}" type="text/html">{{ $link.title }}</a></li>
+      <li><a href="{{ $link.url }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ $link.title }}" type="text/html">{{ upper $link.title }}</a></li>
     {{ end }}
   </ul>
 </nav>
