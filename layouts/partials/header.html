@@ -1,5 +1,12 @@
-<header>
-  <h1><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Title }}</a></h1>
-  <h3><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Params.subtitle }}</a></h3>
-  {{ partial "nav.html" . }}
-</header>
+<div class="container">
+  <div class="row">
+    <header class="col-xs-offset-1 col-xs-10">
+      <h1><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ upper .Site.Title }}</a></h1>
+      <h2><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }}" type="text/html">{{ .Site.Params.subtitle }}</a></h2>
+      <hr>
+    </header>
+  </div>
+  <div class="row">
+    {{ partial "nav.html" . }}
+  </div>
+</div>
