@@ -119,3 +119,20 @@ nav a:visited {
 .index main li time {
   float: right;
 }
+
+/**
+ * Footer styling.
+ */
+footer {
+  color: #515050;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  padding-top: 1em;
+  text-align: center;
+}
+
+footer p a,
+footer p a:hover,
+footer p a:visited {
+  color: #515050;
+}
