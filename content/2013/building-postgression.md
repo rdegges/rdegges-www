@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /building-postgression-an-api-development-story/
 title: "Building postgression (an API Development Story)"
 date: "2013-01-29"
 tags: ["programming"]

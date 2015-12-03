@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /dogs-are-great-programming-companions/
 title: "Dogs Are Great Programming Companions"
 date: "2012-01-09"
 tags: ["programming"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /why-im-learning-node/
 title: "Why I'm Learning Node"
 date: "2012-04-07"
 tags: ["programming", "javascript", "nodejs"]

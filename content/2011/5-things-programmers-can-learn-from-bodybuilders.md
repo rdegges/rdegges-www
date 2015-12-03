@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /5-things-programmers-can-learn-from-bodybuilders/
 title: "5 Things Programmers Can Learn From Bodybuilders"
 date: "2011-03-26"
 tags: ["programming", "personal development"]

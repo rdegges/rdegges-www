@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /fearless/
 title: "Fearless"
 date: "2013-05-24"
 tags: ["personal development"]

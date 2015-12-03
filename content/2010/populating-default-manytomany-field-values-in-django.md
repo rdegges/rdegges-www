@@ -1,9 +1,11 @@
 ---
-title: "Populating Default ManyToMany Field Values in Django"
+aliases:
+  - /populating-default-manytomany-field-values-in-django/
 date: "2010-06-25"
-tags: ["programming", "python", "django"]
-slug: "populating-default-manytomany-field-values-in-django"
 description: "A quick article discussing how populate ManyToManyField default values for Django applications."
+slug: "populating-default-manytomany-field-values-in-django"
+tags: ["programming", "python", "django"]
+title: "Populating Default ManyToMany Field Values in Django"
 ---
 
 

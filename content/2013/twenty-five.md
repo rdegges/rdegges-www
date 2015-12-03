@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /twenty-five/
 title: "Twenty Five"
 date: "2013-06-28"
 tags: ["personal development"]

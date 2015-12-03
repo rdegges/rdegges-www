@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-to-instantly-fix-problematic-deployments-on-heroku/
 title: "How to Instantly Fix Problematic Deployments on Heroku"
 date: "2012-01-08"
 tags: "programming, devops"

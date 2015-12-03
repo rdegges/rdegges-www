@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /devops-django-part-3-the-heroku-way/
 title: "DevOps Django - Part 3 - The Heroku Way"
 date: "2011-12-18"
 tags: ["programming", "devops", "python", "django"]

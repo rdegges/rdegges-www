@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /what-ive-learned-about-writing-so-far/
 title: "What I've Learned About Writing (So Far)"
 date: "2011-12-19"
 tags: ["personal development"]

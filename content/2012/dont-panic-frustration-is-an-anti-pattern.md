@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /dont-panic-frustration-is-an-anti-pattern/
 title: "Don't Panic! Frustration is an Anti-Pattern"
 date: "2012-10-04"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /successful-github-development/
 title: "Successful GitHub Development"
 date: "2012-04-14"
 tags: ["programming"]

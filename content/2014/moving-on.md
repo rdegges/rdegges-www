@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /moving-on/
 title: "Moving On"
 date: "2014-02-03"
 tags: ["startups", "programming", "personal development"]

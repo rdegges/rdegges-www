@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-perfect-django-settings-file/
 title: "The Perfect Django Settings File"
 date: "2011-04-29"
 tags: ["programming", "python", "django"]

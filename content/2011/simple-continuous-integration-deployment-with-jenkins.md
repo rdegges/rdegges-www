@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /simple-continuous-integration-deployment-with-jenkins/
 title: "Simple Continuous Integration / Deployment With Jenkins"
 date: "2011-04-10"
 tags: ["programming", "devops"]

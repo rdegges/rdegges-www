@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /reflections-on-herokus-waza-event/
 title: "Reflections on Heroku's Waza Event"
 date: "2012-01-15"
 tags: ["programming"]

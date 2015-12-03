@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /heroku-dynos-in-depth/
 title: "Heroku Dynos (in Depth)"
 date: "2013-02-10"
 tags: ["programming"]

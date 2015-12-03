@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-i-program-stuff/
 title: "How I Program Stuff"
 date: "2012-01-16"
 tags: ["programming"]

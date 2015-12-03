@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /a-year-in-bakersfield/
 title: "A Year in Bakersfield"
 date: "2012-11-26"
 tags: ["reviews"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /ambitions/
 title: "Ambitions"
 date: "2012-11-13"
 tags: ["personal development"]

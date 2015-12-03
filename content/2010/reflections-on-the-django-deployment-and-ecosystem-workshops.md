@@ -1,9 +1,11 @@
 ---
-title: "Reflections on the Django Deployment and Ecosystem Workshops"
+aliases:
+  - /reflections-on-the-django-deployment-and-ecosystem-workshops/
 date: "2010-12-12"
-tags: ["programming", "python", "django"]
-slug: "reflections-on-the-django-deployment-and-ecosystem-workshops"
 description: "My review of the Django Deployment and Ecosystem workshop.  It was great!"
+slug: "reflections-on-the-django-deployment-and-ecosystem-workshops"
+tags: ["programming", "python", "django"]
+title: "Reflections on the Django Deployment and Ecosystem Workshops"
 ---
 
 

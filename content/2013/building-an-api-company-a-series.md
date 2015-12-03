@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /building-an-api-company-a-series/
 title: "Building an API Company - A Series"
 date: "2013-06-29"
 tags: ["programming", "startups"]

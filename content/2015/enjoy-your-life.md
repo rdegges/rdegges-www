@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /enjoy-your-life/
 title: "Enjoy Your Life"
 date: "2015-03-07"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /freeing-up-your-time/
 title: "Freeing Up Your Time"
 date: "2012-10-19"
 tags: ["personal development"]

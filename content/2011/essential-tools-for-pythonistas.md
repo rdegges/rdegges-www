@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /essential-tools-for-pythonistas/
 title: "Essential Tools for Pythonistas"
 date: "2011-04-17"
 tags: ["programming", "python"]

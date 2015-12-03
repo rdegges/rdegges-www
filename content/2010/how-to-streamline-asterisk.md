@@ -1,9 +1,11 @@
 ---
-title: "How to Streamline Asterisk"
+aliases:
+  - /how-to-streamline-asterisk/
 date: "2010-08-16"
-tags: ["programming", "telephony", "asterisk"]
-slug: "how-to-streamline-asterisk"
 description: "This article walks users through optimizing their Asterisk systems for maximum performance."
+slug: "how-to-streamline-asterisk"
+tags: ["programming", "telephony", "asterisk"]
+title: "How to Streamline Asterisk"
 ---
 
 

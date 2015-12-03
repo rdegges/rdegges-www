@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /leaving-things-better-off/
 title: "Leaving Things Better Off"
 date: "2015-03-15"
 tags: ["personal development"]

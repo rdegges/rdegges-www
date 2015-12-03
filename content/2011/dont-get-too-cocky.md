@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /dont-get-too-cocky/
 title: "Don't Get Too Cocky"
 date: "2011-03-06"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /no-regrets/
 title: "No Regrets"
 date: "2012-10-10"
 tags: ["personal development"]

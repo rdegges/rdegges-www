@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /easy-fuzzy-text-searching-with-postgresql/
 title: "Easy Fuzzy Text Searching With PostgreSQL"
 date: "2013-06-12"
 tags: ["programming"]

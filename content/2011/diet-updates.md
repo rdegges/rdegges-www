@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /diet-updates/
 title: "Diet Updates"
 date: "2011-05-01"
 tags: ["personal development"]

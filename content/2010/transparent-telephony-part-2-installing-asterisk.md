@@ -1,9 +1,11 @@
 ---
-title: "Transparent Telephony - Part 2 - Installing Asterisk"
+aliases:
+  - /transparent-telephony-part-2-installing-asterisk/
 date: "2010-02-28"
-tags: ["programming", "telephony", "asterisk"]
-slug: "transparent-telephony-part-2-installing-asterisk"
 description: "The second part of my telephony series.  In this part, we'll install Asterisk on a Linux server."
+slug: "transparent-telephony-part-2-installing-asterisk"
+tags: ["programming", "telephony", "asterisk"]
+title: "Transparent Telephony - Part 2 - Installing Asterisk"
 ---
 
 

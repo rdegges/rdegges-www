@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-caller-id-works/
 title: "How Caller ID Works"
 date: "2013-12-18"
 tags: ["telephony", "programming", "startups"]

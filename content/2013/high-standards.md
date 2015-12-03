@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /high-standards/
 title: "High Standards"
 date: "2013-04-01"
 tags: ["personal development"]

@@ -1,9 +1,11 @@
 ---
-title: "Transparent Telephony - Part 1 - An Introduction"
+aliases:
+  - /transparent-telephony-part-1-an-introduction/
 date: "2009-08-31"
-tags: ["programming", "telephony", "asterisk"]
-slug: "transparent-telephony-part-1-an-introduction"
 description: "The first part of my new series introducing technical folk to Asterisk and telephony."
+slug: "transparent-telephony-part-1-an-introduction"
+tags: ["programming", "telephony", "asterisk"]
+title: "Transparent Telephony - Part 1 - An Introduction"
 ---
 
 

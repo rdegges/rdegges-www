@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /a-developers-conundrum-dev-prod-parity/
 title: "A Developer's Conundrum - Dev / Prod Parity"
 date: "2012-07-10"
 tags: ["programming"]

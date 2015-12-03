@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /cd/
 title: "CD"
 date: "2013-05-14"
 tags: ["programming"]

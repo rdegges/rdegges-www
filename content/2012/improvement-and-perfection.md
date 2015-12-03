@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /improvement-and-perfection/
 title: "Improvement and Perfection"
 date: "2012-11-24"
 slug: "improvement-and-perfection"

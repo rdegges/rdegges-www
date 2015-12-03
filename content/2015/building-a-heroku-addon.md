@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /building-a-heroku-addon/
 title: "Building a Heroku Addon"
 date: "2015-04-06"
 tags: ["programming", "devops"]

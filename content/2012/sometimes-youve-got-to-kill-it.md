@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /sometimes-youve-got-to-kill-it/
 title: "Sometimes You've Got To Kill It"
 date: "2012-11-20"
 slug: "sometimes-youve-got-to-kill-it"

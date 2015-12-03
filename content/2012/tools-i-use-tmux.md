@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /tools-i-use-tmux/
 title: "Tools I Use - tmux"
 date: "2012-01-06"
 tags: ["programming"]

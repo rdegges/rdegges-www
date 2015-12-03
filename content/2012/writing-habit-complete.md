@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /writing-habit-complete/
 title: "Writing Habit -- Complete"
 date: "2012-01-02"
 tags: ["personal development"]

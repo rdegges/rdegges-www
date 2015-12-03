@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /programming-and-motivation/
 title: "Programming and Motivation"
 date: "2012-10-02"
 tags: ["programming"]

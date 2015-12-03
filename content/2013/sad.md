@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /sad/
 title: ":("
 date: "2013-01-25"
 tags: ["programming"]

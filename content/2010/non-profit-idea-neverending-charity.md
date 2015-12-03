@@ -1,9 +1,11 @@
 ---
-title: "Non-Profit Idea: Neverending Charity"
+aliases:
+  - /non-profit-idea-neverending-charity/
 date: "2010-10-15"
-tags: ["ideas"]
-slug: "non-profit-idea-neverending-charity"
 description: "A quick non-profit idea -- what if you accepted donations, then paid out interest generated each month to a user-voted charity?"
+slug: "non-profit-idea-neverending-charity"
+tags: ["ideas"]
+title: "Non-Profit Idea: Neverending Charity"
 ---
 
 

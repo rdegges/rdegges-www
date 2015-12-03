@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /motivation-io/
 title: "motivation.io"
 date: "2013-04-16"
 tags: ["programming"]

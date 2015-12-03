@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /writing-is-hard/
 title: "Writing is Hard"
 date: "2010-02-12"
 tags: ["personal development"]

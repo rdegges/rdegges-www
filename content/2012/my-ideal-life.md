@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-ideal-life/
 title: "My Ideal Life"
 date: "2012-01-18"
 tags: ["personal development"]

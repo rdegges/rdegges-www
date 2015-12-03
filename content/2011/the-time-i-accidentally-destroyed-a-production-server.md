@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-time-i-accidentally-destroyed-a-production-server/
 title: "The Time I Accidentally Destroyed a Production Server"
 date: "2011-04-30"
 tags: ["programming", "devops"]

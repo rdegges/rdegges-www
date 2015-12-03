@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /service-oriented-side-effects/
 title: "Service Oriented Side Effects"
 date: "2012-09-28"
 tags: ["programming"]

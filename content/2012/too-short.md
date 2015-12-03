@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /too-short/
 title: "Too Short"
 date: "2012-10-23"
 tags: ["personal development"]

@@ -1,9 +1,11 @@
 ---
-title: "Deployment System Requirements"
+aliases:
+  - /deployment-system-requirements/
 date: "2010-12-18"
-tags: ["programming"]
-slug: "deployment-system-requirements"
 description: "Just some personal thoughts to myself about what my continuous deployment systems need to look like to be successful."
+tags: ["programming"]
+title: "Deployment System Requirements"
+slug: "deployment-system-requirements"
 ---
 
 

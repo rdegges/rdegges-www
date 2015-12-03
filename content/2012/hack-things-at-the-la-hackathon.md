@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /hack-things-at-the-la-hackathon/
 title: "Hack Things at the LA Hackathon"
 date: "2012-10-22"
 tags: ["programming"]

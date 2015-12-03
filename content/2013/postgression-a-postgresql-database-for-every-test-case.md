@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /postgression-a-postgresql-database-for-every-test-case/
 title: "postgression - A PostgreSQL Database for Every Test Case"
 date: "2013-01-20"
 tags: ["programming"]

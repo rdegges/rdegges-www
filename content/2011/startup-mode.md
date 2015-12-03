@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /startup-mode/
 title: "Startup Mode"
 date: "2011-01-06"
 tags: ["programming", "telephony", "startups"]

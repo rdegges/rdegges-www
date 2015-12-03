@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /what-i-do-at-work/
 title: "What I Do At Work"
 date: "2010-08-15"
 tags: ["programming", "telephony"]

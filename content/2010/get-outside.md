@@ -1,9 +1,11 @@
 ---
-title: "Get Outside"
+aliases:
+  - /get-outside/
 date: "2010-02-13"
-tags: ["programming"]
-slug: "get-outside"
 description: "Are you a programmer?  GET OUTSIDE MORE!  Seriously dude.  It's good for you!"
+tags: ["programming"]
+title: "Get Outside"
+slug: "get-outside"
 ---
 
 

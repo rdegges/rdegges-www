@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /service-oriented-problems/
 title: "Service Oriented Problems"
 date: "2012-10-01"
 tags: ["programming"]

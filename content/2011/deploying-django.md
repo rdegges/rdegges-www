@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /deploying-django/
 title: "Deploying Django"
 date: "2011-10-30"
 tags: ["programming", "devops", "python", "django"]

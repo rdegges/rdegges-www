@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /being-awesome/
 title: "Being Awesome"
 date: "2012-12-10"
 tags: ["personal development"]

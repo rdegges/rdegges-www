@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2011-yearly-goals-update-1/
 title: "2011 Yearly Goals Update 1"
 date: "2011-04-24"
 tags: ["personal development"]

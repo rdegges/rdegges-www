@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /hack-everything-to-pieces/
 title: "Hack Everything ... To Pieces!"
 date: "2012-06-12"
 tags: ["programming"]

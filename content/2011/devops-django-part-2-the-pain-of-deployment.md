@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /devops-django-part-2-the-pain-of-deployment/
 title: "DevOps Django - Part 2 - The Pain of Deployment"
 date: "2011-12-12"
 tags: ["programming", "devops", "python", "django"]

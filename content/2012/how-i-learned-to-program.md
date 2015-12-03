@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-i-learned-to-program/
 title: "How I Learned to Program"
 date: "2012-02-03"
 tags: ["programming"]

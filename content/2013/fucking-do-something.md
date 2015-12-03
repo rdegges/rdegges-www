@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /fucking-do-something/
 title: "Fucking Do Something!"
 date: "2013-10-21"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /dangerous-people/
 title: "Dangerous People"
 date: "2012-10-03"
 tags: ["programming"]

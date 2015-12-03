@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-positive-programmer/
 title: "The Positive Programmer"
 date: "2013-03-26"
 tags: ["personal development", "programming"]

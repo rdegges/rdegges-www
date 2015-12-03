@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /system76-bonobo-ubuntu-laptop-review/
 title: "System76 'Bonobo' Ubuntu Laptop Review"
 date: "2011-12-14"
 tags: ["review"]

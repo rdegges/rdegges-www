@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /building-a-better-body/
 title: "Building a Better Body"
 date: "2011-04-03"
 tags: ["personal development"]

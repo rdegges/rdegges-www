@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /why-you-might-enjoy-using-dnsimple/
 title: "Why You Might Enjoy Using DNSimple"
 date: "2012-11-27"
 tags: ["reviews"]

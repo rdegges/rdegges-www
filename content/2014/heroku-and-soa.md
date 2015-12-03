@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /heroku-and-soa/
 title: "Heroku and SOA"
 date: "2014-06-04"
 tags: ["programming", "devops"]

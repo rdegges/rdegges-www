@@ -1,9 +1,11 @@
 ---
-title: "A Technical Introduction to the Asterisk Gateway Interface (AGI)"
+aliases:
+  - /a-technical-introduction-to-the-asterisk-gateway-interface-agi/
 date: "2010-02-16"
-tags: ["programming", "telephony", "asterisk"]
-slug: "a-technical-introduction-to-the-asterisk-gateway-interface-agi"
 description: "Interested in the Asterisk AGI?  This article covers the AGI from the ground up: what it does, how it works, and when you should use it."
+slug: "a-technical-introduction-to-the-asterisk-gateway-interface-agi"
+tags: ["programming", "telephony", "asterisk"]
+title: "A Technical Introduction to the Asterisk Gateway Interface (AGI)"
 ---
 
 

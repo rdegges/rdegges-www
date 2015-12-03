@@ -1,9 +1,11 @@
 ---
-title: "5 Ways to Save Your Company Money by Switching to Asterisk"
+aliases:
+  - /5-ways-to-save-your-company-money-by-switching-to-asterisk/
 date: "2010-03-11"
-tags: ["telephony", "asterisk"]
-slug: "5-ways-to-save-your-company-money-by-switching-to-asterisk"
 description: "5 quick ways you can use Asterisk to save your company money."
+slug: "5-ways-to-save-your-company-money-by-switching-to-asterisk"
+tags: ["telephony", "asterisk"]
+title: "5 Ways to Save Your Company Money by Switching to Asterisk"
 ---
 
 

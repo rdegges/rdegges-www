@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /time-off/
 title: "Time Off"
 date: "2012-11-25"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-simplest-way-to-compress-html-in-django/
 title: "The Simplest Way to Compress HTML in Django"
 date: "2012-03-04"
 tags: ["programming", "python", "django"]

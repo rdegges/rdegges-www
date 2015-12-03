@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /finding-your-passion/
 title: "Finding Your Passion"
 date: "2015-01-20"
 tags: ["personal development"]

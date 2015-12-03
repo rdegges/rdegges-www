@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-experience-as-a-new-developer-evangelist/
 title: "My Experience as a New Developer Evangelist"
 date: "2014-02-22"
 tags: ["startups", "programming", "personal development"]

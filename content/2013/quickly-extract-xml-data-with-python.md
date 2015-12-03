@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /quickly-extract-xml-data-with-python/
 title: "Quickly Extract XML Data with Python"
 date: "2013-09-04"
 tags: ["programming", "python"]

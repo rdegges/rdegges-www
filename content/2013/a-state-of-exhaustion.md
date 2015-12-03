@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /a-state-of-exhaustion/
 title: "A State of Exhaustion"
 date: "2013-03-24"
 tags: ["personal development"]

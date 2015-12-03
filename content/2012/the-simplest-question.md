@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-simplest-question/
 title: "The Simplest Question"
 date: "2012-09-27"
 tags: ["personal development"]

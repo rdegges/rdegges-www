@@ -1,8 +1,10 @@
 ---
-title: "Asterisk Expression Truthiness"
+aliases:
+  - /asterisk-expression-truthiness/
 date: "2010-08-18"
-tags: ["programming", "telephony", "asterisk"]
 slug: "asterisk-expression-truthiness"
+tags: ["programming", "telephony", "asterisk"]
+title: "Asterisk Expression Truthiness"
 description: "A quick look at what Asterisk considers 'truth'.  We'll look at source code and plenty of examples."
 ---
 

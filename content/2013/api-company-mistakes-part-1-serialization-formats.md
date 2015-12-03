@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /api-company-mistakes-part-1-serialization-formats/
 title: "API Company Mistakes - Part 1 - Serialization Formats"
 date: "2013-03-25"
 tags: ["programming", "startups"]

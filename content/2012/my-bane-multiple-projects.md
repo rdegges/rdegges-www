@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-bane-multiple-projects/
 title: "My Bane - Multiple Projects"
 date: "2012-10-13"
 tags: ["personal development"]

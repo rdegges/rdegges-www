@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /why-i-love-basic-auth/
 title: "Why I Love Basic Auth"
 date: "2015-03-23"
 slug: "why-i-love-basic-auth"

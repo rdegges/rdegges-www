@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /making-the-world-a-little-bit-better/
 title: "Making the World a Little Bit Better"
 date: "2014-01-22"
 tags: ["personal development"]

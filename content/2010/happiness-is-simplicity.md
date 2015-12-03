@@ -1,9 +1,11 @@
 ---
-title: "Happiness is Simplicity"
+aliases:
+  - /happiness-is-simplicity/
 date: "2010-09-10"
-tags: ["personal development"]
-slug: "happiness-is-simplicity"
 description: "I just had a realization: what makes me happy is the simple things in life.  This is my story."
+slug: "happiness-is-simplicity"
+tags: ["personal development"]
+title: "Happiness is Simplicity"
 ---
 
 

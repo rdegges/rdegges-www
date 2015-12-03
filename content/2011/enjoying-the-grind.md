@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /enjoying-the-grind/
 title: "Enjoying the Grind"
 date: "2011-06-06"
 tags: ["personal development"]

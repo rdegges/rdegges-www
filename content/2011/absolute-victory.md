@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /absolute-victory/
 title: "Absolute Victory"
 date: "2011-07-17"
 tags: ["personal development"]

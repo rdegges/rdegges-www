@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /i-want-to-be-a-renaissance-man/
 title: "I Want to Be a Renaissance Man"
 date: "2011-05-30"
 tags: ["personal development"]

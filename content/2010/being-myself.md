@@ -1,9 +1,11 @@
 ---
-title: "Being Myself"
+aliases:
+  - /being-myself/
 date: "2010-12-02"
-tags: "personal development"
-slug: "being-myself"
 description: "I've been pretty lame lately, constantly working to please other people.  But not anymore!"
+slug: "being-myself"
+tags: "personal development"
+title: "Being Myself"
 ---
 
 

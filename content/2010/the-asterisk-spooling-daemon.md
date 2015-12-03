@@ -1,9 +1,11 @@
 ---
-title: "The Asterisk Spooling Daemon"
+aliases:
+  - /the-asterisk-spooling-daemon/
 date: "2010-06-06"
-tags: ["programming", "telephony", "asterisk", "c"]
-slug: "the-asterisk-spooling-daemon"
 description: "An informal code review and look at the Asterisk call file daemon (pbx_spool.so)."
+slug: "the-asterisk-spooling-daemon"
+tags: ["programming", "telephony", "asterisk", "c"]
+title: "The Asterisk Spooling Daemon"
 ---
 
 

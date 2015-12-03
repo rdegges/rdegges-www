@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /what-im-doing-in-2012/
 title: "What I'm Doing in 2012"
 date: "2012-01-01"
 tags: ["personal development"]

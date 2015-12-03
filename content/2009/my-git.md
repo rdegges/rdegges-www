@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-git/
 date: "2009-12-04"
 description: "A short, personal review of Scott Chacon's new book: Pro Git.  TLDR?  It's awesome, and you should read it."
 slug: "my-git"

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /django-and-ssl/
 title: "Django and SSL"
 date: "2012-05-31"
 tags: ["programming", "python", "django"]

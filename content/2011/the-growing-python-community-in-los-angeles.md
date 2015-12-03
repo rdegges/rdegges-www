@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-growing-python-community-in-los-angeles/
 title: "The Growing Python Community in Los Angeles"
 date: "2011-07-24"
 tags: ["programming"]

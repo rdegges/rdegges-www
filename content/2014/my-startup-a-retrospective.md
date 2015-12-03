@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-startup-a-retrospective/
 title: "My Startup, A Retrospective"
 date: "2014-01-31"
 tags: ["startups"]

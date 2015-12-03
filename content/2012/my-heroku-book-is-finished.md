@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-heroku-book-is-finished/
 title: "My Heroku Book is Finished"
 date: "2012-09-10"
 tags: ["programming"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /programming-innocence/
 title: "Programming Innocence"
 date: "2011-01-11"
 tags: ["programming", "personal development"]

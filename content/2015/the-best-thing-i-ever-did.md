@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-best-thing-i-ever-did/
 title: "The Best Thing I Ever Did"
 date: "2015-01-25"
 slug: "the-best-thing-i-ever-did"

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /some-constants/
 title: "Some Constants"
 date: "2012-10-14"
 tags: ["personal development"]

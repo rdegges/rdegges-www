@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /devops-django-part-4-choosing-heroku/
 title: "DevOps Django - Part 4 - Choosing Heroku"
 date: "2011-12-30"
 tags: ["programming", "devops", "python", "django"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /building-a-heroku-addon-planning/
 title: "Building a Heroku Addon - Planning"
 date: "2015-04-22"
 tags: ["programming", "devops"]

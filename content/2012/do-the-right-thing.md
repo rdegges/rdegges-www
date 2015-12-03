@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /do-the-right-thing/
 title: "Do the Right Thing"
 date: "2012-03-20"
 tags: ["personal development"]

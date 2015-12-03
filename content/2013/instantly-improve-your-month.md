@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /instantly-improve-your-month/
 title: "Instantly Improve Your Month"
 date: "2013-12-16"
 tags: ["personal development"]

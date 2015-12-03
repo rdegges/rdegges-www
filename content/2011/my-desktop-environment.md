@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-desktop-environment/
 title: "My Desktop Environment"
 date: "2011-02-12"
 tags: ["programming"]

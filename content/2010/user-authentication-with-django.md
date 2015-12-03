@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /user-authentication-with-django/
 title: "User Authentication With Django"
 date: "2010-02-17"
 tags: ["programming", "python", "django"]

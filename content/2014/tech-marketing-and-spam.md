@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /tech-marketing-and-spam/
 title: "Tech Marketing and Spam"
 date: "2014-06-05"
 tags: ["programming"]

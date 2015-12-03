@@ -1,9 +1,11 @@
 ---
-title: "How to Reset Your Sleep Schedule, Seriously"
+aliases:
+  - /how-to-reset-your-sleep-schedule-seriously/
 date: "2010-09-04"
-tags: ["life hacks"]
-slug: "how-to-reset-your-sleep-schedule-seriously"
 description: "Want to reset your sleep cycle so you can wake up in the morning when the sun rises?  Try going on a camping trip!"
+slug: "how-to-reset-your-sleep-schedule-seriously"
+tags: ["life hacks"]
+title: "How to Reset Your Sleep Schedule, Seriously"
 ---
 
 

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-done-list/
 title: "My 'Done' List"
 date: "2011-12-25"
 tags: ["programming"]

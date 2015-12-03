@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /merciless/
 title: "Merciless"
 date: "2012-02-26"
 tags: ["personal development"]

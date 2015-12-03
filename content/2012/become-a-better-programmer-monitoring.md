@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /become-a-better-programmer-monitoring/
 title: "Become a Better Programmer - Monitoring"
 date: "2012-08-26"
 tags: ["programming"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-use-and-abuse-of-caffeine/
 title: "My Use (and Abuse) of Caffeine"
 date: "2011-09-29"
 tags: ["personal development"]

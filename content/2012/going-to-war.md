@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /going-to-war/
 title: "Going to War"
 date: "2012-01-07"
 tags: ["personal development"]

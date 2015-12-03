@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /my-new-office/
 title: "My New Office"
 date: "2011-03-16"
 slug: "my-new-office"

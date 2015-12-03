@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /never-stop-hacking/
 title: "Never Stop Hacking"
 date: "2012-04-16"
 tags: ["personal development", "programming"]

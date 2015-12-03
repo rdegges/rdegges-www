@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /sacrifice/
 title: "Sacrifice"
 date: "2013-03-28"
 tags: ["personal development"]

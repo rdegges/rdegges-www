@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /choices-choices/
 title: "Choices, Choices"
 date: "2012-07-02"
 tags: ["personal development"]

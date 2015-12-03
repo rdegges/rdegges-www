@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /two-months-in/
 title: "Two Months In"
 date: "2012-08-22"
 tags: ["startups"]

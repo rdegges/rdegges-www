@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /productivity-and-calmness/
 title: "Productivity and Calmness"
 date: "2013-02-09"
 tags: ["personal development"]

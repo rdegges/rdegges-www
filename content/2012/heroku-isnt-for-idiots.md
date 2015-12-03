@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /heroku-isnt-for-idiots/
 title: "Heroku Isn't for Idiots"
 date: "2012-06-03"
 tags: ["programming"]

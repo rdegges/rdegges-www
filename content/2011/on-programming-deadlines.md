@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /on-programming-deadlines/
 title: "On Programming Deadlines"
 date: "2011-06-23"
 tags: ["programming"]

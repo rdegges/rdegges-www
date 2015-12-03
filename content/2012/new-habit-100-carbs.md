@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /new-habit-100-carbs/
 title: "New Habit - 100 Carbs"
 date: "2012-01-03"
 slug: "new-habit-100-carbs"

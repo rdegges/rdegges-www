@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /do-stuff-have-fun/
 title: "Do Stuff, Have Fun"
 date: "2012-03-23"
 tags: ["personal development"]

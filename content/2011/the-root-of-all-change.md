@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /the-root-of-all-change/
 title: "The Root of all Change"
 date: "2011-07-16"
 tags: ["personal development"]

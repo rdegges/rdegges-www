@@ -1,9 +1,11 @@
 ---
-title: "Python Docstring Symmetry"
+aliases:
+  - /python-docstring-symmetry/
 date: "2010-08-17"
-tags: ["programming", "python"]
-slug: "python-docstring-symmetry"
 description: "A short PEP-257 rant about docstring style."
+slug: "python-docstring-symmetry"
+tags: ["programming", "python"]
+title: "Python Docstring Symmetry"
 ---
 
 

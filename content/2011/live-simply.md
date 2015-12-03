@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /live-simply/
 title: "Live Simply"
 date: "2011-09-05"
 tags: ["personal development"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /devops-django-part-1-goals/
 title: "DevOps Django - Part 1 - Goals"
 date: "2011-12-05"
 tags: ["programming", "devops", "python", "django"]

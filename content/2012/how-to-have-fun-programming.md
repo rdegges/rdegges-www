@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-to-have-fun-programming/
 title: "How to Have Fun Programming"
 date: "2012-06-02"
 tags: ["programming"]

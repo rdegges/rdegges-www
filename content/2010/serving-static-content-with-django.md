@@ -1,9 +1,11 @@
 ---
-title: "Serving Static Content With Django"
+aliases:
+  - /serving-static-content-with-django/
 date: "2010-07-04"
-tags: ["programming", "python", "django"]
-slug: "serving-static-content-with-django"
 description: "A quick article on serving static content with Django."
+slug: "serving-static-content-with-django"
+tags: ["programming", "python", "django"]
+title: "Serving Static Content With Django"
 ---
 
 

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /simplifying-my-jenkins-work-flow/
 title: "Simplifying My Jenkins Work Flow"
 date: "2011-06-01"
 tags: ["devops"]

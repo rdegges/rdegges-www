@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /automation-as-motivation/
 title: "Automation as Motivation"
 date: "2012-05-21"
 tags: ["personal development"]

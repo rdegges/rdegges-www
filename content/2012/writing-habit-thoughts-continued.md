@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /writing-habit-thoughts-continued/
 title: "Writing Habit -- Thoughts (continued)"
 date: "2012-03-05"
 tags: ["personal development"]

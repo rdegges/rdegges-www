@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /how-hard-can-you-work/
 title: "How Hard Can You Work?"
 date: "2013-07-18"
 tags: ["personal development", "programming"]

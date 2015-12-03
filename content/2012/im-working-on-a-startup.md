@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /im-working-on-a-startup/
 title: "I'm Working on a Startup"
 date: "2012-04-08"
 tags: ["startups"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /on-business-guys/
 title: "On Business Guys"
 date: "2011-09-18"
 tags: ["startups", "rant"]

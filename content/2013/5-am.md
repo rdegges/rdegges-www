@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /5-am/
 title: "5 AM"
 date: "2013-05-22"
 tags: ["personal development"]

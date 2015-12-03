@@ -1,9 +1,11 @@
 ---
-title: "Auto Generate Forms with Django's ModelForm"
+aliases:
+  - /auto-generate-forms-with-djangos-modelform/
 date: "2010-03-12"
-tags: ["programming", "python", "django"]
-slug: "auto-generate-forms-with-djangos-modelform"
 description: "Django's ModelForm class is pretty useful.  Here we'll take a quick look at using ModelForm appropriately."
+slug: "auto-generate-forms-with-djangos-modelform"
+tags: ["programming", "python", "django"]
+title: "Auto Generate Forms with Django's ModelForm"
 ---
 
 

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /its-all-perspective/
 title: "It's All Perspective"
 date: "2013-03-31"
 tags: ["personal development"]

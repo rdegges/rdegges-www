@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /for-loops-in-node/
 title: "For Loops in Node"
 date: "2014-09-23"
 tags: ["programming"]

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /some-thoughts-on-bitcoin/
 title: "Some Thoughts on Bitcoin"
 date: "2013-04-28"
 tags: ["bitcoin"]

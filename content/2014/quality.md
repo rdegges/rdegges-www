@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /quality/
 title: "Quality"
 date: "2014-05-30"
 tags: ["personal development", "programming"]

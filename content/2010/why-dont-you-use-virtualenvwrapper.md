@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /why-dont-you-use-virtualenvwrapper/
 title: "Why Don't You Use virtualenvwrapper?"
 date: "2010-09-08"
 tags: ["programming", "python"]
