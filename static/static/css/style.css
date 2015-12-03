@@ -1,6 +1,10 @@
 /**
  * General element styling.
  */
+code {
+  background-color: #FFFFFF;
+  color: #B10000;
+}
 
 /**
  * Header styling.
@@ -86,6 +90,19 @@ nav a:visited {
   font-family: 'Raleway', sans-serif;
 }
 
+.index .intro img {
+  max-width: 10em;
+}
+
+.index .jumbotron {
+  background-color: #FFF;
+  text-align: center;
+}
+
+.index main {
+  margin-top: -2em;
+}
+
 .index main ul {
   list-style-type: none;
   margin: 0em;
@@ -135,4 +152,127 @@ footer p a,
 footer p a:hover,
 footer p a:visited {
   color: #515050;
+}
+
+/**
+ * Mailchimp form styling.
+ */
+.mailchimp-subscribe {
+  text-align: center;
+}
+
+.mailchimp-subscribe button {
+  background-color: #FFF;
+  color: #515050;
+}
+
+.mailchimp-subscribe button:active,
+.mailchimp-subscribe button:hover {
+  background-color: #515050;
+}
+
+/**
+ * Article page styling.
+ */
+.article article {
+  margin-top: -3em;
+}
+
+.article header {
+  margin-bottom: 3em;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  color: #515050;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.article h1 {
+  font-size: 2.5em;
+}
+
+.article h2 {
+  font-size: 2.3em;
+}
+
+.article h3 {
+  font-size: 2.1em;
+}
+
+.article h4 {
+  font-size: 1.9em;
+}
+
+.article h5 {
+  font-size: 1.7em;
+}
+
+.article h6 {
+  font-size: 1.5em;
+}
+
+.article {
+  color: #515050;
+  font-family: 'Sanchez', serif;
+  font-size: 1.3em;
+}
+
+.article p {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.article blockquote {
+  padding-bottom: 0em;
+  padding-top: 0em;
+}
+
+.article blockquote,
+.article blockquote p {
+  text-align: left !important;
+}
+
+.article blockquote,
+.article img,
+.article ol,
+.article pre,
+.article ul {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.article img {
+  display: block;
+  margin: auto;
+  margin-bottom: 2.5em !important;
+  margin-top: 2.5em !important;
+  max-width: 100%;
+}
+
+.article blockquote,
+.article pre {
+  margin-bottom: 2.5em;
+  margin-top: 2.5em;
+}
+
+.article .subscribe {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.article a,
+.article a:link,
+.article a:visited,
+.article a:hover,
+.article a:active {
+  color: #B10000;
+  text-decoration: underline;
 }
