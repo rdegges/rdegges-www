@@ -3,9 +3,9 @@
   {{ partial "head.html" . }}
   <body>
     {{ partial "header.html" . }}
-    <div class="container">
+    <div class="container article">
       <div class="row">
-        <main>
+        <main class="col-xs-offset-2 col-xs-8">
           <article>
             <header>
               <h1>{{ .Title }}</h1>
@@ -13,7 +13,7 @@
             {{ .Content }}
             <section class="subscribe">
               <p>
-                PS:
+                <b>PS</b>:
                 If you read this far, you might want to follow me on
                 <a href="https://twitter.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Randall Degges on Twitter" type="text/html">twitter</a> and
                 <a href="https://github.com/rdegges" hreflang="{{ .Site.LanguageCode }}" title="Randall Degges on Github" type="text/html">github</a>,
