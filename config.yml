@@ -23,3 +23,6 @@ params:
       url: "https://speakerdeck.com/rdegges"
     - title: "Email"
       url: "mailto:r@rdegges.com"
+author:
+  name: "Randall Degges"
+  email: "r@rdegges.com"
