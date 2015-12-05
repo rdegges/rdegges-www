@@ -3,8 +3,6 @@ languageCode: "en-us"
 title: "Randall Degges"
 params:
   author: "Randall Degges"
-  copyrightStart: "2009"
-  copyrightStop: "2015"
   description: "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
   email: "r@rdegges.com"
   subtitle: "Random Thoughts of a Happy Programmer"
