@@ -12,8 +12,7 @@
   "license": "Unlicense",
   "private": true,
   "ignore": [
-    "**/.*",
-    "static/static/components",
+    "static/static/components"
   ],
   "dependencies": {
     "bootswatch": "~3.3.6"
