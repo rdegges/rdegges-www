@@ -1,0 +1,21 @@
+{
+  "name": "rdegges-www",
+  "homepage": "https://github.com/rdegges/rdegges-www",
+  "authors": [
+    "Randall Degges <r@rdegges.com>"
+  ],
+  "description": "My personal website and blog.",
+  "keywords": [
+    "personal",
+    "website"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "static/static/components",
+  ],
+  "dependencies": {
+    "bootswatch": "~3.3.6"
+  }
+}
