@@ -28,4 +28,8 @@ organized and structured.
 To build the site, simply run `hugo` in the project directory.
 
 To build the site for local development purposes, run `hugo server --watch` --
-then open http://localhost:1313 to view the site.
+then open [http://localhost:1313][] to view the site.
+
+
+  [Hugo]: http://gohugo.io/ "Hugo"
+  [http://localhost:1313]: http://localhost:1313 "Localhost"
