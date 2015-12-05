@@ -10,6 +10,9 @@ is really awesome.
 
 You need to have Hugo installed before working with this site.
 
+You also need to have [Bower][] installed -- this is what installs and manages
+the client-side dependencies, like Boostrap, jQuery, etc.
+
 
 ## Theme
 
@@ -32,4 +35,5 @@ then open [http://localhost:1313][] to view the site.
 
 
   [Hugo]: http://gohugo.io/ "Hugo"
+  [Bower]: http://bower.io/ "Bower"
   [http://localhost:1313]: http://localhost:1313 "Localhost"
