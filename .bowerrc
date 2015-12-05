@@ -1,0 +1,5 @@
+{
+  "analytics": true,
+  "directory": "static/static/components",
+  "strict-ssl": true
+}
