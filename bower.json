@@ -17,6 +17,8 @@
   "dependencies": {
     "bootswatch": "~3.3.6",
     "html5shiv": "~3.7.3",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6"
   }
 }
