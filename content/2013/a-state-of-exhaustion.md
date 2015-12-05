@@ -111,7 +111,7 @@ more creative tasks, and reserve the second half of my day (post-workout) for
 I'll let you know how it goes.
 
 
-  [Skeleton Hanging Sketch]: /static/blog/images/2013/skeleton-hanging-sketch.png "Skeleton Hanging Sketch"
+  [Skeleton Hanging Sketch]: /static/images/2013/skeleton-hanging-sketch.png "Skeleton Hanging Sketch"
   [Alven's]: http://zaidox.com/ "Alven Zaidos' Personal Website"
   [wife]: http://hardlyfunny.com/ "Hardly Funny"
   [pomodoro technique]: http://www.amazon.com/gp/product/1934356506/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1934356506&linkCode=as2&tag=rdegges-20 "The Pomodoro Technique"

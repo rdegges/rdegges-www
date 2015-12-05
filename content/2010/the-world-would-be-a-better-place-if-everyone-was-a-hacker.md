@@ -77,4 +77,4 @@ their surroundings, and actively participate in their community, amazing things
 happen.
 
 
-  [Earth Sketch]: /static/blog/images/2010/earth-sketch.png "Earth Sketch"
+  [Earth Sketch]: /static/images/2010/earth-sketch.png "Earth Sketch"

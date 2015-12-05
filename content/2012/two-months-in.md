@@ -170,7 +170,7 @@ Overall, the past two months have been pretty epic.  I've had a lot of fun,
 gotten a bunch of stuff done, and had a ton of fun along the way.
 
 
-  [Samurai in Robes Sketch]: /static/blog/images/2012/samurai-in-robes-sketch.png "Samurai in Robes Sketch"
+  [Samurai in Robes Sketch]: /static/images/2012/samurai-in-robes-sketch.png "Samurai in Robes Sketch"
   [startup]: https://www.telephonyresearch.com/ "Telephony Research"
   [GitHub]: https://github.com/ "GitHub"
   [37 Signals]: http://37signals.com/ "37 Signals"

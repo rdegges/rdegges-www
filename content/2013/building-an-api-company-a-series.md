@@ -191,7 +191,7 @@ me via:
 *Let's do this!*
 
 
-  [Bridge Sketch]: /static/blog/images/2013/bridge-sketch.jpg "Bridge Sketch"
+  [Bridge Sketch]: /static/images/2013/bridge-sketch.jpg "Bridge Sketch"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"
   [Twilio]: http://www.twilio.com/ "Twilio"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"

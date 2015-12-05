@@ -542,7 +542,7 @@ anything else, feel free to [shoot me an email][], and I'll try to get back as
 quick as I can.
 
 
-  [Lock Sketch]: /static/blog/images/2010/lock-sketch.png "Lock Sketch"
+  [Lock Sketch]: /static/images/2010/lock-sketch.png "Lock Sketch"
   [Django]: http://www.djangoproject.com/ "Django"
   [official documentation]: http://docs.djangoproject.com/en/dev/topics/auth/ "Django Authentication Documentation"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

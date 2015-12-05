@@ -151,7 +151,7 @@ So...  Stay tuned!  More to come =)
 [find it here][].
 
 
-  [Retro Robot Sketch]: /static/blog/images/2015/retro-robot-sketch.jpg "Retro Robot Sketch"
+  [Retro Robot Sketch]: /static/images/2015/retro-robot-sketch.jpg "Retro Robot Sketch"
   [Heroku]: https://www.heroku.com/ "Heroku"
   [Heroku Isn't for Idiots]: http://www.rdegges.com/heroku-isnt-for-idiots/ "Heroku Isn't for Idiots"
   [The Heroku Hacker's Guide]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

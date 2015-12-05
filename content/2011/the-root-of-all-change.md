@@ -101,7 +101,7 @@ towards your daily goal--do it anyway, it adds up over time.  And that is the
 core way to make change.  *Consistency*.
 
 
-  [Tree Sketch]: /static/blog/images/2011/tree-sketch.png "Tree Sketch"
+  [Tree Sketch]: /static/images/2011/tree-sketch.png "Tree Sketch"
   [Talent Is Overrated]: http://www.amazon.com/gp/product/1591842948/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1591842948&linkCode=as2&tag=rdegges-20 "Talent Is Overrated"
   [Sebastian Marshall]: http://www.sebastianmarshall.com/ "Sebastian Marshall"
   [Do the Work]: http://www.amazon.com/gp/product/1936719010/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1936719010&linkCode=as2&tag=rdegges-20 "Do the Work"

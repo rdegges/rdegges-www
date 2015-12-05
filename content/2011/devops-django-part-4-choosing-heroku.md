@@ -309,7 +309,7 @@ it out.  It's called **The Heroku Hacker's Guide**, and you can buy it here:
 [http://www.theherokuhackersguide.com/][]
 
 
-  [Troll Sketch]: /static/blog/images/2011/troll-sketch.png "Troll Sketch"
+  [Troll Sketch]: /static/images/2011/troll-sketch.png "Troll Sketch"
   [first part]: {filename}/articles/2011/devops-django-part-1-goals.md "DevOps Django - Part 1 - Goals"
   [previous article]: {filename}/articles/2011/devops-django-part-3-the-heroku-way.md "DevOps Django - Part 3 - The Heroku Way"
   [Rackspace]: http://www.rackspacecloud.com/3149.html "Rackspace"

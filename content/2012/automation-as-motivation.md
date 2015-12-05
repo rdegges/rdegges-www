@@ -59,4 +59,4 @@ Next time I fall into a slump, I'm going to remember my overall goal of perfect
 automation, and get back to work.
 
 
-  [Robot Sketch]: /static/blog/images/2012/robot-sketch.png "Robot Sketch"
+  [Robot Sketch]: /static/images/2012/robot-sketch.png "Robot Sketch"

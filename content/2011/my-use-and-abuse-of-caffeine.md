@@ -197,7 +197,7 @@ I hope that one day, both my normal (un-caffeinated) and caffeinated self can
 be the same person.  I've got a lot of work to do.
 
 
-  [Caffeine Chart]: /static/blog/images/2011/caffeine-chart.png "Caffeine Chart"
+  [Caffeine Chart]: /static/images/2011/caffeine-chart.png "Caffeine Chart"
   [Caffeine]: http://en.wikipedia.org/wiki/Caffeine "Caffeine"
   [University of California, Santa Cruz]: http://www.ucsc.edu/ "UC Santa Cruz"
   [these]: http://www.wiredenergydrink.com/ "Wired Energy Drinks"

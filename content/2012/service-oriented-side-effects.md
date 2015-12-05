@@ -213,7 +213,7 @@ applications, you may want to check out my book:
 [Heroku's platform][] to build fast, small, independent web services.
 
 
-  [Robot Warrior Sketch]: /static/blog/images/2012/robot-warrior-sketch.png "Robot Warrior Sketch"
+  [Robot Warrior Sketch]: /static/images/2012/robot-warrior-sketch.png "Robot Warrior Sketch"
   [Service Oriented Architecture]: http://en.wikipedia.org/wiki/Service-oriented_architecture "Service Oriented Architecture"
   [message queues]: http://en.wikipedia.org/wiki/Message_queue "Message Queues"
   [RabbitMQ]: http://www.rabbitmq.com/ "RabbitMQ"

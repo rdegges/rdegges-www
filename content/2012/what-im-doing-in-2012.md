@@ -121,7 +121,7 @@ dream of mine, and something that would make me really proud of myself.
 Here's to a having a great, happy, relaxed, and interesting 2012.
 
 
-  [Dentist Wolf Meme]: /static/blog/images/2012/dentist-wolf-meme.png "Dentist Wolf Meme"
+  [Dentist Wolf Meme]: /static/images/2012/dentist-wolf-meme.png "Dentist Wolf Meme"
   [HabitForge]: http://habitforge.com/ "HabitForge"
   [writing habit]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
   [Gary Bernhardt]: https://www.destroyallsoftware.com/ "Gary Bernhardt"

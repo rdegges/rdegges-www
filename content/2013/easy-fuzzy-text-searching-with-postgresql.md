@@ -156,7 +156,7 @@ use `pg_trgm` and move on with your life >:)
 Got any questions?  Feel free to [shoot me an email][], would be happy to help.
 
 
-  [Monster in Disguise Sketch]: /static/blog/images/2013/monster-in-disguise-sketch.jpg "Monster in Disguise Sketch"
+  [Monster in Disguise Sketch]: /static/images/2013/monster-in-disguise-sketch.jpg "Monster in Disguise Sketch"
   [Heroku Postgres]: https://postgres.heroku.com/ "Heroku Postgres"
   [pg_trgm]: http://www.postgresql.org/docs/9.2/static/pgtrgm.html "PostgreSQL Fuzzy Text Searching"
   [Solr]: https://lucene.apache.org/solr/ "Apache Solr"

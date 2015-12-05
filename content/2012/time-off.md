@@ -43,4 +43,4 @@ Although it is common knowledge, I now see exactly how effective taking a break
 can be.  I'll definitely be doing this more frequently.
 
 
-  [Turkey Sketch]: /static/blog/images/2012/turkey-sketch.png "Turkey Sketch"
+  [Turkey Sketch]: /static/images/2012/turkey-sketch.png "Turkey Sketch"

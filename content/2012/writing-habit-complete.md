@@ -74,7 +74,7 @@ there's anything you'd like to know, or if you have any questions--feel free to
 [send me an email][].
 
 
-  [Scroll Sketch]: /static/blog/images/2012/scroll-sketch.png "Scroll Sketch"
+  [Scroll Sketch]: /static/images/2012/scroll-sketch.png "Scroll Sketch"
   [writing habit]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
   [learned]: {filename}/articles/2011/what-ive-learned-about-writing-so-far.md "What I've Learned About Writing (So Far)"
   [caffeine junkie]: {filename}/articles/2011/my-use-and-abuse-of-caffeine.md "My Use and Abuse of Caffeine"

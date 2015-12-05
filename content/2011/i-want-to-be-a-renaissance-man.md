@@ -67,6 +67,6 @@ As I begin to build my new life, I'll be sure to write about it.  The
 adventures are just beginning!
 
 
-  [DaVinci Sketch]: /static/blog/images/2011/davinci-sketch.png "DaVinci Sketch"
+  [DaVinci Sketch]: /static/images/2011/davinci-sketch.png "DaVinci Sketch"
   [Wolfenstein 3D]: http://en.wikipedia.org/wiki/Wolfenstein_3D "Wolfenstein 3D Wiki"
   [one-time pad]: http://en.wikipedia.org/wiki/One-time_pad "One-time Pad Encryption Wiki"

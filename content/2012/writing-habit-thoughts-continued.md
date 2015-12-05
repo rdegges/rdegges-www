@@ -148,7 +148,7 @@ journey is going.  Please send me an email ([r@rdegges.com][]), and let's
 keep in touch!
 
 
-  [Old Fashioned Writer Sketch]: /static/blog/images/2012/old-fashioned-writer-sketch.png "Old Fashioned Writer Sketch"
+  [Old Fashioned Writer Sketch]: /static/images/2012/old-fashioned-writer-sketch.png "Old Fashioned Writer Sketch"
   [writing]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
   [before]: {filename}/articles/2012/writing-habit-complete.md "Writing Habit -- Complete"
   [irc.oftc.net/#heapify]: irc://irc.oftc.net/#heapify "#heapify"

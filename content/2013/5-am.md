@@ -249,7 +249,7 @@ evaluate the overall results.
 Got any questions?  Feel free to [shoot me an email][].
 
 
-  [Luffy Sketch]: /static/blog/images/2013/luffy-sketch.jpg "Luffy Sketch"
+  [Luffy Sketch]: /static/images/2013/luffy-sketch.jpg "Luffy Sketch"
   [company]: https://www.telephonyresearch.com/ "Telephony Research"
   [The Pomodoro Technique]: http://www.amazon.com/gp/product/1934356506/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1934356506&linkCode=as2&tag=rdegges-20 "The Pomodoro Technique on Amazon"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

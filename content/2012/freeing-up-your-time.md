@@ -76,7 +76,7 @@ time, and clear your mind--spend a day automating all your basic needs--I
 guarantee you won't regret it.
 
 
-  [Samurai Meditating Sketch]: /static/blog/images/2012/samurai-meditating-sketch.png "Samurai Meditating"
+  [Samurai Meditating Sketch]: /static/images/2012/samurai-meditating-sketch.png "Samurai Meditating"
   [it all adds up]: http://www.youtube.com/watch?v=WO4tIrjBDkk "Inches Speech"
   [Amazon]: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=rdegges-20 "Amazon"
   [Ducksboard]: http://ducksboard.com/ "Ducksboard"

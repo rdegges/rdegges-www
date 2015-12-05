@@ -181,7 +181,7 @@ your application quicker and more precisely, complexity drops substantially).
 Regardless of how you write your applications, go hack something!  >:)
 
 
-  [Grim Reaper Smoking Sketch]: /static/blog/images/2012/grim-reaper-smoking-sketch.png "Grim Reaper Smoking Sketch"
+  [Grim Reaper Smoking Sketch]: /static/images/2012/grim-reaper-smoking-sketch.png "Grim Reaper Smoking Sketch"
   [last post]: {filename}/articles/2012/service-oriented-side-effects.md "Service Oriented Side Effects"
   [tumblr]: https://www.tumblr.com/ "Tumblr"
   [Django]: https://www.djangoproject.com/ "Django"

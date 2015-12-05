@@ -62,6 +62,6 @@ constantly building out new servers automatically, and we're willing to accept
 the associated risk.
 
 
-  [Arrow Sketch]: /static/blog/images/2011/arrow-sketch.png "Arrow Sketch"
+  [Arrow Sketch]: /static/images/2011/arrow-sketch.png "Arrow Sketch"
   [Jenkins]: http://jenkins-ci.org/ "Jenkins"
   [puppet]: https://puppetlabs.com/ "puppet"

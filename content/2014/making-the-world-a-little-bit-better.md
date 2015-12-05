@@ -188,5 +188,5 @@ surprised to learn how easy it can actually be! There's no need to wait, if you
 want to make the world a better place, just get out there and do it!
 
 
-  [Golden Gate Bridge Sketch]: /static/blog/images/2014/golden-gate-bridge-sketch.jpg "Golden Gate Bridge Sketch"
+  [Golden Gate Bridge Sketch]: /static/images/2014/golden-gate-bridge-sketch.jpg "Golden Gate Bridge Sketch"
   [The Tipping Point]: http://www.amazon.com/gp/product/0316316962/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0316316962&linkCode=as2&tag=rdegges-20 "The Tipping Point"

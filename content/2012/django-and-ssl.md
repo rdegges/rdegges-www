@@ -51,7 +51,7 @@ sure to use their new [SSL endpoint][] add-on.  The new SSL endpoint add-on
 makes using SSL as easy as possible.
 
 
-  [Hooded Figure Sketch]: /static/blog/images/2012/hooded-figure-sketch.png "Hooded Figure Sketch"
+  [Hooded Figure Sketch]: /static/images/2012/hooded-figure-sketch.png "Hooded Figure Sketch"
   [encrypting everything]: http://www.codinghorror.com/blog/2012/02/should-all-web-traffic-be-encrypted.html "Encrypt Everything"
   [StackOverflow]: http://stackoverflow.com/questions/8436666/how-to-make-python-on-heroku-https-only "Django + SSL"
   [PyPI]: http://pypi.python.org/pypi "PyPI"

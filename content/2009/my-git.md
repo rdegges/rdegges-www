@@ -148,7 +148,7 @@ really get the most out of my coding experiences.  Git has also made running an
 contributing to open source projects fun again, and that what it is all about.
 
 
-  [Pro Git Book Cover]: /static/blog/images/2009/pro-git-book-cover.png "Pro Git Book Cover"
+  [Pro Git Book Cover]: /static/images/2009/pro-git-book-cover.png "Pro Git Book Cover"
   [Scott Chacon]: http://scottchacon.com/ "Scott Chacon"
   [Pro Git]: http://www.amazon.com/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1430218339&linkCode=as2&tag=rdegges-20 "Pro Git"
   [Git]: http://git-scm.com/ "Git"

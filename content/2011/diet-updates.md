@@ -64,6 +64,6 @@ I'll post another update at the end of my second month, and hopefully be able
 to share more interesting results!
 
 
-  [Steak Sketch]: /static/blog/images/2011/steak-sketch.png "Steak Sketch"
+  [Steak Sketch]: /static/images/2011/steak-sketch.png "Steak Sketch"
   [wikipedia article]: http://en.wikipedia.org/wiki/Ketogenesis "Ketosis Wiki Page"
   [good summary]: http://forum.bodybuilding.com/showthread.php?t=132598293 "Ketosis Summary"

@@ -176,7 +176,7 @@ simplest of looping examples.
 Oh well!  Live and learn!
 
 
-  [Plague Sketch]: /static/blog/images/2014/plague-sketch.jpg "Plague Sketch"
+  [Plague Sketch]: /static/images/2014/plague-sketch.jpg "Plague Sketch"
   [express-stormpath]: https://docs.stormpath.com/nodejs/express/ "express-stormpath"
   [thepiratebay]: http://thepiratebay.se "The Pirate Bay"
   [async]: https://github.com/caolan/async "asyncjs"

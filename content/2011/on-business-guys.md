@@ -191,5 +191,5 @@ If you're a "business guy", instead of trying to find a "tech guy" to work
 with, consider working on yourself to become a "tech guy".
 
 
-  [Old Man Monster Sketch]: /static/blog/images/2011/old-man-monster-sketch.png "Old Man Monster Sketch"
+  [Old Man Monster Sketch]: /static/images/2011/old-man-monster-sketch.png "Old Man Monster Sketch"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"

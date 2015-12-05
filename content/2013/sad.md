@@ -85,7 +85,7 @@ build awesome things, and help others do the same!
 Be awesome to each other.
 
 
-  [Ichigo Hollow Sketch]: /static/blog/images/2013/ichigo-hollow-sketch.png "Ichigo Hollow Sketch"
+  [Ichigo Hollow Sketch]: /static/images/2013/ichigo-hollow-sketch.png "Ichigo Hollow Sketch"
   [this post]: http://harthur.wordpress.com/2013/01/24/771/ "Heather Arthur's Post"
   [Heather Arthur]: http://harthur.wordpress.com/ "Heather Arthur"
   [GitHub account]: https://github.com/harthur "Heather Arthur on GitHub"

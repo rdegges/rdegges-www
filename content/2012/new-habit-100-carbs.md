@@ -84,7 +84,7 @@ If you'd like to learn more about ketogenic diets, here are some good resources:
 -   My personal favorite, [A Guide to Ketosis][].
 
 
-  [Meat Sketch]: /static/blog/images/2012/meat-sketch.png "Meat Sketch"
+  [Meat Sketch]: /static/images/2012/meat-sketch.png "Meat Sketch"
   [writing habit]: {filename}/articles/2012/writing-habit-complete.md "Writing Habit Complete"
   [ketogenic diet]: http://en.wikipedia.org/wiki/Ketogenic_diet "Ketogenic Diet Wiki"
   [keto subreddit]: http://www.reddit.com/r/keto "Keto Reddit"

@@ -45,4 +45,4 @@ The next time you make a decision to do something, ask yourself that simple
 question, and keep yourself honest.
 
 
-  [Samurai in Hat Sketch]: /static/blog/images/2012/samurai-in-hat-sketch.png "Samurai in Hat Sketch"
+  [Samurai in Hat Sketch]: /static/images/2012/samurai-in-hat-sketch.png "Samurai in Hat Sketch"

@@ -171,10 +171,10 @@ You can check out all their systems on their main site:
 [http://www.system76.com/][]
 
 
-  [System76 Lid]: /static/blog/images/2011/system76-lid.png "System76 Lid"
-  [System76 Screen]: /static/blog/images/2011/system76-screen.png "System76 Screen"
-  [System76 Side]: /static/blog/images/2011/system76-side.png "System76 Side"
-  [System76 Keyboard]: /static/blog/images/2011/system76-keyboard.png "System76 Keyboard"
+  [System76 Lid]: /static/images/2011/system76-lid.png "System76 Lid"
+  [System76 Screen]: /static/images/2011/system76-screen.png "System76 Screen"
+  [System76 Side]: /static/images/2011/system76-side.png "System76 Side"
+  [System76 Keyboard]: /static/images/2011/system76-keyboard.png "System76 Keyboard"
   [amazon reviews]: http://www.amazon.com/gp/pdp/profile/A3E3Y9R7W5NAI8 "My Amazon Reviewer Profile"
   [System76 laptop]: https://www.system76.com/laptops/model/bonx6 "System76 Bonobo Laptop"
   [System76]: http://www.system76.com/home/ "System76 Ubuntu Systems"

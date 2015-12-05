@@ -83,5 +83,5 @@ So here goes nothing.
 Into the darkness we go.
 
 
-  [Berserk Sketch]: /static/blog/images/2012/berserk-sketch.png "Berserk Sketch"
+  [Berserk Sketch]: /static/images/2012/berserk-sketch.png "Berserk Sketch"
   [absolute victory]: {filename}/articles/2011/absolute-victory.md "Absolute Victory"

@@ -119,7 +119,7 @@ which clearly demonstrate how to both parse and generate XML.
 So the next time you're looking for a quick way to process XML, check out LXML.
 
 
-  [Lumberjack Sketch]: /static/blog/images/2010/lumberjack-sketch.png "Lumberjack Sketch"
+  [Lumberjack Sketch]: /static/images/2010/lumberjack-sketch.png "Lumberjack Sketch"
   [Django]: https://www.djangoproject.com/ "Django"
   [LXML]: http://lxml.de/ "LXML"
   [official tutorial]: http://lxml.de/tutorial.html "LXML Tutorial"

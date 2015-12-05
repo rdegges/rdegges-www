@@ -186,7 +186,7 @@ In addition to resetting your sleep schedule, you'll also get out of the house
 for a bit, and hopefully de-stress yourself for a couple days.
 
 
-  [Tent Sketch]: /static/blog/images/2010/tent-sketch.png "Tent Sketch"
+  [Tent Sketch]: /static/images/2010/tent-sketch.png "Tent Sketch"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"
   [Wisebread]: http://www.wisebread.com/how-to-naturally-reset-your-sleep-cycle-overnight/ "Wisebread on How to Naturally Reset Your SLeep Cycle"
   [Gigaom]: http://gigaom.com/collaboration/how-to-reset-your-body-clock/ "Gigaom on How to Reset Your Body Clock"

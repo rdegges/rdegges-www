@@ -46,4 +46,4 @@ It's a fork in the road--but I suppose everyone has to choose at one point or
 another.
 
 
-  [Old Man Sketch]: /static/blog/images/2012/old-man-sketch.png "Old Man Sketch"
+  [Old Man Sketch]: /static/images/2012/old-man-sketch.png "Old Man Sketch"

@@ -310,7 +310,7 @@ I hope the guidelines above were useful to you.  If you have any questions or
 suggestions, please leave a comment and I'll update the post as needed.
 
 
-  [Octocat]: /static/blog/images/2012/octocat.png "Octocat"
+  [Octocat]: /static/images/2012/octocat.png "Octocat"
   [project page generator]: https://github.com/blog/1081-instantly-beautiful-project-pages "GitHub Project Page Generator Documentation"
   [http://readthedocs.org/]: https://readthedocs.org/ "Read the Docs"
   [git-flow]: https://github.com/nvie/gitflow "git-flow"

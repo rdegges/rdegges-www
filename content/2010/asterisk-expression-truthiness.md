@@ -189,7 +189,7 @@ Got any questions?  Feel free to [shoot me an email][] or message me on
 [twitter][].
 
 
-  [Stephen Colbert Sketch]: /static/blog/images/2010/stephen-colbert-sketch.png "Stephen Colbert Sketch"
+  [Stephen Colbert Sketch]: /static/images/2010/stephen-colbert-sketch.png "Stephen Colbert Sketch"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [awesome book]: http://www.amazon.com/gp/product/0596517343/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0596517343&linkCode=as2&tag=rdegges-20 "Asterisk: The Definitive Guide"
   [expressions]: http://www.voip-info.org/wiki/view/Asterisk+Expressions "Asterisk Expressions Wiki Page"

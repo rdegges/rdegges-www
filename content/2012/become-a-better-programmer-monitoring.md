@@ -161,12 +161,12 @@ In future posts I'm hoping to write about other methods to becoming a better
 programmer.
 
 
-  [Grim Reaper Gesturing]: /static/blog/images/2012/grim-reaper-gesturing.png "Grim Reaper Gesturing"
+  [Grim Reaper Gesturing]: /static/images/2012/grim-reaper-gesturing.png "Grim Reaper Gesturing"
   [New Relic]: http://newrelic.com/ "NewRelic - Shit just got real for programmers."
-  [Oh Stop It You]: /static/blog/images/2012/oh-stop-it-you.png "Oh Stop It You"
-  [New Relic Map Screenshot]: /static/blog/images/2012/newrelic-map-screenshot.png "New Relic Map Screenshot"
-  [New Relic Pages Screenshot]: /static/blog/images/2012/newrelic-pages-screenshot.png "New Relic Pages Screenshot"
-  [New Relic Tasks Screenshot]: /static/blog/images/2012/newrelic-tasks-screenshot.png "New Relic Tasks Screenshot"
-  [New Relic Overview Screenshot]: /static/blog/images/2012/newrelic-overview-screenshot.png "New Relic Overview Screenshot"
-  [New Relic Web Screenshot]: /static/blog/images/2012/newrelic-web-screenshot.png "New Relic Web Screenshot"
-  [New Relic Task Breakdown Screenshot]: /static/blog/images/2012/newrelic-task-breakdown-screenshot.png "New Relic Task Breakdown Screenshot"
+  [Oh Stop It You]: /static/images/2012/oh-stop-it-you.png "Oh Stop It You"
+  [New Relic Map Screenshot]: /static/images/2012/newrelic-map-screenshot.png "New Relic Map Screenshot"
+  [New Relic Pages Screenshot]: /static/images/2012/newrelic-pages-screenshot.png "New Relic Pages Screenshot"
+  [New Relic Tasks Screenshot]: /static/images/2012/newrelic-tasks-screenshot.png "New Relic Tasks Screenshot"
+  [New Relic Overview Screenshot]: /static/images/2012/newrelic-overview-screenshot.png "New Relic Overview Screenshot"
+  [New Relic Web Screenshot]: /static/images/2012/newrelic-web-screenshot.png "New Relic Web Screenshot"
+  [New Relic Task Breakdown Screenshot]: /static/images/2012/newrelic-task-breakdown-screenshot.png "New Relic Task Breakdown Screenshot"

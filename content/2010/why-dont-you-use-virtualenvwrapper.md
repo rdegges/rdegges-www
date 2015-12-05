@@ -132,7 +132,7 @@ environments, which allow you to get really creative, and save yourself a LOT
 of time by automating common `virtualenv` tasks.
 
 
-  [Crumpled Paper Sketch]: /static/blog/images/2010/crumpled-paper-sketch.png "Crumpled Paper Sketch"
+  [Crumpled Paper Sketch]: /static/images/2010/crumpled-paper-sketch.png "Crumpled Paper Sketch"
   [virtualenv]: https://pypi.python.org/pypi/virtualenv "Virtualenv on PyPI"
   [here]: http://www.doughellmann.com/projects/virtualenvwrapper/ "Virtualenvwrapper"
   [documentation]: http://www.doughellmann.com/docs/virtualenvwrapper/ "Virtualenvwrapper Documentation"

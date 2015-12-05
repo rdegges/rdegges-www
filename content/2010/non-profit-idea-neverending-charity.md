@@ -128,5 +128,5 @@ leverages the power of the internet, large amounts of people, and banks to make
 the world a better place, one month at a time-forever.
 
 
-  [Waterfall Sketch]: /static/blog/images/2010/waterfall-sketch.png "Waterfall Sketch"
+  [Waterfall Sketch]: /static/images/2010/waterfall-sketch.png "Waterfall Sketch"
   [Moleskine notebook]: http://www.amazon.com/gp/product/8883701127/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=8883701127&linkCode=as2&tag=rdegges-20 "Moleskine Notebook"

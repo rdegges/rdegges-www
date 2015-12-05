@@ -95,13 +95,13 @@ Ideally, you should be using `virtualenv` with the infamous
 [virtualenvwrapper][].
 
 
-  [Python Sketch]: /static/blog/images/2011/python-sketch.png "Python Sketch"
+  [Python Sketch]: /static/images/2011/python-sketch.png "Python Sketch"
   [Pythonistas]: http://python.net/~goodger/projects/pycon/2007/idiomatic/presentation.html "Code Like a Pythonista"
   [GitHub]: https://github.com/ "GitHub"
   [Git]: http://git-scm.com/ "Git"
   [Vim]: http://www.vim.org/ "Vim"
   [pyflakes]: https://github.com/kevinw/pyflakes "pyflakes"
-  [pyflakes Screenshot]: /static/blog/images/2011/pyflakes-screenshot.png "pyflakes Screenshot"
+  [pyflakes Screenshot]: /static/images/2011/pyflakes-screenshot.png "pyflakes Screenshot"
   [Sphinx]: http://sphinx.pocoo.org/ "Sphinx"
   [pocoo]: http://www.pocoo.org/ "pocoo"
   [reStructuredText]: http://docutils.sourceforge.net/rst.html "reStructuredText"

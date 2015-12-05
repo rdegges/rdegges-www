@@ -334,7 +334,7 @@ examples in the VoIP info page as they have numerous examples and help
 available.
 
 
-  [Gate Sketch]: /static/blog/images/2010/gate-sketch.png "Gate Sketch"
+  [Gate Sketch]: /static/images/2010/gate-sketch.png "Gate Sketch"
   [AGI]: http://www.voip-info.org/wiki/view/Asterisk+AGI "Asterisk Gateway Interface Wiki Page"
   [Asterisk]: http://www.asterisk.org/ "Asterisk PBX"
   [Dial plan]: http://www.voip-info.org/tiki-index.php?page=Asterisk%20config%20extensions.conf "Asterisk Dial Plan Wiki Page"

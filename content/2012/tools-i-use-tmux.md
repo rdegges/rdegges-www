@@ -162,13 +162,13 @@ terminal work.
     read.
 
 
-  [Tools]: /static/blog/images/2012/tools.png "Tools"
+  [Tools]: /static/images/2012/tools.png "Tools"
   [tmux]: http://tmux.sourceforge.net/ "tmux"
   [GNU screen]: http://www.gnu.org/software/screen/ "GNU screen"
-  [tmux Multiple Windows]: /static/blog/images/2012/tmux-multiple-windows.png "tmux Multiple Windows"
-  [tmux Multiple Panes]: /static/blog/images/2012/tmux-multiple-panes.png "tmux Multiple Panes"
-  [tmux Gallery 1]: /static/blog/images/2012/tmux-gallery-1.png "tmux Gallery 1"
-  [tmux Gallery 2]: /static/blog/images/2012/tmux-gallery-2.png "tmux Gallery 2"
-  [tmux Gallery 3]: /static/blog/images/2012/tmux-gallery-3.png "tmux Gallery 3"
+  [tmux Multiple Windows]: /static/images/2012/tmux-multiple-windows.png "tmux Multiple Windows"
+  [tmux Multiple Panes]: /static/images/2012/tmux-multiple-panes.png "tmux Multiple Panes"
+  [tmux Gallery 1]: /static/images/2012/tmux-gallery-1.png "tmux Gallery 1"
+  [tmux Gallery 2]: /static/images/2012/tmux-gallery-2.png "tmux Gallery 2"
+  [tmux Gallery 3]: /static/images/2012/tmux-gallery-3.png "tmux Gallery 3"
   [tmux crash course]: http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course "tmux Crash Course"
   [tmux series]: http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/ "tmux Series"

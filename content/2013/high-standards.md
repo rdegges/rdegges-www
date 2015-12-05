@@ -101,4 +101,4 @@ Set high standards, ruthlessly pursue your goals, and respect yourself.
 Achieve great things, my friends.
 
 
-  [Samurai Tipping Hat Sketch]: /static/blog/images/2013/samurai-tipping-hat-sketch.jpg "Samurai Tipping Hat Sketch"
+  [Samurai Tipping Hat Sketch]: /static/images/2013/samurai-tipping-hat-sketch.jpg "Samurai Tipping Hat Sketch"

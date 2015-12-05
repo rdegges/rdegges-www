@@ -54,6 +54,6 @@ described above is more-or-less a form of it.  You may enjoy [this book][] on
 the topic (highly recommended).
 
 
-  [Monk Meditating Sketch]: /static/blog/images/2013/monk-meditating-sketch.png "Monk Meditating Sketch"
+  [Monk Meditating Sketch]: /static/images/2013/monk-meditating-sketch.png "Monk Meditating Sketch"
   [mindfulness meditation]: http://en.wikipedia.org/wiki/Mindfulness "Mindfulness"
   [this book]: http://www.amazon.com/gp/product/0807012394/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0807012394&linkCode=as2&tag=rdegges-20 "Mindfulness Meditation"

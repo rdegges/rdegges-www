@@ -63,7 +63,7 @@ Thanks for reading.
 -Randall
 
 
-  [The Heroku Hacker's Guide Cover]: /static/blog/images/2012/the-heroku-hackers-guide-cover.png "The Heroku Hacker's Guide Cover"
+  [The Heroku Hacker's Guide Cover]: /static/images/2012/the-heroku-hackers-guide-cover.png "The Heroku Hacker's Guide Cover"
   [a book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
   [Heroku]: http://www.heroku.com/ "Heroku"
   [puppet]: http://puppetlabs.com/ "Puppet"

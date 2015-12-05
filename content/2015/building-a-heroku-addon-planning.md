@@ -177,12 +177,12 @@ addon.
 So...  Stay tuned!  More to come soon!
 
 
-  [Robot with Chaingun Arm Sketch]: /static/blog/images/2015/robot-with-chaingun-arm-sketch.jpg "Robot with Chaingun Arm Sketch"
+  [Robot with Chaingun Arm Sketch]: /static/images/2015/robot-with-chaingun-arm-sketch.jpg "Robot with Chaingun Arm Sketch"
   [previous installment]: {filename}/articles/2015/building-a-heroku-addon.md "Building a Heroku Addon"
   [syslog drain]: https://devcenter.heroku.com/articles/log-drains "Heroku Log Drains"
   [Heroku Addon Provider]: https://devcenter.heroku.com/articles/bootstrapping-add-on-provider "Bootstrapping an Addon Provider"
   [Bootstrap]: http://getbootstrap.com/ "Twitter Bootstrap"
   [Bootswatch]: https://bootswatch.com/ "Bootswatch - Themes for Bootstrap"
   [email me]: mailto:r@rdegges.com "Randall Degges' Email"
-  [Vanity Dashboard Mockup]: /static/blog/images/2015/vanity-dashboard-mockup.png "Vanity Dashboard Mockup"
+  [Vanity Dashboard Mockup]: /static/images/2015/vanity-dashboard-mockup.png "Vanity Dashboard Mockup"
   [mailgun]: http://www.mailgun.com/ "mailgun"

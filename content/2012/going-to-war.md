@@ -73,4 +73,4 @@ What techniques do you use to motivate yourself, and push yourself beyond your
 limits?
 
 
-  [Beast Sketch]: /static/blog/images/2012/beast-sketch.png "Beast Sketch"
+  [Beast Sketch]: /static/images/2012/beast-sketch.png "Beast Sketch"

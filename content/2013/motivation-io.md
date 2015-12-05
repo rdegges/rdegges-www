@@ -35,7 +35,7 @@ Anyhow, if you're into lifting weights, give [motivation.io][] a try and [let me
 know what you think][]!
 
 
-  [Thor Sketch]: /static/blog/images/2013/thor-sketch.jpg "Thor Sketch"
+  [Thor Sketch]: /static/images/2013/thor-sketch.jpg "Thor Sketch"
   [Alven]: http://zaidox.com/ "Alven Diaz"
   [motivation.io]: http://www.motivation.io/ "motivation.io - Motivational Bodybuilding Videos"
   [YouTube]: http://www.youtube.com/ "YouTube"

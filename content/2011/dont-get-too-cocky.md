@@ -61,4 +61,4 @@ time.
 Regardless of how awesome you are, don't let it get to your head.
 
 
-  [Rooster Sketch]: /static/blog/images/2011/rooster-sketch.png "Rooster Sketch"
+  [Rooster Sketch]: /static/images/2011/rooster-sketch.png "Rooster Sketch"

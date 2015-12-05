@@ -58,4 +58,4 @@ remain innocent.  Hack your heart out every day, and don't forget that the only
 thing that really matters is how much fun you have along the way.
 
 
-  [Warrior Sketch]: /static/blog/images/2011/warrior-sketch.png "Warrior Sketch"
+  [Warrior Sketch]: /static/images/2011/warrior-sketch.png "Warrior Sketch"

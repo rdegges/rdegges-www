@@ -95,7 +95,7 @@ in detail, highlighting the pain points of deployment.
 **UPDATE**: I finished part 2 of the series, you can continue reading [here][].
 
 
-  [Airplane Sketch]: /static/blog/images/2011/airplane-sketch.png "Airplane Sketch"
+  [Airplane Sketch]: /static/images/2011/airplane-sketch.png "Airplane Sketch"
   [published an article]: {filename}/articles/2011/deploying-django.md "Deploying Django"
   [Django]: https://www.djangoproject.com/ "Django"
   [Deploying Django]: {filename}/articles/2011/deploying-django.md "Deploying Django"

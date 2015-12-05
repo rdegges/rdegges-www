@@ -56,6 +56,6 @@ list every time I touch code--through the process of trying to meet each of my
 "done" requirements, I write much better code than I would otherwise.
 
 
-  [Code Wolf Meme]: /static/blog/images/2011/code-wolf-meme.png "Code Wolf Meme"
+  [Code Wolf Meme]: /static/images/2011/code-wolf-meme.png "Code Wolf Meme"
   [GitHub]: https://github.com/ "GitHub"
   [sprintly]: https://sprint.ly/ "sprintly"

@@ -426,7 +426,7 @@ you can do so here: [http://www.theherokuhackersguide.com/][].
 
 
   [first article]: {filename}/articles/2011/devops-django-part-1-goals.md "DevOps Django - Part 1 - Goals"
-  [Deploying Django Meme]: /static/blog/images/2011/deploying-django-meme.png "Deploying Django Meme"
+  [Deploying Django Meme]: /static/images/2011/deploying-django-meme.png "Deploying Django Meme"
   [previous installment]: {filename}/articles/2011/devops-django-part-2-the-pain-of-deployment.md "DevOps Django - Part 2 - The Pain of Deployment"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"
   [Heroku]: http://www.heroku.com/ "Heroku"

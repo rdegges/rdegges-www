@@ -91,14 +91,14 @@ through the [official documentation][], it's really great.
 should check it out: [http://www.theherokuhackersguide.com/][]
 
 
-  [Broke Production]: /static/blog/images/2012/broke-production.png "Broke Production"
+  [Broke Production]: /static/images/2012/broke-production.png "Broke Production"
   [Heroku]: http://www.heroku.com/ "Heroku"
   [Django]: https://www.djangoproject.com/ "Django"
   [New Relic]: http://newrelic.com/ "New Relic, the Best Fucking Application Monitoring Software Ever Written"
   [releases]: http://addons.heroku.com/releases "Heroku Releases Addon"
-  [Cheeto Hands]: /static/blog/images/2012/cheeto-hands.png "Cheeto Hands"
+  [Cheeto Hands]: /static/images/2012/cheeto-hands.png "Cheeto Hands"
   [The IT Crowd]: http://www.imdb.com/title/tt0487831/ "The IT Crowd"
-  [Heroku Releases]: /static/blog/images/2012/heroku-releases.png "Heroku Releases CLI Screen Shot"
+  [Heroku Releases]: /static/images/2012/heroku-releases.png "Heroku Releases CLI Screen Shot"
   [Twilio]: http://www.twilio.com/ "Twilio"
   [official documentation]: http://devcenter.heroku.com/articles/releases "Heroku Releases Addon Documentation"
   [http://www.theherokuhackersguide.com/]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

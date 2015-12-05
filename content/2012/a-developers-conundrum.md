@@ -169,7 +169,7 @@ decision about what to do from now on in my quest to consistently improve my
 development skills >:)
 
 
-  [Grim Reaper Bust]: /static/blog/images/2012/grim-reaper-bust.png "Grim Reaper Bust"
+  [Grim Reaper Bust]: /static/images/2012/grim-reaper-bust.png "Grim Reaper Bust"
   [passionate developer]: http://www.amazon.com/gp/product/1934356344/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1934356344&linkCode=as2&tag=rdegges-20 "The Passionate Programmer"
   [The Twelve-Factor App]: http://www.12factor.net/ "The 12 Factor App"
   [dev-prod parity]: http://www.12factor.net/dev-prod-parity "Dev / Prod Parity"
