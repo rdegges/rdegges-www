@@ -1,11 +1,13 @@
 ---
 aliases:
-  - /building-a-heroku-addon-planning/
-title: "Building a Heroku Addon - Planning"
+  - "/building-a-heroku-addon-planning/"
 date: "2015-04-22"
-tags: ["programming", "devops"]
-slug: "building-a-heroku-addon-planning"
 description: "In this part of the series, we'll lay out our Heroku addon plans, take a look at mockups, and cover high-level functionalities."
+slug: "building-a-heroku-addon-planning"
+tags:
+  - "programming"
+  - "devops"
+title: "Building a Heroku Addon - Planning"
 ---
 
 
