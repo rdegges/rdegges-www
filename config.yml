@@ -1,5 +1,6 @@
 baseurl: "https://www.rdegges.com/"
 languageCode: "en-us"
+metaDataFormat: "yaml"
 title: "Randall Degges"
 params:
   author: "Randall Degges"
