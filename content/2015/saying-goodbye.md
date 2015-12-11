@@ -77,7 +77,9 @@ her, and sneak her human food when Sami wasn't looking.
 She would fall asleep lying in my lap.
 
 When Sami met my parents and my family, Scribbles did too.  My two family dogs:
-Doby and Jenny, got along great with her.  They quickly became good buddies.
+Doby and Jeny, got along great with her.  They quickly became good buddies.
+
+![Scribbles and Doby and Jeny][]
 
 When Sami and I both went off to university, my family adopted Scribbles as
 their own, and took care of her while the two of us were away at school.  My mom
@@ -99,6 +101,8 @@ my only companion most hours of the day.
 I was working constantly at a very small tech company, trying to make big things
 happen.  In the middle of summer, it was well over 100F, and we only had a wall
 unit air conditioner.  It was hot, smelly, and stressful.
+
+![Scribbles and Energy Drinks][]
 
 My only real break from work was taking Scribbles out for our habitual walks
 around the neighborhood which she liked so much.
@@ -289,8 +293,10 @@ I love you, Scribbles.
 
   [Scribbles Face]: /static/images/2015/scribbles-face.jpg "Scribbles' Face"
   [Sami Holding Scribbles]: /static/images/2015/sami-holding-scribbles.jpg "Sami Holding Scribbles"
+  [Scribbles and Doby and Jeny]: /static/images/2015/scribbles-and-doby-and-jeny.jpg "Scribbles and Doby and Jeny"
   [Dad Holding Scribbles]: /static/images/2015/dad-holding-scribbles.jpg "Dad Holding Scribbles"
   [Mom Holding Scribbles]: /static/images/2015/mom-holding-scribbles.jpg "Mom Holding Scribbles"
+  [Scribbles and Energy Drinks]: /static/images/2015/scribbles-and-energy-drinks.jpg "Scribbles and Energy Drinks"
   [Sami Sleeping with Scribbles]: /static/images/2015/sami-sleeping-with-scribbles.jpg "Sami Sleeping with Scribbles"
   [Randall and Scribbles]: /static/images/2015/randall-and-scribbles.jpg "Randall and Scribbles"
   [Sami Working on Scribbles]: /static/images/2015/sami-working-on-scribbles.jpg "Sami Working on Scribbles"
