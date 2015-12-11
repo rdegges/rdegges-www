@@ -121,9 +121,9 @@ both of them beside me was unequaled.
 ![Sami Sleeping with Scribbles][]
 ![Randall and Scribbles][]
 
-As I continued to move up in my career, I worked even harder.  The first 3.5
-years of my marriage was rough: I worked a lot, stayed home alone almost all the
-time, and really only hung out with Scribbles.
+As I continued to move up in my career, I worked even harder.  The first
+three-and-a-half years of my marriage was rough: I worked a lot, stayed home
+alone almost all the time, and really only hung out with Scribbles.
 
 With all that time alone together, we really became best friends.  When I woke
 up every morning I'd play with her and make her breakfast.  When I worked
