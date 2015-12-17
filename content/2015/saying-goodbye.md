@@ -47,7 +47,7 @@ She liked me for who I was.
 
 Our first sort-of-date was a few days before Halloween in 2005.  She invited me
 to go to a party with her, and some friends.  So, my friend Eric picked me up
-and took me over to her place, were we planned to pick her up and drive over to
+and took me over to her place, where we planned to pick her up and drive over to
 the party together.
 
 When I got to her house, she told me to come inside and take a seat on this
