@@ -220,13 +220,13 @@ failed HTTP requests / DB queries / etc. are retried using
 [exponential backoff][] a set amount of times (*usually 3*), ensuring that
 failed requests are retried and downtime is *hopefully* avoided for transient
 issues.  This strategy requires very little development effort, and greatly
-improves *apparent* availability even when issues are present.
+improves *apparent* availability, even when issues are present.
 
 Secondly, I'll build my MVP using tools and services that make my life
 dramatically simpler, with the knowledge that in the future, if I absolutely
 *need* to architect my project for availability, I can always do so.
 
-This typically involves me using services like:
+This typically involves using services like:
 
 
 ### Heroku
