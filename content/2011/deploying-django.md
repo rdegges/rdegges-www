@@ -287,5 +287,5 @@ applications on Heroku to reduce the pain.
   [BDFL]: http://en.wikipedia.org/wiki/Benevolent_Dictator_For_Life "BDFL Wiki"
   [devops]: http://en.wikipedia.org/wiki/DevOps "devops Wiki"
   [deployment documentation]: https://docs.djangoproject.com/en/dev/howto/deployment/ "Django Deployment Documentation"
-  [here]: {filename}/articles/2011/devops-django-part-1-goals.md "Devops Django - Part 1 - Goals"
+  [here]: {{< relref "2011/devops-django-part-1-goals.md" >}} "Devops Django - Part 1 - Goals"
   [The Heroku Hacker's Guide]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

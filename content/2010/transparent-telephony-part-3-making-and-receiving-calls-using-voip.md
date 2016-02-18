@@ -623,8 +623,8 @@ following along should be easier.
 
 
   [Old Telephone Sketch]: /static/images/2010/old-telephone-sketch.png "Old Telephone Sketch"
-  [Part 1 - An Introduction]: {filename}/articles/2009/transparent-telephony-part-1-an-introduction.md "Transparent Telephony - Part 1 - An Introduction"
-  [previous installment]: {filename}/articles/2010/transparent-telephony-part-2-installing-asterisk.md "Transparent Telephony - Part 2 - Installing Asterisk"
+  [Part 1 - An Introduction]: {{< relref "2009/transparent-telephony-part-1-an-introduction.md" >}} "Transparent Telephony - Part 1 - An Introduction"
+  [previous installment]: {{< relref "2010/transparent-telephony-part-2-installing-asterisk.md" >}} "Transparent Telephony - Part 2 - Installing Asterisk"
   [Flowroute]: http://www.flowroute.com/ "Flowroute"
   [voip.ms]: http://voip.ms/ "Voip MS"
   [Vitelity]: http://vitelity.com/ "Vitelity"

@@ -147,6 +147,6 @@ Hopefully by the next update, I'll have wiped even more goals off my list!
 
 
   [Pelican Sketch]: /static/images/2011/pelican-sketch.png "Pelican Sketch"
-  [wrote a post]: {filename}/articles/2010/what-im-doing-in-2011.md "What I'm Doing in 2011"
+  [wrote a post]: {{< relref "2010/what-im-doing-in-2011.md" >}} "What I'm Doing in 2011"
   [Team CrossFit]: http://www.teamcrossfit.com/ "Team CrossFit Woodland Hills, CA"
   [GlobalRoute]: http://globalroute.net/ "GlobalRoute"

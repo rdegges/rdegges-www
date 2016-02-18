@@ -158,7 +158,7 @@ If you'd like to get in touch, you can always hit me up on [Twitter][] or via
 
 
   [Barbarian Sketch]: /static/images/2014/barbarian-sketch.jpg "Barbarian Sketch"
-  [the other day]: {filename}/articles/2014/my-startup-a-retrospective.md "My Startup, a Retrospective"
+  [the other day]: {{< relref "2014/my-startup-a-retrospective.md" >}} "My Startup, a Retrospective"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
   [military phone lines]: https://speakerdeck.com/rdegges/bring-down-the-system-1 "Bring Down the System! - Shutting down military phone lines to save lives, in Python."
   [Mountain Sketch]: /static/images/2014/mountain-sketch.jpg "Mountain Sketch"

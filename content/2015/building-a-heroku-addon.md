@@ -157,4 +157,4 @@ So...  Stay tuned!  More to come =)
   [The Heroku Hacker's Guide]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
   [addons.heroku.com]: https://addons.heroku.com/ "Heroku Addon Marketplace"
   [Vanity]: http://www.vanityaddon.com "Heroku Vanity Addon"
-  [find it here]: {filename}/articles/2015/building-a-heroku-addon-planning.md "Building a Heroku Addon - Planning"
+  [find it here]: {{< relref "2015/building-a-heroku-addon-planning.md" >}} "Building a Heroku Addon - Planning"

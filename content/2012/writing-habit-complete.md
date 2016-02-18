@@ -75,7 +75,7 @@ there's anything you'd like to know, or if you have any questions--feel free to
 
 
   [Scroll Sketch]: /static/images/2012/scroll-sketch.png "Scroll Sketch"
-  [writing habit]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
-  [learned]: {filename}/articles/2011/what-ive-learned-about-writing-so-far.md "What I've Learned About Writing (So Far)"
-  [caffeine junkie]: {filename}/articles/2011/my-use-and-abuse-of-caffeine.md "My Use and Abuse of Caffeine"
+  [writing habit]: {{< relref "2011/establishing-a-writing-habit.md" >}} "Establishing a Writing Habit"
+  [learned]: {{< relref "2011/what-ive-learned-about-writing-so-far.md" >}} "What I've Learned About Writing (So Far)"
+  [caffeine junkie]: {{< relref "2011/my-use-and-abuse-of-caffeine.md" >}} "My Use and Abuse of Caffeine"
   [send me an email]: mailto:r@rdegges.com "Randall Degges' Email"

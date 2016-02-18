@@ -85,5 +85,5 @@ and thoughts, you can read it [right here][].
   [HabitForge]: http://habitforge.com/ "HabitForge"
   [break-the-chain]: http://lifehacker.com/281626/jerry-seinfelds-productivity-secret "Jerry Seinfeld's Productivity Secret"
   [Leonardo DaVinci]: http://en.wikipedia.org/wiki/Leonardo_da_Vinci "Leonardo DaVinci"
-  [here]: {filename}/articles/2011/what-ive-learned-about-writing-so-far.md "What I've Learned About Writing (So Far)"
-  [right here]: {filename}/articles/2012/writing-habit-complete.md "Writing Habit - Complete"
+  [here]: {{< relref "2011/what-ive-learned-about-writing-so-far.md" >}} "What I've Learned About Writing (So Far)"
+  [right here]: {{< relref "2012/writing-habit-complete.md" >}} "Writing Habit - Complete"

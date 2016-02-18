@@ -149,7 +149,7 @@ keep in touch!
 
 
   [Old Fashioned Writer Sketch]: /static/images/2012/old-fashioned-writer-sketch.png "Old Fashioned Writer Sketch"
-  [writing]: {filename}/articles/2011/establishing-a-writing-habit.md "Establishing a Writing Habit"
-  [before]: {filename}/articles/2012/writing-habit-complete.md "Writing Habit -- Complete"
+  [writing]: {{< relref "2011/establishing-a-writing-habit.md" >}} "Establishing a Writing Habit"
+  [before]: {{< relref "2012/writing-habit-complete.md" >}} "Writing Habit -- Complete"
   [irc.oftc.net/#heapify]: irc://irc.oftc.net/#heapify "#heapify"
   [r@rdegges.com]: mailto:r@rdegges.com "Randall Degges' Email"

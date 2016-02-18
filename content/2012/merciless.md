@@ -84,4 +84,4 @@ Into the darkness we go.
 
 
   [Berserk Sketch]: /static/images/2012/berserk-sketch.png "Berserk Sketch"
-  [absolute victory]: {filename}/articles/2011/absolute-victory.md "Absolute Victory"
+  [absolute victory]: {{< relref "2011/absolute-victory.md" >}} "Absolute Victory"

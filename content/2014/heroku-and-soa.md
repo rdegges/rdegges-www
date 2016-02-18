@@ -271,7 +271,7 @@ As always, if you have any questions, please hit me up by [email][] or
   [service oriented architecture]: http://en.wikipedia.org/wiki/Service-oriented_architecture "Service Oriented Architecture"
   [Heroku]: https://www.heroku.com/ "Heroku"
   [quickstart]: https://devcenter.heroku.com/articles/quickstart "Getting Started with Heroku"
-  [previous articles]: {filename}/articles/2012/heroku-isnt-for-idiots.md "Heroku Isn't for Idiots"
+  [previous articles]: {{< relref "2012/heroku-isnt-for-idiots.md" >}} "Heroku Isn't for Idiots"
   [book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
   [Sad Girl Sketch]: /static/images/2014/sad-girl-sketch.jpg "Sad Girl Sketch"
   [Thief Face Sketch]: /static/images/2014/thief-face-sketch.png "Thief Face Sketch"

@@ -435,7 +435,7 @@ I'm probably going to be writing several follow up articles in the coming weeks
 
   [Cute Monster Sketch]: /static/images/2014/cute-monster-sketch.jpg "Cute Monster Sketch"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
-  [this post]: {filename}/articles/2012/im-working-on-a-startup.md "I'm Working on a Startup"
+  [this post]: {{< relref "2012/im-working-on-a-startup.md" >}} "I'm Working on a Startup"
   [drop me an email]: mailto:r@rdegges.com "Randall Degges' Email"
   [Rocket Ship Sketch]: /static/images/2014/rocket-ship-sketch.jpg "Rocket Ship Sketch"
   [Mike]: http://michaelrwally.blogspot.com/ "Michael Wally"

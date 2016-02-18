@@ -308,7 +308,7 @@ deployment solution I discovered.
 
 
   [Pyramid Head Sketch]: /static/images/2011/pyramid-head-sketch.png "Pyramid Head Sketch"
-  [first article]: {filename}/articles/2011/devops-django-part-1-goals.md "DevOps Django - Part 1 - Goals"
+  [first article]: {{< relref "2011/devops-django-part-1-goals.md" >}} "DevOps Django - Part 1 - Goals"
   [Ubuntu server]: http://www.ubuntu.com/business/server/overview "Ubuntu Server"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [OpenSIPS]: http://opensips.org/ "OpenSIPS"
@@ -338,4 +338,4 @@ deployment solution I discovered.
   [Rackspace]: http://www.rackspacecloud.com/3149.html "Rackspace"
   [Web Infrastructure]: /static/images/2011/web-infrastructure.png "Web Infrastructure"
   [nines of availability]: http://en.wikipedia.org/wiki/High_availability "Five Nines"
-  [here]: {filename}/articles/2011/devops-django-part-3-the-heroku-way.md "DevOps Django - Part 3 - The Heroku Way"
+  [here]: {{< relref "2011/devops-django-part-3-the-heroku-way.md" >}} "DevOps Django - Part 3 - The Heroku Way"

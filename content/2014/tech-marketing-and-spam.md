@@ -255,7 +255,7 @@ have that sort of feedback, and it isn't something I'll forget anytime soon.
   [here]: http://www.reddit.com/r/flask/comments/277lxl/flask_auth_in_one_line_of_code/ "Offending Reddit Post"
   [Stormpath blog]: https://stormpath.com/blog/flask-auth-in-one-loc/ "Flask Auth in One Line of Code"
   [Flask library]: http://flask-stormpath.readthedocs.org/en/latest/ "Flask-Stormpath"
-  [joining]: {filename}/articles/2014/moving-on.md "Moving On"
+  [joining]: {{< relref "2014/moving-on.md" >}} "Moving On"
   [Stormpath]: https://stormpath.com/ "Stormpath"
   [Big Dinosaur Sketch]: /static/images/2014/big-dinosaur-sketch.jpg "Big Dinosaur Sketch" [blog]: https://stormpath.com/blog/ "Stormpath Blog"
   [blog]: https://stormpath.com/blog/ "Stormpath Blog"

@@ -415,7 +415,7 @@ Got any questions? Feel free to [shoot me an email][], I'd be happy to help.
 
   [Scuba Diving Sketch]: /static/images/2010/scuba-diving-sketch.png "Scuba Diving Sketch"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
-  [my guide]: {filename}/articles/2010/transparent-telephony-part-2-installing-asterisk.md "Transparent Telephony - Part 2 - Installing Asterisk"
+  [my guide]: {{< relref "2010/transparent-telephony-part-2-installing-asterisk.md" >}} "Transparent Telephony - Part 2 - Installing Asterisk"
   [this page]: http://www.voip-info.org/wiki/view/Asterisk+Slimming "Asterisk Slimming Wiki Page"
   [voip-info]: http://www.voip-info.org/ "VoIP Info Wiki"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

@@ -96,10 +96,10 @@ in detail, highlighting the pain points of deployment.
 
 
   [Airplane Sketch]: /static/images/2011/airplane-sketch.png "Airplane Sketch"
-  [published an article]: {filename}/articles/2011/deploying-django.md "Deploying Django"
+  [published an article]: {{< relref "2011/deploying-django.md" >}} "Deploying Django"
   [Django]: https://www.djangoproject.com/ "Django"
-  [Deploying Django]: {filename}/articles/2011/deploying-django.md "Deploying Django"
+  [Deploying Django]: {{< relref "2011/deploying-django.md" >}} "Deploying Django"
   [memcached]: http://memcached.org/ "memcached"
   [Redis]: http://redis.io/ "Redis"
   [postgresql]: http://www.postgresql.org/ "PostgreSQL"
-  [here]: {filename}/articles/2011/devops-django-part-2-the-pain-of-deployment.md "DevOps Django - Part 2 - The Pain of Deployment"
+  [here]: {{< relref "2011/devops-django-part-2-the-pain-of-deployment.md" >}} "DevOps Django - Part 2 - The Pain of Deployment"

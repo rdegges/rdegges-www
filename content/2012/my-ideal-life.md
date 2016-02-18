@@ -103,4 +103,4 @@ knows.
 
 
   [Tyrael Sketch]: /static/images/2012/tyrael-sketch.png "Tyrael Sketch"
-  [positive habits]: {filename}/articles/2012/what-im-doing-in-2012.md "What I'm Doing in 2012"
+  [positive habits]: {{< relref "2012/what-im-doing-in-2012.md" >}} "What I'm Doing in 2012"

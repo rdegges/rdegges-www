@@ -254,7 +254,7 @@ shoot me an email ([r@rdegges.com][]).
 
 
   [Dragon Sketch]: /static/images/2013/dragon-sketch.png "Dragon Sketch"
-  [Last week]: {filename}/articles/2013/postgression-a-postgresql-database-for-every-test-case.md "Postgression - a PostgreSQL Database for Every Test Case"
+  [Last week]: {{< relref "2013/postgression-a-postgresql-database-for-every-test-case.md" >}} "Postgression - a PostgreSQL Database for Every Test Case"
   [Alven]: https://twitter.com/zaidos "Alven on Twitter"
   [postgression]: http://www.postgression.com/ "postgression"
   [last article]: http://rdegges.com/postgression-a-postgresql-database-for-every "postgression"

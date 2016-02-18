@@ -180,7 +180,7 @@ So...  Stay tuned!  More to come soon!
 
 
   [Robot with Chaingun Arm Sketch]: /static/images/2015/robot-with-chaingun-arm-sketch.jpg "Robot with Chaingun Arm Sketch"
-  [previous installment]: {filename}/articles/2015/building-a-heroku-addon.md "Building a Heroku Addon"
+  [previous installment]: {{< relref "2015/building-a-heroku-addon.md" >}} "Building a Heroku Addon"
   [syslog drain]: https://devcenter.heroku.com/articles/log-drains "Heroku Log Drains"
   [Heroku Addon Provider]: https://devcenter.heroku.com/articles/bootstrapping-add-on-provider "Bootstrapping an Addon Provider"
   [Bootstrap]: http://getbootstrap.com/ "Twitter Bootstrap"
