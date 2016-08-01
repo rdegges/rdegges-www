@@ -68,7 +68,7 @@ having good documentation.
 
 Your official documentation should (at a minimum) include:
 
--   **What your project's purpose is, and who is its indended audience.**  For
+-   **What your project's purpose is, and who is its intended audience.**  For
     example, if your project provides a Python library for controlling the Mars
     Rover spacecraft, you should explain that your project is meant to be used
     by NASA scientists on the rover project, and that you need at least a PhD
