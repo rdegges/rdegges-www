@@ -6,7 +6,8 @@ install:
 script: make build
 after_success: make deploy
 branches:
-  only: master
+  only:
+  - master
 env:
   global:
   - secure: BNX8Hq0yhUBn89Btf7TrKee3M1dFW9dyYVWEOFemFs6Ts2fcQ1atzXBvuQmsiUhpwg2CsBDTmywZ6fq8BZ58jcer6KlDQ6FxHKoGIQsEk4jcb0NBaDnfixhTMsX1/H990wgxUNtN0H+U4g2BAy2ny12ybm/1b4lg1+CNXSClTnU=
