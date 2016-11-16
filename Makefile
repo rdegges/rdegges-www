@@ -14,3 +14,5 @@ develop:
 
 deploy:
 	aws s3 sync public/ s3://www.rdegges.com --acl public-read --delete
+	aws configure set preview.cloudfront true
+	aws cloudfront create-invalidation --distribution-id E1IO983UEMAFXC --paths '/*'
