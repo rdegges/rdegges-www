@@ -1,6 +1,7 @@
 language: go
 install:
 - go get -v github.com/spf13/hugo
+- npm install -g bower
 - bower install
 - pip install awscli
 script: make build
