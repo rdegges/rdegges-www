@@ -1,6 +1,8 @@
 language: go
+before_install:
+- sudo apt-get -qq update
+- sudo apt-get -y install hugo
 install:
-- go get -v github.com/spf13/hugo
 - npm install -g bower
 - bower install
 - pip install --user awscli
