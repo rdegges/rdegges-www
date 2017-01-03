@@ -82,7 +82,6 @@ If you'd like to learn more about ketogenic diets, here are some good resources:
 - The [Something Awful Keto Guide][].
 - The [bodybuilding.com guide to ketosis][].
 - My personal favorite, [A Guide to Ketosis][].
-- A really thorough guide to [Ketosis][].
 
 
   [Meat Sketch]: /static/images/2012/meat-sketch.png "Meat Sketch"
@@ -93,4 +92,3 @@ If you'd like to learn more about ketogenic diets, here are some good resources:
   [Something Awful Keto Guide]: http://lowcarbplate.com/tlcm/ "Something Awful Keto Guide"
   [bodybuilding.com guide to ketosis]: http://www.bodybuilding.com/fun/keto.htm "Bodybuilding + Ketosis"
   [A Guide to Ketosis]: http://forum.bodybuilding.com/showthread.php?t=132598293 "A Guide to Ketosis"
-  [Ketosis]: http://www.lifehackersguide.com/ketogenic-diet/ "Ketosis"
