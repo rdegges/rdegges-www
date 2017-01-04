@@ -6,8 +6,9 @@ install:
 - npm install -g bower
 - bower install
 - pip install --user awscli
-script: make build
-after_success: make deploy
+script:
+- hugo version
+- make deploy
 branches:
   only:
   - master
