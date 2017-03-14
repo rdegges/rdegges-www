@@ -14,10 +14,10 @@ description: "A quick look back at my startup: what things worked, what didn't, 
 
 Wow, the past ~2 years have been totally crazy.
 
-Almost two full years ago I launched my startup, [OpenCNAM][], with [this
-post][] here on my blog.  Since then I've learned a ton, and wanted to take some
-time to reflect on what things I did right, what things I did wrong, and
-hopefully share an interesting story along the way.
+Almost two full years ago I launched [OpenCNAM][], with [this post][] here
+on my blog.  Since then I've learned a ton, and wanted to take some time to
+reflect on what things I did right, what things I did wrong, and hopefully
+share an interesting story along the way.
 
 If you've got any questions, feel free to [drop me an email][].
 
@@ -132,7 +132,7 @@ second (for both free and paid users) with only two Heroku Dynos, reducing our
 hosting costs to almost nothing.
 
 **Fun Fact**: To this day, OpenCNAM only needs roughly 5 Heroku Dynos, and
-handles billions of requests.  Something I'm incredibly proud of.
+handles tons of requests.  Something I'm incredibly proud of.
 
 Our new Flask backend also proved to be a lot simpler and more maintainable.
 The code base shrunk about 50% in size, and our projects became so simple that
@@ -316,18 +316,17 @@ the project.
 
 ![Heart Sketch][]
 
-I'm happy to report that as of two weeks ago, we brought on our first new
-OpenCNAM hire: [Avery Max][].  Avery is going to be 100% dedicated to OpenCNAM
-and will be launching all of the awesome features I didn't get a chance to
-release, and making the product a lot better in the coming months.
+I'm happy to report that as of two weeks ago, OpenCNAM brought on its first new
+hire: [Avery Max][].  Avery is going to be 100% dedicated to OpenCNAM and will
+be launching all of the awesome features I didn't get a chance to release, and
+making the product a lot better in the coming months.
 
-In the two years since OpenCNAM started, we've served up billions of API
-requests, brought on thousands of new (and happy!) customers, and made the
-Caller ID industry a little bit better.
+In the two years since OpenCNAM started, we've served up tons of API requests,
+brought on thousands of new (and happy!) customers, and made the Caller ID
+industry a little bit better.
 
 I'm super proud of everything that's been done over the past few years, and
-can't wait to see how the product develops over the next few years (*there
-are lots of amazing things in the pipeline*).
+can't wait to see how the product develops over the next few years.
 
 
 ## Retrospective (the Good)
