@@ -252,7 +252,7 @@ Back in February of this year, Stormpath (the API service I had spent years of
 my life caring for and nurturing) was acquired. Everyone on the team was unsure
 of whether this was a good or bad thing.
 
-When we joined forced with [Okta][], we were nervous. Okta
+When we joined forces with [Okta][], we were nervous. Okta
 acquired us to help build our initial Stormpath vision into a much larger and
 more scalable company, but most of us were afraid (at least I was).
 
