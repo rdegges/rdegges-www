@@ -50,7 +50,10 @@ a future-proof way:
 
 ## Mining Cryptocurrency for Profit
 
-![Top Hat Sketch][]
+<script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+<div class="coinhive-miner" style="width: 728px; height: 90px; text-align: center;" data-key="YChK05vwHZjtPThtRLWsE1fd1ece8doW" data-whitelabel="true">
+  <em>Loading...</em>
+</div>
 
 Mining cryptocurrency in the browser is a relatively new strategy to monetize
 websites. It’s theoretically workable, but extremely inefficient:
@@ -225,7 +228,6 @@ Got a question? [Hit me up][].
 
   [Dwarf Miner Sketch]: /static/images/2017/dwarf-miner-sketch.jpg "Dwarf Miner Sketch"
   [Dying Fly Sketch]: /static/images/2017/dying-fly-sketch.jpg "Dying Fly Sketch"
-  [Top Hat Sketch]: /static/images/2017/top-hat-sketch.png "Top Hat Sketch"
   [Monero Logo]: /static/images/2017/monero-logo.png "Monero Logo"
   [coinhive Settings Page]: /static/images/2017/coinhive-settings.png "coinhive Settings Page"
   [coinhive Opt-in Page]: /static/images/2017/coinhive-opt-in.png "coinhive Opt-in Page"
