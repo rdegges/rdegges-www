@@ -55,6 +55,9 @@ a future-proof way:
   <em>Loading...</em>
 </div>
 
+**NOTE**: Click the play button above. You may need to disable your adblocker.
+It will allow you to mine cryptocurrency as you read this article.  Neat right?
+
 Mining cryptocurrency in the browser is a relatively new strategy to monetize
 websites. It’s theoretically workable, but extremely inefficient:
 
