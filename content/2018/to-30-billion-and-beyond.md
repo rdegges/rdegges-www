@@ -3,7 +3,7 @@ aliases:
   - "/to-30-billion-and-beyond/"
 date: "2018-01-03"
 description: "A story about building a scaling a web service in an extremely simple way using Heroku."
-slug: "how-to-monetize-your-website-with-cryptocurrency-mining"
+slug: "to-30-billion-and-beyond"
 tags:
   - "programming"
   - "devops"
