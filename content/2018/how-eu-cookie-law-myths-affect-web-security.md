@@ -1,7 +1,7 @@
 ---
 aliases:
   - "/how-eu-cookie-law-myths-affect-web-security/"
-date: "2018-01-22"
+date: "2018-01-21"
 description: "The EU Cookie Law has had a massive negative impact on website security. Here's why."
 slug: "how-eu-cookie-law-myths-affect-web-security"
 tags:
