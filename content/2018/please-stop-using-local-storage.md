@@ -4,6 +4,7 @@ aliases:
 date: "2018-01-24"
 description: "Stop using local storage to store sensitive information. If you're putting a JWT in local storage you're doing it wrong."
 slug: "please-stop-using-local-storage"
+status: draft
 tags:
   - "programming"
   - "security"
