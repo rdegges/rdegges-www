@@ -1,7 +1,7 @@
 ---
 aliases:
   - "/please-stop-using-local-storage/"
-date: "2018-01-24"
+date: "2018-01-26"
 description: "Stop using local storage to store sensitive information. If you're putting a JWT in local storage you're doing it wrong."
 slug: "please-stop-using-local-storage"
 status: draft
@@ -291,12 +291,17 @@ If you need to store sensitive data, here's how to do it:
   with cookies. Read [Jeff Atwood's article](https://blog.codinghorror.com/protecting-your-cookies-httponly/)
   for more information. He's the *man*.
 
+- Make sure that your cookie library also sets the `SameSite=strict` cookie flag
+  (to prevent [CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+  attacks), as well as the `secure=true` flag (to ensure cookies can only be
+  set over an encrypted connection).
+
 - Each time a user makes a request to your site, use their session ID (extracted
   from the cookie they send to you) to retrieve their account details from
   either a database or a cache (depending on how large your website is)
 
-- Once you have the user's account info pulled up and verified feel free to pull
-  any associated sensitive data along with it
+- Once you have the user's account info pulled up and verified, feel free to
+  pull any associated sensitive data along with it
 
 This pattern is simple, straightforward, and most importantly: *secure*. And
 yes, you can most definitely scale up a large website using this pattern. Don't
@@ -352,6 +357,20 @@ extremely wide array of attacks that could absolutely cripple your users.
 Have a question? [Shoot me an email](mailto:r@rdegges.com).
 
 Stay safe out there =)
+
+**NOTE**: For those of you who made it this far who are wondering why I didn't
+specifically call out [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+as a way to mitigate the effects of XSS, I specifically chose not to include
+this because it cannot help in the situation I described above. Even if you use
+CSP to whitelist all third party JavaScript domains, that does nothing to
+prevent XSS if the third party provider is compromised.
+
+And while we're at it: [subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+(while cool) is also not a global solution to this issue. For most marketing
+tools, ad networks, etc. (which are by far the most commonly used types of
+third party JavaScript), subresource integrity is almost never used as the
+providers of those scripts *want* to change them frequently so they can
+silently update functionality for their users.
 
 
   [Grumpy Rage Face]: /static/images/2018/grumpy-rage-face.jpg "Grumpy Rage Face"
