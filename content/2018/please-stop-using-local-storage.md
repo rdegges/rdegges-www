@@ -372,6 +372,13 @@ third party JavaScript), subresource integrity is almost never used as the
 providers of those scripts *want* to change them frequently so they can
 silently update functionality for their users.
 
+**UPDATE**: I'm not the only one who thinks you should never store anything
+sensitive in local storage. So does [OWASP](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Local_Storage):
+
+> ... In other words, any authentication your application requires can be
+> bypassed by a user with local privileges to the machine on which the data is
+> stored. Therefore, it's recommended not to store any sensitive information in
+> local storage.
 
   [Grumpy Rage Face]: /static/images/2018/grumpy-rage-face.jpg "Grumpy Rage Face"
   [HTML5 Local Storage]: /static/images/2018/html5-local-storage.jpg "HTML5 Local Storage"
