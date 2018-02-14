@@ -10,7 +10,7 @@ build:
 develop:
 	rm -rf public
 	bower install
-	hugo server --watch
+	hugo server --watch -d public-dev
 
 deploy: build
 	aws s3 sync public/ s3://www.rdegges.com --acl public-read --delete
