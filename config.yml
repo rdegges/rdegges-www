@@ -1,14 +1,21 @@
 baseurl: "https://www.rdegges.com/"
 languageCode: "en-us"
+contentDir: "articles"
+enableRobotsTXT: true
+googleAnalytics: "UA-11364428-13"
+languageCode: "en"
 metaDataFormat: "yaml"
+newContentEditor: "vim"
+rssLimit: 25
 title: "Randall Degges"
+permalinks:
+  post: /:year/:title
 params:
   author: "Randall Degges"
   description: "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
   email: "r@rdegges.com"
   subtitle: "Random Thoughts of a Happy Programmer"
   mailchimpFormAction: "https://rdegges.us5.list-manage.com/subscribe/post?u=ac8a69447e872cf6ddf171977&amp;id=62ec9e2b1c"
-  googleAnalyticsTrackingId: "UA-11364428-13"
   navLinks:
     - title: "Twitter"
       url: "https://twitter.com/rdegges"
