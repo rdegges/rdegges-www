@@ -137,6 +137,12 @@ nav a:visited {
   float: right;
 }
 
+.index main p {
+  padding-top: 1em;
+  font-size: 16px !important;
+}
+
+
 /**
  * Footer styling.
  */
