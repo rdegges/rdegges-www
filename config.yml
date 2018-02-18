@@ -1,4 +1,4 @@
-baseurl: "https://www.rdegges.com/"
+baseURL: "https://www.rdegges.com/"
 languageCode: "en-us"
 contentDir: "articles"
 enableRobotsTXT: true
