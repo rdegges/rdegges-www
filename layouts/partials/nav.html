@@ -1,6 +1,6 @@
 <nav class="col-xs-offset-1 col-xs-10">
   <ul>
-    <li><a href="{{ "/" | absURL }}" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }} - Home" type="text/html">HOME</a></li>
+    <li><a href="/" hreflang="{{ .Site.LanguageCode }}" media="all" title="{{ .Site.Title }} - Home" type="text/html">HOME</a></li>
     {{ range $link := .Site.Params.navLinks }}
       <li><a href="{{ $link.url }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ $.Site.Title }} - {{ $link.title }}" type="text/html">{{ upper $link.title }}</a></li>
     {{ end }}

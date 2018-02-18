@@ -7,7 +7,7 @@
       <div class="row">
         <section class="intro">
           <div class="col-xs-offset-3 col-xs-6">
-            <img alt="Randall Degges - Avatar" class="center-block img-rounded img-responsive" src="{{ "/static/images/rdegges-avatar.png" | absURL }}">
+            <img alt="Randall Degges - Avatar" class="center-block img-rounded img-responsive" src="/static/images/rdegges-avatar.png">
           </div>
         </section>
       </div>
@@ -27,7 +27,7 @@
           <ul>
             {{ range .Data.Pages }}
               <time class="visible-xs visible-sm visible-md" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
-              <li><a href="{{ .Permalink }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
+              <li><a href="{{ .URL }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
             {{ end }}
           </ul>
           <p>
