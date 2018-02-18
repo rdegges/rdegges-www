@@ -3,7 +3,6 @@ languageCode: "en-us"
 contentDir: "articles"
 enableRobotsTXT: true
 googleAnalytics: "UA-11364428-13"
-languageCode: "en"
 metaDataFormat: "yaml"
 newContentEditor: "vim"
 title: "Randall Degges"
@@ -32,5 +31,5 @@ author:
   name: "Randall Degges"
   email: "r@rdegges.com"
 outputFormats:
-  rss:
+  RSS:
     baseName: "feed"
