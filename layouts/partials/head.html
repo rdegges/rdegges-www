@@ -6,7 +6,10 @@
   <meta content="{{ .Site.Author }}" name="author">
   <meta content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" name="description">
   <title>{{ .Site.Title }} - {{ if ne .Title "" }}{{ .Title }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}</title>
-  <link href="{{ .RSSLink }}" rel="alternate" title="RSS Feed" type="application/rss+xml">
+  {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" title="{{ .Site.Title }}" type="application/rss+xml" />
+    <link href="{{ .RSSLink }}" rel="feed" title="{{ .Site.Title }}" type="application/rss+xml" />
+  {{ end }}
   <link href="{{ "/static/images/favicons/apple-icon-57x57.png" | absURL }}" rel="apple-touch-icon" sizes="57x57">
   <link href="{{ "/static/images/favicons/apple-icon-60x60.png" | absURL }}" rel="apple-touch-icon" sizes="60x60">
   <link href="{{ "/static/images/favicons/apple-icon-72x72.png" | absURL }}" rel="apple-touch-icon" sizes="72x72">
