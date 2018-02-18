@@ -6,7 +6,6 @@ googleAnalytics: "UA-11364428-13"
 languageCode: "en"
 metaDataFormat: "yaml"
 newContentEditor: "vim"
-rssLimit: 25
 title: "Randall Degges"
 permalinks:
   post: /:year/:title
