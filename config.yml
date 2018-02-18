@@ -32,3 +32,6 @@ params:
 author:
   name: "Randall Degges"
   email: "r@rdegges.com"
+outputFormats:
+  rss:
+    baseName: "feed"
