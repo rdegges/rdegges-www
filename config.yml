@@ -1,3 +1,4 @@
+test: "hi"
 baseURL: "https://www.rdegges.com"
 languageCode: "en-us"
 contentDir: "articles"
