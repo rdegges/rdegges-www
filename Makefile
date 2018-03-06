@@ -8,7 +8,6 @@ build:
 
 develop:
 	rm -rf public
-	bower install
 	hugo server --watch -d public-dev
 
 deploy: build
