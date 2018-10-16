@@ -317,7 +317,7 @@ $200/mo spend), it looks as if ipify is able to service each request for total
 cost of $0.000000007. That's astoundingly low.
 
 If you compare that to the expected cost of running the same service on
-sometihng like Lambda, ipify would rack up a total bill of: $1,243.582/mo
+something like Lambda, ipify would rack up a total bill of: $1,243.582/mo
 (compute) + $6,000/mo (requests) = ~$7,243.58. As a quick note, this is some
 back-of-a-napkin math. I plugged ipify's numbers into a Lambda pricing example
 from the AWS website here: https://aws.amazon.com/lambda/pricing/.
