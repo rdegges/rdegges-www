@@ -4,11 +4,11 @@
 
 build:
 	rm -rf public
-	hugo
+	docker run --rm -u hugo --name rdegges-www -p 1313:1313 -it -v $(PWD):/src jguyomard/hugo-builder:extras hugo
 
 develop:
-	rm -rf public
-	hugo server --watch -d public-dev
+	rm -rf public-dev
+	docker run --rm -u hugo --name rdegges-www -p 1313:1313 -it -v $(PWD):/src jguyomard/hugo-builder:extras hugo server --watch -d public-dev --bind 0.0.0.0
 
 deploy: build
 	aws s3 sync public/ s3://www.rdegges.com --acl public-read --delete
