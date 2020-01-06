@@ -4,7 +4,7 @@
 
 build:
 	rm -rf public
-	docker run --rm -u hugo --name rdegges-www -p 1313:1313 -it -v $(PWD):/src jguyomard/hugo-builder:extras hugo
+	docker run --rm -u hugo --name rdegges-www -it -v $(PWD):/src jguyomard/hugo-builder:extras hugo
 
 develop:
 	rm -rf public-dev
