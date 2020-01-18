@@ -4,7 +4,6 @@ aliases:
 date: "2020-01-17"
 description: "An in-depth look at how I manage my finances."
 slug: "my-personal-financial-strategy"
-status: draft
 tags:
   - "personal finance"
 title: "My Personal Financial Strategy"
