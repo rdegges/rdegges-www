@@ -50,7 +50,7 @@ Since we're in the middle of a worldwide crisis at the moment, there's never bee
 
 ![Radiation Mask Sketch][]
 
-The first step in building a financial plan is to take stock of where you're currently at. You can't make good financial decisions if you have no idea what your situation is.
+The first step in building a financial plan is to take stock of where you're currently at. You can't make good financial decisions if you have no idea what your overall financial situation is.
 
 If you're making 50k per year and are 50k in debt, your plan is going to look a hell of a lot different than someone who's making 50k per year and has no debt, for example.
 
@@ -61,44 +61,44 @@ Once you've got all your data synced, the next thing you'll want to do is look b
 - How much money you have coming in every month
 - How much money you have going out every month
 
-These two numbers are the most important to know: how much you're making and how much you're spending. You should *always* know what these numbers are. Your main goal should be to **always spend less than you make**. If you notice yourself spending more than you make in a month, warning shots should be going off in your head.
+These two numbers are important to know: how much you're *making* and how much you're *spending*. You should *always* know what these numbers are. Your goal should be to **always spend less than you make**. If you notice yourself spending more than you make in a month, warning shots should be going off in your head.
 
-**NOTE**: I recommend logging into your finance tracking app once every week and checking to see how much you've spent. It's a great way to stay conscious of your spending habits and allows you to be more thoughtful about your spending. I've noticed that when I don't do this, I end up spending money without even realizing it.
+**NOTE**: I recommend logging into your finance tracking app once every week and checking to see how much you've spent. It's a great way to stay conscious of your spending habits and allows you to be more thoughtful with your resources. I've noticed that when I don't do this, I end up spending money without even realizing it.
 
-The next thing you'll need to do is look through every purchase you made in the last 30 days and categorize them.
+The next thing you'll need to do is look through every purchase you've made in the last 30 days and categorize them.
 
 - **Essential expenses.** These are things you absolutely cannot live without. This includes things like grocery bills, electricity and gas, and rent/mortgage payments.
-- **Obligations.** These are outstanding debts that you are obligated to make payments on. This could be things like credit card minimum payments, student loan payments, car payments, etc.
-- **Luxury expenses.** This would be essentially everything else: Netflix, fast food, electronics, internet, video games, etc.
+- **Obligations.** These are outstanding debts that you are obligated to make payments on. These could be things like credit card minimum payments, student loan payments, car payments, etc.
+- **Luxury expenses.** These are essentially everything else: Netflix, fast food, electronics, internet, video games, etc.
 
 Once you've categorized your expenses into the three categories above, tally them up. This will give you some useful information, namely:
 
 - How much money do you need coming in every month to *survive*? This is your "survival" burn rate. This is the minimum amount of money you need to make every month to stay alive.
-- How much money do you need to *stay current*? This is the amount of money you need to not only survive but also pay the minimum on all your debts, loans, etc. While it is possible to not pay these things in a pinch, that isn't something you'll want to do if you can avoid it.
+- How much money do you need to *stay current*? This is the amount of money you need to not only survive but also pay the minimum on all your debts, loans, etc. While it is possible to not pay these things in a pinch, this isn't something you want to do if you can avoid it.
 - How much money do you need to keep up your current lifestyle? This is the amount of money you need to keep living like you are now.
 
 I've been tracking my finances this way for many years now. Always knowing your various burn rates is incredibly useful. It gives me a good idea of what I need to earn and helps me put things in perspective.
 
-My wife and I, for example, could live off as little as ~$1.5k per month if we *had to*. It wouldn't be a great lifestyle, but we could make it work. Even if your number is large, knowing what you *need* to earn to survive is really useful when designing a defensive finance plan.
+My wife and I, for example, could live off as little as ~1.5k per month if we *had to*. It wouldn't be a great lifestyle, but we could make it work. Even if your number is large, knowing what you *need* to earn to survive is essential when designing a defensive finance plan.
 
 
 ## Build an Emergency Fund
 
 ![Ambulance][]
 
-Once you've figured out where your finances are, the next thing you need to do is build an *emergency fund*. This is a pile of money that should cover your expenses for no less than 6 months. For example, if you are currently spending 5k per month, your emergency fund should be no less than 30k.
+Once you've figured out where your finances are at you need to build an *emergency fund*. This is a pile of money that should cover your expenses for no less than 6 months. For example, if you are currently spending 5k per month, your emergency fund should be no less than 30k.
 
 The idea here is that if you lose all your income, you should be able to survive like you are currently for 6 months: enough time to find a new job, reduce your expenditures, etc.
 
 If you already have money set aside to cover at least 6 months of expenses: congratulations, you're in a great spot! Don't have a 6-month emergency fund yet? *Don't panic.* There's no better time than *right now* to get started. Having an emergency fund is **absolutely essential**, especially in times of economic uncertainty.
 
-If you're worried you might lose a job or have to take a pay cut, your number one goal should be to *cut your expenses* as much as possible in the short term and start piling up cash so that in the event something bad happens you'll have some wiggle room.
+If you're worried you might lose a job or have to take a pay cut, your number one goal should be to *cut your expenses* as much as possible in the short term and start piling up cash so in the event something bad happens you'll have some wiggle room.
 
-Let's say, for example, that you make 60k per year (after-tax) and spend 36k per year. This means that each month you bring home 5k and spend 3k. In this scenario, your emergency fund should be at least 18k (3 * 6). If you are able to save 2k per month out of your 5k salary, that means that it will take you ~9 months to build up that emergency fund from zero.
+Let's say, for example, you make 60k per year (after-tax) and spend 36k. This means that each month you bring home 5k and spend 3k. In this scenario, your emergency fund should be at least 18k (3 * 6). If you're able to save 2k per month out of your 5k salary, that means that it will take you ~9 months to build up that emergency fund from zero.
 
-This is why it's so critical you get started right away. Saving that much money can take a while, but it's absolutely worth it. Having a 6-month buffer can mean the difference between incurring a massive amount of debt or being mostly unaffected in the event of a job loss, medical expense, etc. Having the ability to survive for 6 months without work can be incredibly empowering.
+This is why it's so critical you get started right away. Saving that much money can take a while, but it's absolutely worth it. Having a 6-month buffer can mean the difference between incurring a massive amount of debt or being mostly unaffected in the event of a job loss, medical expense, etc. Having the ability to survive for 6 months without work is incredibly empowering.
 
-**NOTE**: You should never invest your emergency fund. It should be kept in a high-yield savings account so you can access it easily if necessary. Putting your emergency fund into investments like stock, bonds, etc., is a risky proposition because if the value of that investment drops, you now have less of a buffer if you need it.
+**NOTE**: You should never invest your emergency fund. It should be kept in a high-yield savings account you can access easily if necessary. Putting your emergency fund into investments like stock, bonds, etc., is a risky proposition because if the value of that investment drops, you now have less of a buffer if you need it.
 
 For the last few years, my wife and I have maintained a 1-year emergency fund. This is a very conservative amount but lets us sleep well at night knowing we don't have to worry about job loss, economic instability, etc.
 
@@ -111,9 +111,9 @@ If saving up a year (or two years) worth of expenses sounds daunting to you, jus
 
 ![Relaxing Sketch][]
 
-Regardless of whether you've got an emergency fund or not, the next thing you'll want to do as part of your defensive financial plan is to reduce your lifestyle expenses.
+Regardless of whether you've got an emergency fund or not, the next thing you'll want to do as part of your defensive financial plan is reduce lifestyle expenses.
 
-Go through all the non-essential expenses you've made in the last month or so and figure out what you can safely cut back on. For example, if you were paying $500 a month for an expensive gym membership that you can no longer use during the coronavirus pandemic, now would be a good time to cancel or temporarily pause that membership.
+Go through all the non-essential expenses you've made in the last month or so and figure out where you can safely cut back. For example, if you were paying $500 a month for an expensive gym membership that you can no longer use during the coronavirus pandemic, now would be a good time to cancel or temporarily pause that membership.
 
 If you have subscriptions to Netflix, Hulu, Amazon Prime Video, and HBO, why not pick your favorite service and cancel the rest? In a downturn, flexibility is key. By reducing your expenses you are giving yourself the most possible options later on.
 
@@ -130,7 +130,7 @@ Now that you've cut your non-essential expenses down as much as you can without 
 
 If you have a mortgage payment, car payments, student loan payments, credit card payments, etc., those are all considered *liabilities*. Having to make payments to someone else puts you in a vulnerable position for a few reasons:
 
-1. It increases your monthly burn rate, meaning you need to save a much larger emergency fund to accommodate for your payments
+1. It increases your monthly burn rate, meaning you need to save a much larger emergency fund to accommodate your payments
 2. It reduces the amount of money you can save per month
 3. In increases your risk. If you lose your job or are only able to earn a fraction of what you are earning today, having to make debt payments will increase your stress, decrease your flexibility, and put you more at risk of needing to take extreme measures to stay afloat.
 
@@ -168,7 +168,7 @@ Here are some of my suggestions to keep earning money even in terrible economic 
 
 First off, **work hard**. There's no substitute for hard work. If you work hard and do the best job you can, your employer will recognize that. In the event they do need to lay people off, you'll be at the bottom of the list.
 
-Next, **be essential**. Every company has essential people. Similar to working hard, being so great that you're an essential part of the business provides some level of job stability. If you're a core developer helping to keep the business running, for example, you're going to have far more job stability than someone working on a new, experimental project that doesn't bring in any revenue.
+Next, **be essential**. Every company has essential people. Similar to working hard, being so great that you're an essential part of the business provides some level of job stability. If you're a core developer helping to keep the business running, for example, you're going to have far more job stability than someone working on a new, experimental project that doesn't generate revenue.
 
 Even if you're in a role that isn't core to the business, there are many ways to make yourself essential: show value, understand the business and how you contribute and push for positive change to help improve the bottom line when possible.
 
@@ -189,8 +189,8 @@ If you've already done everything else we've discussed above, you're in an ideal
 
 If you're at this point, part of your defensive personal finance strategy should be to take advantage of opportunities as they arise. There are many ways to do this, here are just a few:
 
-- **Start a company that serves a clear and present need.** Right now, for example, there are tons of distilleries around the country who've shifted from manufacturing spirits to making hand sanitizer. There are always opportunities in financial downturns, so keep your eyes open for ones that make sense.
-- **Invest in the markets.** There's no better time to invest in the market than in a downturn because you're purchasing assets at a discount. Buy stock regularly and hold onto it. When the markets eventually bounce back, you'll get a great return.
+- **Start a company that serves a clear and present need.** Right now, for example, there are tons of distilleries around the country who've shifted from manufacturing spirits to hand sanitizer. There are always opportunities in financial downturns, so keep your eyes open for ones that make sense.
+- **Invest in the markets.** There's no better time to invest in the market than during a downturn because you're purchasing assets at a discount. Buy stock regularly and hold onto it. When the markets eventually bounce back, you'll get a great return.
 - **Look for asset acquisition opportunities.** Outside of the markets, there are many other types of assets you can purchase: rental properties, small businesses, etc. In financial downturns, it isn't uncommon for property owners to sell properties at a discount (if they need money now), and the same is true for businesses.
 
 What Sami and I are doing today is the following:
