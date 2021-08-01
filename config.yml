@@ -19,8 +19,6 @@ params:
       url: "https://twitter.com/rdegges"
     - title: "Facebook"
       url: "https://www.facebook.com/rdegges"
-    - title: "G+"
-      url: "https://plus.google.com/109157194342162880262"
     - title: "GitHub"
       url: "https://github.com/rdegges"
     - title: "Talks"
