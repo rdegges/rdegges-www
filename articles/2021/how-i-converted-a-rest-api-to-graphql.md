@@ -10,6 +10,8 @@ title: "How I Converted a REST API I Don't Control to GraphQL"
 ---
 
 
+![REST API to GraphQL][]
+
 I've been building and working with REST APIs for many years now. Recently, however, I've been spending more and more of my time working with (and building) GraphQL-based APIs.
 
 While GraphQL has generally made my life easier, especially as I've been building and consuming more data-heavy APIs, there is still one *extremely* annoying problem I've run into over and over again: lack of GraphQL support for third-party APIs I need to consume.
@@ -346,6 +348,7 @@ If there isn't a public schema available, go build your own! To do this:
 Once you have a schema, you can easily deploy it live to the StepZen service, which will give you a dedicated GraphQL endpoint/explorer you can query. And bam, you're now able to use GraphQL to talk to any REST API, even ones you don't own/control/etc!
 
 
+  [REST API to GraphQL]: /static/images/2021/rest-to-graphql.gif "REST API to GraphQL GIF"
   [StepZen]: https://stepzen.com/ "StepZen"
   [Airtable]: https://www.airtable.com/ "Airtable"
   [FedEx]: https://www.fedex.com/en-us/home.html "FedEx"
