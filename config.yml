@@ -17,8 +17,6 @@ params:
   navLinks:
     - title: "Twitter"
       url: "https://twitter.com/rdegges"
-    - title: "Facebook"
-      url: "https://www.facebook.com/rdegges"
     - title: "GitHub"
       url: "https://github.com/rdegges"
     - title: "Talks"
