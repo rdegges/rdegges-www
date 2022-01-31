@@ -10,6 +10,8 @@ title: "How to Calculate the Energy Consumption of a Mac"
 ---
 
 
+![Macbook Sketch][]
+
 I'm a bit of a sustainability nerd. I love the idea of living a life where your carbon footprint is neutral (or negative) and you leave the world a better place than it was before you got here. 
 
 While it's clear that there's only [so much impact](https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions) an individual can have on carbon emissions, I like the idea of working to minimize my personal carbon footprint. This is a big part of the reason why I live in a home with solar power, drive an electric vehicle, and try to avoid single-use plastics as much as possible.
@@ -145,4 +147,5 @@ I'm currently in the process of following up with Snyk's IT department to see if
 **PS**: The creation of this blog post took precisely `19.972951810666647` watt-hours of electricity and generated `.016977009039067` pounds of CO2.
 
 
+  [Macbook Sketch]: /static/images/2022/macbook-sketch.png "Macbook Sketch"
   [Eve Energy Screenshot]: /static/images/2022/eve-energy-screenshot.png "Eve Energy Screenshot"
