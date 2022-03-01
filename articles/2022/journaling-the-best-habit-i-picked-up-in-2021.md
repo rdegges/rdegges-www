@@ -10,6 +10,8 @@ title: "Journaling: The Best Habit I Picked Up in 2021"
 ---
 
 
+![Writing Sketch][]
+
 2021 was a challenging year in many ways. Other than the global pandemic, many things changed in my life (some good, some bad), and it was a somewhat stressful year.
 
 In March of 2021, I almost died due to a gastrointestinal bleed (a freak accident caused by a routine procedure). Luckily, I survived the incident due to my amazing wife calling 911 at the right time and the fantastic paramedics and doctors at my local hospital, but it was a terrifying ordeal.
@@ -88,5 +90,6 @@ It's a bound book with high-quality photos, layouts, etc. It looks **astounding*
 
 So, my recommendation is that if you're going to start a journal and want to print it out eventually, use the [Day One app](https://dayoneapp.com/) -- it's been absolutely 10/10 incredible.
 
+  [Writing Sketch]: /static/images/2022/writing-sketch.png "Writing Sketch"
   [Day One App]: /static/images/2022/day-one-app.png "Day One App"
   [My Journal]: /static/images/2022/my-journal.png "My Journal"
