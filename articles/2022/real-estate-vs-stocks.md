@@ -219,7 +219,7 @@ As you've seen by now, there isn't a clear answer here. To sum it up:
   [Home Sketch]: /static/images/2022/home-sketch.jpg "Home Sketch"
   [Investment Graph Sketch]: /static/images/2022/investment-graph-sketch.jpg "Investment Graph Sketch"
   [Surfing Sketch]: /static/images/2022/surfing-sketch.jpg "Surfing Sketch"
-  [Curious Stick Figure Sketch]: /static/images/2022/curious-stick-figure-sketch.png "Curious Stick Figure Sketch"
+  [Curious Stick Figure Sketch]: /static/images/2022/curious-stick-figure-sketch.jpg "Curious Stick Figure Sketch"
   [Architecture Diagram Sketch]: /static/images/2022/architecture-diagram-sketch.jpg "Architecture Diagram Sketch"
   [Apartment Building Sketch]: /static/images/2022/apartment-building-sketch.jpg "Apartment Building Sketch"
   [High Rise Sketch]: /static/images/2022/high-rise-sketch.jpg "High Rise Sketch"
