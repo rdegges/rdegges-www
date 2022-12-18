@@ -15,8 +15,8 @@ params:
   subtitle: "Random Thoughts of a Happy Programmer"
   mailchimpFormAction: "https://rdegges.us5.list-manage.com/subscribe/post?u=ac8a69447e872cf6ddf171977&amp;id=62ec9e2b1c"
   navLinks:
-    - title: "Twitter"
-      url: "https://twitter.com/rdegges"
+    - title: "Mastodon"
+      url: "https://mastodon.green/@rdegges"
     - title: "GitHub"
       url: "https://github.com/rdegges"
     - title: "Talks"
