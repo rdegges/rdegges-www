@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/rdegges/rdegges-www#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.3.1",
     "bootswatch": "^4.0.0",
     "jquery": "^1.9.1",
     "popper.js": "^1.12.9"
