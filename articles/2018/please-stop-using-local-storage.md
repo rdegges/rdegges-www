@@ -373,7 +373,7 @@ providers of those scripts *want* to change them frequently so they can
 silently update functionality for their users.
 
 **UPDATE**: I'm not the only one who thinks you should never store anything
-sensitive in local storage. So does [OWASP](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Local_Storage):
+sensitive in local storage. So does [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html#local-storage):
 
 > ... In other words, any authentication your application requires can be
 > bypassed by a user with local privileges to the machine on which the data is
