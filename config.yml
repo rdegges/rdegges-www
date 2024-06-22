@@ -2,7 +2,6 @@ baseURL: "https://www.rdegges.com"
 languageCode: "en-us"
 contentDir: "articles"
 enableRobotsTXT: true
-googleAnalytics: "UA-11364428-13"
 metaDataFormat: "yaml"
 newContentEditor: "vim"
 title: "Randall Degges"
