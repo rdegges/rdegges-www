@@ -25,9 +25,9 @@
       <div class="row">
         <main class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
           <ul>
-            {{ range .Data.Pages }}
+            {{ range .Site.RegularPages }}
               <time class="visible-xs visible-sm visible-md" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
-              <li><a href="{{ .URL }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
+              <li><a href="{{ .Permalink }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
             {{ end }}
           </ul>
           <p>

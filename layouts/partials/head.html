@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
   <meta content="{{ .Site.Author }}" name="author">
   <meta content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" name="description">
   <title>{{ .Site.Title }} - {{ if ne .Title "" }}{{ .Title }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}</title>
