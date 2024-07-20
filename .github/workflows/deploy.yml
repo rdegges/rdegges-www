@@ -34,7 +34,6 @@ jobs:
             secret_access_key = ${{ secrets.STORJ_SECRET_KEY }}
             endpoint = ${{ secrets.STORJ_SATELLITE_URL }}
             chunk_size = 64Mi
-        disable_base64: true
 
       - name: Sync to Storj
         run: |
