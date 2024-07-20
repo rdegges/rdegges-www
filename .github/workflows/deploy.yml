@@ -25,6 +25,7 @@ jobs:
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
+          disable_base64: true
           rclone_config: |
             [storj]
             type = s3
