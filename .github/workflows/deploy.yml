@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
 
@@ -17,7 +16,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
 
       - name: Build Website
         run: |
@@ -25,17 +24,17 @@ jobs:
 
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
-          with:
-            rclone_config: |
-              [storj]
-              type = s3
-              provider = Storj
-              env_auth = false
-              access_key_id = ${{ secrets.STORJ_ACCESS_KEY }}
-              secret_access_key = ${{ secrets.STORJ_SECRET_KEY }}
-              endpoint = ${{ secrets.STORJ_SATELLITE_URL }}
-              chunk_size = 64Mi
-            disable_base64: true
+        with:
+          rclone_config: |
+            [storj]
+            type = s3
+            provider = Storj
+            env_auth = false
+            access_key_id = ${{ secrets.STORJ_ACCESS_KEY }}
+            secret_access_key = ${{ secrets.STORJ_SECRET_KEY }}
+            endpoint = ${{ secrets.STORJ_SATELLITE_URL }}
+            chunk_size = 64Mi
+        disable_base64: true
 
       - name: Sync to Storj
         run: |
