@@ -22,37 +22,6 @@ jobs:
         run: |
           hugo
 
-      - name: Setup Rclone
-        uses: AnimMouse/setup-rclone@v1
-        with:
-          disable_base64: true
-          rclone_config: |
-            [storj]
-            type = s3
-            provider = Storj
-            env_auth = false
-            access_key_id = ${{ secrets.STORJ_ACCESS_KEY }}
-            secret_access_key = ${{ secrets.STORJ_SECRET_KEY }}
-            endpoint = ${{ secrets.STORJ_SATELLITE_URL }}
-            chunk_size = 64Mi
-
       - name: Sync to Storj
         run: |
-          rclone sync ./public/ storj:${{ secrets.STORJ_BUCKET_NAME }}
-
-#      - name: Install AWS CLI
-#      - id: install-aws-cli
-#        uses: unfor19/install-aws-cli-action@v1
-#        with:
-#          version: 2
-#          verbose: false
-#          arch: arm64                        # allowed values: amd64, arm64
-#
-#      - name: Invalidate CloudFront Cache
-#        env:
-#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#        run: |
-#          DISTRIBUTION_ID=your-cloudfront-distribution-id
-#          aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
-#
+          hugo deploy --maxDeletes -1 --invalidateCDN
