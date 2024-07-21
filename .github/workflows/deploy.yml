@@ -24,4 +24,4 @@ jobs:
 
       - name: Sync to Storj
         run: |
-          hugo deploy --maxDeletes -1 --invalidateCDN
+          hugo deploy --maxDeletes -1
