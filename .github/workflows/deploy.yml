@@ -24,4 +24,5 @@ jobs:
 
       - name: Sync to Storj
         run: |
+          hugo version
           hugo deploy --maxDeletes -1
