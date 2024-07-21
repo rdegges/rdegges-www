@@ -40,5 +40,5 @@ email = "r@rdegges.com"
 baseName = "feed"
 
 [deployment.targets]
+URL = "s3://{{ getenv "S3_BUCKET_NAME" }}?endpoint={{ getenv "S3_ENDPOINT"  }}&disableSSL=false&s3ForcePathStyle=true"
 name = "Storj Bucket"
-URL = "s3://rdegges-www?endpoint=gateway.storjshare.io&disableSSL=false&s3ForcePathStyle=true"
