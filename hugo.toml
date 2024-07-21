@@ -1,0 +1,44 @@
+baseURL = "https://www.rdegges.com"
+languageCode = "en-us"
+contentDir = "articles"
+enableRobotsTXT = true
+metaDataFormat = "yaml"
+newContentEditor = "nvim"
+title = "Randall Degges"
+
+[permalinks]
+post = "/:year/:title"
+
+[params]
+author = "Randall Degges"
+description = "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
+email = "r@rdegges.com"
+subtitle = "Random Thoughts of a Happy Programmer"
+mailchimpFormAction = "https://rdegges.us5.list-manage.com/subscribe/post?u=ac8a69447e872cf6ddf171977&amp;id=62ec9e2b1c"
+
+[[params.navLinks]]
+title = "Bluesky"
+url = "https://bsky.app/profile/rdegges.bsky.social"
+
+[[params.navLinks]]
+title = "GitHub"
+url = "https://github.com/rdegges"
+
+[[params.navLinks]]
+title = "Talks"
+url = "https://speakerdeck.com/rdegges"
+
+[[params.navLinks]]
+title = "Email"
+url = "mailto:r@rdegges.com"
+
+[author]
+name = "Randall Degges"
+email = "r@rdegges.com"
+
+[outputFormats.RSS]
+baseName = "feed"
+
+[deployment.targets]
+name = "Storj Bucket"
+URL = "s3://rdegges-www?endpoint=gateway.storjshare.io&disableSSL=false&s3ForcePathStyle=true"
