@@ -1,6 +1,5 @@
 baseURL = "https://www.rdegges.com"
 languageCode = "en-us"
-contentDir = "articles"
 enableRobotsTXT = true
 metaDataFormat = "yaml"
 newContentEditor = "nvim"
