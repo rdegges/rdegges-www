@@ -1,0 +1,21 @@
+<form
+    action="{{ .Site.Params.emailSubscriptionFormAction }}"
+    class="email-subscribe form-inline"
+    method="post"
+    onsubmit="window.open('https://buttondown.email/rdegges', 'popupwindow')"
+    role="form"
+    target="popupwindow"
+>
+    <div class="form-group">
+        <input
+            class="form-control"
+            id="bd-email"
+            name="email"
+            placeholder="Email Address"
+            size="20"
+            required
+            type="email"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+</form>
