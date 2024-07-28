@@ -17,7 +17,7 @@ emailSubscriptionFormAction = "https://buttondown.email/api/emails/embed-subscri
 
 [[params.navLinks]]
 title = "Bluesky"
-url = "https://bsky.app/profile/rdegges.bsky.social"
+url = "https://bsky.app/profile/rdegges.com"
 
 [[params.navLinks]]
 title = "GitHub"
