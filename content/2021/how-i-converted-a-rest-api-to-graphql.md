@@ -36,7 +36,7 @@ Using the StepZen CLI, for example, I can create a new GraphQL endpoint that all
 
 Here's what this looks like (assuming you've already got the [StepZen CLI][] installed and initialized):
 
-```bash
+```console
 $ stepzen import airtable
 $ stepzen import fedex
 $ stepzen start
@@ -320,7 +320,7 @@ Once you've built a schema that teaches StepZen how to talk to the REST API, how
 
 Well, in the example above, I built a public-facing StepZen schema and contributed it back to the community. In this case, I can simply use this schema like I would any other:
 
-```bash
+```console
 $ stepzen import randomuser
 $ stepzen start
 ```
