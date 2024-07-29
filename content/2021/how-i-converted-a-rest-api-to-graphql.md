@@ -173,7 +173,7 @@ You don't need to be a wizard to do this, just pick out the important fields (an
 
 For example, here's the `RandomUser` type I defined based on the REST API output above:
 
-```graphql
+```
 type RandomUser {
   gender: String!
   title: String!
@@ -228,7 +228,7 @@ Once your data modeling is complete and you've defined your type(s), it's time t
 
 To get started, edit the `<servicename>.graphql` file and add the following `Query` definition:
 
-```graphql
+```
 type Query {
   randomUser: RandomUser
     @rest(
@@ -246,7 +246,7 @@ When I defined the `RandomUser` type above, I decided to make all the data flat,
 
 So, the next thing we need to do is explain to StepZen how to convert the nested JSON key/values into the custom schema I defined. To do this, we'll use the `setters` REST directive StepZen provides:
 
-```graphql
+```
 type Query {
   randomUser: RandomUser
     @rest(
