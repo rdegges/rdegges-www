@@ -38,9 +38,14 @@ email = "r@rdegges.com"
 [outputFormats.RSS]
 baseName = "feed"
 
-[deployment.targets]
+[[deployment.targets]]
 URL = "s3://rdegges-www?endpoint=gateway.storjshare.io&disableSSL=false&s3ForcePathStyle=true"
-name = "Storj Bucket"
+name = "Storj"
+
+[[deployment.targets]]
+cloudFrontDistributionID = "E3VRTXFJ9OEPFY"
+URL = "s3://www.rdegges.com"
+name = "AWS"
 
 [markup]
 [markup.highlight]

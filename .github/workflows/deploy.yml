@@ -22,7 +22,7 @@ jobs:
         run: |
           hugo
 
-      - name: Sync to Storj
+      - name: Deploy Website
         run: |
           hugo version
-          hugo deploy --maxDeletes -1
+          hugo deploy --target=AWS
