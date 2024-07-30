@@ -2,3 +2,4 @@
 *.lock
 public
 public-dev
+.env
