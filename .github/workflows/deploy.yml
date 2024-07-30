@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Website
         run: |
-          echo $AWS_REGION
+          echo ${{ secrets.AWS_REGION }}
           aws s3 ls
           hugo
 
