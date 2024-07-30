@@ -25,4 +25,4 @@ jobs:
       - name: Deploy Website
         run: |
           hugo version
-          hugo deploy --target=AWS
+          hugo deploy --target=AWS -verbose
