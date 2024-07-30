@@ -21,7 +21,7 @@ jobs:
       - name: Build Website
         run: |
           echo ${{ secrets.AWS_REGION }}
-          aws s3 ls
+          AWS_REGION=${{ secrets.AWS_REGION }} AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws s3 ls
           hugo
 
       - name: Deploy Website
