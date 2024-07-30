@@ -25,6 +25,7 @@ jobs:
 
       - name: Build Website
         run: |
+          aws s3 ls
           hugo
 
       - name: Deploy Website
