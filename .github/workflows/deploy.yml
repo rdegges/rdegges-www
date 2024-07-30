@@ -13,11 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup AWS CLI
-        uses: unfor19/install-aws-cli-action@v1
-        with:
-          arch: amd64
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
