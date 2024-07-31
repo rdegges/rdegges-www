@@ -47,7 +47,6 @@ cloudFrontDistributionID = "E3VRTXFJ9OEPFY"
 URL = "s3://www.rdegges.com"
 name = "AWS"
 
-[markup]
 [markup.highlight]
 anchorLineNos = true
 codeFences = true
@@ -58,7 +57,7 @@ lineAnchors = ''
 lineNoStart = 1
 lineNos = false
 lineNumbersInTable = true
-noClasses = true
+noClasses = false
 noHl = false
 style = 'autumn'
 tabWidth = 4
