@@ -48,7 +48,7 @@ URL = "s3://www.rdegges.com"
 name = "AWS"
 
 [markup.highlight]
-anchorLineNos = true
+anchorLineNos = false
 codeFences = true
 guessSyntax = false
 hl_Lines = ''
