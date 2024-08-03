@@ -3,6 +3,7 @@ aliases:
   - "/im-writing-again/"
 date: "2024-08-02"
 description: "After a 2+ year hiatus, I'm back to writing."
+draft: true
 slug: "im-writing-again"
 tags:
   - "Personal Development"
