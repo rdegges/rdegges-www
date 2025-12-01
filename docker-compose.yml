@@ -1,0 +1,16 @@
+# Docker Compose for local Hugo development
+# Usage: docker compose up
+#
+# Hugo version is pinned to match netlify.toml for consistency.
+
+services:
+  hugo:
+    image: hugomods/hugo:exts-0.127.0
+    container_name: rdegges-www
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/src
+    working_dir: /src
+    # Enable live reload by polling (works better with Docker on macOS)
+    command: hugo server --bind 0.0.0.0 --buildDrafts --buildFuture --poll 500ms

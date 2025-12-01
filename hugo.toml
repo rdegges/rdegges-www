@@ -1,6 +1,7 @@
 baseURL = "https://www.rdegges.com"
 languageCode = "en-us"
 enableRobotsTXT = true
+ignoreLogs = ['warning-goldmark-raw-html']
 metaDataFormat = "yaml"
 newContentEditor = "nvim"
 timezone = "America/Los_Angeles"
