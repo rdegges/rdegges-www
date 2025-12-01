@@ -3,37 +3,23 @@
 My personal website: https://www.rdegges.com
 
 
-## Dependencies
+## Development
 
-This site is built using [Hugo][], the Golang based static site generator.  It
-is really awesome.
+This site is built using [Hugo](https://gohugo.io/), a fast static site generator.
 
-You need to have Hugo installed before working with this site.
+```bash
+# Install Hugo (https://gohugo.io/installation/)
+brew install hugo
 
-You also need to have [Bower][] installed -- this is what installs and manages
-the client-side dependencies, like Boostrap, jQuery, etc.
+# Run locally with live reload
+hugo server
+
+# Build for production
+hugo
+```
 
 
 ## Theme
 
-I've built my own custom theme here for my personal usage -- feel free to take
-from it what you want.  I release it into the public domain.
-
-
-## Writing
-
-My blog posts are stored in a separate repository.  I do this to keep my writing
-organized and structured.
-
-
-## Building
-
-To build the site, simply run `hugo` in the project directory.
-
-To build the site for local development purposes, run `hugo server --watch` --
-then open [http://localhost:1313][] to view the site.
-
-
-  [Hugo]: http://gohugo.io/ "Hugo"
-  [Bower]: http://bower.io/ "Bower"
-  [http://localhost:1313]: http://localhost:1313 "Localhost"
+I've built my own custom theme here for my personal usage — feel free to take
+from it what you want. I release it into the public domain.
