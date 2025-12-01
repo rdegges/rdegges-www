@@ -1,7 +1,0 @@
-[build]
-publish = "public"
-command = "hugo"
-
-[context.production.environment]
-HUGO_VERSION = "0.127.0"
-HUGO_ENABLEGITINFO = "true"
