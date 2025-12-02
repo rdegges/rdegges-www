@@ -11,7 +11,6 @@ title = "Randall Degges"
 post = "/:year/:title"
 
 [params]
-author = "Randall Degges"
 description = "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
 email = "r@rdegges.com"
 subtitle = "Random Thoughts of a Happy Programmer"
@@ -33,7 +32,7 @@ url = "https://speakerdeck.com/rdegges"
 title = "Email"
 url = "mailto:r@rdegges.com"
 
-[author]
+[params.author]
 name = "Randall Degges"
 email = "r@rdegges.com"
 
