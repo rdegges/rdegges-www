@@ -5,7 +5,7 @@
 
 services:
   hugo:
-    image: hugomods/hugo:exts-0.152.2
+    image: hugomods/hugo:ci-0.152.2
     container_name: rdegges-www
     ports:
       - "1313:1313"
