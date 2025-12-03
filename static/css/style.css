@@ -61,7 +61,7 @@ header {
    ========================================================================== */
 nav {
   font-family: var(--font-heading);
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .nav-list {
