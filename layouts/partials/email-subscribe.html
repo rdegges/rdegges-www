@@ -1,21 +1,20 @@
 <form
-    action="{{ .Site.Params.emailSubscriptionFormAction }}"
-    class="email-subscribe form-inline"
-    method="post"
-    onsubmit="window.open('https://buttondown.email/rdegges', 'popupwindow')"
-    role="form"
-    target="popupwindow"
+  action="{{ .Site.Params.emailSubscriptionFormAction }}"
+  class="email-subscribe"
+  method="post"
+  onsubmit="window.open('https://buttondown.email/rdegges', 'popupwindow')"
+  target="popupwindow"
 >
-    <div class="form-group">
-        <input
-            class="form-control"
-            id="bd-email"
-            name="email"
-            placeholder="Email Address"
-            size="20"
-            required
-            type="email"
-        />
-    </div>
-    <button type="submit" class="btn btn-primary">Subscribe</button>
+  <div class="d-flex justify-content-center gap-2 flex-wrap">
+    <input
+      class="form-control"
+      id="bd-email"
+      name="email"
+      placeholder="Email Address"
+      required
+      type="email"
+      style="max-width: 250px;"
+    >
+    <button type="submit" class="btn btn-subscribe">Subscribe</button>
+  </div>
 </form>

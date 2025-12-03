@@ -1,58 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    {{ partial "head.html" . }}
-    <body>
-        {{ partial "header.html" . }}
-        <div class="container article">
-            <div class="row">
-                <main
-                    class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8"
-                >
-                    <article>
-                        <header>
-                            <h1>{{ .Title }}</h1>
-                        </header>
-                        {{ .Content }}
-                        <section class="subscribe">
-                            <p>
-                                <b>PS</b>: If you read this far, you might want
-                                to follow me on
-                                <a
-                                    href="https://bsky.app/profile/rdegges.com"
-                                    hreflang="{{ .Site.LanguageCode }}"
-                                    target="_blank"
-                                    title="Randall Degges on Bluesky"
-                                    type="text/html"
-                                    >Bluesky</a
-                                >
-                                or
-                                <a
-                                    href="https://github.com/rdegges"
-                                    hreflang="{{ .Site.LanguageCode }}"
-                                    target="_blank"
-                                    title="Randall Degges on Github"
-                                    type="text/html"
-                                    >GitHub</a
-                                >
-                                and subscribe via
-                                <a
-                                    href="/feed.xml"
-                                    type="application/rss+xml"
-                                    target="_blank"
-                                    title="Randall Degges' RSS"
-                                    >RSS</a
-                                >
-                                or email below (<i
-                                    >I'll email you new articles when I publish
-                                    them</i
-                                >).
-                            </p>
-                            {{ partial "email-subscribe.html" . }}
-                        </section>
-                    </article>
-                </main>
-            </div>
-        </div>
-        {{ partial "footer.html" . }}
-    </body>
+  {{ partial "head.html" . }}
+  <body class="article-page">
+    {{ partial "header.html" . }}
+    <div class="container">
+      <div class="row justify-content-center">
+        <main class="col-10 col-md-8">
+          <article>
+            <header class="article-header">
+              <h1>{{ .Title }}</h1>
+            </header>
+            {{ .Content }}
+            <section class="subscribe">
+              <p>
+                <strong>PS</strong>: If you read this far, you might want to follow me on
+                <a href="https://bsky.app/profile/rdegges.com" target="_blank" rel="noopener" title="Randall Degges on Bluesky">Bluesky</a>
+                or
+                <a href="https://github.com/rdegges" target="_blank" rel="noopener" title="Randall Degges on GitHub">GitHub</a>
+                and subscribe via
+                <a href="/feed.xml" target="_blank" rel="noopener" title="Randall Degges' RSS">RSS</a>
+                or email below (<em>I'll email you new articles when I publish them</em>).
+              </p>
+              {{ partial "email-subscribe.html" . }}
+            </section>
+          </article>
+        </main>
+      </div>
+    </div>
+    {{ partial "footer.html" . }}
+  </body>
 </html>
