@@ -1,0 +1,273 @@
+/* ==========================================================================
+   CSS Custom Properties (Design Tokens)
+   ========================================================================== */
+:root {
+  --color-text: #515050;
+  --color-text-muted: #bebebe;
+  --color-link-article: #b10000;
+  --color-bg: #fff;
+  --font-heading: "Raleway", sans-serif;
+  --font-body: "Sanchez", serif;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+body {
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+header {
+  font-family: var(--font-heading);
+}
+
+.site-title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  margin-bottom: 0.25rem;
+}
+
+.site-title a,
+.site-subtitle a {
+  color: var(--color-text);
+}
+
+.site-title a:hover,
+.site-subtitle a:hover {
+  color: var(--color-text-muted);
+}
+
+.site-subtitle {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+nav {
+  font-family: var(--font-heading);
+  margin-bottom: 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.nav-list li {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-list li:not(:last-child)::after {
+  content: ",";
+  margin-left: -0.1rem;
+}
+
+.nav-list a {
+  padding: 0.25rem 0.5rem;
+}
+
+/* ==========================================================================
+   Index Page
+   ========================================================================== */
+.index {
+  font-family: var(--font-heading);
+}
+
+.index .intro img {
+  max-width: 10rem;
+}
+
+.index .jumbotron {
+  background-color: var(--color-bg);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Article List */
+.article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.article-list a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+.article-list time {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.index main > p {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  padding: 1rem 0 2rem;
+}
+
+footer a {
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Email Subscribe Form
+   ========================================================================== */
+.email-subscribe {
+  margin-top: 1rem;
+}
+
+.btn-subscribe {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.btn-subscribe:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ==========================================================================
+   Article Page
+   ========================================================================== */
+.article-page {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.article-header {
+  font-family: var(--font-heading);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-text-muted);
+}
+
+.article-header h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom: 0;
+}
+
+.article-page article h1,
+.article-page article h2,
+.article-page article h3,
+.article-page article h4,
+.article-page article h5,
+.article-page article h6 {
+  font-family: var(--font-heading);
+  margin: 1.5rem 0 1rem;
+}
+
+.article-page article h2 { font-size: 1.8rem; }
+.article-page article h3 { font-size: 1.5rem; }
+.article-page article h4 { font-size: 1.3rem; }
+.article-page article h5 { font-size: 1.15rem; }
+.article-page article h6 { font-size: 1rem; }
+
+.article-page article p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.article-page article a {
+  color: var(--color-link-article);
+  text-decoration: underline;
+}
+
+.article-page article a:hover {
+  color: var(--color-link-article);
+  opacity: 0.8;
+}
+
+.article-page article img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.article-page article blockquote {
+  border-left: 4px solid var(--color-text-muted);
+  margin: 2rem 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  font-style: italic;
+}
+
+.article-page article blockquote p {
+  text-align: left;
+}
+
+.article-page article pre {
+  margin: 2rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.article-page article ul,
+.article-page article ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.article-page .subscribe {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 576px) {
+  .article-list li {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .article-list time {
+    font-size: 0.85rem;
+  }
+}
