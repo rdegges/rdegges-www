@@ -1,0 +1,275 @@
+/**
+ * Header styling.
+ */
+header {
+    font-family: "Raleway", sans-serif;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+header a:visited,
+header h1 a,
+header h2 a {
+    color: #515050;
+}
+
+header h1 a:hover,
+header h2 a:hover {
+    color: #bebebe;
+}
+
+/**
+ * Navigation bar styling.
+ */
+nav {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+}
+
+nav li {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+nav li:after {
+    content: ",";
+}
+
+nav li:last-child:after {
+    content: none;
+}
+
+nav a,
+nav a:hover,
+nav a:visited {
+    color: #515050;
+}
+
+/**
+ * Index page styling.
+ */
+.index {
+    font-family: "Raleway", sans-serif;
+}
+
+.index .intro img {
+    max-width: 10em;
+}
+
+.index .jumbotron {
+    background-color: #fff;
+    text-align: center;
+}
+
+.index main {
+    margin-top: -2em;
+}
+
+.index main ul {
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+}
+
+.index main li {
+    margin-bottom: 0.5em;
+}
+
+.index main li a,
+.index main time {
+    font-size: 1.2em;
+}
+
+.index main li a {
+    font-weight: 700;
+}
+
+.index main li a,
+.index main li a:hover,
+.index main li a:visited {
+    color: #515050;
+}
+
+.index main time {
+    color: #bebebe;
+    font-weight: normal;
+}
+
+.index main li time {
+    float: right;
+}
+
+.index main p {
+    padding-top: 1em;
+    font-size: 16px !important;
+}
+
+/**
+ * Footer styling.
+ */
+footer {
+    color: #515050;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+footer p a,
+footer p a:hover,
+footer p a:visited {
+    color: #515050;
+}
+
+/**
+ * Email form styling.
+ */
+.email-subscribe {
+    text-align: center;
+}
+
+.email-subscribe button {
+    background-color: #fff;
+    color: #515050;
+}
+
+.email-subscribe button:active,
+.email-subscribe button:hover {
+    background-color: #515050;
+}
+
+/**
+ * Article page styling.
+ */
+.article article {
+    margin-top: -3em;
+}
+
+.article header {
+    margin-bottom: 3em;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+    color: #515050;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.article h1 {
+    font-size: 2.5em;
+}
+
+.article h2 {
+    font-size: 2.3em;
+}
+
+.article h3 {
+    font-size: 2.1em;
+}
+
+.article h4 {
+    font-size: 1.9em;
+}
+
+.article h5 {
+    font-size: 1.7em;
+}
+
+.article h6 {
+    font-size: 1.5em;
+}
+
+.article {
+    color: #515050;
+    font-family: "Sanchez", serif;
+    font-size: 1.3em;
+}
+
+.article p {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: justify;
+}
+
+.article blockquote {
+    padding-bottom: 0em;
+    padding-top: 0em;
+}
+
+.article blockquote,
+.article blockquote p {
+    text-align: left !important;
+}
+
+.article blockquote,
+.article img,
+.article ol,
+.article pre,
+.article ul {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.article img {
+    display: block;
+    margin: auto;
+    margin-bottom: 2.5em !important;
+    margin-top: 2.5em !important;
+    max-width: 100%;
+}
+
+.article blockquote,
+.article pre {
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+}
+
+.article .subscribe {
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.article a,
+.article a:link,
+.article a:visited,
+.article a:hover,
+.article a:active {
+    color: #b10000;
+    text-decoration: underline;
+}
