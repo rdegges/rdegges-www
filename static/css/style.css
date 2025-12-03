@@ -32,6 +32,7 @@ a:hover {
    ========================================================================== */
 header {
   font-family: var(--font-heading);
+  padding-top: 1.5rem;
 }
 
 .site-title {
@@ -180,9 +181,7 @@ footer a {
 
 .article-header {
   font-family: var(--font-heading);
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-text-muted);
+  margin-bottom: 3rem;
 }
 
 .article-header h1 {
@@ -197,14 +196,17 @@ footer a {
 .article-page article h5,
 .article-page article h6 {
   font-family: var(--font-heading);
-  margin: 1.5rem 0 1rem;
+  font-weight: 400;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  line-height: 1.15;
 }
 
-.article-page article h2 { font-size: 1.8rem; }
-.article-page article h3 { font-size: 1.5rem; }
-.article-page article h4 { font-size: 1.3rem; }
-.article-page article h5 { font-size: 1.15rem; }
-.article-page article h6 { font-size: 1rem; }
+.article-page article h2 { font-size: 2.2rem; }
+.article-page article h3 { font-size: 1.9rem; }
+.article-page article h4 { font-size: 1.7rem; }
+.article-page article h5 { font-size: 1.5rem; }
+.article-page article h6 { font-size: 1.3rem; }
 
 .article-page article p {
   margin: 1rem 0;
