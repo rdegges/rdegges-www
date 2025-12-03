@@ -37,7 +37,7 @@ header {
 
 .site-title {
   font-size: clamp(1.75rem, 6vw, 3.25rem);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .site-title a,
