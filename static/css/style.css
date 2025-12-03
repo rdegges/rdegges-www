@@ -36,7 +36,7 @@ header {
 }
 
 .site-title {
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(1.75rem, 6vw, 3.25rem);
   margin-bottom: 0.25rem;
 }
 
@@ -51,7 +51,7 @@ header {
 }
 
 .site-subtitle {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(0.9rem, 3vw, 1.6rem);
   font-weight: 400;
 }
 
@@ -74,7 +74,7 @@ nav {
 }
 
 .nav-list li {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
