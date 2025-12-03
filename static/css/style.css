@@ -182,6 +182,7 @@ footer a {
 .article-header {
   font-family: var(--font-heading);
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .article-header h1 {
