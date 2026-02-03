@@ -20,7 +20,7 @@ jobs:
         run: docker compose run --rm hugo hugo --minify
 
       - name: Deploy Website
-        run: docker compose run --rm -e AWS_REGION -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY hugo hugo deploy --target=AWS
+        run: docker compose run --rm -e AWS_REGION -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY hugo hugo deploy --target=AWS --maxDeletes -1
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
