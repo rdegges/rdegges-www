@@ -1,0 +1,22 @@
+{{- $dest := .Destination -}}
+{{- $alt := .Text | default "" -}}
+{{- $title := .Title | default "" -}}
+
+{{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") (hasPrefix $dest "data:") -}}
+
+{{- if not $isRemote -}}
+  {{- if hasPrefix $dest "/" -}}
+    {{- /* Absolute path: ensure it exists in static/ */ -}}
+    {{- if not (fileExists (printf "static%s" $dest)) -}}
+      {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $image := .Page.Resources.GetMatch $dest -}}
+    {{- if not $image -}}
+      {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
+    {{- end -}}
+    {{- $dest = $image.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+<img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}>
