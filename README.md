@@ -1,6 +1,6 @@
 # rdegges-www
 
-My personal website: https://www.rdegges.com
+My personal website: https://rdegges.com
 
 
 ## Development

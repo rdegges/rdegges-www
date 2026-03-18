@@ -1,4 +1,4 @@
-baseURL = "https://www.rdegges.com"
+baseURL = "https://rdegges.com"
 languageCode = "en-us"
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
