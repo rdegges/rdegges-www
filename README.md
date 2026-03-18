@@ -29,6 +29,18 @@ hugo server
 ```
 
 
+## Deployment
+
+The site deploys automatically to [Render](https://render.com) on every push
+to `main`. Configuration is in `render.yaml`.
+
+**Hugo version:** The Hugo version is pinned in two places that must stay in sync:
+- `docker-compose.yml` — used for local development
+- `render.yaml` (`HUGO_VERSION` env var) — used for production builds on Render
+
+When upgrading Hugo, update both files.
+
+
 ## Theme
 
 I've built my own custom theme here for my personal usage — feel free to take

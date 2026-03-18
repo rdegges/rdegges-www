@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: rdegges-www
+    runtime: static
+    buildCommand: hugo --minify
+    staticPublishPath: ./public
+    envVars:
+      - key: HUGO_VERSION
+        value: "0.152.2"
+    headers:
+      # Cache immutable static assets aggressively
+      - path: /static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Security headers (applied to all pages)
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=63072000; includeSubDomains; preload
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
+      - path: /*
+        name: Content-Security-Policy
+        value: >-
+          default-src 'self';
+          script-src 'self' 'unsafe-inline';
+          style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+          font-src 'self' fonts.gstatic.com;
+          img-src 'self' data:;
+          form-action 'self' buttondown.email;
+          connect-src 'self';
+          frame-src 'none';
+          object-src 'none';
+          base-uri 'self';
+          frame-ancestors 'none'
