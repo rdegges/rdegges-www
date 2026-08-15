@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# A newer push to the same branch makes an in-flight run redundant.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Check Hugo version pins are in sync
+        run: ./scripts/check-hugo-version.sh
+
+      # The render-image hook fails the build on any broken image reference,
+      # so a clean build is also a link check.
+      - name: Build site
+        run: docker compose run --rm hugo hugo --minify

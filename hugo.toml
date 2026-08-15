@@ -1,11 +1,19 @@
 baseURL = "https://rdegges.com"
-languageCode = "en-us"
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
-metaDataFormat = "yaml"
+locale = "en-us"
 newContentEditor = "nvim"
 timezone = "America/Los_Angeles"
 title = "Randall Degges"
+
+[module]
+# Declares the Hugo version the layouts are written against. Building with
+# anything older logs "Module "project" is not compatible with this Hugo
+# version" up front, which is a much clearer signal than the template errors
+# that follow. It is a warning, not a hard stop -- scripts/check-hugo-version.sh
+# is what actually fails the build in CI.
+[module.hugoVersion]
+min = "0.165.0"
 
 [permalinks]
 post = "/:year/:title"

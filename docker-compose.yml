@@ -1,11 +1,12 @@
 # Docker Compose for local Hugo development
 # Usage: docker compose up
 #
-# Hugo version is pinned here and used by both local dev and GitHub Actions.
+# The Hugo version here must match hugo.toml and render.yaml.
+# Run scripts/check-hugo-version.sh (or `make check`) to verify.
 
 services:
   hugo:
-    image: hugomods/hugo:ci-0.152.2
+    image: hugomods/hugo:base-0.165.0
     container_name: rdegges-www
     ports:
       - "1313:1313"

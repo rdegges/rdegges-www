@@ -27,7 +27,7 @@
           <ul>
             {{ range .Site.RegularPages }}
               <time class="visible-xs visible-sm visible-md" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
-              <li><a href="{{ .Permalink }}" hreflang="{{ $.Site.LanguageCode }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
+              <li><a href="{{ .Permalink }}" hreflang="{{ $.Site.Language.Locale }}" media="all" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a> <time class="visible-lg" datetime="{{ dateFormat "02 Jan 2006" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time></li>
             {{ end }}
           </ul>
           <p>

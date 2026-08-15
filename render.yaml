@@ -6,7 +6,7 @@ services:
     staticPublishPath: ./public
     envVars:
       - key: HUGO_VERSION
-        value: "0.152.2"
+        value: "0.165.0"
     headers:
       # Cache immutable static assets aggressively
       - path: /static/*

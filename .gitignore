@@ -2,4 +2,5 @@
 *.lock
 public
 public-dev
+resources
 .env
