@@ -1,0 +1,18 @@
+{{- /*
+Overrides Hugo's built-in alias template solely to keep <meta name="robots"
+content="noindex"> on redirect stubs. Hugo dropped that tag from the embedded
+template, which would otherwise let search engines index all 166 of this site's
+old URLs as duplicates of their canonical targets.
+
+Everything else here mirrors the built-in template.
+*/ -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+  <head>
+    <title>{{ .Permalink }}</title>
+    {{ with .Page.OutputFormats.Canonical }}<link rel="{{ .Rel }}" href="{{ .Permalink }}">{{ end }}
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+</html>
