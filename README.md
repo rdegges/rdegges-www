@@ -39,12 +39,19 @@ Hugo Extended is required.
 The site deploys automatically to [Render](https://render.com) on every push
 to `main`. Configuration is in `render.yaml`.
 
+**Why there's a build script:** Render's static-site build image ships its own
+pinned Hugo (0.124.x) and ignores `HUGO_VERSION` — setting it has no effect on
+which binary `hugo` resolves to. Since these layouts need the template system
+introduced in Hugo 0.146, `scripts/render-build.sh` downloads the pinned Hugo
+(verifying its checksum) and builds with that instead.
+
 **Hugo version:** The Hugo version is declared in three places that must stay in
 sync:
 - `hugo.toml` (`[module.hugoVersion] min`) — the source of truth; Hugo warns
   up front when built with anything older
 - `docker-compose.yml` (image tag) — used for local development and CI
-- `render.yaml` (`HUGO_VERSION` env var) — used for production builds on Render
+- `render.yaml` (`HUGO_VERSION` env var) — read by `scripts/render-build.sh`
+  for production builds on Render
 
 When upgrading Hugo, update all three and run `make check`. CI runs the same
 check (`scripts/check-hugo-version.sh`) and fails the build if they drift.
