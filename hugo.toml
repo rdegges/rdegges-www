@@ -1,4 +1,9 @@
 baseURL = "https://rdegges.com"
+# There are no list templates, so Hugo could not write HTML for these kinds and
+# logged "found no layout file" for each. It still gave them an HTML permalink,
+# which put 41 URLs in sitemap.xml that 404 -- every /YYYY/, /tags/*, and
+# /categories/. Their only rendered output was a feed nothing linked to.
+disableKinds = ["section", "taxonomy", "term"]
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
 locale = "en-us"
