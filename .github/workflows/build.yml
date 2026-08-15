@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# A newer push to the same branch makes an in-flight run redundant.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # Runs the exact script Render runs, so CI exercises the real deploy
+      # path -- including reading the Hugo version out of docker-compose.yml.
+      # The render-image hook fails the build on any broken image reference,
+      # so a clean build is also a link check.
+      - name: Build site
+        run: ./scripts/render-build.sh

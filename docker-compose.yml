@@ -1,11 +1,13 @@
 # Docker Compose for local Hugo development
 # Usage: docker compose up
 #
-# Hugo version is pinned here and used by both local dev and GitHub Actions.
+# This image tag is the single source of truth for the Hugo version.
+# Production reads it too: scripts/render-build.sh parses the version out of
+# this file, so a Dependabot bump here upgrades local dev, CI and Render at once.
 
 services:
   hugo:
-    image: hugomods/hugo:ci-0.152.2
+    image: hugomods/hugo:base-0.165.0
     container_name: rdegges-www
     ports:
       - "1313:1313"

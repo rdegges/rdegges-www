@@ -1,11 +1,20 @@
 baseURL = "https://rdegges.com"
-languageCode = "en-us"
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
-metaDataFormat = "yaml"
+locale = "en-us"
 newContentEditor = "nvim"
 timezone = "America/Los_Angeles"
 title = "Randall Degges"
+
+[module]
+# The OLDEST Hugo these layouts work with -- deliberately not the version we
+# pin. 0.146 introduced the template layout used here and 0.158 added
+# .Language.Locale (0.157 fails to build, 0.158 succeeds). This only moves if
+# the templates start using a newer feature, so upgrading Hugo never touches
+# this file. Older versions log a clear incompatibility warning up front
+# instead of a pile of template errors.
+[module.hugoVersion]
+min = "0.158.0"
 
 [permalinks]
 post = "/:year/:title"
