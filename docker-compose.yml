@@ -1,8 +1,9 @@
 # Docker Compose for local Hugo development
 # Usage: docker compose up
 #
-# The Hugo version here must match hugo.toml and render.yaml.
-# Run scripts/check-hugo-version.sh (or `make check`) to verify.
+# This image tag is the single source of truth for the Hugo version.
+# Production reads it too: scripts/render-build.sh parses the version out of
+# this file, so a Dependabot bump here upgrades local dev, CI and Render at once.
 
 services:
   hugo:

@@ -6,9 +6,6 @@ services:
     # so the build script installs the pinned version before building.
     buildCommand: ./scripts/render-build.sh
     staticPublishPath: ./public
-    envVars:
-      - key: HUGO_VERSION
-        value: "0.165.0"
     headers:
       # Cache immutable static assets aggressively
       - path: /static/*

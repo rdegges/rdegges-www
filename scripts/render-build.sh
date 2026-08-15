@@ -2,27 +2,31 @@
 #
 # Production build for Render.
 #
-# Render's static-site build image ships its own pinned Hugo (0.124.x as of
-# writing) and does NOT honour the HUGO_VERSION environment variable -- setting
-# it has no effect on which binary `hugo` resolves to. Since this site's layouts
-# require the template system introduced in Hugo 0.146, we download the pinned
-# version ourselves rather than using whatever the image provides.
+# Render's static-site build image ships its own Hugo (0.124.x) and ignores the
+# HUGO_VERSION environment variable, so we install the version we actually want.
 #
-# HUGO_VERSION comes from render.yaml and is kept in sync with hugo.toml and
-# docker-compose.yml by scripts/check-hugo-version.sh.
+# The version comes from the image tag in docker-compose.yml, which is the
+# single source of truth for this repo -- local dev, CI and production all build
+# with the same Hugo, and there is no second copy to drift out of sync.
 
 set -euo pipefail
 
-: "${HUGO_VERSION:?HUGO_VERSION is not set (it should come from render.yaml)}"
+cd "$(dirname "$0")/.."
 
-archive="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-base="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+version="$(sed -n 's|^[[:space:]]*image:[[:space:]]*hugomods/hugo:base-\(.*\)[[:space:]]*$|\1|p' docker-compose.yml)"
+if [ -z "$version" ]; then
+  echo "error: could not read the Hugo version from docker-compose.yml" >&2
+  exit 1
+fi
+
+archive="hugo_extended_${version}_linux-amd64.tar.gz"
+base="https://github.com/gohugoio/hugo/releases/download/v${version}"
 workdir="$(mktemp -d)"
 trap 'rm -rf "$workdir"' EXIT
 
-echo "==> Downloading Hugo ${HUGO_VERSION} (extended)"
+echo "==> Downloading Hugo ${version} (extended)"
 curl -sSfL "${base}/${archive}" -o "${workdir}/${archive}"
-curl -sSfL "${base}/hugo_${HUGO_VERSION}_checksums.txt" -o "${workdir}/checksums.txt"
+curl -sSfL "${base}/hugo_${version}_checksums.txt" -o "${workdir}/checksums.txt"
 
 echo "==> Verifying checksum"
 (cd "$workdir" && grep " ${archive}\$" checksums.txt | sha256sum -c -)

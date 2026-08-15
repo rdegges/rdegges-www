@@ -7,13 +7,14 @@ timezone = "America/Los_Angeles"
 title = "Randall Degges"
 
 [module]
-# Declares the Hugo version the layouts are written against. Building with
-# anything older logs "Module "project" is not compatible with this Hugo
-# version" up front, which is a much clearer signal than the template errors
-# that follow. It is a warning, not a hard stop -- scripts/check-hugo-version.sh
-# is what actually fails the build in CI.
+# The OLDEST Hugo these layouts work with -- deliberately not the version we
+# pin. 0.146 introduced the template layout used here and 0.158 added
+# .Language.Locale (0.157 fails to build, 0.158 succeeds). This only moves if
+# the templates start using a newer feature, so upgrading Hugo never touches
+# this file. Older versions log a clear incompatibility warning up front
+# instead of a pile of template errors.
 [module.hugoVersion]
-min = "0.165.0"
+min = "0.158.0"
 
 [permalinks]
 post = "/:year/:title"
