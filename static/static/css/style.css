@@ -254,6 +254,14 @@ footer p a:visited {
     max-width: 100%;
 }
 
+/* Images whose original is larger than anything we serve link to the full
+   resolution file. The anchor has to be a block so it does not add inline
+   leading below the image it wraps. */
+.article a.img-full {
+    display: block;
+    cursor: zoom-in;
+}
+
 .article blockquote,
 .article pre {
     margin-bottom: 2.5em;
