@@ -91,7 +91,7 @@ through the [official documentation][], it's really great.
 should check it out: [http://www.theherokuhackersguide.com/][]
 
 
-[Broke Production]: broke-production.png "Broke Production"
+[Broke Production]: broke-production.jpg "Broke Production"
   [Heroku]: http://www.heroku.com/ "Heroku"
   [Django]: https://www.djangoproject.com/ "Django"
   [New Relic]: http://newrelic.com/ "New Relic, the Best Fucking Application Monitoring Software Ever Written"

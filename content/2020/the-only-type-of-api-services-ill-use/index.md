@@ -145,7 +145,7 @@ With all that said, if you're thinking about how you should be pricing an API se
 
 [Lady Justice Sketch]: lady-justice-sketch.png "Lady Justice Sketch"
 [Sand Clock Sketch]: sand-clock-sketch.png "Sand Clock Sketch"
-[Grim Reaper Sketch]: grim-reaper-sketch.png "Grim Reaper Sketch"
+[Grim Reaper Sketch]: grim-reaper-sketch.jpg "Grim Reaper Sketch"
 [Bucket Sketch]: bucket-sketch.png "Bucket Sketch"
 [Business Man Sketch]: business-man-sketch.png "Business Man Sketch"
 [Thinking Man Sketch]: thinking-man-sketch.png "Thinking Man Sketch"

@@ -214,7 +214,7 @@ and experiment with the hundreds of awesome plugins that it has, be sure to
 read the [official documentation][].
 
 
-[Butler Sketch]: butler-sketch.png "Butler Sketch"
+[Butler Sketch]: butler-sketch.jpg "Butler Sketch"
   [GitHub]: https://github.com/ "GitHub"
   [Jenkins CI]: http://jenkins-ci.org/ "Jenkins CI"
   [Hudson]: http://hudson-ci.org/ "Hudson CI"

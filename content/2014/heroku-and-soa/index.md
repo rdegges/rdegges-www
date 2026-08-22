@@ -274,7 +274,7 @@ As always, if you have any questions, please hit me up by [email][] or
   [previous articles]: {{< relref "2012/heroku-isnt-for-idiots.md" >}} "Heroku Isn't for Idiots"
   [book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
 [Sad Girl Sketch]: sad-girl-sketch.jpg "Sad Girl Sketch"
-[Thief Face Sketch]: thief-face-sketch.png "Thief Face Sketch"
+[Thief Face Sketch]: thief-face-sketch.jpg "Thief Face Sketch"
   [pricing]: https://www.heroku.com/pricing "Heroku Pricing"
 [Plant Sketch]: plant-sketch.png "Plant Sketch"
   [addon marketplace]: https://addons.heroku.com/ "Heroku Addons"

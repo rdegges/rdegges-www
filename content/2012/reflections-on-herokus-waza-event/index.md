@@ -150,5 +150,5 @@ I hope the Heroku guys throw another one sometime soon.
   [The UNIX Programming Environment]: http://www.amazon.com/gp/product/013937681X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=013937681X&linkCode=as2&tag=rdegges-20 "The UNIX Programming Environment"
   [Brian Kernighan]: http://www.cs.princeton.edu/~bwk/ "Brian Kernighan"
   [Dennis Ritchie]: http://cm.bell-labs.com/who/dmr/ "Dennis Ritchie"
-[Green Tea Leaves]: green-tea-leaves.png "Green Tea Leaves"
+[Green Tea Leaves]: green-tea-leaves.jpg "Green Tea Leaves"
   [teance]: http://www.teance.com/ "teance"

@@ -111,7 +111,7 @@ document, give it a try!
 Got a better method?  [Drop me a line][].
 
 
-[Broken Demon Sketch]: broken-demon-sketch.png "Broken Demon Sketch"
+[Broken Demon Sketch]: broken-demon-sketch.jpg "Broken Demon Sketch"
   [written]: {{< relref "2010/basic-xml-parsing-with-python-and-lxml.md" >}} "Basic XML Parsing With Python and LXML"
   [lxml]: http://lxml.de/ "Python LXML"
   [xml.etree]: http://docs.python.org/2/library/xml.etree.elementtree.html "Python xml.etree"

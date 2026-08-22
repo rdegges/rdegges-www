@@ -89,7 +89,7 @@ love to hear them.  I hope you'll give postgression a try!
 [Check out postgression here.][postgression]
 
 
-[Monkey Sketch]: monkey-sketch.png "Monkey Sketch"
+[Monkey Sketch]: monkey-sketch.jpg "Monkey Sketch"
   [Jenkins]: http://jenkins-ci.org/ "Jenkins CI"
   [Travis CI]: https://travis-ci.org/ "Travis CI"
   [PostgreSQL]: http://www.postgresql.org/ "PostgreSQL"

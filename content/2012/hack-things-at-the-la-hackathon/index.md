@@ -81,5 +81,5 @@ yours now!
 Hope to see you there >:)
 
 
-[Axe Warrior Sketch]: axe-warrior-sketch.png "Axe Warrior Sketch"
+[Axe Warrior Sketch]: axe-warrior-sketch.jpg "Axe Warrior Sketch"
   [LA Hackathon]: http://www.meetup.com/LA-Hackathons/events/85658952/ "LA Hackathon"

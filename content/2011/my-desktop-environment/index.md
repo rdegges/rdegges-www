@@ -306,6 +306,6 @@ separate post.
   [Dropbox]: http://db.tt/nP9tpb2 "Dropbox"
   [Amarok]: http://amarok.kde.org/en "Amarok"
   [last.fm]: http://www.last.fm/home "last.fm"
-[Amarok Screenshot]: amarok-screenshot.png "Amarok Screenshot"
+[Amarok Screenshot]: amarok-screenshot.jpg "Amarok Screenshot"
   [IRSSI]: http://www.irssi.org/ "IRSSI"
 [IRSSI Screenshot]: irssi-screenshot.png "IRSSI Screenshot"

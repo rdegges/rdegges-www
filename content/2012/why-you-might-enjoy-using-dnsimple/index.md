@@ -161,7 +161,7 @@ now: [https://dnsimple.com/][DNSimple].
 [DNSimple Apply Domain Template]: dnsimple-apply-domain-template.png "DNSimple Apply Domain Template"
 [DNSimple Domains]: dnsimple-domains.png "DNSimple Domains"
 [DNSimple Templates]: dnsimple-templates.png "DNSimple Templates"
-[DNSimple Domain Editor]: dnsimple-domain-editor.png "DNSimple Domain Editor"
+[DNSimple Domain Editor]: dnsimple-domain-editor.jpg "DNSimple Domain Editor"
 [DNSimple Domain Page]: dnsimple-domain-page.png "DNSimple Domain Page"
   [this article]: https://devcenter.heroku.com/articles/avoiding-naked-domains-dns-arecords "Avoid Naked Domains"
 [DNSimple URL Forwarding]: dnsimple-url-forwarding.png "DNSimple URL Forwarding"
