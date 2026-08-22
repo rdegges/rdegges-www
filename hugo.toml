@@ -21,6 +21,18 @@ title = "Randall Degges"
 [module.hugoVersion]
 min = "0.158.0"
 
+[imaging]
+# Hugo's default resample filter is "box", which is fast but soft when
+# downscaling. Lanczos is the quality choice and these images are resized once
+# at build time, so the cost is paid in CI rather than by readers.
+resampleFilter = "lanczos"
+
+[imaging.jpeg]
+# Resizing re-encodes, so this is the quality every downscaled JPEG inherits.
+# Hugo defaults to 75; measured on this site's photos, 85 scores ~90 on
+# SSIMULACRA2 (visually lossless) while 75 is visibly softer.
+quality = 85
+
 [permalinks]
 post = "/:year/:title"
 

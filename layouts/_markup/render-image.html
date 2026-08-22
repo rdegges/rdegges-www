@@ -1,22 +1,103 @@
+{{- /*
+  Image render hook: geometry only.
+
+  This resizes images and emits a responsive srcset. It deliberately does NOT
+  convert formats. Format choice depends on whether an image is continuous-tone
+  (photos, scans) or discrete-tone (screenshots, line art), and the two want
+  opposite treatment -- measured on this site's own images, a lossy re-encode of
+  a screenshot scores 59 on SSIMULACRA2, which is visibly damaged, while the
+  same setting is fine on a photo. Nothing in a Hugo template can tell the two
+  apart: it can compare encoded sizes but cannot score quality. So format
+  negotiation belongs at the CDN, where it is per-browser, reversible, and
+  improves without a rebuild.
+
+  Animated GIFs pass through untouched -- Hugo's image processing flattens them
+  to a single frame. SVG cannot be processed at all.
+*/ -}}
+
 {{- $dest := .Destination -}}
-{{- $alt := .Text | default "" -}}
+{{- $alt := .PlainText | default "" -}}
 {{- $title := .Title | default "" -}}
+
+{{- /* Widths worth generating. The content column tops out at 750 CSS px, so
+       1500 covers a 2x display; beyond that nobody sees the extra pixels. */ -}}
+{{- $ladder := slice 480 750 1125 -}}
+{{- $maxWidth := 1500 -}}
 
 {{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") (hasPrefix $dest "data:") -}}
 
-{{- if not $isRemote -}}
-  {{- if hasPrefix $dest "/" -}}
-    {{- /* Absolute path: ensure it exists in static/ */ -}}
-    {{- if not (fileExists (printf "static%s" $dest)) -}}
-      {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
-    {{- end -}}
+{{- if $isRemote -}}
+  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- else if hasPrefix $dest "/" -}}
+  {{- /* Absolute path into static/. Kept as a build-time link check: a broken
+         image reference fails CI rather than shipping a 404. */ -}}
+  {{- if not (fileExists (printf "static%s" $dest)) -}}
+    {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
+  {{- end -}}
+  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- else -}}
+  {{- $image := .Page.Resources.GetMatch $dest -}}
+  {{- if not $image -}}
+    {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
+  {{- end -}}
+
+  {{- $sub := $image.MediaType.SubType -}}
+  {{- $processable := and (eq $image.ResourceType "image") (not (in (slice "gif" "svg") $sub)) -}}
+
+  {{- /* The first image on a page is almost always the LCP element: fetch it
+         eagerly and at high priority. Everything below it can wait. */ -}}
+  {{- $lcp := eq .Ordinal 0 -}}
+  {{- $loadAttrs := "loading=\"lazy\" decoding=\"async\"" -}}
+  {{- if $lcp }}{{ $loadAttrs = "loading=\"eager\" fetchpriority=\"high\" decoding=\"async\"" }}{{ end -}}
+
+  {{- if not $processable -}}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
+      {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
   {{- else -}}
-    {{- $image := .Page.Resources.GetMatch $dest -}}
-    {{- if not $image -}}
-      {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
+    {{- $cap := cond (gt $image.Width $maxWidth) $maxWidth $image.Width -}}
+
+    {{- /* Only ladder steps meaningfully smaller than the cap: emitting 480w
+           alongside a 500w original just doubles the work for nothing. */ -}}
+    {{- $widths := slice -}}
+    {{- range $ladder -}}
+      {{- if lt (mul . 100) (mul $cap 85) }}{{ $widths = $widths | append . }}{{ end -}}
     {{- end -}}
-    {{- $dest = $image.RelPermalink -}}
+    {{- $widths = $widths | append $cap -}}
+
+    {{- /* Only ever resize DOWN. Re-encoding an image at its own size is pure
+           loss: Hugo's PNG encoder produces a larger file than the original for
+           the flat-colour screenshots on this site, so an untouched original is
+           both smaller and faster to build. */ -}}
+    {{- $srcset := slice -}}
+    {{- range $widths -}}
+      {{- $r := $image -}}
+      {{- if lt . $image.Width }}{{ $r = $image.Resize (printf "%dx" .) }}{{ end -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+    {{- end -}}
+    {{- $fallback := $image -}}
+    {{- if lt $cap $image.Width }}{{ $fallback = $image.Resize (printf "%dx" $cap) }}{{ end -}}
+
+    {{- /* Rendered width at each Bootstrap breakpoint, capped by the image's
+           own size -- an image narrower than the column renders at its natural
+           width, so claiming the full column would fetch a variant too large. */ -}}
+    {{- $lg := cond (gt $image.Width 750) 750 $image.Width -}}
+    {{- $md := cond (gt $image.Width 616) 616 $image.Width -}}
+    {{- $sm := cond (gt $image.Width 470) 470 $image.Width -}}
+    {{- /* When the image is narrower than every breakpoint it renders at one
+           fixed width everywhere, and the breakpoint list collapses. */ -}}
+    {{- $sizes := printf "(min-width: 1200px) %dpx, (min-width: 992px) %dpx, (min-width: 768px) %dpx, 83vw" $lg $md $sm -}}
+    {{- if and (eq $lg $md) (eq $md $sm) }}{{ $sizes = printf "(min-width: 768px) %dpx, 83vw" $lg }}{{ end -}}
+
+    {{- /* Link to the original only when it actually holds more detail than
+           anything in the srcset. A link to the same file is noise for keyboard
+           and screen-reader users. */ -}}
+    {{- $hasMore := gt $image.Width $cap -}}
+    {{- if $hasMore -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ end -}}
+    <img src="{{ $fallback.RelPermalink }}"
+      {{- /* A one-entry srcset says nothing that src does not. */ -}}
+      {{- if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
+      width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+      alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
+    {{- if $hasMore -}}</a>{{ end -}}
   {{- end -}}
 {{- end -}}
-
-<img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}>
