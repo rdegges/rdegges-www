@@ -53,4 +53,4 @@ way too short for that.
 From now on I'm just going to do stuff, and have fun.  Forget everything else.
 
 
-[Kangaroos]: kangaroos.png "Kangaroos"
+[Kangaroos]: kangaroos.jpg "Kangaroos"

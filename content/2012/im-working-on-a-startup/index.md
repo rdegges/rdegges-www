@@ -67,7 +67,7 @@ Over the coming months, I'll be spending more time writing about my startup
 journeys, so be sure to check back!
 
 
-[Monk Sketch]: monk-sketch.png "Monk Sketch"
+[Monk Sketch]: monk-sketch.jpg "Monk Sketch"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
 [OpenCNAM Logo]: opencnam-logo.png "OpenCNAM Logo"
   [support@opencnam.com]: mailto:support@opencnam.com "OpenCNAM Support Email"

@@ -92,4 +92,4 @@ So, my recommendation is that if you're going to start a journal and want to pri
 
 [Writing Sketch]: writing-sketch.png "Writing Sketch"
 [Day One App]: day-one-app.png "Day One App"
-[My Journal]: my-journal.png "My Journal"
+[My Journal]: my-journal.jpg "My Journal"

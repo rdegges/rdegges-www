@@ -148,4 +148,4 @@ I'm currently in the process of following up with Snyk's IT department to see if
 
 
 [Macbook Sketch]: macbook-sketch.png "Macbook Sketch"
-[Eve Energy Screenshot]: eve-energy-screenshot.png "Eve Energy Screenshot"
+[Eve Energy Screenshot]: eve-energy-screenshot.jpg "Eve Energy Screenshot"

@@ -376,7 +376,7 @@ guy, after all.
 [Heroku Icon Black]: heroku-icon-black.png "Heroku Icon Black"
 [AWS Icon]: aws-icon.png "AWS Icon"
 [Superman Back Sketch]: superman-back-sketch.png "Superman Back Sketch"
-[Superman Proud Sketch]: superman-proud-sketch.png "Superman Proud Sketch"
+[Superman Proud Sketch]: superman-proud-sketch.jpg "Superman Proud Sketch"
 [Service Logos]: service-logos.png "Service Logos"
   [Zencoder]: https://zencoder.com/en/ "Zencoder"
   [Heroku]: https://www.heroku.com/ "Heroku"

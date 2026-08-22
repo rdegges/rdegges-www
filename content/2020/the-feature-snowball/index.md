@@ -133,11 +133,11 @@ As I mentioned near the start of this article, I've been successfully using the 
 If you're the type of person who feels excited and motivated when they finish projects and cross things off their todo list, you may want to give the feature snowball method a try. It's completely changed the way I work, my outlook, and the daily enjoyment of what I do every day.
 
 
-[Monstrous Yeti Sketch]: monstrous-yeti-sketch.png "Monstrous Yeti Sketch"
+[Monstrous Yeti Sketch]: monstrous-yeti-sketch.jpg "Monstrous Yeti Sketch"
 [Angry Yeti Sketch]: angry-yeti-sketch.png "Angry Yeti Sketch"
 [Hulking Yeti Sketch]: hulking-yeti-sketch.png "Hulking Yeti Sketch"
 [Lumbering Yeti Sketch]: lumbering-yeti-sketch.png "Lumbering Yeti Sketch"
 [Wise Yeti Sketch]: wise-yeti-sketch.png "Wise Yeti Sketch"
-[Cute Yeti Sketch]: cute-yeti-sketch.png "Cute Yeti Sketch"
+[Cute Yeti Sketch]: cute-yeti-sketch.jpg "Cute Yeti Sketch"
 [Sad Yeti Sketch]: sad-yeti-sketch.png "Sad Yeti Sketch"
 [Old Yeti Sketch]: old-yeti-sketch.png "Old Yeti Sketch"

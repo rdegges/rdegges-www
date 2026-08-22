@@ -115,7 +115,7 @@ currently solving at my workplace, and so I plan to do some very detailed write
 ups on my methods and tools over the coming weeks.
 
 
-[Dump Truck Sketch]: dump-truck-sketch.png "Dump Truck Sketch"
+[Dump Truck Sketch]: dump-truck-sketch.jpg "Dump Truck Sketch"
   [Revolution Systems]: http://www.revsys.com/ "Revolution Systems"
   [Jacob Kaplan-Moss]: http://jacobian.org/ "Jacob Kaplan-Moss"
   [Chef]: http://wiki.opscode.com/display/chef/Home "Chef"

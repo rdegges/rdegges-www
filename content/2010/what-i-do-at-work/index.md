@@ -139,6 +139,6 @@ re-define traditional telephony services, and let us build rock solid, high
 performance telephony systems.
 
 
-[Desk Sketch]: desk-sketch.png "Desk Sketch"
+[Desk Sketch]: desk-sketch.jpg "Desk Sketch"
   [Fonality]: http://www.fonality.com/ "Fonality"
   [RCG's CEO]: http://www.chrisbrunner.com/ "Chris Brunner"

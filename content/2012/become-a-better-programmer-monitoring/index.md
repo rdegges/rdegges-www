@@ -161,7 +161,7 @@ In future posts I'm hoping to write about other methods to becoming a better
 programmer.
 
 
-[Grim Reaper Gesturing]: grim-reaper-gesturing.png "Grim Reaper Gesturing"
+[Grim Reaper Gesturing]: grim-reaper-gesturing.jpg "Grim Reaper Gesturing"
   [New Relic]: http://newrelic.com/ "NewRelic - Shit just got real for programmers."
 [Oh Stop It You]: oh-stop-it-you.png "Oh Stop It You"
 [New Relic Map Screenshot]: newrelic-map-screenshot.png "New Relic Map Screenshot"

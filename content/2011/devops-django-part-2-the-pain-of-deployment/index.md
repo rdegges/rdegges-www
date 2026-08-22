@@ -307,7 +307,7 @@ deployment solution I discovered.
 **UPDATE**: I finished part 3 of the series, you can read it [here][].
 
 
-[Pyramid Head Sketch]: pyramid-head-sketch.png "Pyramid Head Sketch"
+[Pyramid Head Sketch]: pyramid-head-sketch.jpg "Pyramid Head Sketch"
   [first article]: {{< relref "2011/devops-django-part-1-goals.md" >}} "DevOps Django - Part 1 - Goals"
   [Ubuntu server]: http://www.ubuntu.com/business/server/overview "Ubuntu Server"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"

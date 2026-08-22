@@ -193,10 +193,10 @@ developers, please drop by and say hi :)
 
 
 [Kenpachi Sketch]: kenpachi-sketch.png "Kenpachi Sketch"
-[Byakuya Sketch]: byakuya-sketch.png "Byakuya Sketch"
+[Byakuya Sketch]: byakuya-sketch.jpg "Byakuya Sketch"
 [Kenpachi Alternate Sketch]: kenpachi-alternate-sketch.png "Kenpachi Alternate Sketch"
 [Kneeling Samurai Sketch]: kneeling-samurai-sketch.png "Kneeling Samurai Sketch"
-[Kenpachi Back Sketch]: kenpachi-back-sketch.png "Kenpachi Back Sketch"
+[Kenpachi Back Sketch]: kenpachi-back-sketch.jpg "Kenpachi Back Sketch"
 [Ichigo Hollow Sketch]: ichigo-hollow-sketch.png "Ichigo Hollow Sketch"
 [Ichigo Hollow Screaming]: ichigo-hollow-screaming.png "Ichigo Hollow Screaming"
-[Renji Sketch]: renji-sketch.png "Renji Sketch"
+[Renji Sketch]: renji-sketch.jpg "Renji Sketch"

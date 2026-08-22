@@ -234,4 +234,4 @@ It doesn't matter where you're at now, it only matters where you're going. Stay 
   [layoffs are coming]: https://jacobian.org/2020/mar/13/layoffs-are-coming/ "Layoffs Are Coming"
   [since the great depression]: https://www.nytimes.com/2020/04/03/upshot/coronavirus-jobless-rate-great-depression.html "Coronavirus Jobless Rate vs Great Depression"
 [Scientist Sketch]: scientist-sketch.jpg "Scientist Sketch"
-[Doctor in PPE Sketch]: doctor-in-ppe-sketch.png "Doctor in PPE Sketch"
+[Doctor in PPE Sketch]: doctor-in-ppe-sketch.jpg "Doctor in PPE Sketch"

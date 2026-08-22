@@ -408,6 +408,6 @@ interested in deploying web applications on Heroku, you should check it out.
 [New Relic Dynos]: newrelic-dynos.png "New Relic Dynos"
 [New Relic Web Transactions]: newrelic-web-transactions.png "New Relic Web Transactions"
 [New Relic Background Tasks]: newrelic-background-tasks.png "New Relic Background Tasks"
-[You're Gonna Have a Bad Time]: youre-gonna-have-a-bad-time.png "You're Gonna Have a Bad Time"
+[You're Gonna Have a Bad Time]: youre-gonna-have-a-bad-time.jpg "You're Gonna Have a Bad Time"
 [Giant Sketch]: giant-sketch.png "Giant Sketch"
   [The Heroku Hacker's Guide]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

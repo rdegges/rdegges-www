@@ -86,6 +86,6 @@ middleware classes, it is necessary to have them executed last by Django (which
 means defining them first in `MIDDLEWARE_CLASSES`).
 
 
-[Electron Sketch]: electron-sketch.png "Electron Sketch"
+[Electron Sketch]: electron-sketch.jpg "Electron Sketch"
   [Django security comment]: https://docs.djangoproject.com/en/1.8/ref/middleware/#module-django.middleware.gzip "Django GZip Middleware"
   [django-htmlmin]: https://github.com/cobrateam/django-htmlmin "django-htmlmin"

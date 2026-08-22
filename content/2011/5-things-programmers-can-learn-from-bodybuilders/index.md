@@ -134,4 +134,4 @@ Always keep pushing yourself beyond your limits, and you will achieve great
 things.
 
 
-[Jay Cutler]: jay-cutler.png "Jay Cutler"
+[Jay Cutler]: jay-cutler.jpg "Jay Cutler"

@@ -69,4 +69,4 @@ than the alternatives.
 Do the right thing.
 
 
-[Dark Angel]: dark-angel.png "Dark Angel"
+[Dark Angel]: dark-angel.jpg "Dark Angel"
