@@ -26,25 +26,40 @@
   <meta name="msapplication-TileImage" content="/static/images/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   {{- /*
-    One stylesheet, content-addressed.
+    One stylesheet, content-addressed, no third-party requests.
 
-    Bootstrap first, then our overrides, in the order they used to be linked --
-    style.css sets Raleway/Sanchez over Bootstrap's Roboto, so order is load
-    bearing. Bootstrap's @import stays at the top of the concatenated file,
-    which CSS requires.
+    Order is load bearing: @font-face first (CSS requires it before use),
+    then Bootstrap, then our overrides -- style.css sets Raleway and Sanchez
+    over Bootstrap's defaults.
 
-    fingerprint puts a hash of the contents in the filename, so the URL changes
-    whenever the bytes do. That is what makes the one-year immutable header in
-    render.yaml honest: a given URL genuinely can never hold different bytes.
-    Skipped outside production so local filenames stay readable.
+    fonts.css is executed as a template so each src resolves to the
+    fingerprinted URL of its font file.
+
+    Bootstrap ships an @import for Roboto from fonts.googleapis.com. Nothing
+    on the site renders in Roboto -- verified by walking every visible text
+    node and reading its computed font-family -- but the browser still pays a
+    render-blocking request for it, chained behind the stylesheet that
+    imports it. It is stripped here rather than by editing the vendored file.
+
+    fingerprint puts a hash of the contents in the filename, so the URL
+    changes whenever the bytes do. That is what makes the one-year immutable
+    header in render.yaml honest. Skipped outside production so local
+    filenames stay readable.
   */ -}}
+  {{- $fonts := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . -}}
   {{- $sheets := slice
+        $fonts
         (resources.Get "css/bootstrap.min.css")
         (resources.Get "css/style.css")
         (resources.Get "css/syntax.css") -}}
   {{- $css := $sheets | resources.Concat "static/css/site.css" -}}
+  {{- $css = $css.Content
+        | replaceRE `@import\s+(url\()?["']https://fonts\.googleapis\.com[^"']*["']\)?\s*;` ""
+        | resources.FromString "static/css/site.css" -}}
   {{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+  {{- /* The two faces used above the fold. Preload so they start downloading
+         with the stylesheet rather than after it parses. */ -}}
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/raleway-latin.woff2" | resources.Copy "static/fonts/raleway-latin.woff2" | fingerprint).RelPermalink }}">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/sanchez-latin.woff2" | resources.Copy "static/fonts/sanchez-latin.woff2" | fingerprint).RelPermalink }}">
   <link href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }} media="all" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" type="text/css">
 </head>
