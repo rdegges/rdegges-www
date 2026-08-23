@@ -6,6 +6,9 @@
   <meta content="{{ .Site.Params.author.name }}" name="author">
   <meta content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" name="description">
   <title>{{ .Site.Title }} - {{ if ne .Title "" }}{{ .Title }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}</title>
+  {{- /* Belt and braces: a 404 served with a 404 status is not indexed anyway,
+         but this also covers a host that mistakenly serves it as 200. */}}
+  {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
   <link href="/feed.xml" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml" />
   <link href="/feed.xml" rel="feed" title="{{ .Site.Title }}" type="application/atom+xml" />
   <link href="/static/images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
