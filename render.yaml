@@ -36,8 +36,8 @@ services:
         value: >-
           default-src 'self';
           script-src 'self' 'unsafe-inline';
-          style-src 'self' 'unsafe-inline' fonts.googleapis.com;
-          font-src 'self' fonts.gstatic.com;
+          style-src 'self' 'unsafe-inline';
+          font-src 'self';
           img-src 'self' data:;
           form-action 'self' buttondown.email;
           connect-src 'self';
