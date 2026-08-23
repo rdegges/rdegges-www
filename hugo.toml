@@ -33,6 +33,17 @@ resampleFilter = "lanczos"
 # SSIMULACRA2 (visually lossless) while 75 is visibly softer.
 quality = 85
 
+[services]
+  [services.rss]
+    # The feed carried all 168 posts in full: 2,077,488 bytes, and every
+    # aggregator refetched the lot on every poll. Twenty items is the RSS
+    # convention and cuts it to 366,729 bytes -- and because posts here are
+    # infrequent, twenty still reaches back to December 2015.
+    #
+    # Items stay full-content rather than becoming summaries, so the feed is
+    # still readable without visiting the site.
+    limit = 20
+
 [permalinks]
 post = "/:year/:title"
 
