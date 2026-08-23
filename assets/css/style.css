@@ -248,6 +248,13 @@ footer p a:visited {
 
 .article img {
     display: block;
+    /* height:auto is load bearing. The img carries width and height
+       attributes so the browser can reserve space before the file arrives,
+       which keeps layout shift at zero. Without height:auto, max-width
+       shrinks the width to fit the column while the height attribute still
+       governs the height, and the image renders stretched -- worst on
+       phones, where the column is narrowest. */
+    height: auto;
     margin: auto;
     margin-bottom: 2.5em !important;
     margin-top: 2.5em !important;
