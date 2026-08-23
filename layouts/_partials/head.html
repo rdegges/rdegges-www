@@ -25,9 +25,26 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/static/images/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link href="/static/components/bootswatch/paper/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+  {{- /*
+    One stylesheet, content-addressed.
+
+    Bootstrap first, then our overrides, in the order they used to be linked --
+    style.css sets Raleway/Sanchez over Bootstrap's Roboto, so order is load
+    bearing. Bootstrap's @import stays at the top of the concatenated file,
+    which CSS requires.
+
+    fingerprint puts a hash of the contents in the filename, so the URL changes
+    whenever the bytes do. That is what makes the one-year immutable header in
+    render.yaml honest: a given URL genuinely can never hold different bytes.
+    Skipped outside production so local filenames stay readable.
+  */ -}}
+  {{- $sheets := slice
+        (resources.Get "css/bootstrap.min.css")
+        (resources.Get "css/style.css")
+        (resources.Get "css/syntax.css") -}}
+  {{- $css := $sheets | resources.Concat "static/css/site.css" -}}
+  {{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+  <link href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }} media="all" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" type="text/css">
-  <link href="/static/css/style.css" media="all" rel="stylesheet" type="text/css">
-  <link href="/static/css/syntax.css" media="all" rel="stylesheet" type="text/css">
 </head>
