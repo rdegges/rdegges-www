@@ -73,8 +73,23 @@ url = "mailto:r@rdegges.com"
 name = "Randall Degges"
 email = "r@rdegges.com"
 
-[outputFormats.RSS]
-baseName = "feed"
+# Atom 1.0 instead of RSS 2.0, at the same /feed.xml URL so existing
+# subscribers keep working -- readers parse the document, not the extension.
+# Hugo has no built-in Atom media type, so it is declared here.
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.Atom]
+    mediaType = "application/atom+xml"
+    baseName = "feed"
+    isPlainText = false
+    rel = "alternate"
+
+[outputs]
+  home = ["HTML", "Atom"]
+  page = ["HTML"]
 
 [markup.highlight]
 anchorLineNos = false
