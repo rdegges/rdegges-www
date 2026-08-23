@@ -134,7 +134,11 @@ nav a:visited {
     font-weight: normal;
 }
 
-.index main li time {
+/* Only the desktop date floats. Both <time> elements now sit inside the
+   <li> (a <ul> may only contain <li>), so this has to name the desktop one
+   -- otherwise the mobile date floats right onto the title's line instead
+   of sitting on its own line above it. */
+.index main li time.visible-lg {
     float: right;
 }
 
