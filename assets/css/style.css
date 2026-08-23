@@ -46,6 +46,15 @@ nav ul {
     list-style-type: none;
     margin: 0em;
     padding: 0em;
+    /* The nav items are inline, and inline content can only wrap at
+       whitespace. hugo --minify strips the whitespace between </li> and
+       <li>, which removes the only wrap opportunity they had, so on a
+       narrow phone the last item ran past the viewport and the whole page
+       scrolled sideways by ~23px. Flex wraps between items regardless of
+       whitespace. */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav li {
