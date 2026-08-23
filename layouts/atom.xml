@@ -1,0 +1,73 @@
+{{- /*
+  Atom 1.0 feed (RFC 4287), published at /feed.xml.
+
+  Atom is chosen over RSS 2.0 because the spec is unambiguous where RSS is
+  not: entry identity, timestamps and content type are all required and
+  defined, rather than conventions each reader guesses at.
+
+  Required by the spec, and easy to get wrong:
+    - feed and entry <id> must be permanent, unique IRIs
+    - feed and entry <updated> must be RFC 3339, not RFC 822 like RSS
+    - <content type="html"> must carry escaped HTML, not raw markup
+
+  The item count reuses services.rss.limit so there is one knob for feed
+  length regardless of which format is published.
+*/ -}}
+{{- $authorName := "" -}}
+{{- $authorEmail := "" -}}
+{{- with site.Params.author -}}
+  {{- if reflect.IsMap . -}}
+    {{- $authorName = .name | default "" -}}
+    {{- $authorEmail = .email | default "" -}}
+  {{- else -}}
+    {{- $authorName = . -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages := site.RegularPages -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 }}{{ $pages = $pages | first $limit }}{{ end -}}
+{{- /* site.Lastmod is the newest Lastmod across the site, which is exactly
+       what Atom's feed-level <updated> means. */ -}}
+{{- $updated := site.Lastmod -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.Language.LanguageCode | default site.Language.Lang }}">
+  <title>{{ site.Title }}</title>
+  {{- with site.Params.subtitle }}
+  <subtitle>{{ . }}</subtitle>
+  {{- end }}
+  <id>{{ site.Home.Permalink }}</id>
+  <updated>{{ $updated.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</updated>
+  <link rel="alternate" type="text/html" href="{{ site.Home.Permalink }}" />
+  {{- with .OutputFormats.Get "atom" }}
+  <link rel="self" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" />
+  {{- end }}
+  {{- with $authorName }}
+  <author>
+    <name>{{ . }}</name>
+    {{- with $authorEmail }}
+    <email>{{ . }}</email>
+    {{- end }}
+    <uri>{{ site.Home.Permalink }}</uri>
+  </author>
+  {{- end }}
+  {{- with site.Copyright }}
+  <rights>{{ . }}</rights>
+  {{- end }}
+  <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
+  {{- range $pages }}
+  <entry>
+    <title>{{ .Title }}</title>
+    <link rel="alternate" type="text/html" href="{{ .Permalink }}" />
+    <id>{{ .Permalink }}</id>
+    <published>{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</published>
+    <updated>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</updated>
+    {{- with $authorName }}
+    <author><name>{{ . }}</name></author>
+    {{- end }}
+    {{- with .Description }}
+    <summary type="text">{{ . }}</summary>
+    {{- end }}
+    <content type="html">{{ .Content | transform.XMLEscape | safeHTML }}</content>
+  </entry>
+  {{- end }}
+</feed>
