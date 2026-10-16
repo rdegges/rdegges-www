@@ -217,7 +217,9 @@
     ]);
   }
 
-  function animateAlong(node, pathD, ms, onTick) {
+  // isLive lets the caller abandon an animation: once it returns false the
+  // trolley stops where it is and the promise resolves false.
+  function animateAlong(node, pathD, ms, onTick, isLive) {
     var path = sv("path", { d: pathD });
     var tmp = sv("svg", { width: 0, height: 0, style: "position:absolute" }, [path]);
     document.body.appendChild(tmp);
@@ -230,15 +232,16 @@
       if (onTick) onTick(p);
     }
     return new Promise(function (resolve) {
-      if (REDUCED) { at(1); tmp.remove(); resolve(); return; }
+      if (REDUCED) { at(1); tmp.remove(); resolve(true); return; }
       var start = null;
       function step(ts) {
+        if (isLive && !isLive()) { tmp.remove(); resolve(false); return; }
         if (start == null) start = ts;
         var t = Math.min(1, (ts - start) / ms);
         // Ease in only: trolleys do not slow down for anybody.
         at(t * t * (3 - 2 * t) * 0.35 + t * 0.65);
         if (t < 1) requestAnimationFrame(step);
-        else { tmp.remove(); resolve(); }
+        else { tmp.remove(); resolve(true); }
       }
       requestAnimationFrame(step);
     });
@@ -253,7 +256,8 @@
     var state = opts.mode === "crowd"
       ? { main: { name: champ, n: 1 }, side: { name: "Python", n: 3 } }
       : { main: { name: "Python", n: 1 }, side: { name: champ, n: 1 } };
-    var busy = false;
+    // Every redraw bumps this, which cancels any trolley still in motion.
+    var token = 0;
 
     var wrap = el("div", { "class": "tw-diorama" });
     var controls = el("div", { "class": "tw-controls" });
@@ -325,7 +329,7 @@
     }
 
     function draw() {
-      busy = false;
+      token++;
       people.innerHTML = "";
       fx.innerHTML = "";
       state.mainG = crowd(people, state.main, MAIN_Y);
@@ -367,10 +371,10 @@
     }
 
     function go() {
-      if (busy) { draw(); }
+      draw();
+      var my = token;
       var p = pPull();
       if (p == null) return;
-      busy = true;
       send.disabled = true;
       var pull = Math.random() < p;
       var hit = pull ? state.sideG : state.mainG;
@@ -390,7 +394,8 @@
           spared.classList.add("tw-spared");
           fx.appendChild(bonk(VICTIM_X + 10, (pull ? SIDE_Y : MAIN_Y) - 22));
         }
-      }).then(function () {
+      }, function () { return my === token; }).then(function (finished) {
+        if (!finished) return;
         caption.textContent = (pull ? "Jev pulled the lever. " : "Jev did not touch the lever. ") +
           "The trolley hit " + phrase(victims) + ". (It pulls " + pct(p) + " of the time here, so send it again and you might get a different answer. Jev would.)";
         send.disabled = false;
@@ -736,9 +741,9 @@
   }
 
   // Diverging: blue when the row survives more, red when it dies more, gray
-  // at a coin flip. Saturates at ±0.05, past the widest margin in the data.
+  // at a coin flip. Saturates at ±0.06, the widest margin in the data.
   function divColor(p) {
-    var t = Math.max(-1, Math.min(1, (p - 0.5) / 0.05));
+    var t = Math.max(-1, Math.min(1, (p - 0.5) / 0.06));
     return t >= 0 ? mix("#f0efec", "#2a78d6", t) : mix("#f0efec", "#e34948", -t);
   }
 
