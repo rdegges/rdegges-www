@@ -1,0 +1,11 @@
+{{- /*
+  An interactive widget for "The Programmer Trolley Problem" post.
+
+  Usage: {{< trolley "bracket" >}}
+
+  Markdown here drops raw HTML, so each widget is an empty container that the
+  post's trolley.js fills in. The post loads that script through its front
+  matter (see the styles/scripts note in head.html). Feed readers and no-JS
+  visitors get the fallback line.
+*/ -}}
+<div class="tw" data-widget="{{ .Get 0 }}"><p class="tw-fallback"><em>(There's an interactive trolley here. <a href="{{ .Page.Permalink }}">Open the post on rdegges.com</a> to play with it.)</em></p></div>

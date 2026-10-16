@@ -65,4 +65,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/raleway-latin.woff2" | resources.Copy "static/fonts/raleway-latin.woff2" | fingerprint).RelPermalink }}">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/sanchez-latin.woff2" | resources.Copy "static/fonts/sanchez-latin.woff2" | fingerprint).RelPermalink }}">
   <link href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }} media="all" rel="stylesheet" type="text/css">
+  {{- /* A post can bring its own CSS and JS from its page bundle by listing
+         the files in front matter (styles: [...], scripts: [...]). They are
+         same-origin, so the CSP's 'self' covers them, and fingerprinted like
+         the site stylesheet. A missing file fails the build. */ -}}
+  {{- range .Params.styles }}
+    {{- with $.Resources.Get . }}{{ $r := . | fingerprint }}
+  <link href="{{ $r.RelPermalink }}" integrity="{{ $r.Data.Integrity }}" rel="stylesheet">
+    {{- else }}{{ errorf "%s: styles entry %q is not in the page bundle" $.File.Path . }}{{ end }}
+  {{- end }}
+  {{- range .Params.scripts }}
+    {{- with $.Resources.Get . }}{{ $r := . | fingerprint }}
+  <script defer src="{{ $r.RelPermalink }}" integrity="{{ $r.Data.Integrity }}"></script>
+    {{- else }}{{ errorf "%s: scripts entry %q is not in the page bundle" $.File.Path . }}{{ end }}
+  {{- end }}
 </head>

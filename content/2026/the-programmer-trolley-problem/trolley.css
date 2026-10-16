@@ -1,0 +1,232 @@
+/* Widgets for "The Programmer Trolley Problem". Everything is scoped under
+   .tw so nothing leaks into the rest of the site. The site is light-only,
+   so the widgets are too. */
+
+.tw {
+  --tw-ink: #515050;
+  --tw-ink-2: #7a7774;
+  --tw-muted: #a19d98;
+  --tw-panel: #faf8f5;
+  --tw-line: #e6e1da;
+  --tw-blue: #2a78d6;
+  --tw-blue-soft: #cde2fb;
+  --tw-red: #e34948;
+  --tw-gray-mid: #f0efec;
+  --tw-trolley: #d03b3b;
+  --tw-tie: #c7ad8a;
+  --tw-rail: #6f6a64;
+  margin: 2em 0;
+  padding: 16px;
+  background: var(--tw-panel);
+  border: 1px solid var(--tw-line);
+  border-radius: 10px;
+  color: var(--tw-ink);
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.tw svg { display: block; width: 100%; height: auto; }
+.tw svg text { font-family: "Raleway", sans-serif; fill: var(--tw-ink); }
+.tw p { margin: 0.6em 0 0; }
+.tw .tw-fallback { margin: 0; }
+
+/* A wide chart scrolls inside its own box; the page never scrolls sideways. */
+.tw-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tw-scroll > svg { min-width: 520px; }
+
+/* ---------- controls ---------- */
+
+.tw-controls, .tw-buttons { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-end; }
+.tw-buttons { margin-top: 10px; gap: 8px; }
+.tw-field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--tw-ink-2); }
+.tw-field select {
+  font: inherit; font-size: 15px; color: var(--tw-ink);
+  padding: 6px 8px; border: 1px solid #cfc8bf; border-radius: 6px; background: #fff;
+}
+.tw-btn {
+  font: inherit; font-weight: 600; font-size: 14px;
+  padding: 8px 14px; border-radius: 6px; cursor: pointer;
+  border: 1px solid #cfc8bf; background: #fff; color: var(--tw-ink);
+}
+.tw-btn:hover { border-color: var(--tw-ink-2); }
+.tw-btn:disabled { opacity: 0.5; cursor: default; }
+.tw-primary { background: var(--tw-trolley); border-color: var(--tw-trolley); color: #fff; }
+.tw-primary:hover { background: #b83131; border-color: #b83131; }
+.tw button:focus-visible, .tw select:focus-visible, .tw [tabindex]:focus-visible {
+  outline: 2px solid var(--tw-blue); outline-offset: 2px;
+}
+
+.tw-seg { display: inline-flex; border: 1px solid #cfc8bf; border-radius: 6px; overflow: hidden; background: #fff; }
+.tw-seg button {
+  font: inherit; font-size: 14px; min-width: 34px; padding: 6px 8px;
+  border: 0; border-right: 1px solid #e6e1da; background: #fff; color: var(--tw-ink); cursor: pointer;
+}
+.tw-seg button:last-child { border-right: 0; }
+.tw-seg button[aria-pressed="true"] { background: var(--tw-ink); color: #fff; }
+
+.tw-caption { font-size: 14px; color: var(--tw-ink-2); min-height: 2.9em; }
+.tw-note { font-size: 13px; color: var(--tw-ink-2); }
+
+/* ---------- the diorama ---------- */
+
+.tw-stage { margin-top: 10px; background: #fffdf9; border: 1px solid var(--tw-line); border-radius: 8px; }
+.tw-ties { fill: none; stroke: var(--tw-tie); stroke-width: 18; stroke-dasharray: 4 9; }
+.tw-rail-out { fill: none; stroke: var(--tw-rail); stroke-width: 9; }
+.tw-rail-in { fill: none; stroke: #fffdf9; stroke-width: 5; }
+.tw-track-label { font-size: 14px; fill: var(--tw-muted) !important; }
+
+.tw-person line, .tw-person circle { stroke: var(--tw-ink); stroke-width: 2.2; stroke-linecap: round; fill: #fffdf9; }
+.tw-rope { fill: #b0864f; stroke: none !important; }
+.tw-body { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 0.35s ease-in, opacity 0.35s; }
+.tw-hit .tw-body { transform: rotate(-82deg) translateX(-6px); opacity: 0.35; }
+.tw-spared .tw-body { animation: tw-hop 0.5s ease-out 2; }
+@keyframes tw-hop { 50% { transform: translateY(-6px); } }
+.tw-tag rect { fill: #fff; stroke: #cfc8bf; }
+.tw-tag text { font-size: 15px; font-weight: 600; }
+
+.tw-trolley-body { fill: var(--tw-trolley); }
+.tw-trolley-roof { fill: #8f2525; }
+.tw-trolley-window { fill: #fdf3dc; }
+.tw-wheel { fill: #333; stroke: #777; stroke-width: 2; }
+
+.tw-lever-base { fill: var(--tw-rail); }
+.tw-lever-handle line { stroke: var(--tw-ink); stroke-width: 4; stroke-linecap: round; }
+.tw-lever-handle circle { fill: var(--tw-trolley); }
+.tw-lever-handle { transition: transform 0.25s; }
+
+.tw-robot-head { fill: #dfe8f3; stroke: #5d7894; stroke-width: 2; }
+.tw-robot-line { stroke: #5d7894; stroke-width: 3; stroke-linecap: round; }
+.tw-robot-eye { fill: #253a52; }
+.tw-robot-bulb { fill: #f5c04a; }
+.tw-robot-name { font-size: 15px; font-weight: 700; fill: #5d7894 !important; }
+
+.tw-bubble path { fill: #fff; stroke: #cfc8bf; }
+.tw-bubble text { font-size: 15px; font-style: italic; }
+.tw-bubble { animation: tw-pop 0.25s ease-out; }
+.tw-bonk polygon { fill: #f5c04a; stroke: #b98a12; stroke-width: 1.5; }
+.tw-bonk text { font-size: 11px; font-weight: 800; fill: #5a3d00 !important; }
+.tw-bonk { animation: tw-pop 0.2s ease-out; transform-box: fill-box; transform-origin: center; }
+@keyframes tw-pop { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: scale(1); } }
+
+.tw-meter { margin-top: 10px; }
+.tw-meter-bar { display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 2px; background: var(--tw-panel); }
+.tw-meter-pull { background: var(--tw-trolley); border-radius: 6px 0 0 6px; }
+.tw-meter-leave { background: #b9b3ab; border-radius: 0 6px 6px 0; }
+.tw-meter-legend { display: flex; justify-content: space-between; font-size: 13px; margin-top: 4px; }
+
+.tw-asked { margin-top: 8px; font-size: 14px; }
+.tw-asked summary { cursor: pointer; font-weight: 600; }
+.tw-prompt { font-family: "Sanchez", serif; font-size: 14px; background: #fff; border-left: 3px solid var(--tw-line); padding: 8px 12px; margin: 8px 0 0; }
+ul.tw-prompt { list-style: none; }
+.tw-prompt li { margin: 4px 0; }
+.tw-prompt code { font-size: 12px; background: var(--tw-gray-mid); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+
+/* ---------- bracket ---------- */
+
+.tw-bracket { display: flex; gap: 14px; min-width: 760px; padding: 10px 2px 4px; }
+.tw-col { flex: 1 1 0; display: flex; flex-direction: column; }
+.tw-col-head { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tw-ink-2); margin-bottom: 6px; }
+.tw-col-body { flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 8px; }
+.tw-card {
+  display: block; width: 100%; text-align: left; font: inherit; padding: 0; cursor: pointer;
+  background: #fff; border: 1px solid #ddd6cc; border-radius: 6px; overflow: hidden; color: inherit;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.tw-card.tw-bye { cursor: default; }
+.tw-card.tw-live { border-color: var(--tw-trolley); box-shadow: 0 0 0 3px rgba(208, 59, 59, 0.2); }
+.tw-card.tw-selected { border-color: var(--tw-blue); box-shadow: 0 0 0 3px rgba(42, 120, 214, 0.2); }
+.tw-slot { display: flex; gap: 6px; align-items: center; padding: 4px 8px; min-height: 26px; font-size: 13px; }
+.tw-slot + .tw-slot { border-top: 1px solid #efe9e1; }
+.tw-seed { width: 16px; text-align: right; font-size: 11px; color: var(--tw-muted); }
+.tw-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tw-score { font-variant-numeric: tabular-nums; font-size: 12px; color: var(--tw-ink-2); }
+.tw-won .tw-name { font-weight: 700; }
+.tw-lost { color: var(--tw-muted); }
+.tw-lost .tw-name { text-decoration: line-through; text-decoration-color: var(--tw-trolley); text-decoration-thickness: 2px; }
+.tw-byeline { color: var(--tw-muted); font-style: italic; justify-content: center; }
+.tw-champ { text-align: center; padding: 16px 6px; border: 2px dashed #ddd6cc; border-radius: 8px; background: #fff; }
+.tw-trophy { display: block; font-size: 30px; filter: grayscale(1); opacity: 0.4; transition: all 0.4s; }
+.tw-champ-name { font-weight: 800; font-size: 17px; }
+.tw-crowned .tw-champ { border-color: #e5b53a; border-style: solid; }
+.tw-crowned .tw-trophy { filter: none; opacity: 1; transform: scale(1.15); }
+
+.tw-detail:not(:empty) { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--tw-line); }
+.tw-detail h4 { margin: 0 0 8px; font-size: 16px; color: var(--tw-ink); }
+.tw-dline { display: flex; align-items: center; gap: 10px; margin: 4px 0; font-size: 14px; }
+.tw-dname { width: 130px; flex: none; }
+.tw-dbar { flex: 1; height: 10px; background: #ece7e0; border-radius: 5px; overflow: hidden; }
+.tw-dbar span { display: block; height: 100%; background: #b9b3ab; border-radius: 5px; }
+.tw-win .tw-dbar span { background: var(--tw-blue); }
+.tw-win .tw-dname, .tw-win .tw-mcount { font-weight: 700; }
+.tw-dnum { width: 44px; flex: none; text-align: right; font-variant-numeric: tabular-nums; }
+.tw-chips { font-size: 13px; }
+.tw-chip { display: inline-block; background: #fff; border: 1px solid var(--tw-line); border-radius: 12px; padding: 1px 8px; margin: 2px 4px 2px 0; }
+
+/* ---------- charts ---------- */
+
+.tw-grid { stroke: #e6e1da; stroke-width: 1; }
+.tw-grid.tw-even { stroke: #9a9590; stroke-dasharray: 4 3; }
+.tw-axis { font-size: 11px; fill: var(--tw-ink-2) !important; }
+.tw-rowlabel { font-size: 12px; }
+.tw-collabel { font-size: 12px; }
+.tw-ci { fill: var(--tw-blue-soft); }
+.tw-dot { fill: var(--tw-blue); stroke: #fff; stroke-width: 1.5; cursor: default; }
+.tw-dot-flip { fill: var(--tw-red); }
+.tw-mean { stroke: var(--tw-ink); stroke-width: 2; }
+
+.tw-cell { stroke: none; }
+.tw-diag { fill: #fff; stroke: #e6e1da; }
+.tw-hatch-line { stroke: rgba(80, 78, 75, 0.45); stroke-width: 1.5; }
+
+.tw-curve { fill: none; stroke: #d3cdc5; stroke-width: 1.5; }
+.tw-curve-on { stroke: var(--tw-blue); stroke-width: 2.5; }
+.tw-pt { fill: var(--tw-blue); stroke: #fff; stroke-width: 2; }
+.tw-pt-on { fill: var(--tw-trolley); }
+.tw-chart { margin-top: 14px; }
+
+.tw-legend { font-size: 13px; color: var(--tw-ink-2); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.tw-key { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: middle; }
+.tw-key-dot { background: var(--tw-blue); }
+.tw-key-flip { background: var(--tw-red); }
+.tw-key-ci { background: var(--tw-blue-soft); border-radius: 3px; width: 20px; }
+.tw-key-mean { background: var(--tw-ink); width: 2px; height: 14px; border-radius: 0; }
+.tw-key-hatch { border-radius: 3px; background: repeating-linear-gradient(45deg, #f0efec 0 2px, #a5a19c 2px 3.5px); }
+.tw-grad { display: inline-block; width: 120px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, #e34948, #f0efec, #2a78d6); }
+
+/* ---------- rate board ---------- */
+
+.tw-board { background: #1d1d1b; border-radius: 8px; padding: 14px 16px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: #f5c04a; }
+.tw-board-head, .tw-board-row { display: flex; justify-content: space-between; gap: 12px; }
+.tw-board-head { color: #9a9590; font-size: 12px; letter-spacing: 0.1em; border-bottom: 1px solid #3a3936; padding-bottom: 8px; margin-bottom: 6px; }
+.tw-board-row { font-size: 15px; padding: 3px 0; border-bottom: 1px dashed #2e2d2a; }
+.tw-flap { white-space: pre; letter-spacing: 0.06em; }
+.tw-rate { font-variant-numeric: tabular-nums; }
+
+/* ---------- matchup cards ---------- */
+
+.tw-matchups { display: grid; gap: 10px; }
+.tw-mcard { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--tw-line); border-radius: 8px; padding: 10px 12px; }
+.tw-mside { display: grid; gap: 4px; }
+.tw-mcount { font-size: 14px; }
+.tw-vs { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--tw-muted); }
+.tw-mside .tw-dnum { width: auto; text-align: left; font-size: 13px; color: var(--tw-ink-2); }
+
+/* ---------- tooltip (lives on body) ---------- */
+
+.tw-tip {
+  position: absolute; z-index: 50; display: none; pointer-events: none; max-width: 260px;
+  background: #2b2a28; color: #f4f2ee; font: 13px/1.4 "Raleway", sans-serif;
+  padding: 7px 10px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 600px) {
+  .tw { padding: 12px; margin-left: -4px; margin-right: -4px; }
+  .tw-dname { width: 96px; }
+  .tw-mcard { grid-template-columns: 1fr; }
+  .tw-vs { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tw *, .tw *::before, .tw *::after { animation: none !important; transition: none !important; }
+}
