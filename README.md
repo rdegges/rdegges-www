@@ -40,7 +40,7 @@ to `main`. Configuration is in `render.yaml`.
 `docker-compose.yml`:
 
 ```yaml
-image: hugomods/hugo:base-0.165.0
+image: ghcr.io/gohugoio/hugo:v0.168.0
 ```
 
 Local dev and CI use that image directly. Production reads the same tag:

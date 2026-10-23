@@ -30,7 +30,7 @@
        what Atom's feed-level <updated> means. */ -}}
 {{- $updated := site.Lastmod -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.Language.LanguageCode | default site.Language.Lang }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.Language.Locale }}">
   <title>{{ site.Title }}</title>
   {{- with site.Params.subtitle }}
   <subtitle>{{ . }}</subtitle>

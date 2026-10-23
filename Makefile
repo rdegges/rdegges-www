@@ -17,7 +17,7 @@ dev:
 
 # Build the site for production
 build:
-	docker compose run --rm hugo hugo --minify
+	docker compose run --rm hugo build --minify
 
 # Remove build artifacts
 clean:

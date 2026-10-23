@@ -13,7 +13,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-version="$(sed -n 's|^[[:space:]]*image:[[:space:]]*hugomods/hugo:base-\(.*\)[[:space:]]*$|\1|p' docker-compose.yml)"
+version="$(sed -n 's|^[[:space:]]*image:[[:space:]]*ghcr\.io/gohugoio/hugo:v\([0-9.]*\)[[:space:]]*$|\1|p' docker-compose.yml)"
 if [ -z "$version" ]; then
   echo "error: could not read the Hugo version from docker-compose.yml" >&2
   exit 1
