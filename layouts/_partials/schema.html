@@ -1,0 +1,60 @@
+{{- /*
+  Schema.org structured data as JSON-LD.
+
+  Search engines use it for rich results, and AI systems use it to answer
+  "who wrote this, and when?" without guessing from the page layout. Every
+  page describes the site's author as one Person with a stable @id, linked
+  to their other profiles via sameAs, so it all resolves to one entity.
+
+  Home: the WebSite and the Person. Posts: a BlogPosting authored and
+  published by that Person. The 404 page gets nothing.
+
+  This is data, not script: CSP does not apply to it, and the no-inline-
+  code test allows exactly this type.
+*/ -}}
+{{- $home := site.Home.Permalink -}}
+{{- $person := dict
+      "@type" "Person"
+      "@id" (print $home "#person")
+      "name" site.Params.author.name
+      "url" $home
+      "email" (print "mailto:" site.Params.email)
+      "description" site.Params.description -}}
+{{- with site.Params.person -}}
+  {{- with .jobTitle }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
+  {{- with .worksFor }}{{ $person = merge $person (dict "worksFor" (dict "@type" "Organization" "name" . "url" $.Site.Params.person.worksForURL)) }}{{ end -}}
+  {{- with .sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
+{{- end -}}
+{{- $website := dict
+      "@type" "WebSite"
+      "@id" (print $home "#website")
+      "url" $home
+      "name" site.Title
+      "description" site.Params.description
+      "inLanguage" "en-US"
+      "publisher" (dict "@id" (print $home "#person")) -}}
+{{- $graph := slice -}}
+{{- if .IsHome -}}
+  {{- $graph = slice $website $person -}}
+{{- else if .IsPage -}}
+  {{- $post := dict
+        "@type" "BlogPosting"
+        "@id" (print .Permalink "#article")
+        "url" .Permalink
+        "mainEntityOfPage" .Permalink
+        "headline" .Title
+        "description" (.Description | default site.Params.description)
+        "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+        "inLanguage" "en-US"
+        "wordCount" .WordCount
+        "author" (dict "@id" (print $home "#person"))
+        "publisher" (dict "@id" (print $home "#person"))
+        "isPartOf" (dict "@id" (print $home "#website")) -}}
+  {{- with .Params.tags }}{{ $post = merge $post (dict "keywords" .) }}{{ end -}}
+  {{- with partial "first-image.html" . }}{{ with .url }}{{ $post = merge $post (dict "image" .) }}{{ end }}{{ end -}}
+  {{- $graph = slice $post $website $person -}}
+{{- end -}}
+{{- with $graph }}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" . | jsonify | safeJS }}</script>
+{{- end }}
