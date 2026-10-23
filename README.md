@@ -33,28 +33,26 @@ Hugo Extended is required.
 
 ## Deployment
 
-The site deploys automatically to [Render](https://render.com) on every push
-to `main`. Configuration is in `render.yaml`.
+The site is a static build served by [Cloudflare](https://developers.cloudflare.com/workers/static-assets/).
+Production builds with:
 
-**Hugo version:** It lives in exactly one place — the image tag in
-`docker-compose.yml`:
-
-```yaml
-image: hugomods/hugo:base-0.165.0
+```bash
+./scripts/build.sh   # output in ./public
 ```
 
-Local dev and CI use that image directly. Production reads the same tag:
-`scripts/render-build.sh` parses the version out of `docker-compose.yml`,
-downloads that Hugo (verifying its checksum) and builds with it. So upgrading
-Hugo means editing one line, and Dependabot's weekly Docker PR does it for you —
-merge it and local dev, CI and production all move together.
+Response headers (security headers, caching) live in `static/_headers`, which
+Hugo copies into the build output, where Cloudflare reads it.
 
-The build script exists because Render's static-site image ships its own pinned
-Hugo (0.124.x) and ignores `HUGO_VERSION`; setting that variable has no effect
-on which binary `hugo` resolves to.
+**Hugo version:** It lives in exactly one place, the image tag in
+`docker-compose.yml`. Local dev uses that image directly, and
+`scripts/build.sh` parses the version out of the same file, then downloads
+that Hugo (verifying its checksum) and builds with it, which is what CI and
+production run. Hosted build images ship whatever Hugo they ship, so we never
+rely on one. Upgrading Hugo means editing one line, and Dependabot's weekly
+Docker PR does it for you.
 
 `hugo.toml` also sets `[module.hugoVersion] min`, but that's the *oldest* Hugo
-the layouts support rather than the version we pin — it stays put when you
+the layouts support rather than the version we pin: it stays put when you
 upgrade, and only moves if the templates start relying on a newer feature.
 
 

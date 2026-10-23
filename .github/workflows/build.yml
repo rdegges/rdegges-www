@@ -22,9 +22,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      # Runs the exact script Render runs, so CI exercises the real deploy
+      # Runs the exact script production runs, so CI exercises the real deploy
       # path -- including reading the Hugo version out of docker-compose.yml.
       # The render-image hook fails the build on any broken image reference,
       # so a clean build is also a link check.
       - name: Build site
-        run: ./scripts/render-build.sh
+        run: ./scripts/build.sh
