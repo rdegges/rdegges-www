@@ -11,6 +11,9 @@
   {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
   <link href="/feed.xml" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml" />
   <link href="/feed.xml" rel="feed" title="{{ .Site.Title }}" type="application/atom+xml" />
+  {{- with .OutputFormats.Get "markdown" }}
+  <link rel="alternate" type="text/markdown" href="{{ .RelPermalink }}" title="{{ $.Title }} (Markdown)">
+  {{- end }}
   <link href="/static/images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
   <link href="/static/images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
   <link href="/static/images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
