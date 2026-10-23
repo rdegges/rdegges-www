@@ -11,6 +11,12 @@
   {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
   <link href="/feed.xml" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml" />
   <link href="/feed.xml" rel="feed" title="{{ .Site.Title }}" type="application/atom+xml" />
+  {{- /* rel="me" links this site to profiles that link back, which is how
+         Mastodon-style verification and IndieWeb identity work. A <link> in
+         the head does the job of the hidden <a> it replaces, without an
+         inline style. */}}
+  <link rel="me" href="https://bsky.app/profile/rdegges.com">
+  <link rel="me" href="https://github.com/rdegges">
   <link href="/static/images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
   <link href="/static/images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
   <link href="/static/images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">

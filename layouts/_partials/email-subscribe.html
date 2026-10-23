@@ -1,8 +1,10 @@
+{{- /* No JavaScript: target="popupwindow" already opens Buttondown's
+       confirmation page in a new tab. The onsubmit that used to pre-open
+       that window was the only script on the site. */ -}}
 <form
     action="{{ .Site.Params.emailSubscriptionFormAction }}"
     class="email-subscribe form-inline"
     method="post"
-    onsubmit="window.open('https://buttondown.email/rdegges', 'popupwindow')"
     role="form"
     target="popupwindow"
 >

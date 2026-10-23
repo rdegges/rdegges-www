@@ -4,3 +4,4 @@ public
 public-dev
 resources
 .env
+__pycache__/
