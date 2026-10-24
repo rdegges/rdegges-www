@@ -1,7 +1,7 @@
 # Keeps the build toolchain current so upgrades arrive as small, reviewable PRs
-# instead of piling up. Hugo itself is pinned in three files that must move
-# together, so a Docker bump here will fail CI until hugo.toml and render.yaml
-# are updated to match — see scripts/check-hugo-version.sh.
+# instead of piling up. The Hugo version is the image tag in
+# docker-compose.yml, and CI fails on any Hugo warning, so a Hugo bump that
+# would break the site fails on its own PR.
 version: 2
 
 updates:
@@ -9,6 +9,15 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # Wait a week before proposing a new release. Compromised and broken
+    # releases are usually caught and pulled within days; this keeps them
+    # from reaching the build in the meantime.
+    cooldown:
+      default-days: 7
+    # One PR for all action bumps in a given week instead of one each.
+    groups:
+      actions:
+        patterns: ["*"]
     commit-message:
       prefix: "ci"
 
@@ -16,5 +25,7 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: "build"
