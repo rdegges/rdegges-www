@@ -84,8 +84,17 @@ email = "r@rdegges.com"
     isPlainText = false
     rel = "alternate"
 
+  # RFC 9116 security.txt, rendered from layouts/home.securitytxt.txt so its
+  # required Expires date is computed at build time rather than going stale.
+  [outputFormats.SecurityTxt]
+    mediaType = "text/plain"
+    baseName = "security"
+    path = ".well-known"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
-  home = ["HTML", "Atom"]
+  home = ["HTML", "Atom", "SecurityTxt"]
   page = ["HTML"]
 
 [markup.highlight]

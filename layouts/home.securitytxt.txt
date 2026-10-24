@@ -1,0 +1,13 @@
+{{- /*
+  RFC 9116: tells security researchers how to report a problem with this
+  site. Served at /.well-known/security.txt.
+
+  Expires is required and must be in the future. The RFC recommends less
+  than a year out, so it is set to 180 days from the build. Only a
+  production deploy renews it. If nothing deploys for 180 days, the file
+  goes stale until the next one.
+*/ -}}
+Contact: mailto:{{ site.Params.email }}
+Expires: {{ (now.AddDate 0 0 180).UTC.Format "2006-01-02T15:04:05Z" }}
+Preferred-Languages: en
+Canonical: {{ site.Home.Permalink }}.well-known/security.txt
