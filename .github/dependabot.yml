@@ -29,3 +29,16 @@ updates:
       default-days: 7
     commit-message:
       prefix: "build"
+
+  # cf and wrangler, the Cloudflare packaging tools CI runs.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      npm:
+        patterns: ["*"]
+    commit-message:
+      prefix: "build"
