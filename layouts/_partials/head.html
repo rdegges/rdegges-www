@@ -60,4 +60,5 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/raleway-latin.woff2" | resources.Copy "static/fonts/raleway-latin.woff2" | fingerprint).RelPermalink }}">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (resources.Get "fonts/sanchez-latin.woff2" | resources.Copy "static/fonts/sanchez-latin.woff2" | fingerprint).RelPermalink }}">
   <link href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }} media="all" rel="stylesheet" type="text/css">
+  {{- partial "schema.html" . }}
 </head>
