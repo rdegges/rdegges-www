@@ -12,24 +12,33 @@ header a:active {
     text-decoration: none;
 }
 
-header h1 {
+/* The site name is an <h1> on the home page and a <p class="h1"> elsewhere,
+   so both forms are styled. "header h1" also matches each post's own title
+   (article > header > h1), which is where its centering comes from. */
+header h1,
+header .h1 {
     font-size: 4em;
     text-align: center;
 }
 
-header h2 {
+header h2,
+header .h2 {
     font-size: 2em;
     text-align: center;
 }
 
 header a:visited,
 header h1 a,
-header h2 a {
+header h2 a,
+header .h1 a,
+header .h2 a {
     color: #515050;
 }
 
 header h1 a:hover,
-header h2 a:hover {
+header h2 a:hover,
+header .h1 a:hover,
+header .h2 a:hover {
     color: #bebebe;
 }
 
@@ -286,6 +295,18 @@ footer p a:visited {
 .article pre {
     margin-bottom: 2.5em;
     margin-top: 2.5em;
+}
+
+/* Raleway like the home page's dates, centered under the title. #767676 is
+   the lightest grey that still meets WCAG AA contrast (4.5:1) on white at
+   this size. The negative top margin pulls it into the title's bottom
+   margin so it reads as part of the heading, not the first paragraph. */
+.article .post-date {
+    color: #767676;
+    font-family: "Raleway", sans-serif;
+    font-size: 0.85em;
+    margin-top: -1.5em;
+    text-align: center;
 }
 
 .article .subscribe {
