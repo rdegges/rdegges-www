@@ -44,9 +44,6 @@ quality = 85
     # still readable without visiting the site.
     limit = 20
 
-[permalinks]
-post = "/:year/:title"
-
 [params]
 description = "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
 email = "r@rdegges.com"
@@ -87,9 +84,35 @@ email = "r@rdegges.com"
     isPlainText = false
     rel = "alternate"
 
+  # /llms.txt (https://llmstxt.org): a plain-text map of the site for AI
+  # systems, rendered from layouts/home.llms.txt.
+  [outputFormats.LLMs]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+
+  # Each post as Markdown at <post>/index.md, rendered from
+  # layouts/page.markdown.md and advertised with <link rel="alternate">, so
+  # AI crawlers can read the text without scraping the HTML around it.
+  [outputFormats.Markdown]
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+    rel = "alternate"
+
+  # RFC 9116 security.txt, rendered from layouts/home.securitytxt.txt so its
+  # required Expires date is computed at build time rather than going stale.
+  [outputFormats.SecurityTxt]
+    mediaType = "text/plain"
+    baseName = "security"
+    path = ".well-known"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
-  home = ["HTML", "Atom"]
-  page = ["HTML"]
+  home = ["HTML", "Atom", "LLMs", "SecurityTxt"]
+  page = ["HTML", "Markdown"]
 
 [markup.highlight]
 anchorLineNos = false
@@ -105,3 +128,18 @@ noClasses = false
 noHl = false
 style = 'autumn'
 tabWidth = 4
+
+# Who this site is about, for the structured data in _partials/schema.html.
+# sameAs tells search engines and AI systems that these profiles belong to
+# the same person as this site, which is how they tie it all to one entity.
+[params.person]
+jobTitle = "VP, AI Engineering"
+worksFor = "Snyk"
+worksForURL = "https://snyk.io"
+sameAs = [
+  "https://github.com/rdegges",
+  "https://bsky.app/profile/rdegges.com",
+  "https://www.linkedin.com/in/rdegges/",
+  "https://www.instagram.com/randalldegges",
+  "https://speakerdeck.com/rdegges",
+]

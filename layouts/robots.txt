@@ -1,0 +1,9 @@
+{{- /*
+  Everything on this site is public and meant to be found, by search
+  engines and AI crawlers alike, so nothing is disallowed. The Sitemap line
+  is how crawlers that never see Search Console learn every post's URL.
+*/ -}}
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
