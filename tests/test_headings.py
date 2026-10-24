@@ -15,6 +15,12 @@ class TestHeadings(SiteTestCase):
         home = next(p for p in pages() if p.url == "/")
         self.assertEqual(len(home.find("h1")), 1)
 
+    def test_404_has_an_h1(self):
+        # The site name isn't a heading off the home page, so the 404 page
+        # needs its own or it has no heading at all.
+        page = next(p for p in pages() if p.url == "/404.html")
+        self.assertEqual(len(page.find("h1")), 1)
+
     def test_every_post_has_exactly_one_h1(self):
         for page in articles():
             with self.subTest(page=page.url):
