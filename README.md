@@ -53,9 +53,37 @@ The site deploys automatically to [Render](https://render.com) on every push
 to `main`. Configuration is in `render.yaml`. Render serves production.
 
 The move to [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
-is staged but not live. Nothing deploys to Cloudflare yet. The configuration is
-in `cloudflare.config.ts` and `wrangler.config.ts`. CI packages the tested
-`public/` with `npx cf build`, then runs `npx cf deploy --prebuilt --dry-run`.
+is staged but not live. After the tests pass, every push to `main` also deploys
+to the Worker `rdegges-www`. That Worker is served only at
+https://rdegges-www.randall-degges.workers.dev. DNS still points at Render, so
+visitors do not see it. The configuration is in `cloudflare.config.ts` and
+`wrangler.config.ts`.
+
+On every run, CI packages the tested `public/` with `npx cf build`, then runs
+`npx cf deploy --prebuilt --dry-run`. On `main`, the `deploy` job then uploads
+that same package with `npx cf deploy --prebuilt`. It does not rebuild. You can
+also start a deploy of `main` from the Actions tab (Build, then Run workflow).
+
+**Cloudflare deploy token:** The `deploy` job gets `CLOUDFLARE_API_TOKEN` from
+the `cloudflare` GitHub environment. Only `main` can use that environment. The
+account ID is the environment variable `CLOUDFLARE_ACCOUNT_ID`, not a secret.
+
+The token has one permission: Individual Workers Editor, on the `rdegges-www`
+Worker only. It can deploy new versions of that Worker. It cannot change other
+Workers. It also cannot create Workers or change routes or custom domains.
+Each deploy also turns on this Worker's workers.dev URL, because `cf deploy`
+writes that setting every time. When DNS moves to Cloudflare, a person with
+more access must add the route or custom domain. The `rdegges-www` Worker existed before
+this repo used it, and the deploy reuses it.
+
+The token has no expiry date. The owner chose this. To rotate the token:
+
+1. In the Cloudflare dashboard, create a new account API token. Give it
+   Individual Workers Editor on Specified Workers, then `rdegges-www`.
+2. Copy the new token, then run:
+   `pbpaste | gh secret set CLOUDFLARE_API_TOKEN --env cloudflare --repo rdegges/rdegges-www`
+3. Run the Build workflow on `main` and make sure that the `deploy` job passes.
+4. Delete the old token in the dashboard.
 
 Response headers live in two files: `render.yaml` for Render and
 `static/_headers` for Cloudflare. `tests/test_headers.py` fails when the two
