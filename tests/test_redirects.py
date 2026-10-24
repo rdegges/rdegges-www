@@ -3,7 +3,9 @@
 import os
 import unittest
 
-from helpers import PUBLIC, SiteTestCase, pages, public_file
+from helpers import PUBLIC, Page, SiteTestCase, pages, public_file
+
+OLD_FEEDS = {"/feeds/atom.xml", "/index.xml"}
 
 
 def rules():
@@ -45,8 +47,50 @@ class TestRedirects(SiteTestCase):
                 self.assertEqual(table.get(page.url), target)
                 self.assertEqual(table.get(page.url.rstrip("/")), target)
 
-    def test_old_feed_url_redirects_to_the_feed(self):
-        self.assertEqual(dict((s, d) for s, d, _ in rules())["/feeds/atom.xml"], "/feed.xml")
+    def test_old_feed_urls_redirect_to_the_feed(self):
+        table = dict((s, d) for s, d, _ in rules())
+        for source in sorted(OLD_FEEDS):
+            with self.subTest(source=source):
+                self.assertEqual(table.get(source), "/feed.xml")
+
+    def test_sources_and_destinations_are_site_paths(self):
+        # Cloudflare matches the source against the request path, so a rule
+        # without a leading slash never fires. A destination with a scheme
+        # or a protocol-relative "//" would send visitors off the site.
+        for source, dest, _ in rules():
+            with self.subTest(source=source):
+                for path in (source, dest):
+                    self.assertTrue(path.startswith("/"), path)
+                    self.assertFalse(path.startswith("//"), path)
+                    self.assertNotIn("://", path)
+
+    def test_no_rule_shadows_real_content(self):
+        # Cloudflare applies a redirect even where a file exists, so a rule
+        # whose source is a real page or asset would hide it. A source may
+        # only be missing from the build or be one of Hugo's alias stubs.
+        for source, _, _ in rules():
+            with self.subTest(source=source):
+                path = public_file(source)
+                if not os.path.isfile(path):
+                    continue
+                self.assertTrue(path.endswith(".html") and Page(path).is_alias, path)
+
+    def test_every_rule_comes_from_an_alias_or_an_old_feed(self):
+        # The file is generated from aliases; a rule with neither origin is
+        # a stray that nothing else in the build accounts for.
+        stubs = {p.url.rstrip("/") for p in pages(include_aliases=True) if p.is_alias}
+        for source, _, _ in rules():
+            with self.subTest(source=source):
+                self.assertTrue(source in OLD_FEEDS or source.rstrip("/") in stubs, source)
+
+    def test_no_redirect_chains(self):
+        # One hop: a destination that is itself a source costs a second 301.
+        all_rules = rules()
+        sources = {s for s, _, _ in all_rules}
+        for source, dest, _ in all_rules:
+            with self.subTest(source=source):
+                self.assertNotIn(dest, sources)
+                self.assertNotIn(dest.rstrip("/"), sources)
 
 
 if __name__ == "__main__":
