@@ -44,9 +44,6 @@ quality = 85
     # still readable without visiting the site.
     limit = 20
 
-[permalinks]
-post = "/:year/:title"
-
 [params]
 description = "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
 email = "r@rdegges.com"
