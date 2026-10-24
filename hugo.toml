@@ -114,7 +114,7 @@ email = "r@rdegges.com"
     isPlainText = true
     notAlternative = true
 
-  # Cloudflare's _redirects file, rendered from layouts/home.redirects.txt:
+  # Cloudflare's _redirects file, rendered from layouts/home.redirects:
   # real 301s for every alias and old feed URL.
   [outputFormats.Redirects]
     mediaType = "text/redirects"
