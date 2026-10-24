@@ -110,7 +110,7 @@ tabWidth = 4
 # sameAs tells search engines and AI systems that these profiles belong to
 # the same person as this site, which is how they tie it all to one entity.
 [params.person]
-jobTitle = "VP of GTM AI Engineering, DevRel, SecRel, Community, and Content"
+jobTitle = "VP, AI Engineering"
 worksFor = "Snyk"
 worksForURL = "https://snyk.io"
 sameAs = [
