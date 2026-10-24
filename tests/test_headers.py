@@ -82,16 +82,19 @@ def matcher(pattern):
     return re.compile("".join(".*" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
 
 
-def render_triples():
-    """{(path, header-name-lowercased, value)} from render.yaml."""
-    with open(RENDER_YAML, encoding="utf-8") as f:
-        text = f.read()
+def render_triples(text=None):
+    """{(path, header-name-lowercased, value)} from render.yaml, or from text."""
+    if text is None:
+        with open(RENDER_YAML, encoding="utf-8") as f:
+            text = f.read()
     matches = list(RENDER_RULE.finditer(text))
-    # Every "path:" must belong to a parsed rule, so a rule written in a shape
-    # the regex does not know fails here instead of dropping out of the sync.
-    paths = re.findall(r"^[ ]*- path:", text, re.M)
-    if len(matches) != len(paths):
-        raise AssertionError(f"parsed {len(matches)} of {len(paths)} render.yaml header rules")
+    # Every list item under "headers:" must be a parsed rule, so a rule
+    # written in a shape or key order the regex does not know fails here
+    # instead of dropping out of the sync.
+    headers = re.search(r"^[ ]*headers:.*$", text, re.M)
+    items = re.findall(r"^[ ]*- ", text[headers.end():], re.M) if headers else []
+    if len(matches) != len(items):
+        raise AssertionError(f"parsed {len(matches)} of {len(items)} render.yaml header rules")
     return {(m["path"], m["name"].strip().lower(), normalize(m["folded"] or m["value"])) for m in matches}
 
 
@@ -158,6 +161,17 @@ class TestHeaders(SiteTestCase):
 
     def test_render_yaml_sets_no_content_type(self):
         self.assertNotIn("content-type", {name for _, name, _ in render_triples()})
+        # Checked on the raw text too, so it holds even if the parser misses a rule.
+        with open(RENDER_YAML, encoding="utf-8") as f:
+            text = f.read()
+        self.assertIsNone(re.search(r"^[ ]*(?:- )?name:[ ]*Content-Type[ ]*$", text, re.I | re.M))
+
+    def test_render_yaml_parser_rejects_unknown_key_order(self):
+        with open(RENDER_YAML, encoding="utf-8") as f:
+            text = f.read()
+        text = text.rstrip("\n") + "\n      - name: X-Test\n        path: /*\n        value: y\n"
+        with self.assertRaises(AssertionError):
+            render_triples(text)
 
     def test_no_url_gets_the_same_header_twice(self):
         # Cloudflare applies every pattern that matches a URL and joins the
