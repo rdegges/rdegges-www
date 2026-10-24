@@ -50,7 +50,21 @@ the build the day it appears, then runs these tests and
 ## Deployment
 
 The site deploys automatically to [Render](https://render.com) on every push
-to `main`. Configuration is in `render.yaml`.
+to `main`. Configuration is in `render.yaml`. Render serves production.
+
+The move to [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
+is staged but not live. Nothing deploys to Cloudflare yet. The configuration is
+in `cloudflare.config.ts` and `wrangler.config.ts`. CI packages the tested
+`public/` with `npx cf build`, then runs `npx cf deploy --prebuilt --dry-run`.
+
+Response headers live in two files: `render.yaml` for Render and
+`static/_headers` for Cloudflare. `tests/test_headers.py` fails when the two
+files differ. The only exception is Content-Type, which only Cloudflare sets.
+
+`package.json` exists only for this Cloudflare tooling. It pins `cf` and
+`wrangler` to exact versions. `cf` hands static-asset packaging to the
+`wrangler` package, and only `wrangler.config.ts` can set the assets
+directory. Nobody runs the `wrangler` CLI directly.
 
 **Hugo version:** It lives in exactly one place — the image tag in
 `docker-compose.yml`:
