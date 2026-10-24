@@ -5,8 +5,8 @@
 <div class="container">
   <div class="row">
     <header class="col-xs-offset-1 col-xs-10">
-      {{- $name := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` .Site.Language.Locale .Site.Title (upper .Site.Title) | safeHTML -}}
-      {{- $tagline := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` .Site.Language.Locale .Site.Title .Site.Params.subtitle | safeHTML -}}
+      {{- $name := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` (.Site.Language.Locale | htmlEscape) (.Site.Title | htmlEscape) (upper .Site.Title | htmlEscape) | safeHTML -}}
+      {{- $tagline := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` (.Site.Language.Locale | htmlEscape) (.Site.Title | htmlEscape) (.Site.Params.subtitle | htmlEscape) | safeHTML -}}
       {{- if .IsHome }}
       <h1 class="h1">{{ $name }}</h1>
       <h2 class="h2 hidden-xs">{{ $tagline }}</h2>
