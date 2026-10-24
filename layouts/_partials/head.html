@@ -14,6 +14,9 @@
   {{- partial "meta.html" . }}
   <link href="/feed.xml" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml" />
   <link href="/feed.xml" rel="feed" title="{{ .Site.Title }}" type="application/atom+xml" />
+  {{- with .OutputFormats.Get "markdown" }}
+  <link rel="alternate" type="text/markdown" href="{{ .RelPermalink }}" title="{{ $.Title }} (Markdown)">
+  {{- end }}
   {{- /* rel="me" links this site to profiles that link back, which is how
          Mastodon-style verification and IndieWeb identity work. A <link> in
          the head does the job of the hidden <a> it replaces, without an
