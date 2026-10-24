@@ -12,4 +12,4 @@ By {{ site.Params.author.name }} · {{ .Date.Format "January 2, 2006" }} · {{ .
 > {{ . }}
 {{- end }}
 
-{{ .RawContent | strings.TrimSpace }}
+{{ .RenderShortcodes | strings.TrimSpace }}
