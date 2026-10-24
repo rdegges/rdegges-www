@@ -18,7 +18,7 @@ dev:
 
 # Build the site for production
 build:
-	docker compose run --rm hugo hugo --minify
+	docker compose run --rm hugo build --minify
 
 # Check the built site: links, metadata, sitemap, feed
 test: build

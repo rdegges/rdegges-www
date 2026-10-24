@@ -2,17 +2,20 @@
 # Usage: docker compose up
 #
 # This image tag is the single source of truth for the Hugo version.
-# Production reads it too: scripts/build.sh parses the version out of this
-# file, so a Dependabot bump here upgrades local dev, CI and production at once.
+# scripts/build.sh parses the version out of this file, so CI and the
+# production build use the same Hugo, and a Dependabot bump here upgrades all
+# of them at once.
+#
+# This is Hugo's official image (extended edition, amd64 and arm64). Its
+# entrypoint runs hugo, so commands are hugo subcommands: `server`, `build`.
 
 services:
   hugo:
-    image: hugomods/hugo:base-0.165.0
+    image: ghcr.io/gohugoio/hugo:v0.168.0
     container_name: rdegges-www
     ports:
       - "1313:1313"
     volumes:
-      - .:/src
-    working_dir: /src
+      - .:/project
     # Enable live reload by polling (works better with Docker on macOS)
-    command: hugo server --bind 0.0.0.0 --buildDrafts --buildFuture --poll 500ms
+    command: server --bind 0.0.0.0 --buildDrafts --buildFuture --poll 500ms
