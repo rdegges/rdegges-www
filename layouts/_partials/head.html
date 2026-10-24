@@ -38,11 +38,8 @@
     fonts.css is executed as a template so each src resolves to the
     fingerprinted URL of its font file.
 
-    Bootstrap ships an @import for Roboto from fonts.googleapis.com. Nothing
-    on the site renders in Roboto -- verified by walking every visible text
-    node and reading its computed font-family -- but the browser still pays a
-    render-blocking request for it, chained behind the stylesheet that
-    imports it. It is stripped here rather than by editing the vendored file.
+    bootstrap.css is Bootswatch Paper pruned to the classes this site uses;
+    its header explains how and what to do if a template needs more.
 
     fingerprint puts a hash of the contents in the filename, so the URL
     changes whenever the bytes do. That is what makes the one-year immutable
@@ -52,13 +49,10 @@
   {{- $fonts := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . -}}
   {{- $sheets := slice
         $fonts
-        (resources.Get "css/bootstrap.min.css")
+        (resources.Get "css/bootstrap.css")
         (resources.Get "css/style.css")
         (resources.Get "css/syntax.css") -}}
   {{- $css := $sheets | resources.Concat "static/css/site.css" -}}
-  {{- $css = $css.Content
-        | replaceRE `@import\s+(url\()?["']https://fonts\.googleapis\.com[^"']*["']\)?\s*;` ""
-        | resources.FromString "static/css/site.css" -}}
   {{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
   {{- /* The two faces used above the fold. Preload so they start downloading
          with the stylesheet rather than after it parses. */ -}}
