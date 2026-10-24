@@ -14,6 +14,12 @@
   {{- with .OutputFormats.Get "markdown" }}
   <link rel="alternate" type="text/markdown" href="{{ .RelPermalink }}" title="{{ $.Title }} (Markdown)">
   {{- end }}
+  {{- /* rel="me" links this site to profiles that link back, which is how
+         Mastodon-style verification and IndieWeb identity work. A <link> in
+         the head does the job of the hidden <a> it replaces, without an
+         inline style. */}}
+  <link rel="me" href="https://bsky.app/profile/rdegges.com">
+  <link rel="me" href="https://github.com/rdegges">
   {{- /* The modern minimum: browsers request /favicon.ico and iOS requests
          /apple-touch-icon.png on their own, so both live at the root, and
          the manifest covers Android. The 25-file generator set this
