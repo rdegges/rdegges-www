@@ -4,7 +4,8 @@ aliases:
 date: "2010-12-02"
 description: "I've been pretty lame lately, constantly working to please other people.  But not anymore!"
 slug: "being-myself"
-tags: "personal development"
+tags:
+  - "personal development"
 title: "Being Myself"
 ---
 
