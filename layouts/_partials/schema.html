@@ -17,12 +17,15 @@
       "@type" "Person"
       "@id" (print $home "#person")
       "name" site.Params.author.name
-      "url" $home
-      "email" (print "mailto:" site.Params.email)
-      "description" site.Params.description -}}
+      "url" $home -}}
+{{- with site.Params.email }}{{ $person = merge $person (dict "email" (print "mailto:" .)) }}{{ end -}}
 {{- with site.Params.person -}}
   {{- with .jobTitle }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
-  {{- with .worksFor }}{{ $person = merge $person (dict "worksFor" (dict "@type" "Organization" "name" . "url" $.Site.Params.person.worksForURL)) }}{{ end -}}
+  {{- with .worksFor -}}
+    {{- $org := dict "@type" "Organization" "name" . -}}
+    {{- with site.Params.person.worksForURL }}{{ $org = merge $org (dict "url" .) }}{{ end -}}
+    {{- $person = merge $person (dict "worksFor" $org) -}}
+  {{- end -}}
   {{- with .sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
 {{- end -}}
 {{- $website := dict

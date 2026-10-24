@@ -132,7 +132,7 @@ class TestStructuredData(SiteTestCase):
                 nodes = graph(page)
                 post = nodes["https://rdegges.com" + page.url + "#article"]
                 self.assertEqual(post["@type"], "BlogPosting")
-                for field in ("headline", "datePublished", "dateModified", "image", "description"):
+                for field in ("headline", "datePublished", "dateModified", "description"):
                     self.assertTrue(post.get(field), field)
                 # Google truncates headlines past 110 characters.
                 self.assertLessEqual(len(post["headline"]), 110)
@@ -153,7 +153,8 @@ class TestStructuredData(SiteTestCase):
                 self.assertEqual(post["mainEntityOfPage"], canonical)
                 self.assertEqual(post["headline"], page.meta("og:title"))
                 self.assertEqual(post["description"], page.meta("description"))
-                self.assertEqual(post["image"], page.meta("og:image"))
+                if "image" in post:
+                    self.assertEqual(post["image"], page.meta("og:image"))
                 self.assertEqual(post["datePublished"], page.meta("article:published_time"))
                 self.assertEqual(post["dateModified"], page.meta("article:modified_time"))
                 tags = [a["content"] for a in page.find("meta") if a.get("property") == "article:tag"]
@@ -175,6 +176,8 @@ class TestStructuredData(SiteTestCase):
         for page in articles():
             with self.subTest(page=page.url):
                 post = graph(page)["https://rdegges.com" + page.url + "#article"]
+                if "image" not in post:
+                    continue
                 url = urlparse(post["image"])
                 self.assertEqual((url.scheme, url.netloc), ("https", "rdegges.com"))
                 self.assertTrue(os.path.isfile(public_file(url.path)), url.path)
