@@ -7,7 +7,18 @@
       <div class="row">
         <section class="intro">
           <div class="col-xs-offset-3 col-xs-6">
-            <img alt="Randall Degges - Avatar" class="center-block img-rounded img-responsive" src="/static/images/rdegges-avatar.png">
+            {{- /* The avatar renders at 130 CSS px at every breakpoint (style.css
+                   caps it at 10em), but the source is a 500px, 185 KB PNG. It
+                   is the largest thing above the fold, so ship 1x/2x/3x WebP
+                   and let the browser pick. width/height reserve its box so
+                   nothing shifts when it arrives. Copied under static/ first
+                   so the variants land on the immutable-cache path. */}}
+            {{- $avatar := resources.Get "images/rdegges-avatar.png" | resources.Copy "static/images/rdegges-avatar.png" -}}
+            {{- $srcset := slice -}}
+            {{- range $x := slice 1 2 3 -}}
+              {{- $srcset = $srcset | append (printf "%s %dx" ($avatar.Resize (printf "%dx webp q85" (mul 130 $x))).RelPermalink $x) -}}
+            {{- end }}
+            <img alt="Randall Degges - Avatar" class="center-block img-rounded img-responsive" src="{{ ($avatar.Resize "260x webp q85").RelPermalink }}" srcset="{{ delimit $srcset ", " }}" width="130" height="130" fetchpriority="high" decoding="async">
           </div>
         </section>
       </div>
@@ -48,6 +59,5 @@
       </div>
     </div>
     {{ partial "footer.html" . }}
-    <div style="display:none;"><a rel="me" href="https://bsky.app/profile/rdegges.com">Bluesky</a></div>
   </body>
 </html>
