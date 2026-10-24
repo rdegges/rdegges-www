@@ -1,0 +1,24 @@
+{{- /*
+  Cloudflare _redirects (Workers static assets and Pages both read it from
+  the build output): permanent redirects for URLs that moved.
+
+  Hugo already writes a meta-refresh page for every alias, and those stay
+  as a fallback. A real 301 is better: crawlers carry the old URL's
+  ranking over without guessing, feed readers follow it, and visitors skip
+  the extra page load. Cloudflare applies these even where a file exists.
+
+  Each alias gets two lines, with and without the trailing slash, so
+  "/old-post" lands in one hop rather than two. Cloudflare allows 2,000
+  static redirects; this is about 340.
+*/ -}}
+# Old feed URLs from previous versions of the site.
+/feeds/atom.xml /feed.xml 301
+/index.xml /feed.xml 301
+{{ range site.RegularPages }}
+{{- $target := .RelPermalink }}
+{{- range .Aliases }}
+{{- $from := . | strings.TrimSuffix "/" }}
+{{ $from }} {{ $target }} 301
+{{ $from }}/ {{ $target }} 301
+{{- end }}
+{{- end }}

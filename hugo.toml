@@ -77,6 +77,10 @@ email = "r@rdegges.com"
   [mediaTypes."application/atom+xml"]
     suffixes = ["xml"]
 
+  # No file extension: Cloudflare looks for a file named exactly _redirects.
+  [mediaTypes."text/redirects"]
+    delimiter = ""
+
 [outputFormats]
   [outputFormats.Atom]
     mediaType = "application/atom+xml"
@@ -110,8 +114,16 @@ email = "r@rdegges.com"
     isPlainText = true
     notAlternative = true
 
+  # Cloudflare's _redirects file, rendered from layouts/home.redirects:
+  # real 301s for every alias and old feed URL.
+  [outputFormats.Redirects]
+    mediaType = "text/redirects"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
-  home = ["HTML", "Atom", "LLMs", "SecurityTxt"]
+  home = ["HTML", "Atom", "LLMs", "SecurityTxt", "Redirects"]
   page = ["HTML", "Markdown"]
 
 [markup.highlight]
