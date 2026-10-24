@@ -13,6 +13,9 @@ def rules():
 
 class TestRedirects(SiteTestCase):
     def test_rules_are_well_formed_and_within_cloudflare_limits(self):
+        # https://developers.cloudflare.com/workers/platform/limits/#static-assets:
+        # 2,000 static rules, 1,000 characters per rule. Past either limit
+        # Cloudflare drops rules instead of failing the deploy.
         all_rules = rules()
         self.assertLessEqual(len(all_rules), 2000)
         sources = [r[0] for r in all_rules]
@@ -21,6 +24,10 @@ class TestRedirects(SiteTestCase):
             with self.subTest(rule=rule):
                 self.assertEqual(len(rule), 3)
                 self.assertEqual(rule[2], "301")
+                self.assertLessEqual(len(" ".join(rule)), 1000)
+                # A splat or placeholder makes a rule dynamic, which has
+                # its own limit of 100.
+                self.assertNotRegex(rule[0], r"[*:]", "dynamic rule")
 
     def test_every_destination_exists(self):
         for source, dest, _ in rules():
