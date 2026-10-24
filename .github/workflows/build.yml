@@ -17,14 +17,47 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Actions are pinned to a full commit SHA, not a tag: a tag can be moved
+      # to point at different code, a SHA cannot. Dependabot still bumps them,
+      # keeping the version comment in sync.
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Runs the exact script production runs, so CI exercises the real build
+      # path -- including reading the Hugo version out of docker-compose.yml.
+      # --panicOnWarning turns any Hugo warning (a deprecation, a missing
+      # layout) into a failure, so a Hugo upgrade that would start breaking
+      # things is caught on its Dependabot PR rather than after a deploy.
+      - name: Build site
+        run: ./scripts/build.sh --panicOnWarning
+
+      # Checks the built output: links, metadata, sitemap, feed. Standard
+      # library only, so there is nothing to install.
+      - name: Test site
+        run: python3 -m unittest discover --start-directory tests --verbose
+
+  # Static analysis for the workflows themselves: template injection,
+  # over-broad permissions, unpinned actions, credential persistence.
+  zizmor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-      # Runs the exact script production runs, so CI exercises the real deploy
-      # path -- including reading the Hugo version out of docker-compose.yml.
-      # The render-image hook fails the build on any broken image reference,
-      # so a clean build is also a link check.
-      - name: Build site
-        run: ./scripts/build.sh
+      - name: Run zizmor
+        uses: zizmorcore/zizmor-action@53290badfa369cb0bf7ad16342cb62c2fa47ac7b # v0.8.0
+        with:
+          # Report in the job log and fail on findings, rather than uploading
+          # SARIF, which needs security-events: write.
+          advanced-security: false

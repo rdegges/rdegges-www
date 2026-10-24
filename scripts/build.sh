@@ -8,6 +8,8 @@
 # The version comes from the image tag in docker-compose.yml, which is the
 # single source of truth for this repo -- local dev, CI and production all build
 # with the same Hugo, and there is no second copy to drift out of sync.
+#
+# Extra arguments are passed through to hugo; CI passes --panicOnWarning.
 
 set -euo pipefail
 
@@ -35,4 +37,4 @@ tar -xzf "${workdir}/${archive}" -C "$workdir" hugo
 export PATH="${workdir}:${PATH}"
 
 echo "==> Building with $(hugo version)"
-hugo --minify
+hugo --minify "$@"
