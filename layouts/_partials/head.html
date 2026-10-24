@@ -14,22 +14,14 @@
   {{- with .OutputFormats.Get "markdown" }}
   <link rel="alternate" type="text/markdown" href="{{ .RelPermalink }}" title="{{ $.Title }} (Markdown)">
   {{- end }}
-  <link href="/static/images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
-  <link href="/static/images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
-  <link href="/static/images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="/static/images/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-  <link href="/static/images/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-  <link href="/static/images/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-  <link href="/static/images/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="/static/images/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
-  <link href="/static/images/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-  <link href="/static/images/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
-  <link href="/static/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="/static/images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
-  <link href="/static/images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/static/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/static/images/favicons/ms-icon-144x144.png">
+  {{- /* The modern minimum: browsers request /favicon.ico and iOS requests
+         /apple-touch-icon.png on their own, so both live at the root, and
+         the manifest covers Android. The 25-file generator set this
+         replaces targeted browsers (old iOS sizes, IE tiles) that no longer
+         ship. */}}
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
   {{- /*
     One stylesheet, content-addressed, no third-party requests.
@@ -41,11 +33,8 @@
     fonts.css is executed as a template so each src resolves to the
     fingerprinted URL of its font file.
 
-    Bootstrap ships an @import for Roboto from fonts.googleapis.com. Nothing
-    on the site renders in Roboto -- verified by walking every visible text
-    node and reading its computed font-family -- but the browser still pays a
-    render-blocking request for it, chained behind the stylesheet that
-    imports it. It is stripped here rather than by editing the vendored file.
+    bootstrap.css is Bootswatch Paper pruned to the classes this site uses;
+    its header explains how and what to do if a template needs more.
 
     fingerprint puts a hash of the contents in the filename, so the URL
     changes whenever the bytes do. That is what makes the one-year immutable
@@ -55,13 +44,10 @@
   {{- $fonts := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . -}}
   {{- $sheets := slice
         $fonts
-        (resources.Get "css/bootstrap.min.css")
+        (resources.Get "css/bootstrap.css")
         (resources.Get "css/style.css")
         (resources.Get "css/syntax.css") -}}
   {{- $css := $sheets | resources.Concat "static/css/site.css" -}}
-  {{- $css = $css.Content
-        | replaceRE `@import\s+(url\()?["']https://fonts\.googleapis\.com[^"']*["']\)?\s*;` ""
-        | resources.FromString "static/css/site.css" -}}
   {{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
   {{- /* The two faces used above the fold. Preload so they start downloading
          with the stylesheet rather than after it parses. */ -}}
