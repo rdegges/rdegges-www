@@ -1,0 +1,48 @@
+{{- /*
+  Metadata for search engines and link previews (Slack, LinkedIn, Bluesky,
+  iMessage, Discord ...): a canonical URL plus Open Graph and Twitter card
+  tags, so a shared link unfurls with a title, summary and image instead of
+  a bare URL.
+
+  The preview image is the first image in the post (see first-image.html).
+  Pages with no image (home, 404) use the avatar.
+*/ -}}
+{{- $description := .Description | default site.Params.description -}}
+{{- $image := partial "first-image.html" . -}}
+{{- if not $image.url -}}
+  {{- $avatar := resources.Get "images/rdegges-avatar.png" | resources.Copy "static/images/rdegges-avatar.png" -}}
+  {{- $avatar = $avatar.Resize "500x jpg q85 #ffffff" -}}
+  {{- $image = dict "url" $avatar.Permalink "alt" site.Title "width" $avatar.Width "height" $avatar.Height -}}
+{{- end }}
+  {{- if ne .Kind "404" }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="max-image-preview:large">
+  {{- end }}
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ .Title | default site.Title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $image.url }}">
+  {{- with $image.width }}
+  <meta property="og:image:width" content="{{ . }}">
+  {{- end }}
+  {{- with $image.height }}
+  <meta property="og:image:height" content="{{ . }}">
+  {{- end }}
+  {{- with $image.alt }}
+  <meta property="og:image:alt" content="{{ . }}">
+  {{- end }}
+  {{- if .IsPage }}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:author" content="{{ site.Params.author.name }}">
+  {{- range .Params.tags }}
+  <meta property="article:tag" content="{{ . }}">
+  {{- end }}
+  <meta name="twitter:card" content="summary_large_image">
+  {{- else }}
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  {{- end }}
