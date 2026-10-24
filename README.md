@@ -31,6 +31,22 @@ hugo server
 Hugo Extended is required.
 
 
+## Testing
+
+```bash
+make test
+```
+
+The tests in `tests/` check the *built* site in `./public` rather than the
+templates: every internal link and image resolves, every page has a title,
+description and language, every sitemap URL exists, and the feed is valid
+Atom. They use only Python's standard library, so there's nothing to install.
+
+CI runs the same build with `--panicOnWarning`, so a Hugo deprecation fails
+the build the day it appears, then runs these tests and
+[zizmor](https://docs.zizmor.sh) over the workflows.
+
+
 ## Deployment
 
 The site deploys automatically to [Render](https://render.com) on every push
@@ -40,7 +56,7 @@ to `main`. Configuration is in `render.yaml`.
 `docker-compose.yml`:
 
 ```yaml
-image: hugomods/hugo:base-0.165.0
+image: ghcr.io/gohugoio/hugo:v0.168.0
 ```
 
 Local dev and CI use that image directly. Production reads the same tag:
