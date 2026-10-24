@@ -34,12 +34,61 @@ jobs:
       # layout) into a failure, so a Hugo upgrade that would start breaking
       # things is caught on its Dependabot PR rather than after a deploy.
       - name: Build site
-        run: ./scripts/build.sh --panicOnWarning
+        run: ./scripts/render-build.sh --panicOnWarning
 
       # Checks the built output: links, metadata, sitemap, feed. Standard
       # library only, so there is nothing to install.
       - name: Test site
         run: python3 -m unittest discover --start-directory tests --verbose
+
+      # The rest of this job stages the move to Cloudflare. It packages the
+      # public/ tested above, without a rebuild, and runs a deploy dry run.
+      # Nothing here deploys. cf loads TypeScript config files, which needs
+      # Node 22.18 or later; 24 is the current LTS.
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          # No dependency cache: a restored cache is a way to poison the build.
+          package-manager-cache: false
+
+      - name: Install Cloudflare tooling
+        run: npm ci --ignore-scripts
+
+      - name: Package for Cloudflare
+        run: npx cf build
+        env:
+          CF_SEND_TELEMETRY: "false"
+
+      # .well-known is a dot directory, the kind a copy step can drop.
+      - name: Check the package includes security.txt
+        run: |
+          if [ -z "$(find .cloudflare/output/v0 -path '*/.well-known/security.txt' -type f)" ]; then
+            echo "::error::security.txt is missing from .cloudflare/output/v0"
+            exit 1
+          fi
+
+      # Wrangler 4.152 does not parse _headers or _redirects on deploy, so the
+      # dry run prints no rule summary to compare with tests/test_headers.py.
+      # If a later version starts to print one, fail until that check exists.
+      - name: Deploy dry run
+        run: |
+          set -o pipefail
+          npx cf deploy --prebuilt --dry-run 2>&1 | tee "$RUNNER_TEMP/dry-run.log"
+          if grep -Eiq '_headers|_redirects|header rules' "$RUNNER_TEMP/dry-run.log"; then
+            echo "::error::the dry run now reports on _headers or _redirects; compare its rule counts with tests/test_headers.py"
+            exit 1
+          fi
+        env:
+          CF_SEND_TELEMETRY: "false"
+
+      - name: Upload Cloudflare package
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cloudflare-output
+          path: .cloudflare/output/
+          include-hidden-files: true
+          if-no-files-found: error
 
   # Static analysis for the workflows themselves: template injection,
   # over-broad permissions, unpinned actions, credential persistence.

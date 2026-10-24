@@ -14,7 +14,8 @@
  * axis would make the 200 real and change how the tagline looks, so the clamp
  * keeps this change invisible. Widen it here if you ever want that weight.
  *
- * Published under /static/ so the existing render.yaml cache rule matches.
+ * Published under /static/ so the cache rule in render.yaml and
+ * static/_headers matches.
  *
  * unicode-range is what keeps this cheap. A page with no latin-ext characters
  * never downloads the latin-ext file.

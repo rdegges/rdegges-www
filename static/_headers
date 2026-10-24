@@ -1,5 +1,9 @@
-# Response headers for Cloudflare (Workers static assets and Pages both read
-# this file from the build output). Hugo copies it from static/ to public/.
+# Response headers for Cloudflare (Workers static assets read this file from
+# the build output). Hugo copies it from static/ to public/.
+#
+# Render serves production today and reads its headers from render.yaml.
+# Every rule below except the Content-Type ones must match render.yaml
+# exactly; tests/test_headers.py fails the build when the two differ.
 #
 # Syntax: a URL pattern on its own line, then indented "Name: value" lines.
 # When several patterns match a request, Cloudflare applies all of them.
@@ -29,3 +33,14 @@
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
   Content-Security-Policy: default-src 'none'; script-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; form-action 'self' https://buttondown.com https://buttondown.email; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests
+
+# Cloudflare only: name the charset of the text files, so a reader or crawler
+# never has to guess it. Render has no equivalent rule.
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*/index.md
+  Content-Type: text/markdown; charset=utf-8

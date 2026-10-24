@@ -2,7 +2,7 @@
 # Usage: docker compose up
 #
 # This image tag is the single source of truth for the Hugo version.
-# scripts/build.sh parses the version out of this file, so CI and the
+# scripts/render-build.sh parses the version out of this file, so CI and the
 # production build use the same Hugo, and a Dependabot bump here upgrades all
 # of them at once.
 #

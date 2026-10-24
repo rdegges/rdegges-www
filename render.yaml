@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: rdegges-www
+    runtime: static
+    # Render's build image ships its own outdated Hugo and ignores HUGO_VERSION,
+    # so the build script installs the pinned version before building.
+    buildCommand: ./scripts/render-build.sh
+    staticPublishPath: ./public
+    headers:
+      # Cache immutable static assets aggressively
+      - path: /static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Security headers (applied to all pages)
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=63072000; includeSubDomains; preload
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+      - path: /*
+        name: Cross-Origin-Opener-Policy
+        value: same-origin
+      # No JavaScript runs on this site, so scripts are forbidden outright.
+      # Keep in step with static/_headers; tests/test_headers.py checks.
+      - path: /*
+        name: Content-Security-Policy
+        value: >-
+          default-src 'none';
+          script-src 'none';
+          style-src 'self';
+          font-src 'self';
+          img-src 'self' data:;
+          manifest-src 'self';
+          form-action 'self' https://buttondown.com https://buttondown.email;
+          frame-ancestors 'none';
+          base-uri 'none';
+          object-src 'none';
+          upgrade-insecure-requests

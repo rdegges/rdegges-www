@@ -49,32 +49,42 @@ the build the day it appears, then runs these tests and
 
 ## Deployment
 
-The site is a static build served by [Cloudflare](https://developers.cloudflare.com/workers/static-assets/).
-Production builds with:
+The site deploys automatically to [Render](https://render.com) on every push
+to `main`. Configuration is in `render.yaml`. Render serves production.
 
-```bash
-./scripts/build.sh   # output in ./public
-```
+The move to [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
+is staged but not live. Nothing deploys to Cloudflare yet. The configuration is
+in `cloudflare.config.ts` and `wrangler.config.ts`. CI packages the tested
+`public/` with `npx cf build`, then runs `npx cf deploy --prebuilt --dry-run`.
 
-Response headers (security headers, caching) live in `static/_headers`, which
-Hugo copies into the build output, where Cloudflare reads it.
+Response headers live in two files: `render.yaml` for Render and
+`static/_headers` for Cloudflare. `tests/test_headers.py` fails when the two
+files differ. The only exception is Content-Type, which only Cloudflare sets.
 
-**Hugo version:** It lives in exactly one place, the image tag in
+`package.json` exists only for this Cloudflare tooling. It pins `cf` and
+`wrangler` to exact versions. `cf` hands static-asset packaging to the
+`wrangler` package, and only `wrangler.config.ts` can set the assets
+directory. Nobody runs the `wrangler` CLI directly.
+
+**Hugo version:** It lives in exactly one place — the image tag in
 `docker-compose.yml`:
 
 ```yaml
 image: ghcr.io/gohugoio/hugo:v0.168.0
 ```
 
-Local dev uses that image directly, and
-`scripts/build.sh` parses the version out of the same file, then downloads
-that Hugo (verifying its checksum) and builds with it, which is what CI and
-production run. Hosted build images ship whatever Hugo they ship, so we never
-rely on one. Upgrading Hugo means editing one line, and Dependabot's weekly
-Docker PR does it for you.
+Local dev and CI use that image directly. Production reads the same tag:
+`scripts/render-build.sh` parses the version out of `docker-compose.yml`,
+downloads that Hugo (verifying its checksum) and builds with it. So upgrading
+Hugo means editing one line, and Dependabot's weekly Docker PR does it for you —
+merge it and local dev, CI and production all move together.
+
+The build script exists because Render's static-site image ships its own pinned
+Hugo (0.124.x) and ignores `HUGO_VERSION`; setting that variable has no effect
+on which binary `hugo` resolves to.
 
 `hugo.toml` also sets `[module.hugoVersion] min`, but that's the *oldest* Hugo
-the layouts support rather than the version we pin: it stays put when you
+the layouts support rather than the version we pin — it stays put when you
 upgrade, and only moves if the templates start relying on a newer feature.
 
 

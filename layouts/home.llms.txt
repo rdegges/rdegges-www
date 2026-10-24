@@ -1,0 +1,29 @@
+{{- /*
+  /llms.txt, per https://llmstxt.org: who the site is about, then every
+  post with a one-line summary, linking to its Markdown version so a model
+  can fetch clean text.
+*/ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+{{ site.Params.author.name }} writes "{{ site.Params.subtitle }}": essays and tutorials on programming, developer tools, APIs, security, startups, productivity and personal development, published since 2009.
+
+Every post is also available as Markdown: replace a post's trailing slash with /index.md. The full text of the latest posts is in the Atom feed.
+
+- Website: {{ site.Home.Permalink }}
+- Feed: {{ "feed.xml" | absURL }}
+- Email: {{ site.Params.email }}
+{{- range site.Params.navLinks }}
+{{- if hasPrefix .url "http" }}
+- {{ .title }}: {{ .url }}
+{{- end }}
+{{- end }}
+
+## Posts
+{{ range site.RegularPages }}
+{{- $post := . }}
+{{- with .OutputFormats.Get "markdown" }}
+- [{{ $post.Title }}]({{ .Permalink }}) ({{ $post.Date.Format "2006-01-02" }}){{ with $post.Description }}: {{ . }}{{ end }}
+{{- end }}
+{{- end }}
