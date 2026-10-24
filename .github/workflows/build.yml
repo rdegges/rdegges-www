@@ -34,7 +34,7 @@ jobs:
       # layout) into a failure, so a Hugo upgrade that would start breaking
       # things is caught on its Dependabot PR rather than after a deploy.
       - name: Build site
-        run: ./scripts/build.sh --panicOnWarning
+        run: ./scripts/render-build.sh --panicOnWarning
 
       # Checks the built output: links, metadata, sitemap, feed. Standard
       # library only, so there is nothing to install.

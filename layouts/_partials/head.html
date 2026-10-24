@@ -47,7 +47,7 @@
 
     fingerprint puts a hash of the contents in the filename, so the URL
     changes whenever the bytes do. That is what makes the one-year immutable
-    header in static/_headers honest. Skipped outside production so local
+    header in render.yaml honest. Skipped outside production so local
     filenames stay readable.
   */ -}}
   {{- $fonts := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . -}}

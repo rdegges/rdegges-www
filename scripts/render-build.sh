@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# Production build: installs the pinned Hugo, then builds into ./public.
+# Production build for Render.
 #
-# Hosted build images ship whatever Hugo they ship, so rather than depend on
-# one, this downloads the exact version we pin and verifies its checksum.
+# Render's static-site build image ships its own Hugo (0.124.x) and ignores the
+# HUGO_VERSION environment variable, so we install the version we actually want.
 #
 # The version comes from the image tag in docker-compose.yml, which is the
 # single source of truth for this repo -- local dev, CI and production all build
