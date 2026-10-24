@@ -42,6 +42,46 @@ def parse_headers():
     return rules
 
 
+# The media type a Content-Type rule may give each file extension. Spelled
+# out rather than read from mimetypes, whose table depends on the host's
+# /etc/mime.types.
+MEDIA_TYPES = {".txt": "text/plain", ".md": "text/markdown"}
+
+
+def raw_rules():
+    """[(pattern, [(line number, header-name-lowercased, value)])] in file order.
+
+    Unlike parse_headers, this keeps repeated patterns and repeated names,
+    because Cloudflare does not collapse them: it joins the values.
+    """
+    rules = []
+    for n, line in header_lines():
+        if not line[0].isspace():
+            rules.append((line.strip(), []))
+        elif rules:
+            name, _, value = line.strip().partition(":")
+            rules[-1][1].append((n, name.strip().lower(), value.strip()))
+    return rules
+
+
+def built_urls():
+    """Every URL path the built site serves a file at."""
+    urls = set()
+    for root, _, files in os.walk(PUBLIC):
+        for name in files:
+            url = "/" + os.path.relpath(os.path.join(root, name), PUBLIC).replace(os.sep, "/")
+            urls.add(url)
+            if name == "index.html":
+                urls.add(url.removesuffix("index.html"))
+    urls.discard("/_headers")
+    return urls
+
+
+def matcher(pattern):
+    """A regex for a _headers URL pattern. The splat matches anything, slashes included."""
+    return re.compile("".join(".*" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
+
+
 def render_triples():
     """{(path, header-name-lowercased, value)} from render.yaml."""
     with open(RENDER_YAML, encoding="utf-8") as f:
@@ -118,6 +158,46 @@ class TestHeaders(SiteTestCase):
 
     def test_render_yaml_sets_no_content_type(self):
         self.assertNotIn("content-type", {name for _, name, _ in render_triples()})
+
+    def test_no_url_gets_the_same_header_twice(self):
+        # Cloudflare applies every pattern that matches a URL and joins the
+        # values of a repeated header with a comma. "DENY, SAMEORIGIN" is not a
+        # valid X-Frame-Options, so the browser drops it. parse_headers keeps
+        # only the last value per name, so test_matches_render_yaml cannot see
+        # this.
+        urls = built_urls()
+        self.assertGreater(len(urls), 1)
+        for url in urls:
+            seen = {}
+            for pattern, headers in raw_rules():
+                if not matcher(pattern).match(url):
+                    continue
+                for n, name, _ in headers:
+                    self.assertNotIn(name, seen, f"{url}: {name} set on line {seen.get(name)} and line {n}")
+                    seen[name] = n
+
+    def test_content_type_rules_agree_with_the_files_they_match(self):
+        # A Content-Type rule replaces the type Cloudflare would infer, so a
+        # broad pattern (/* or /static/*) would mislabel every file under it.
+        urls = built_urls()
+        found = 0
+        for pattern, headers in raw_rules():
+            for n, name, value in headers:
+                if name != "content-type":
+                    continue
+                found += 1
+                media_type = value.split(";")[0].strip()
+                matched = [u for u in urls if matcher(pattern).match(u)]
+                self.assertTrue(matched, f"line {n}: {pattern} matches no built file")
+                for url in matched:
+                    self.assertEqual(MEDIA_TYPES.get(os.path.splitext(url)[1]), media_type, f"line {n}: {pattern} labels {url}")
+        self.assertGreaterEqual(found, 1)
+
+    def test_every_pattern_matches_a_built_file(self):
+        # A rule for a path the build never writes does nothing, silently.
+        urls = built_urls()
+        for pattern, _ in raw_rules():
+            self.assertTrue(any(matcher(pattern).match(u) for u in urls), f"{pattern} matches no built file")
 
 
 if __name__ == "__main__":
