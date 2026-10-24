@@ -5,3 +5,6 @@ public-dev
 resources
 .env
 __pycache__/
+node_modules/
+.wrangler/
+.cloudflare/

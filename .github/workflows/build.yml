@@ -5,11 +5,14 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
-# A newer push to the same branch makes an in-flight run redundant.
+# A newer push to a pull request makes an in-flight run redundant. A run on
+# main is never cancelled once it starts, so a deploy never stops halfway. A
+# newer push to main waits, and only the newest waiting run is kept.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
@@ -40,6 +43,115 @@ jobs:
       # library only, so there is nothing to install.
       - name: Test site
         run: python3 -m unittest discover --start-directory tests --verbose
+
+      # The rest of this job stages the move to Cloudflare. It packages the
+      # public/ tested above, without a rebuild, and runs a deploy dry run.
+      # Nothing here deploys. cf loads TypeScript config files, which needs
+      # Node 22.18 or later; 24 is the current LTS.
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          # No dependency cache: a restored cache is a way to poison the build.
+          package-manager-cache: false
+
+      - name: Install Cloudflare tooling
+        run: npm ci --ignore-scripts
+
+      - name: Package for Cloudflare
+        run: npx cf build
+        env:
+          CF_SEND_TELEMETRY: "false"
+
+      # .well-known is a dot directory, the kind a copy step can drop.
+      - name: Check the package includes security.txt
+        run: |
+          if [ -z "$(find .cloudflare/output/v0 -path '*/.well-known/security.txt' -type f)" ]; then
+            echo "::error::security.txt is missing from .cloudflare/output/v0"
+            exit 1
+          fi
+
+      # Wrangler 4.152 does not parse _headers or _redirects on deploy, so the
+      # dry run prints no rule summary to compare with tests/test_headers.py.
+      # If a later version starts to print one, fail until that check exists.
+      - name: Deploy dry run
+        run: |
+          set -o pipefail
+          npx cf deploy --prebuilt --dry-run 2>&1 | tee "$RUNNER_TEMP/dry-run.log"
+          if grep -Eiq '_headers|_redirects|header rules' "$RUNNER_TEMP/dry-run.log"; then
+            echo "::error::the dry run now reports on _headers or _redirects; compare its rule counts with tests/test_headers.py"
+            exit 1
+          fi
+        env:
+          CF_SEND_TELEMETRY: "false"
+
+      - name: Upload Cloudflare package
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cloudflare-output
+          path: .cloudflare/output/
+          include-hidden-files: true
+          if-no-files-found: error
+
+  # Deploys the package the build job tested to the rdegges-www Worker. It
+  # runs only for main, and the cloudflare environment holds the token and
+  # admits only main. There is no rebuild: cf deploys the artifact as is.
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: cloudflare
+    # One deploy at a time, across all runs. A deploy in progress always
+    # finishes. Only a deploy that has not started yet can be replaced.
+    concurrency:
+      group: cloudflare-deploy
+      cancel-in-progress: false
+    permissions:
+      contents: read
+
+    steps:
+      # Only for package.json and package-lock.json: the deploy reads
+      # nothing else from the repository.
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download Cloudflare package
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: cloudflare-output
+          path: .cloudflare/output
+
+      # cf deploy --prebuilt uploads this directory. If either file is
+      # missing or empty, the package is wrong, so nothing is deployed.
+      - name: Check the package before deploying
+        run: |
+          assets=.cloudflare/output/v0/workers/default/assets
+          for f in .well-known/security.txt _headers; do
+            if [ ! -s "$assets/$f" ]; then
+              echo "::error::$f is missing or empty in $assets"
+              exit 1
+            fi
+          done
+
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install Cloudflare tooling
+        run: npm ci --ignore-scripts
+
+      # The token is set on this step only, so no other step can read it.
+      - name: Deploy to Cloudflare
+        run: npx cf deploy --prebuilt
+        env:
+          CF_SEND_TELEMETRY: "false"
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
   # Static analysis for the workflows themselves: template injection,
   # over-broad permissions, unpinned actions, credential persistence.

@@ -1,0 +1,36 @@
+# Response headers for Cloudflare (Workers static assets read this file from
+# the build output). Hugo copies it from static/ to public/.
+#
+# Render serves production today and reads its headers from render.yaml.
+# Every rule below except the Content-Type ones must match render.yaml
+# exactly; tests/test_headers.py fails the build when the two differ.
+#
+# Syntax: a URL pattern on its own line, then indented "Name: value" lines.
+# When several patterns match a request, Cloudflare applies all of them.
+
+# Everything under /static/ has a content hash in its filename (CSS, fonts,
+# processed images), so a changed file gets a new URL and the old one can be
+# cached forever.
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Security headers for every response.
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  X-XSS-Protection: 1; mode=block
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; form-action 'self' buttondown.email; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+# Cloudflare only: name the charset of the text files, so a reader or crawler
+# never has to guess it. Render has no equivalent rule.
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*/index.md
+  Content-Type: text/markdown; charset=utf-8
