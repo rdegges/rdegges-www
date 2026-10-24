@@ -31,6 +31,22 @@ hugo server
 Hugo Extended is required.
 
 
+## Testing
+
+```bash
+make test
+```
+
+The tests in `tests/` check the *built* site in `./public` rather than the
+templates: every internal link and image resolves, every page has a title,
+description and language, every sitemap URL exists, and the feed is valid
+Atom. They use only Python's standard library, so there's nothing to install.
+
+CI runs the same build with `--panicOnWarning`, so a Hugo deprecation fails
+the build the day it appears, then runs these tests and
+[zizmor](https://docs.zizmor.sh) over the workflows.
+
+
 ## Deployment
 
 The site is a static build served by [Cloudflare](https://developers.cloudflare.com/workers/static-assets/).

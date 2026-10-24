@@ -257,7 +257,7 @@ shoot me an email ([r@rdegges.com][]).
   [Last week]: {{< relref "2013/postgression-a-postgresql-database-for-every-test-case.md" >}} "Postgression - a PostgreSQL Database for Every Test Case"
   [Alven]: https://twitter.com/zaidos "Alven on Twitter"
   [postgression]: http://www.postgression.com/ "postgression"
-  [last article]: http://rdegges.com/postgression-a-postgresql-database-for-every "postgression"
+  [last article]: /2013/postgression-a-postgresql-database-for-every-test-case/ "postgression"
   [Flask]: http://flask.pocoo.org/ "Flask"
   [Flask-Cache]: http://packages.python.org/Flask-Cache/ "Flask-Cache"
   [Flask-Script]: http://flask-script.readthedocs.org/en/latest/ "Flask-Script"
