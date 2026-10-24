@@ -60,7 +60,13 @@ Response headers (security headers, caching) live in `static/_headers`, which
 Hugo copies into the build output, where Cloudflare reads it.
 
 **Hugo version:** It lives in exactly one place, the image tag in
-`docker-compose.yml`. Local dev uses that image directly, and
+`docker-compose.yml`:
+
+```yaml
+image: ghcr.io/gohugoio/hugo:v0.168.0
+```
+
+Local dev uses that image directly, and
 `scripts/build.sh` parses the version out of the same file, then downloads
 that Hugo (verifying its checksum) and builds with it, which is what CI and
 production run. Hosted build images ship whatever Hugo they ship, so we never
