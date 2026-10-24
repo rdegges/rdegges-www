@@ -5,7 +5,9 @@
   {{ hugo.Generator }}
   <meta content="{{ .Site.Params.author.name }}" name="author">
   <meta content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" name="description">
-  <title>{{ .Site.Title }} - {{ if ne .Title "" }}{{ .Title }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}</title>
+  {{- /* Page first, site second: search results and tabs truncate from the
+         right, so the words that differ between pages have to come first. */}}
+  <title>{{ if or .IsHome (eq .Title "") }}{{ .Site.Title }} - {{ .Site.Params.subtitle }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   {{- /* Belt and braces: a 404 served with a 404 status is not indexed anyway,
          but this also covers a host that mistakenly serves it as 200. */}}
   {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
