@@ -197,4 +197,4 @@ me via:
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [Freeswitch]: http://freeswitch.org/ "Freeswitch"
   [Twitter]: https://twitter.com/rdegges "Randall Degges on Twitter"
-  [RSS]: http://www.rdegges.com/feeds/atom.xml "Randall Degges' RSS Feed"
+  [RSS]: /feed.xml "Randall Degges' RSS Feed"
