@@ -288,6 +288,18 @@ footer p a:visited {
     margin-top: 2.5em;
 }
 
+/* Raleway like the home page's dates, centered under the title. #767676 is
+   the lightest grey that still meets WCAG AA contrast (4.5:1) on white at
+   this size. The negative top margin pulls it into the title's bottom
+   margin so it reads as part of the heading, not the first paragraph. */
+.article .post-date {
+    color: #767676;
+    font-family: "Raleway", sans-serif;
+    font-size: 0.85em;
+    margin-top: -1.5em;
+    text-align: center;
+}
+
 .article .subscribe {
     margin-bottom: 1em;
     margin-top: 2em;
