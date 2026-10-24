@@ -27,21 +27,23 @@ services:
         value: strict-origin-when-cross-origin
       - path: /*
         name: Permissions-Policy
-        value: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+        value: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
       - path: /*
-        name: X-XSS-Protection
-        value: 1; mode=block
+        name: Cross-Origin-Opener-Policy
+        value: same-origin
+      # No JavaScript runs on this site, so scripts are forbidden outright.
+      # Keep in step with static/_headers; tests/test_headers.py checks.
       - path: /*
         name: Content-Security-Policy
         value: >-
-          default-src 'self';
-          script-src 'self' 'unsafe-inline';
-          style-src 'self' 'unsafe-inline';
+          default-src 'none';
+          script-src 'none';
+          style-src 'self';
           font-src 'self';
           img-src 'self' data:;
-          form-action 'self' buttondown.email;
-          connect-src 'self';
-          frame-src 'none';
+          manifest-src 'self';
+          form-action 'self' https://buttondown.com https://buttondown.email;
+          frame-ancestors 'none';
+          base-uri 'none';
           object-src 'none';
-          base-uri 'self';
-          frame-ancestors 'none'
+          upgrade-insecure-requests

@@ -109,6 +109,24 @@ class TestHeaders(SiteTestCase):
         self.assertIn("frame-ancestors 'none'", every["content-security-policy"])
         self.assertIn("object-src 'none'", every["content-security-policy"])
 
+    def test_csp_forbids_script_and_inline_style(self):
+        csp = dict(
+            (d.split()[0], d.split()[1:])
+            for d in self.rules["/*"]["content-security-policy"].split(";")
+            if d.strip()
+        )
+        self.assertEqual(csp["default-src"], ["'none'"])
+        self.assertEqual(csp["script-src"], ["'none'"])
+        self.assertNotIn("'unsafe-inline'", csp["style-src"])
+        self.assertIn("https://buttondown.com", csp["form-action"])
+
+    def test_deprecated_headers_are_gone(self):
+        # X-XSS-Protection is ignored by current browsers and could open
+        # holes in old ones; interest-cohort was Google's abandoned FLoC.
+        every = self.rules["/*"]
+        self.assertNotIn("x-xss-protection", every)
+        self.assertNotIn("interest-cohort", every["permissions-policy"])
+
     def test_fingerprinted_assets_are_cached_forever(self):
         self.assertIn("immutable", self.rules["/static/*"]["cache-control"])
 
