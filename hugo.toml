@@ -44,9 +44,6 @@ quality = 85
     # still readable without visiting the site.
     limit = 20
 
-[permalinks]
-post = "/:year/:title"
-
 [params]
 description = "The personal website of Randall Degges: programmer, speaker, author and entrepreneur."
 email = "r@rdegges.com"
@@ -105,3 +102,18 @@ noClasses = false
 noHl = false
 style = 'autumn'
 tabWidth = 4
+
+# Who this site is about, for the structured data in _partials/schema.html.
+# sameAs tells search engines and AI systems that these profiles belong to
+# the same person as this site, which is how they tie it all to one entity.
+[params.person]
+jobTitle = "VP, AI Engineering"
+worksFor = "Snyk"
+worksForURL = "https://snyk.io"
+sameAs = [
+  "https://github.com/rdegges",
+  "https://bsky.app/profile/rdegges.com",
+  "https://www.linkedin.com/in/rdegges/",
+  "https://www.instagram.com/randalldegges",
+  "https://speakerdeck.com/rdegges",
+]

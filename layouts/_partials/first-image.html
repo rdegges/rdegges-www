@@ -1,0 +1,21 @@
+{{- /*
+  Returns the first image in a page's rendered content as a dict with url
+  (absolute), alt, width and height -- or an empty dict if there is none.
+
+  Reading the rendered HTML rather than the page's resources means this is
+  the image the reader sees first, as the render hook output it: already
+  resized, with its real dimensions.
+*/ -}}
+{{- $image := dict -}}
+{{- with findRESubmatch `<img[^>]*>` .Content 1 -}}
+  {{- $tag := index (index . 0) 0 -}}
+  {{- with findRESubmatch `src="([^"]+)"` $tag 1 -}}
+    {{- $image = dict "url" (index (index . 0) 1 | absURL) -}}
+  {{- end -}}
+  {{- range $attr := slice "alt" "width" "height" -}}
+    {{- with findRESubmatch (printf `%s="([^"]*)"` $attr) $tag 1 -}}
+      {{- $image = merge $image (dict $attr (index (index . 0) 1)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $image -}}

@@ -1,8 +1,19 @@
+{{- /* Only the home page's main heading is the site name. Everywhere else
+       the page's own title is its <h1>, so the site name and tagline are
+       styled to look the same (Bootstrap's .h1/.h2) without being headings
+       -- one <h1> per page, and no tagline sitting above it in the outline. */ -}}
 <div class="container">
   <div class="row">
     <header class="col-xs-offset-1 col-xs-10">
-      <h1><a href="/" hreflang="{{ .Site.Language.Locale }}" title="{{ .Site.Title }} - Home" type="text/html">{{ upper .Site.Title }}</a></h1>
-      <h2 class="hidden-xs"><a href="/" hreflang="{{ .Site.Language.Locale }}" title="{{ .Site.Title }} - Home" type="text/html">{{ .Site.Params.subtitle }}</a></h2>
+      {{- $name := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` (.Site.Language.Locale | htmlEscape) (.Site.Title | htmlEscape) (upper .Site.Title | htmlEscape) | safeHTML -}}
+      {{- $tagline := printf `<a href="/" hreflang="%s" title="%s - Home" type="text/html">%s</a>` (.Site.Language.Locale | htmlEscape) (.Site.Title | htmlEscape) (.Site.Params.subtitle | htmlEscape) | safeHTML -}}
+      {{- if .IsHome }}
+      <h1 class="h1">{{ $name }}</h1>
+      <h2 class="h2 hidden-xs">{{ $tagline }}</h2>
+      {{- else }}
+      <p class="h1">{{ $name }}</p>
+      <p class="h2 hidden-xs">{{ $tagline }}</p>
+      {{- end }}
       <hr>
     </header>
   </div>
