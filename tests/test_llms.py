@@ -150,10 +150,11 @@ class TestMarkdownCopies(SiteTestCase):
 
     def test_no_unrendered_hugo_shortcodes(self):
         # Served as-is, {{< relref "..." >}} is a dead link to a reader or model.
+        # RenderShortcodes can also leave hugo_ctx markers in its output.
         leaks = []
         for url, path in markdown_copies():
             for n, line in enumerate(read(path).splitlines(), 1):
-                if TEMPLATE_SYNTAX.search(line):
+                if TEMPLATE_SYNTAX.search(line) or "hugo_ctx" in line:
                     leaks.append(f"{url}index.md:{n}: {line.strip()}")
         self.assertEqual(leaks, [], f"{len(leaks)} unrendered shortcodes:\n" + "\n".join(leaks))
 
