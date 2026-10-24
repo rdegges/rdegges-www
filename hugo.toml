@@ -88,6 +88,23 @@ email = "r@rdegges.com"
     isPlainText = false
     rel = "alternate"
 
+  # /llms.txt (https://llmstxt.org): a plain-text map of the site for AI
+  # systems, rendered from layouts/home.llms.txt.
+  [outputFormats.LLMs]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+
+  # Each post as Markdown at <post>/index.md, rendered from
+  # layouts/page.markdown.md and advertised with <link rel="alternate">, so
+  # AI crawlers can read the text without scraping the HTML around it.
+  [outputFormats.Markdown]
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+    rel = "alternate"
+
   # RFC 9116 security.txt, rendered from layouts/home.securitytxt.txt so its
   # required Expires date is computed at build time rather than going stale.
   [outputFormats.SecurityTxt]
@@ -106,8 +123,8 @@ email = "r@rdegges.com"
     notAlternative = true
 
 [outputs]
-  home = ["HTML", "Atom", "SecurityTxt", "Redirects"]
-  page = ["HTML"]
+  home = ["HTML", "Atom", "LLMs", "SecurityTxt", "Redirects"]
+  page = ["HTML", "Markdown"]
 
 [markup.highlight]
 anchorLineNos = false
