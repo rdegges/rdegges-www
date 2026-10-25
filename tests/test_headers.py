@@ -5,7 +5,7 @@ import os
 import re
 import unittest
 
-from helpers import PUBLIC, SiteTestCase
+from helpers import PUBLIC, SiteTestCase, articles
 
 HEADERS = os.path.join(PUBLIC, "_headers")
 RENDER_YAML = os.path.join(os.path.dirname(__file__), "..", "render.yaml")
@@ -47,6 +47,9 @@ def parse_headers():
 # /etc/mime.types.
 MEDIA_TYPES = {".txt": "text/plain", ".md": "text/markdown"}
 
+# Headers that only _headers sets: Render serves the same files without them.
+CLOUDFLARE_ONLY = {"content-type", "link"}
+
 
 def raw_rules():
     """[(pattern, [(line number, header-name-lowercased, value)])] in file order.
@@ -78,8 +81,22 @@ def built_urls():
 
 
 def matcher(pattern):
-    """A regex for a _headers URL pattern. The splat matches anything, slashes included."""
-    return re.compile("".join(".*" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
+    """A regex for a _headers URL pattern. The splat matches anything, slashes included.
+
+    The splat is group 1, so a test can fill in :splat the way Cloudflare does.
+    """
+    return re.compile("".join("(.*)" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
+
+
+def link_headers(url):
+    """The Link values Cloudflare would send for url, with :splat filled in."""
+    links = []
+    for pattern, headers in raw_rules():
+        m = matcher(pattern).match(url)
+        if m:
+            splat = m.group(1) if m.groups() else ""
+            links += [value.replace(":splat", splat) for _, name, value in headers if name == "link"]
+    return links
 
 
 def render_triples(text=None):
@@ -162,15 +179,15 @@ class TestHeaders(SiteTestCase):
                 self.assertIn(":", line, f"line {n}: header line with no colon")
 
     def test_matches_render_yaml(self):
-        # Render serves production from render.yaml; Cloudflare will serve it
-        # from _headers. Both must send the same headers, except Content-Type,
-        # which only Cloudflare sets.
+        # Render, the rollback host, serves from render.yaml; Cloudflare serves
+        # from _headers. Both must send the same headers, except the ones
+        # only Cloudflare sets.
         render = render_triples()
         cloudflare = {
             (pattern, name, normalize(value))
             for pattern, headers in self.rules.items()
             for name, value in headers.items()
-            if name != "content-type"
+            if name not in CLOUDFLARE_ONLY
         }
         # Fail closed: a parser that finds nothing would make the sets equal.
         self.assertGreaterEqual(len(render), 2)
@@ -223,6 +240,40 @@ class TestHeaders(SiteTestCase):
                 self.assertTrue(matched, f"line {n}: {pattern} matches no built file")
                 for url in matched:
                     self.assertEqual(MEDIA_TYPES.get(os.path.splitext(url)[1]), media_type, f"line {n}: {pattern} labels {url}")
+        self.assertGreaterEqual(found, 1)
+
+    def test_markdown_copies_name_their_post_as_canonical(self):
+        # Without this, a search engine can index the Markdown copy as a page
+        # of its own. The value must be the URL the HTML post names as its
+        # canonical, after Cloudflare puts the matched path in for :splat.
+        posts = articles()
+        self.assertTrue(posts)
+        for page in posts:
+            url = page.url + "index.md"
+            with self.subTest(url=url):
+                canonical = page.find("link", rel="canonical")[0]["href"]
+                self.assertEqual(link_headers(url), [f"<{canonical}>; rel=\"canonical\""])
+
+    def test_only_markdown_copies_carry_a_link_header(self):
+        # Link is exempt from the render.yaml sync, so nothing else holds it to
+        # the Markdown copies. On an HTML page it would be a second canonical
+        # next to the one in <head>, free to disagree with it.
+        copies = {page.url + "index.md" for page in articles()}
+        urls = built_urls()
+        self.assertTrue(copies <= urls)
+        for url in sorted(urls - copies):
+            with self.subTest(url=url):
+                self.assertEqual(link_headers(url), [])
+
+    def test_splat_placeholder_is_only_used_under_a_splat(self):
+        # Under a pattern with no *, Cloudflare has nothing to put in for
+        # :splat and sends the literal text.
+        found = 0
+        for pattern, headers in raw_rules():
+            for n, _, value in headers:
+                if ":splat" in value:
+                    found += 1
+                    self.assertEqual(pattern.count("*"), 1, f"line {n}: :splat under {pattern}")
         self.assertGreaterEqual(found, 1)
 
     def test_every_pattern_matches_a_built_file(self):

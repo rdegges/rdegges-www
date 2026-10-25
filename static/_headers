@@ -1,9 +1,10 @@
 # Response headers for Cloudflare (Workers static assets read this file from
 # the build output). Hugo copies it from static/ to public/.
 #
-# Render serves production today and reads its headers from render.yaml.
-# Every rule below except the Content-Type ones must match render.yaml
-# exactly; tests/test_headers.py fails the build when the two differ.
+# Render, kept as the rollback host until it is removed, reads its headers
+# from render.yaml. Every rule below except the Content-Type and Link ones
+# must match render.yaml exactly; tests/test_headers.py fails the build when
+# the two differ.
 #
 # Syntax: a URL pattern on its own line, then indented "Name: value" lines.
 # When several patterns match a request, Cloudflare applies all of them.
@@ -42,5 +43,9 @@
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 
+# The Markdown copy of a post names the HTML post as its canonical URL, so a
+# search engine indexes the post once and folds the copy into it. The splat
+# is the post's path, for example 2024/im-writing-again.
 /*/index.md
   Content-Type: text/markdown; charset=utf-8
+  Link: <https://rdegges.com/:splat/>; rel="canonical"

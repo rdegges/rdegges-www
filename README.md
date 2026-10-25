@@ -49,15 +49,20 @@ the build the day it appears, then runs these tests and
 
 ## Deployment
 
-The site deploys automatically to [Render](https://render.com) on every push
-to `main`. Configuration is in `render.yaml`. Render serves production.
+[Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
+serves production. After the tests pass, every push to `main` deploys to the
+Worker `rdegges-www`, which serves https://rdegges.com. The configuration is in
+`cloudflare.config.ts` and `wrangler.config.ts`. The workers.dev URL and the
+per-version preview URLs are off (`workersDev: false`, `previewUrls: false`).
+Until Render is removed, https://rdegges-www.onrender.com also serves a copy
+of the site.
 
-The move to [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
-is staged but not live. After the tests pass, every push to `main` also deploys
-to the Worker `rdegges-www`. That Worker is served only at
-https://rdegges-www.randall-degges.workers.dev. DNS still points at Render, so
-visitors do not see it. The configuration is in `cloudflare.config.ts` and
-`wrangler.config.ts`.
+The custom domain `rdegges.com` was attached to the Worker by hand.
+`cloudflare.config.ts` does not list it, so a deploy leaves it in place. A
+Cloudflare redirect rule sends `www.rdegges.com` to `rdegges.com`.
+
+[Render](https://render.com) also deploys every push to `main`, from
+`render.yaml`. It is kept only as the rollback host until it is removed.
 
 On every run, CI packages the tested `public/` with `npx cf build`, then runs
 `npx cf deploy --prebuilt --dry-run`. On `main`, the `deploy` job then uploads
@@ -71,10 +76,8 @@ account ID is the environment variable `CLOUDFLARE_ACCOUNT_ID`, not a secret.
 The token has one permission: Individual Workers Editor, on the `rdegges-www`
 Worker only. It can deploy new versions of that Worker. It cannot change other
 Workers. It also cannot create Workers or change routes or custom domains.
-Each deploy also turns on this Worker's workers.dev URL, because `cf deploy`
-writes that setting every time. When DNS moves to Cloudflare, a person with
-more access must add the route or custom domain. The `rdegges-www` Worker existed before
-this repo used it, and the deploy reuses it.
+The `rdegges-www` Worker existed before this repo used it, and the deploy
+reuses it.
 
 The token has no expiry date. The owner chose this. To rotate the token:
 
@@ -87,7 +90,8 @@ The token has no expiry date. The owner chose this. To rotate the token:
 
 Response headers live in two files: `render.yaml` for Render and
 `static/_headers` for Cloudflare. `tests/test_headers.py` fails when the two
-files differ. The only exception is Content-Type, which only Cloudflare sets.
+files differ. The exceptions are Content-Type and Link, which only Cloudflare
+sets. Link names the HTML post as the canonical URL of its Markdown copy.
 
 `package.json` exists only for this Cloudflare tooling. It pins `cf` and
 `wrangler` to exact versions. `cf` hands static-asset packaging to the
