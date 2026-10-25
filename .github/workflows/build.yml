@@ -6,6 +6,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Monthly rebuild and deploy of main. Each build sets the Expires date in
+  # security.txt to 180 days out, so this keeps it valid when nothing else
+  # is merged. GitHub disables a public repo's schedule after 60 days with
+  # no repository activity; see the README.
+  schedule:
+    - cron: "23 7 1 * *"
 
 # A newer push to a pull request makes an in-flight run redundant. A run on
 # main is never cancelled once it starts, so a deploy never stops halfway. A
@@ -111,8 +117,8 @@ jobs:
       contents: read
 
     steps:
-      # Only for package.json and package-lock.json: the deploy reads
-      # nothing else from the repository.
+      # For package.json, package-lock.json and the live check script: the
+      # deploy reads nothing else from the repository.
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -152,6 +158,12 @@ jobs:
           CF_SEND_TELEMETRY: "false"
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      # Proves the deploy reached rdegges.com: the live security.txt must be
+      # the one in the package just uploaded. A green scheduled run means the
+      # Expires date was renewed. No token here.
+      - name: Check the live security.txt
+        run: ./scripts/check-live-security-txt.sh .cloudflare/output/v0/workers/default/assets/.well-known/security.txt https://rdegges.com/.well-known/security.txt
 
   # Static analysis for the workflows themselves: template injection,
   # over-broad permissions, unpinned actions, credential persistence.

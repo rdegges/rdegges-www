@@ -54,6 +54,15 @@ class TestSecurityTxt(SiteTestCase):
         self.assertGreater(expires, now + timedelta(days=30))
         self.assertLess(expires, now + timedelta(days=365))
 
+    def test_expires_is_180_days_from_the_build(self):
+        # scripts/check-live-security-txt.sh refuses a package with fewer
+        # than 179 whole days left, but only after the deploy has uploaded
+        # it. This catches a shorter window in the template before merge.
+        expires = datetime.fromisoformat(self.fields["Expires"][0].replace("Z", "+00:00"))
+        left = expires - datetime.now(timezone.utc)
+        self.assertGreaterEqual(left, timedelta(days=179))
+        self.assertLessEqual(left, timedelta(days=180))
+
     def test_canonical_url_is_where_the_file_is(self):
         self.assertEqual(self.fields["Canonical"], ["https://rdegges.com/.well-known/security.txt"])
         self.assertTrue(os.path.isfile(public_file("/.well-known/security.txt")))

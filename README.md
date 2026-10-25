@@ -57,6 +57,19 @@ per-version preview URLs are off (`workersDev: false`, `previewUrls: false`).
 Until Render is removed, https://rdegges-www.onrender.com also serves a copy
 of the site.
 
+**Monthly deploy:** On the 1st of each month, a scheduled run rebuilds and
+deploys `main`. Each build sets the Expires date in `security.txt` to 180 days
+out, so this run keeps the file valid when nothing else is merged. After every
+deploy, the `deploy` job checks that the live `security.txt` has the same
+Expires date as the package it uploaded. If the check fails on a scheduled run,
+GitHub emails the failure to the person who last changed the cron line; on a
+push or manual run, it emails the person who started the run.
+
+GitHub turns off a public repository's schedule after 60 days with no
+repository activity. So with no merges at all, the file stays valid for about
+7 months. Any merge to `main` restarts both clocks. A scheduled rebuild also
+publishes any post whose future publish date has passed.
+
 The custom domain `rdegges.com` was attached to the Worker by hand.
 `cloudflare.config.ts` does not list it, so a deploy leaves it in place. A
 Cloudflare redirect rule sends `www.rdegges.com` to `rdegges.com`.

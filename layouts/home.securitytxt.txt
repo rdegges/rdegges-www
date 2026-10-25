@@ -3,9 +3,11 @@
   site. Served at /.well-known/security.txt.
 
   Expires is required and must be in the future. The RFC recommends less
-  than a year out, so it is set to 180 days from the build. Only a
-  production deploy renews it. If nothing deploys for 180 days, the file
-  goes stale until the next one.
+  than a year out, so it is set to 180 days from the build. Every
+  production deploy renews it, including the monthly scheduled one in
+  .github/workflows/build.yml. GitHub disables that schedule after 60 days
+  with no repository activity, so after about 7 months with no merges the
+  file goes stale until the next deploy.
 */ -}}
 Contact: mailto:{{ site.Params.email }}
 Expires: {{ (now.AddDate 0 0 180).UTC.Format "2006-01-02T15:04:05Z" }}
