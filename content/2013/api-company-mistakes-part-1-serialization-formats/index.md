@@ -5,7 +5,7 @@ title: "API Company Mistakes - Part 1 - Serialization Formats"
 date: "2013-03-25"
 tags: ["programming", "startups"]
 slug: "api-company-mistakes-part-1-serialization-formats"
-description: "Some mistakes I've made while building my API company, OpenCNAM."
+description: "My first API company mistake: adding XML, JSONP, YAML, and HTML output to OpenCNAM. Almost nobody used them. Pick one format, like JSON, and stick with it."
 ---
 
 

@@ -2,7 +2,7 @@
 aliases:
   - /my-git/
 date: "2009-12-04"
-description: "A short, personal review of Scott Chacon's new book: Pro Git.  TLDR?  It's awesome, and you should read it."
+description: "My review of Scott Chacon's Pro Git, and why I left SVN for Git: offline commits, painless merges, and GitHub's forking and project hosting."
 slug: "my-git"
 tags: ["git"]
 title: "My Git"

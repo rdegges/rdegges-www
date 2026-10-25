@@ -2,7 +2,7 @@
 aliases:
   - "/how-i-converted-a-rest-api-to-graphql/"
 date: "2021-10-03"
-description: "A short guide to REST API -> GraphQL conversion using StepZen."
+description: "A short guide to converting a REST API you don't control to GraphQL with StepZen, using the Random User API as the example, from schema to deploy."
 slug: "how-i-converted-a-rest-api-to-graphql"
 tags:
   - "programming"

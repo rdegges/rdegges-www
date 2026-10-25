@@ -5,7 +5,7 @@ title: "My Use (and Abuse) of Caffeine"
 date: "2011-09-29"
 tags: ["personal development"]
 slug: "my-use-and-abuse-of-caffeine"
-description: "An in-depth look at caffeine cycling and abuse.  I love this shit, but it's definitely not safe to try at home, kids."
+description: "How I cycle caffeine: three weeks on, one week off, 100mg to 2g a day from NoDoz and Rockstar, how it changes my mood, and why you shouldn't copy me."
 ---
 
 

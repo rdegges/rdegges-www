@@ -5,7 +5,7 @@ title: "Twenty Five"
 date: "2013-06-28"
 tags: ["personal development"]
 slug: "twenty-five"
-description: "Holy shit.  I'm 25 years old.  How did this happen?  Anyway, here are some things I've learned."
+description: "Holy shit, I'm 25 years old. Here are some things I've learned so far: be understanding, trust your instinct, keep your promises, and accept reality."
 ---
 
 

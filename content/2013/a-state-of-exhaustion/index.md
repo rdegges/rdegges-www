@@ -5,7 +5,7 @@ title: "A State of Exhaustion"
 date: "2013-03-24"
 tags: ["personal development"]
 slug: "a-state-of-exhaustion"
-description: "How I've been crawling out of my own exhaustion by focusing on the basics and keeping things simple."
+description: "After a move and weeks of illness, I noticed I worked better while exhausted: less distraction, more grinding through tasks. Here's how I'm using that."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Heroku Dynos (in Depth)"
 date: "2013-02-10"
 tags: ["programming"]
 slug: "heroku-dynos-in-depth"
-description: "A technical look at Heroku's dynos, and how they work."
+description: "What Heroku dynos are and why they're great: isolated process containers on AWS with 512MB RAM, 750 free hours per app, and automatic load balancing."
 ---
 
 

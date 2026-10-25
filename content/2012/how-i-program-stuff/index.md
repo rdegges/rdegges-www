@@ -5,7 +5,7 @@ title: "How I Program Stuff"
 date: "2012-01-16"
 tags: ["programming"]
 slug: "how-i-program-stuff"
-description: "Everyone has their own method for writing awesome code.  This is mine."
+description: "My method for writing code I care about: isolate myself for confidence and energy, eliminate every distraction, then code ruthlessly with no regrets."
 ---
 
 

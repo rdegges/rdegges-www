@@ -5,7 +5,7 @@ title: "Being Awesome"
 date: "2012-12-10"
 tags: ["personal development"]
 slug: "being-awesome"
-description: "If you want to be awesome, then go do it right now.  NO EXCUSES!"
+description: "A short kick in the pants: if you want to be awesome, go do it now. Code what you want, build the business, lift the weights, and ignore everyone else."
 ---
 
 

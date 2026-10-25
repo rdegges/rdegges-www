@@ -5,7 +5,7 @@ title: "DevOps Django - Part 4 - Choosing Heroku"
 date: "2011-12-30"
 tags: ["programming", "devops", "python", "django"]
 slug: "devops-django-part-4-choosing-heroku"
-description: "The last part of my DevOps Django series.  In this installment, I discuss why Heroku is a kickass solution to many of Django's deployment problems, and how you can benefit from using it."
+description: "Part 4 of my DevOps Django series: why we moved from Rackspace to Heroku, with real numbers on dev time, dyno and database prices, and hidden costs."
 ---
 
 

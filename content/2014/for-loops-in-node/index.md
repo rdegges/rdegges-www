@@ -5,7 +5,7 @@ title: "For Loops in Node"
 date: "2014-09-23"
 tags: ["programming"]
 slug: "for-loops-in-node"
-description: "A story in which I discover that writing simple for loops in Node.js isn't always so simple."
+description: "A story in which I discover that simple for loops in Node.js aren't so simple: an async scraper loop ate all my RAM, and setInterval (and lupus) fixed it."
 ---
 
 

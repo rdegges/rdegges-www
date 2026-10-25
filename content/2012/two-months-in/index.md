@@ -5,7 +5,7 @@ title: "Two Months In"
 date: "2012-08-22"
 tags: ["startups"]
 slug: "two-months-in"
-description: "I'm two months into my new startup.  Here are some of the things I've been thinking about."
+description: "Lessons from my first two months working on my startup full-time: chaos beats rigid plans, APIs are my passion, and relaxing should actually mean relax."
 ---
 
 

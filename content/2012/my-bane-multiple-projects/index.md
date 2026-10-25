@@ -5,7 +5,7 @@ title: "My Bane - Multiple Projects"
 date: "2012-10-13"
 tags: ["personal development"]
 slug: "my-bane-multiple-projects"
-description: "I suck at multi-tasking.  It's a lot easier to focus on a single thing at a time."
+description: "I'm awful at juggling multiple projects. Here's why that bugs me, and why I'm letting passion and motivation pick my daily work instead of importance."
 ---
 
 

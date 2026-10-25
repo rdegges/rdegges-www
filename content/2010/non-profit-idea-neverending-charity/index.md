@@ -2,7 +2,7 @@
 aliases:
   - /non-profit-idea-neverending-charity/
 date: "2010-10-15"
-description: "A quick non-profit idea -- what if you accepted donations, then paid out interest generated each month to a user-voted charity?"
+description: "A non-profit idea: pool donations in high-yield savings accounts, then give the monthly interest to a charity the donors vote on, forever."
 slug: "non-profit-idea-neverending-charity"
 tags: ["ideas"]
 title: "Non-Profit Idea: Neverending Charity"

@@ -5,7 +5,7 @@ title: "Writing Habit -- Complete"
 date: "2012-01-02"
 tags: ["personal development"]
 slug: "writing-habit-complete"
-description: "My writing habit is now complete!"
+description: "I finished my 21-day habit of writing 30 minutes a day. What changed, and my tips: find a set time to write, use caffeine, and don't limit your topics."
 ---
 
 

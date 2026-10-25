@@ -5,7 +5,7 @@ title: "Instantly Improve Your Month"
 date: "2013-12-16"
 tags: ["personal development"]
 slug: "instantly-improve-your-month"
-description: "A few ways you can instantly improve your month, cut back on stress, and feel happier."
+description: "My list for getting out of a rut: drink lots of water, eat greens and lean meat, lift heavy, get outside, see friends, read, write, and focus on one thing."
 ---
 
 

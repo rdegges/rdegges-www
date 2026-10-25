@@ -2,7 +2,7 @@
 aliases:
   - /basic-xml-parsing-with-python-and-lxml/
 date: "2010-03-16"
-description: "The simplest way to parse basic XML code with Python (hint: use LXML)."
+description: "The simplest way I found to parse basic XML with Python: use LXML's findtext() to pull values like a status code out of an API's XML responses."
 slug: "basic-xml-parsing-with-python-and-lxml"
 tags: ["programming", "python"]
 title: "Basic XML Parsing With Python and LXML"

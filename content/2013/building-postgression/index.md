@@ -5,7 +5,7 @@ title: "Building postgression (an API Development Story)"
 date: "2013-01-29"
 tags: ["programming"]
 slug: "building-postgression-an-api-development-story"
-description: "How I built postgression, the free PostgreSQL database service."
+description: "How Alven and I built postgression, a free throwaway PostgreSQL database API, using Python, Flask, Redis, and Heroku's API, for about $11 a month."
 ---
 
 

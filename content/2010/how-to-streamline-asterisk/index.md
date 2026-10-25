@@ -2,7 +2,7 @@
 aliases:
   - /how-to-streamline-asterisk/
 date: "2010-08-16"
-description: "This article walks users through optimizing their Asterisk systems for maximum performance."
+description: "How I slim down Asterisk for speed: install every module, set autoload=no in modules.conf, then whitelist only the modules you need by trial and error."
 slug: "how-to-streamline-asterisk"
 tags: ["programming", "telephony", "asterisk"]
 title: "How to Streamline Asterisk"

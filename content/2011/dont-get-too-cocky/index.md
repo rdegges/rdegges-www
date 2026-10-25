@@ -5,7 +5,7 @@ title: "Don't Get Too Cocky"
 date: "2011-03-06"
 tags: ["personal development"]
 slug: "dont-get-too-cocky"
-description: "Don't be cocky.  Been there and done that!"
+description: "I thought HTML and CSS were toys, then spent 100+ hours on an ugly template for work. A lesson in staying humble, and why I'm now learning them properly."
 ---
 
 

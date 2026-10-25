@@ -2,7 +2,7 @@
 aliases:
   - "/to-30-billion-and-beyond/"
 date: "2018-01-03"
-description: "A story about building a scaling a web service in an extremely simple way using Heroku."
+description: "How I built ipify, a free IP address API, and scaled it to 30 billion requests a month on Heroku for about $200 a month by rewriting it from Node to Go."
 slug: "to-30-billion-and-beyond"
 tags:
   - "programming"

@@ -5,7 +5,7 @@ title: "How I Learned to Program"
 date: "2012-02-03"
 tags: ["programming"]
 slug: "how-i-learned-to-program"
-description: "This article talks about my experience learning to program and my general development mindset."
+description: "How I learned to program, and my advice for beginners: use Linux, want it badly, build small command line programs, write a lot, join IRC, have fun."
 ---
 
 

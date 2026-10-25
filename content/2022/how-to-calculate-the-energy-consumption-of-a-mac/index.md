@@ -2,7 +2,7 @@
 aliases:
   - "/how-to-calculate-the-energy-consumption-of-a-mac/"
 date: "2022-01-30"
-description: "A look at the various ways to track the energy consumption of a Mac."
+description: "How to calculate a Mac's energy consumption: why battery metrics fall short, and the ioreg shell script I wrote to log wall adapter watts every minute."
 slug: "how-to-calculate-the-energy-consumption-of-a-mac"
 tags:
   - "programming"

@@ -5,7 +5,7 @@ title: "DevOps Django - Part 2 - The Pain of Deployment"
 date: "2011-12-12"
 tags: ["programming", "devops", "python", "django"]
 slug: "devops-django-part-2-the-pain-of-deployment"
-description: "The second part of my DevOps Django series.  In this article, I discuss how painful deployment is, and why it is the way it is."
+description: "Part 2 of my DevOps Django series: the Asterisk telephony stack and Django web stack I run, and why puppet, nagios, MySQL and failover ate 90% of my time."
 ---
 
 

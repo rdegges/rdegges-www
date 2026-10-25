@@ -5,7 +5,7 @@ title: "Enjoying the Grind"
 date: "2011-06-06"
 tags: ["personal development"]
 slug: "enjoying-the-grind"
-description: "Sometimes it's relaxing to stop worrying about all of your goals and aspirations and just enjoy the present."
+description: "After losing about 80 lbs, I've learned to enjoy the daily grind: diet and exercise stopped feeling like chores and became chances to build willpower."
 ---
 
 

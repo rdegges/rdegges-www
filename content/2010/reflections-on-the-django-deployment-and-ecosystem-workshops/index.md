@@ -2,7 +2,7 @@
 aliases:
   - /reflections-on-the-django-deployment-and-ecosystem-workshops/
 date: "2010-12-12"
-description: "My review of the Django Deployment and Ecosystem workshop.  It was great!"
+description: "My review of the RevSys Django Deployment and Ecosystem workshops with Jacob Kaplan-Moss: Chef, pip, virtualenv, fabric, celery, and why they're worth it."
 slug: "reflections-on-the-django-deployment-and-ecosystem-workshops"
 tags: ["programming", "python", "django"]
 title: "Reflections on the Django Deployment and Ecosystem Workshops"

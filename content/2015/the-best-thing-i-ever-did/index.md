@@ -5,7 +5,7 @@ title: "The Best Thing I Ever Did"
 date: "2015-01-25"
 slug: "the-best-thing-i-ever-did"
 tags: ["personal development"]
-description: "Some personal reflections on the best thing I ever did for myself and my own personal growth."
+description: "The best thing I ever did for my own personal growth: going from over 300lbs to bodybuilding, and the lessons about hard work and consistency it taught me."
 ---
 
 

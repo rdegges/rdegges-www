@@ -2,7 +2,7 @@
 aliases:
   - /auto-generate-forms-with-djangos-modelform/
 date: "2010-03-12"
-description: "Django's ModelForm class is pretty useful.  Here we'll take a quick look at using ModelForm appropriately."
+description: "Django's ModelForm builds a form straight from your model. Here I swap a hand-written form for a Server model with a ModelForm and use it in a view."
 slug: "auto-generate-forms-with-djangos-modelform"
 tags: ["programming", "python", "django"]
 title: "Auto Generate Forms with Django's ModelForm"

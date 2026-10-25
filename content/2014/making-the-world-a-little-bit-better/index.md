@@ -5,7 +5,7 @@ title: "Making the World a Little Bit Better"
 date: "2014-01-22"
 tags: ["personal development"]
 slug: "making-the-world-a-little-bit-better"
-description: "Some thoughts on how you can make the world a better place by improving your immediate environment."
+description: "What The Tipping Point taught me about context: change your environment to improve your own life, and small acts like picking up trash help others."
 ---
 
 

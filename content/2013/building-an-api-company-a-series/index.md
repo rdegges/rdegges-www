@@ -5,7 +5,7 @@ title: "Building an API Company - A Series"
 date: "2013-06-29"
 tags: ["programming", "startups"]
 slug: "building-an-api-company-a-series"
-description: "Come build an API company with me!"
+description: "Kicking off a series on building an API company from the ground up. Who it's for, what you'll end up with, and why programmers make great API founders."
 ---
 
 

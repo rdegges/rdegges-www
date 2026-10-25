@@ -5,7 +5,7 @@ title: "The Simplest Way to Compress HTML in Django"
 date: "2012-03-04"
 tags: ["programming", "python", "django"]
 slug: "the-simplest-way-to-compress-html-in-django"
-description: "This article shows you the simplest way to compress your HTML code with Django."
+description: "Minify your Django site's HTML with django-htmlmin: pip install it, add HtmlMinifyMiddleware, and pair it with GZipMiddleware in the right order."
 ---
 
 

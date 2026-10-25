@@ -2,7 +2,7 @@
 aliases:
   - /populating-default-manytomany-field-values-in-django/
 date: "2010-06-25"
-description: "A quick article discussing how populate ManyToManyField default values for Django applications."
+description: "How to set initial values for a Django ManyToManyField in a form: pass a list of model ids, not one id. I hit this building a caller ban system."
 slug: "populating-default-manytomany-field-values-in-django"
 tags: ["programming", "python", "django"]
 title: "Populating Default ManyToMany Field Values in Django"

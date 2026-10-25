@@ -5,7 +5,7 @@ title: "Django and SSL"
 date: "2012-05-31"
 tags: ["programming", "python", "django"]
 slug: "django-and-ssl"
-description: "This article shows you the simplest possible way to force your Django site to run over SSL."
+description: "I couldn't find a simple way to force HTTPS in Django, so I wrote django-sslify: add one middleware line and every HTTP request redirects to SSL."
 ---
 
 

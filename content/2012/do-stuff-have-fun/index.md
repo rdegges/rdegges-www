@@ -5,7 +5,7 @@ title: "Do Stuff, Have Fun"
 date: "2012-03-23"
 tags: ["personal development"]
 slug: "do-stuff-have-fun"
-description: "Give this a try: do stuff, and have fun.  Don't worry about anything else."
+description: "I waste energy debating tiny decisions, like whether to do laundry. My new philosophy for life and work: stop overthinking, do stuff, and have fun."
 ---
 
 

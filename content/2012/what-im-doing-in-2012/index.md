@@ -5,7 +5,7 @@ title: "What I'm Doing in 2012"
 date: "2012-01-01"
 tags: ["personal development"]
 slug: "what-im-doing-in-2012"
-description: "2012 is going to be an epic year -- I FEEL IT!"
+description: "This year I'm focusing on habits, not goals: tracking them with HabitForge 21 days at a time, plus my plans for open source, reading, Vim, and a book."
 ---
 
 

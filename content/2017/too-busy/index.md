@@ -2,7 +2,7 @@
 aliases:
   - "/too-busy/"
 date: "2017-03-31"
-description: "In which I reflect on the sad state of my busy life over the last few years."
+description: "For years I've been too busy for side projects, trips, and family. A lunch with a friend showed me how weak that excuse is."
 slug: "too-busy"
 tags:
   - "personal development"

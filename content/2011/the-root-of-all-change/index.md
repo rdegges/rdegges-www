@@ -5,7 +5,7 @@ title: "The Root of all Change"
 date: "2011-07-16"
 tags: ["personal development"]
 slug: "the-root-of-all-change"
-description: "Making changes in your life is hard.  Research has shown that the best way to build lasting change is to add new habits into your life, and make them second nature."
+description: "After 20+ books on high achievers, I think the root of all change is consistency. How HabitForge's 21-day streaks helped me lose 80lbs and read daily."
 ---
 
 

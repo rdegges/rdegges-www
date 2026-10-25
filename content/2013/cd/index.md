@@ -5,7 +5,7 @@ title: "CD"
 date: "2013-05-14"
 tags: ["programming"]
 slug: "cd"
-description: "Some thoughts on continuous delivery, and why it is awesome."
+description: "Why every programmer should use continuous delivery: it keeps the build working and kills manual deploy work. Plus options: Git hooks, Travis CI, Jenkins."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Fearless"
 date: "2013-05-24"
 tags: ["personal development"]
 slug: "fearless"
-description: "A motivational short about living a fearless life."
+description: "We're raised to live by our fears. A short motivational piece on deciding who you want to be, ignoring what others think, and chasing your goals anyway."
 ---
 
 

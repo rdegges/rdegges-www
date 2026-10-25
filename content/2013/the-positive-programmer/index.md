@@ -5,7 +5,7 @@ title: "The Positive Programmer"
 date: "2013-03-26"
 tags: ["personal development", "programming"]
 slug: "the-positive-programmer"
-description: "My thoughts on all the negativity in the tech community."
+description: "My thoughts on the negativity in the tech community, how I went from a miserable, negative programmer to a happy one, and small steps to get there."
 ---
 
 

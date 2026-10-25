@@ -5,7 +5,7 @@ title: "Building a Better Body"
 date: "2011-04-03"
 tags: ["personal development"]
 slug: "building-a-better-body"
-description: "My experiences lifting weights, losing weight, and dieting."
+description: "How I went from nearly 300lbs to 235lbs by jogging and counting calories with The Hacker's Diet, and my plan to reach 180lbs with ketosis and CrossFit."
 ---
 
 

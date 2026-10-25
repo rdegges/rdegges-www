@@ -2,7 +2,7 @@
 aliases:
   - /deployment-system-requirements/
 date: "2010-12-18"
-description: "Just some personal thoughts to myself about what my continuous deployment systems need to look like to be successful."
+description: "The requirements Kurtis and I set for our continuous deployment system: dev, staging and production, git flow, CI, layered tests, and self-healing."
 tags: ["programming"]
 title: "Deployment System Requirements"
 slug: "deployment-system-requirements"

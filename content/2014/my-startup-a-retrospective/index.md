@@ -5,7 +5,7 @@ title: "My Startup, A Retrospective"
 date: "2014-01-31"
 tags: ["startups"]
 slug: "my-startup-a-retrospective"
-description: "A quick look back at my startup: what things worked, what didn't, and what I learned along the way."
+description: "Two years of OpenCNAM, my Caller ID API startup: the weekend MVP, the Django to Flask rewrite, the cold emails that won customers, and my mistakes."
 ---
 
 

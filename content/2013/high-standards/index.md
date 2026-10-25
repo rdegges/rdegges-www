@@ -5,7 +5,7 @@ title: "High Standards"
 date: "2013-04-01"
 tags: ["personal development"]
 slug: "high-standards"
-description: "Want to improve yourself?  It doesn't hurt to have high standards for yourself."
+description: "The one personal development hack I believe in: hold yourself to high standards. Write down the traits and goals you want, then ruthlessly live up to them."
 ---
 
 

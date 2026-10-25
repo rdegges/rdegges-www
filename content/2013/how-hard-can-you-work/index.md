@@ -5,7 +5,7 @@ title: "How Hard Can You Work?"
 date: "2013-07-18"
 tags: ["personal development", "programming"]
 slug: "how-hard-can-you-work"
-description: "Here's a trick to getting through those boring days at work: see how hard you can possibly work.  Make it a game."
+description: "Bored by simple coding tasks? Inspired by The Passionate Programmer, I make it a game: how hard can I work? Sketch first, write tests, automate, document."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Fucking Do Something!"
 date: "2013-10-21"
 tags: ["personal development"]
 slug: "fucking-do-something"
-description: "Feeling down?  Get up and fucking do something!"
+description: "A note to my future self: when you feel down, skip the self pity. Hit the gym, ride 20 miles, turn off Netflix, and fucking do something. No excuses."
 ---
 
 

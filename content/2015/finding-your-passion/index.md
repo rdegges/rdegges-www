@@ -5,7 +5,7 @@ title: "Finding Your Passion"
 date: "2015-01-20"
 tags: ["personal development"]
 slug: "finding-your-passion"
-description: "How do you find that thing you were meant to do? The thing that you love spending your time on?  Your passion?"
+description: "How do you find the thing you love? List what you do often, circle what makes you feel something, and see which of those you enjoy doing alone."
 ---
 
 

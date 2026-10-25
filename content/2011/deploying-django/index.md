@@ -5,7 +5,7 @@ title: "Deploying Django"
 date: "2011-10-30"
 tags: ["programming", "devops", "python", "django"]
 slug: "deploying-django"
-description: "Deploying Django code is insanely hard.  There's no simple way to solve a lot of these issues."
+description: "Why deploying Django is so hard: one site's path through HAProxy, memcached, celery and Postgres slaves, and what the Django community needs to fix it."
 ---
 
 

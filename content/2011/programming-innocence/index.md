@@ -5,7 +5,7 @@ title: "Programming Innocence"
 date: "2011-01-11"
 tags: ["programming", "personal development"]
 slug: "programming-innocence"
-description: "There's something special about the mindset of a new programmer: new programmers have no fear at all.  How awesome would it be to feel like that again?"
+description: "New programmers code without fear. Then worry about best practices, tools, deadlines, and critics creeps in. How I try to get that fearless hacking back."
 ---
 
 

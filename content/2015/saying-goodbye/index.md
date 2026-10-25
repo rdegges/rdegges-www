@@ -5,7 +5,7 @@ title: "Saying Goodbye"
 date: "2015-12-11"
 tags: ["personal"]
 slug: "saying-goodbye"
-description: "Saying a final goodbye to my best friend."
+description: "Saying a final goodbye to my best friend, Scribbles, the tiny chihuahua who was with Sami and me from our first date to her last night at home."
 ---
 
 

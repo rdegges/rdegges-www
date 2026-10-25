@@ -5,7 +5,7 @@ title: "Quickly Extract XML Data with Python"
 date: "2013-09-04"
 tags: ["programming", "python"]
 slug: "quickly-extract-xml-data-with-python"
-description: "The simplest way to extract XML data with Python."
+description: "The simplest way I found to pull a value out of XML in Python: the built-in xml.etree ElementTree module and an XPath find(), with no lxml needed."
 ---
 
 

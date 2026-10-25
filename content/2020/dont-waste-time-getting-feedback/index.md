@@ -2,7 +2,7 @@
 aliases:
   - "/dont-waste-time-getting-feedback/"
 date: "2020-04-05"
-description: "Don't waste your time on user feedback if you're a startup."
+description: "Don't waste time on user feedback if you're a startup building for people like you. If you're your own target customer, just build, ship, and keep selling."
 slug: "dont-waste-time-getting-feedback"
 tags:
   - "business"

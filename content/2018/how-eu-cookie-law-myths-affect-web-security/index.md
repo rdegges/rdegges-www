@@ -2,7 +2,7 @@
 aliases:
   - "/how-eu-cookie-law-myths-affect-web-security/"
 date: "2018-01-21"
-description: "The EU Cookie Law has had a massive negative impact on website security. Here's why."
+description: "The EU Cookie Law isn't about cookies. Myths about it push developers to keep session data in local storage, which invites XSS. Here's what to do instead."
 slug: "how-eu-cookie-law-myths-affect-web-security"
 tags:
   - "programming"

@@ -5,7 +5,7 @@ title: "My Experience as a New Developer Evangelist"
 date: "2014-02-22"
 tags: ["startups", "programming", "personal development"]
 slug: "my-experience-as-a-new-developer-evangelist"
-description: "Reflections and thoughts about my first three weeks as a Developer Evangelist at Stormpath."
+description: "My first three weeks as a Developer Evangelist at Stormpath: what I actually do all day, the scheduling challenges, and what I'd like to change."
 ---
 
 

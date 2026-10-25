@@ -2,7 +2,7 @@
 aliases:
   - "/how-to-monetize-your-website-with-cryptocurrency-mining/"
 date: "2017-12-10"
-description: "Advertising is dying. Let me show you a new way to monetize your website using a JavaScript-based Monero miner."
+description: "Advertising is dying. How to monetize your website by mining Monero in visitors' browsers with coinhive, what it earns, and why you should ask first."
 slug: "how-to-monetize-your-website-with-cryptocurrency-mining"
 tags:
   - "cryptocurrency"

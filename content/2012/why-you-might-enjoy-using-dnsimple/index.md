@@ -5,7 +5,7 @@ title: "Why You Might Enjoy Using DNSimple"
 date: "2012-11-27"
 tags: ["reviews"]
 slug: "why-you-might-enjoy-using-dnsimple"
-description: "DNSimple is the greatest DNS provider in the history of the universe.  You'd be crazy not to use them.  Here's why."
+description: "Why DNSimple is my favorite domain registrar and DNS provider: a clean interface, DNS templates, URL forwarding, easy SSL, a real API, and great support."
 ---
 
 

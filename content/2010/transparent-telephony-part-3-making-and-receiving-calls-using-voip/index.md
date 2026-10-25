@@ -2,7 +2,7 @@
 aliases:
   - /transparent-telephony-part-3-making-and-receiving-calls-using-voip/
 date: "2010-03-03"
-description: "The third part of my telephony series.  In this installment we'll connect Asterisk to Flowroute, and make internet calls!"
+description: "Part 3 of my Asterisk telephony series: connect a Flowroute SIP trunk, create a SIP extension, write dial plan for calls in and out, and test with X-Lite."
 slug: "transparent-telephony-part-3-making-and-receiving-calls-using-voip"
 tags: ["programming", "telephony", "asterisk"]
 title: "Transparent Telephony - Part 3 - Making and Receiving Calls Using VoIP"

@@ -5,7 +5,7 @@ title: "System76 'Bonobo' Ubuntu Laptop Review"
 date: "2011-12-14"
 tags: ["review"]
 slug: "system76-bonobo-ubuntu-laptop-review"
-description: "My review of the System76 Bonobo laptop.  It's pretty great, I'd recommend it for any developers who love Linux as much as I do."
+description: "My review of the System76 Bonobo, a 17.3-inch Ubuntu laptop: great screen, fast SSD, perfect Linux hardware support, and a few gripes like the power key."
 ---
 
 

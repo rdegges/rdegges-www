@@ -5,7 +5,7 @@ title: "Don't Panic! Frustration is an Anti-Pattern"
 date: "2012-10-04"
 tags: ["personal development"]
 slug: "dont-panic-frustration-is-an-anti-pattern"
-description: "The next time you get frustrated, take a deep breath and relax.  Coding when you're frustrated isn't going to help anyone."
+description: "Broken libraries and reverted fixes make coding frustrating. Feeding that frustration hurts your work, so notice it, let it go, and fix the next thing."
 ---
 
 

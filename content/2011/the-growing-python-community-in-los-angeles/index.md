@@ -5,7 +5,7 @@ title: "The Growing Python Community in Los Angeles"
 date: "2011-07-24"
 tags: ["programming"]
 slug: "the-growing-python-community-in-los-angeles"
-description: "The Python community in LA is really picking up.  This article talks about my experiences with some of the awesome tech people of LA."
+description: "The Python and Django scene in Los Angeles is taking off. My time at LA Django and PyLadies meetups, the people leading it, and how to get involved."
 ---
 
 

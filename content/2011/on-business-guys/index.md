@@ -5,7 +5,7 @@ title: "On Business Guys"
 date: "2011-09-18"
 tags: ["startups", "rant"]
 slug: "on-business-guys"
-description: "Business guys?  Boo!  Who needs them?  If you're a smart dude, what's stopping you from killing it on all fronts: tech, business, etc?"
+description: "A tech guy's rant: good engineers can learn business and marketing, so they have little reason to team up with business guys. My advice: learn to code."
 ---
 
 

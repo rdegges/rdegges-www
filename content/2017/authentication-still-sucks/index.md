@@ -2,7 +2,7 @@
 aliases:
   - "/authentication-still-sucks/"
 date: "2017-08-29"
-description: "Authentication hasn't improved much in the last several years.  Here's the current state of things."
+description: "Authentication and authorization are still as hard as ever for developers. Why, and why I'm excited to relaunch the Okta Identity Platform."
 slug: "authentication-still-sucks"
 tags:
   - "business"

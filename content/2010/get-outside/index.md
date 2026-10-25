@@ -2,7 +2,7 @@
 aliases:
   - /get-outside/
 date: "2010-02-13"
-description: "Are you a programmer?  GET OUTSIDE MORE!  Seriously dude.  It's good for you!"
+description: "Programmers spend too much time inside. Here's why getting outside clears your head and helps you code better, and some easy ways I found to do it."
 tags: ["programming"]
 title: "Get Outside"
 slug: "get-outside"

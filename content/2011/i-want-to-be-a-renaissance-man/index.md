@@ -5,7 +5,7 @@ title: "I Want to Be a Renaissance Man"
 date: "2011-05-30"
 tags: ["personal development"]
 slug: "i-want-to-be-a-renaissance-man"
-description: "Why can't I be good at a ton of stuff?  I want to do everything!"
+description: "Skateboarding, video games, programming, fitness: I've always gone deep on just one thing. Now I want to stop limiting myself and be a renaissance man."
 ---
 
 

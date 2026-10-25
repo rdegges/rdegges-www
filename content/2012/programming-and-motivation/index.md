@@ -5,7 +5,7 @@ title: "Programming and Motivation"
 date: "2012-10-02"
 tags: ["programming"]
 slug: "programming-and-motivation"
-description: "A few days I've devised to keep myself motivated for writing code over the years."
+description: "How I stay motivated to write code: think like your users, work in small bursts with concrete goals, use caffeine, and keep chasing your ambitions."
 ---
 
 

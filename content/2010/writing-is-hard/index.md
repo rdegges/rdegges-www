@@ -5,7 +5,7 @@ title: "Writing is Hard"
 date: "2010-02-12"
 tags: ["personal development"]
 slug: "writing-is-hard"
-description: "Writing is really hard stuff -- so I'm going to do it way more often!  >:)"
+description: "Writing is hard for me because I'm afraid my posts won't be perfect, so I quit halfway. My new rule: if I start writing something, I finish it."
 ---
 
 

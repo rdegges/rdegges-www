@@ -2,7 +2,7 @@
 aliases:
   - "/does-music-help-you-focus/"
 date: "2022-04-04"
-description: "Does listening to music help you focus? Here's what I found."
+description: "Does listening to music help you focus? I tracked 120 Pomodoro sessions over three months, and music made me less productive: about 20% vs 60% without it."
 slug: "does-music-help-you-focus"
 tags:
   - "productivity"

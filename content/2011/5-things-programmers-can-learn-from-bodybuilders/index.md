@@ -5,7 +5,7 @@ title: "5 Things Programmers Can Learn From Bodybuilders"
 date: "2011-03-26"
 tags: ["programming", "personal development"]
 slug: "5-things-programmers-can-learn-from-bodybuilders"
-description: "You'd be surprised to learn how inspirational bodybuilders can be to programmers like me."
+description: "Five lessons programmers can learn from bodybuilders: nothing great comes easily, be consistent, know what you want, learn from others, and go for the win."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Some Constants"
 date: "2012-10-14"
 tags: ["personal development"]
 slug: "some-constants"
-description: "Some of the things I try to do on a daily basis to keep myself sane."
+description: "The daily constants that keep me sane no matter how crazy things get: lifting weights, reading books, eating meat, and writing a little every day."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Tools I Use - tmux"
 date: "2012-01-06"
 tags: ["programming"]
 slug: "tools-i-use-tmux"
-description: "tmux is an amazingly useful tool.  Here's a quick look at what makes it awesome."
+description: "Why I switched from GNU screen to tmux: horizontal and vertical splits, sane defaults, and auto-arranged panes. Plus my short .tmux.conf and resources."
 ---
 
 

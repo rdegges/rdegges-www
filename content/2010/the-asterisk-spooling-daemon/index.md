@@ -2,7 +2,7 @@
 aliases:
   - /the-asterisk-spooling-daemon/
 date: "2010-06-06"
-description: "An informal code review and look at the Asterisk call file daemon (pbx_spool.so)."
+description: "An informal code review of the Asterisk call file daemon (pbx_spool.c): how it parses call files, the 256-byte line limit, and every directive it accepts."
 slug: "the-asterisk-spooling-daemon"
 tags: ["programming", "telephony", "asterisk", "c"]
 title: "The Asterisk Spooling Daemon"

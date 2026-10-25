@@ -5,7 +5,7 @@ title: "Hack Things at the LA Hackathon"
 date: "2012-10-22"
 tags: ["programming"]
 slug: "hack-things-at-the-la-hackathon"
-description: "If you miss the LA Hackathon, you're missing out; hardcore."
+description: "Why California programmers should go to the LA Hackathon on November 4, 2012: open source hacking, great people, free meals, no idea guys, $10 tickets."
 ---
 
 

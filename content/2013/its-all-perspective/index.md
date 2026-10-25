@@ -5,7 +5,7 @@ title: "It's All Perspective"
 date: "2013-03-31"
 tags: ["personal development"]
 slug: "its-all-perspective"
-description: "Your perspective on everyday situations makes all the difference in life."
+description: "Struggling to stay positive? A Buddha story about refusing a gift of anger, and how changing your perspective lets you choose how you feel."
 ---
 
 

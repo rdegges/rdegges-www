@@ -5,7 +5,7 @@ title: "postgression - A PostgreSQL Database for Every Test Case"
 date: "2013-01-20"
 tags: ["programming"]
 slug: "postgression-a-postgresql-database-for-every-test-case"
-description: "Introducing postgression: a free PostgreSQL database service."
+description: "Introducing postgression: hit our API, no account needed, and get a free PostgreSQL database URL for your tests. It disappears after 30 minutes."
 ---
 
 

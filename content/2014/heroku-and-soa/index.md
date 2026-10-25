@@ -5,7 +5,7 @@ title: "Heroku and SOA"
 date: "2014-06-04"
 tags: ["programming", "devops"]
 slug: "heroku-and-soa"
-description: "Heroku's platform was designed with services in mind.  If you're building a service oriented web app, you might find this interesting."
+description: "Heroku was designed with services in mind. Why its free dyno per app, lack of vendor lock-in, and Foreman make it great for service oriented apps."
 ---
 
 

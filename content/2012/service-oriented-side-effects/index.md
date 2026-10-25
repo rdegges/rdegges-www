@@ -5,7 +5,7 @@ title: "Service Oriented Side Effects"
 date: "2012-09-28"
 tags: ["programming"]
 slug: "service-oriented-side-effects"
-description: "A quick look at some of the side effects you'll encounter when writing service oriented applications.  Many of them are positive."
+description: "Monolith vs. service oriented architecture: the side effects of splitting a web app into small services, mostly good: maintainability, scaling, simplicity."
 ---
 
 

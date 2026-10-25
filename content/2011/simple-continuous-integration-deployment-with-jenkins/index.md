@@ -5,7 +5,7 @@ title: "Simple Continuous Integration / Deployment With Jenkins"
 date: "2011-04-10"
 tags: ["programming", "devops"]
 slug: "simple-continuous-integration-deployment-with-jenkins"
-description: "A quick walkthrough showing you how to get Jenkins up and running."
+description: "How to set up Jenkins CI on Ubuntu or Debian: install it, put NGINX in front, lock it down, add Git, and have it test and deploy your code on every push."
 ---
 
 
