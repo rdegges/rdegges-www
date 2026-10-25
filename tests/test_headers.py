@@ -5,7 +5,7 @@ import os
 import re
 import unittest
 
-from helpers import PUBLIC, SiteTestCase
+from helpers import PUBLIC, SiteTestCase, articles
 
 HEADERS = os.path.join(PUBLIC, "_headers")
 RENDER_YAML = os.path.join(os.path.dirname(__file__), "..", "render.yaml")
@@ -46,6 +46,9 @@ def parse_headers():
 # out rather than read from mimetypes, whose table depends on the host's
 # /etc/mime.types.
 MEDIA_TYPES = {".txt": "text/plain", ".md": "text/markdown"}
+
+# Headers that only _headers sets: Render serves the same files without them.
+CLOUDFLARE_ONLY = {"content-type", "link"}
 
 
 def raw_rules():
@@ -162,15 +165,15 @@ class TestHeaders(SiteTestCase):
                 self.assertIn(":", line, f"line {n}: header line with no colon")
 
     def test_matches_render_yaml(self):
-        # Render serves production from render.yaml; Cloudflare will serve it
-        # from _headers. Both must send the same headers, except Content-Type,
-        # which only Cloudflare sets.
+        # Render, the rollback host, serves from render.yaml; Cloudflare serves
+        # from _headers. Both must send the same headers, except the ones
+        # only Cloudflare sets.
         render = render_triples()
         cloudflare = {
             (pattern, name, normalize(value))
             for pattern, headers in self.rules.items()
             for name, value in headers.items()
-            if name != "content-type"
+            if name not in CLOUDFLARE_ONLY
         }
         # Fail closed: a parser that finds nothing would make the sets equal.
         self.assertGreaterEqual(len(render), 2)
@@ -224,6 +227,25 @@ class TestHeaders(SiteTestCase):
                 for url in matched:
                     self.assertEqual(MEDIA_TYPES.get(os.path.splitext(url)[1]), media_type, f"line {n}: {pattern} labels {url}")
         self.assertGreaterEqual(found, 1)
+
+    def test_markdown_copies_name_their_post_as_canonical(self):
+        # Without this, a search engine can index the Markdown copy as a page
+        # of its own. The value must be the URL the HTML post names as its
+        # canonical, after Cloudflare puts the matched path in for :splat.
+        posts = articles()
+        self.assertTrue(posts)
+        for page in posts:
+            url = page.url + "index.md"
+            with self.subTest(url=url):
+                links = []
+                for pattern, headers in raw_rules():
+                    # The splat captured, so :splat can be filled in as Cloudflare does.
+                    m = re.fullmatch("(.*)".join(re.escape(p) for p in pattern.split("*")), url)
+                    if m:
+                        splat = m.group(1) if m.groups() else ""
+                        links += [value.replace(":splat", splat) for _, name, value in headers if name == "link"]
+                canonical = page.find("link", rel="canonical")[0]["href"]
+                self.assertEqual(links, [f"<{canonical}>; rel=\"canonical\""])
 
     def test_every_pattern_matches_a_built_file(self):
         # A rule for a path the build never writes does nothing, silently.
