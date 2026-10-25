@@ -223,7 +223,7 @@ me was something similar to the following (your mileage may vary):
 > I'm a big fan of your company, &lt;company&gt;.  I love how you guys do &lt;something&gt;,
 > and love your product.
 >
-> I'm the CTO at a small tech startup, OpenCNAM (https://www.opencnam.com/).  We
+> I'm the CTO at a small tech startup, OpenCNAM (`https://www.opencnam.com/`).  We
 > just built an experimental new Caller ID API service.  The way it works is
 > simple: you query our public API endpoint with a phone number (ex:
 > `https://api.opencnam.com/v2/+16502530000`), and we'll give you back that phone's
