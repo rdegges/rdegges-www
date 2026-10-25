@@ -81,8 +81,22 @@ def built_urls():
 
 
 def matcher(pattern):
-    """A regex for a _headers URL pattern. The splat matches anything, slashes included."""
-    return re.compile("".join(".*" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
+    """A regex for a _headers URL pattern. The splat matches anything, slashes included.
+
+    The splat is group 1, so a test can fill in :splat the way Cloudflare does.
+    """
+    return re.compile("".join("(.*)" if part == "*" else re.escape(part) for part in re.split(r"(\*)", pattern)) + r"\Z")
+
+
+def link_headers(url):
+    """The Link values Cloudflare would send for url, with :splat filled in."""
+    links = []
+    for pattern, headers in raw_rules():
+        m = matcher(pattern).match(url)
+        if m:
+            splat = m.group(1) if m.groups() else ""
+            links += [value.replace(":splat", splat) for _, name, value in headers if name == "link"]
+    return links
 
 
 def render_triples(text=None):
@@ -237,15 +251,30 @@ class TestHeaders(SiteTestCase):
         for page in posts:
             url = page.url + "index.md"
             with self.subTest(url=url):
-                links = []
-                for pattern, headers in raw_rules():
-                    # The splat captured, so :splat can be filled in as Cloudflare does.
-                    m = re.fullmatch("(.*)".join(re.escape(p) for p in pattern.split("*")), url)
-                    if m:
-                        splat = m.group(1) if m.groups() else ""
-                        links += [value.replace(":splat", splat) for _, name, value in headers if name == "link"]
                 canonical = page.find("link", rel="canonical")[0]["href"]
-                self.assertEqual(links, [f"<{canonical}>; rel=\"canonical\""])
+                self.assertEqual(link_headers(url), [f"<{canonical}>; rel=\"canonical\""])
+
+    def test_only_markdown_copies_carry_a_link_header(self):
+        # Link is exempt from the render.yaml sync, so nothing else holds it to
+        # the Markdown copies. On an HTML page it would be a second canonical
+        # next to the one in <head>, free to disagree with it.
+        copies = {page.url + "index.md" for page in articles()}
+        urls = built_urls()
+        self.assertTrue(copies <= urls)
+        for url in sorted(urls - copies):
+            with self.subTest(url=url):
+                self.assertEqual(link_headers(url), [])
+
+    def test_splat_placeholder_is_only_used_under_a_splat(self):
+        # Under a pattern with no *, Cloudflare has nothing to put in for
+        # :splat and sends the literal text.
+        found = 0
+        for pattern, headers in raw_rules():
+            for n, _, value in headers:
+                if ":splat" in value:
+                    found += 1
+                    self.assertEqual(pattern.count("*"), 1, f"line {n}: :splat under {pattern}")
+        self.assertGreaterEqual(found, 1)
 
     def test_every_pattern_matches_a_built_file(self):
         # A rule for a path the build never writes does nothing, silently.
