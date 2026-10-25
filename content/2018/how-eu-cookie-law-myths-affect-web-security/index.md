@@ -170,4 +170,4 @@ If you follow the two rules above, you'll be OK.
   [cross-site scripting attacks]: https://owasp.org/www-community/attacks/xss/ "Cross Site Scripting OWASP"
   [pdf]: https://web.archive.org/web/20171220083505/https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf "OWASP Top 10 List"
   [httpOnly]: https://owasp.org/www-community/HttpOnly "httpOnly Cookie Flag OWASP"
-  [SameSite]: https://community.owasp.org/SameSite "SameSite Cookie Flag OWASP"
+  [SameSite]: https://owasp.org/www-community/SameSite "SameSite Cookie Flag OWASP"

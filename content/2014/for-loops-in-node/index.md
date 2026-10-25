@@ -178,7 +178,7 @@ Oh well!  Live and learn!
 
 [Plague Sketch]: plague-sketch.jpg "Plague Sketch"
   [express-stormpath]: https://web.archive.org/web/20141011213934/http://docs.stormpath.com:80/nodejs/express/ "express-stormpath"
-  [thepiratebay]: http://thepiratebay.se "The Pirate Bay"
+  [thepiratebay]: https://web.archive.org/web/20140923120130/http://thepiratebay.se/ "The Pirate Bay"
   [async]: https://github.com/caolan/async "asyncjs"
   [forever]: https://github.com/caolan/async#forever "asyncjs forever"
   [Robert]: http://www.robertjd.com/ "Robert"
