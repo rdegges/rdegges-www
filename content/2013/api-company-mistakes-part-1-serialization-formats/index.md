@@ -123,4 +123,4 @@ definitely save you a headache or two.
 
 [Angry Dragon Sketch]: angry-dragon-sketch.png "Angry Dragon Sketch"
   [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
-  [postgression]: http://www.postgression.com/ "A PostgreSQL Database for Every Test Case"
+  [postgression]: https://web.archive.org/web/20130125000443/http://www.postgression.com:80/ "A PostgreSQL Database for Every Test Case"

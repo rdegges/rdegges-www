@@ -66,7 +66,7 @@ Thanks for reading.
 [The Heroku Hacker's Guide Cover]: the-heroku-hackers-guide-cover.png "The Heroku Hacker's Guide Cover"
   [a book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
   [Heroku]: http://www.heroku.com/ "Heroku"
-  [puppet]: http://puppetlabs.com/ "Puppet"
+  [puppet]: https://www.puppet.com/ "Puppet"
   [Rackspace]: http://www.rackspace.com/ "Rackspace"
   [EC2]: http://aws.amazon.com/ "AWS"
   [best practices]: http://www.12factor.net/ "The 12 Factor App"

@@ -98,6 +98,6 @@ weekend.  You should check it out.
   [Javascript: The Good Parts]: http://www.amazon.com/gp/product/0596517742/ref=as_li_ss_tl?ie=UTF8&tag=rdegges-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596517742 "Javascript: The Good Parts"
   [nodejs]: http://nodejs.org/ "nodejs"
   [npm]: http://npmjs.org/ "npm"
-  [negative things about nodejs]: http://teddziuba.com/2011/10/node-js-is-cancer.html "nodejs is cancer"
+  [negative things about nodejs]: https://web.archive.org/web/20120404205003/http://teddziuba.com:80/2011/10/node-js-is-cancer.html "nodejs is cancer"
   [node-opencnam]: https://github.com/telephonyresearch/node-opencnam "node-opencnam"
   [Node Beginner Book]: http://www.nodebeginner.org/ "Node Beginner"

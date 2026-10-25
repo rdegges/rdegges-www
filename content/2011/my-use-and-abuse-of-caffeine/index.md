@@ -202,4 +202,4 @@ be the same person.  I've got a lot of work to do.
   [University of California, Santa Cruz]: http://www.ucsc.edu/ "UC Santa Cruz"
   [these]: http://www.wiredenergydrink.com/ "Wired Energy Drinks"
   [NoDoz caffeine pills]: http://www.amazon.com/gp/product/B000NVNLTS/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000NVNLTS&linkCode=as2&tag=rdegges-20 "NoDoz Caffeine Pills"
-  [Zero Carb Rockstar Energy Drinks]: http://www.amazon.com/gp/product/B000NGNEKY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000NGNEKY&linkCode=as2&tag=rdegges-20 "Zero Carb Rockstar"
+  [Zero Carb Rockstar Energy Drinks]: https://web.archive.org/web/20210211065913/https://www.amazon.com/dp/B000NGNEKY "Zero Carb Rockstar"

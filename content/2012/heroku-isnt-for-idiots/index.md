@@ -390,8 +390,8 @@ interested in deploying web applications on Heroku, you should check it out.
 
   [Heroku]: http://www.heroku.com/ "Heroku"
 [Demon Warrior Sketch]: demon-warrior-sketch.png "Demon Warrior Sketch"
-  [The Cloud is Not For You]: http://justcramer.com/2012/06/02/the-cloud-is-not-for-you/ "The Cloud is Not For You"
-  [David]: http://justcramer.com/ "David Cramer"
+  [The Cloud is Not For You]: https://web.archive.org/web/20120604205950/http://justcramer.com/2012/06/02/the-cloud-is-not-for-you/ "The Cloud is Not For You"
+  [David]: https://web.archive.org/web/20120518060534/http://justcramer.com:80/ "David Cramer"
 [Heroku is Ubuntu]: heroku-is-ubuntu.png "Heroku is Ubuntu"
   [dynos]: https://devcenter.heroku.com/articles/dynos "Heroku Dynos"
   [chroot jail]: http://en.wikipedia.org/wiki/Jail_(computer_security) "chroot Jails Wikipedia"

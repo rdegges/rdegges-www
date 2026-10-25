@@ -103,9 +103,9 @@ core way to make change.  *Consistency*.
 
 [Tree Sketch]: tree-sketch.png "Tree Sketch"
   [Talent Is Overrated]: http://www.amazon.com/gp/product/1591842948/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1591842948&linkCode=as2&tag=rdegges-20 "Talent Is Overrated"
-  [Sebastian Marshall]: http://www.sebastianmarshall.com/ "Sebastian Marshall"
+  [Sebastian Marshall]: https://web.archive.org/web/20110721021813/http://www.sebastianmarshall.com/ "Sebastian Marshall"
   [Do the Work]: http://www.amazon.com/gp/product/1936719010/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1936719010&linkCode=as2&tag=rdegges-20 "Do the Work"
   [My Life]: http://www.amazon.com/gp/product/140003003X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=140003003X&linkCode=as2&tag=rdegges-20 "My Life"
   [Hackers & Painters]: http://www.amazon.com/gp/product/1449389554/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449389554&linkCode=as2&tag=rdegges-20 "Hackers and Painters"
   [The Power of Less]: http://www.amazon.com/gp/product/1401309704/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1401309704&linkCode=as2&tag=rdegges-20 "The Power of Less"
-  [HabitForge]: http://habitforge.com/ "HabitForge"
+  [HabitForge]: https://web.archive.org/web/20110715172539/http://habitforge.com:80/ "HabitForge"

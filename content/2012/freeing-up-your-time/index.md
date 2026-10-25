@@ -79,4 +79,4 @@ guarantee you won't regret it.
 [Samurai Meditating Sketch]: samurai-meditating-sketch.png "Samurai Meditating"
   [it all adds up]: http://www.youtube.com/watch?v=WO4tIrjBDkk "Inches Speech"
   [Amazon]: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=rdegges-20 "Amazon"
-  [Ducksboard]: http://ducksboard.com/ "Ducksboard"
+  [Ducksboard]: https://web.archive.org/web/20120919213114/http://ducksboard.com/ "Ducksboard"

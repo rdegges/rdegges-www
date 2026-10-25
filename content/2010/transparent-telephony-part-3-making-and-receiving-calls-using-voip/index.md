@@ -12,6 +12,8 @@ title: "Transparent Telephony - Part 3 - Making and Receiving Calls Using VoIP"
 ![Old Telephone Sketch][]
 
 
+**NOTE**: I wrote this article years ago, and its content is dated. Asterisk has since removed the `chan_sip` driver (and `sip.conf`) that this guide is built on, and replaced it with PJSIP. If you're setting up a SIP trunk today, read the official guide on [migrating from chan_sip to PJSIP](https://docs.asterisk.org/Configuration/Channel-Drivers/SIP/Configuring-res_pjsip/Migrating-from-chan_sip-to-res_pjsip/).
+
 Welcome back to the Transparent Telephony series.  If you're a new reader, you
 may want to start at the beginning: [Part 1 - An Introduction][].
 
@@ -629,8 +631,8 @@ following along should be easier.
   [voip.ms]: http://voip.ms/ "Voip MS"
   [Vitelity]: http://vitelity.com/ "Vitelity"
   [Bandwidth]: http://bandwidth.com/ "Bandwidth"
-  [Voicepulse]: http://www.voicepulse.com/ "Voicepulse"
-  [sign up page]: https://www.flowroute.com/accounts/signup/ "Flowroute Sign Up Page"
+  [Voicepulse]: https://web.archive.org/web/20100205230832/http://voicepulse.com/ "Voicepulse"
+  [sign up page]: https://web.archive.org/web/20080905040743/http://www.flowroute.com:80/accounts/signup/ "Flowroute Sign Up Page"
   [IP Chicken]: http://ipchicken.com/ "IP Chicken"
   [VoIP Info page]: http://www.voip-info.org/wiki/view/Asterisk+config+sip.conf "Asterisk sip.conf Wiki Page"
-  [download and install X-Lite]: http://www.counterpath.com/x-lite.html "X-Lite Download Page"
+  [download and install X-Lite]: https://web.archive.org/web/20100207215849/http://www.counterpath.com:80/x-lite.html "X-Lite Download Page"

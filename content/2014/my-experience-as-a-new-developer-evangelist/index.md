@@ -237,11 +237,11 @@ And oh yeah, have a lot of fun :)
 
 
 [Blah Sketch]: lion-face-sketch.jpg "Lion Face Sketch"
-  [Stormpath]: https://stormpath.com "Stormpath - Simple Authentication and User Management for Developers"
+  [Stormpath]: https://web.archive.org/web/20140208083553/http://stormpath.com/ "Stormpath - Simple Authentication and User Management for Developers"
 [Large Robot Sketch]: large-robot-sketch.jpg "Large Robot Sketch"
-  [blog post]: http://stormpath.com/blog/hello-stormpath "Hello, Stormpath!"
+  [blog post]: https://web.archive.org/web/20140325151640/http://stormpath.com/blog/hello-stormpath "Hello, Stormpath!"
   [Python SDK]: https://github.com/stormpath/stormpath-sdk-python "Stormpath Python SDK"
-  [Rocket Space]: http://rocket-space.com/ "Rocket Space"
+  [Rocket Space]: https://web.archive.org/web/20140216185814/http://rocket-space.com:80/ "Rocket Space"
   [Flask SDK]: https://github.com/stormpath/stormpath-flask "Stormpath Flask SDK"
   [sample application]: https://github.com/stormpath/stormpath-flask-sample "Stormpath Flask Sample Application"
 [Bodybuilder Sketch]: bodybuilder-sketch.jpg "Bodybuilder Sketch"

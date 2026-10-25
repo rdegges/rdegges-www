@@ -12,6 +12,8 @@ description: "Alven and I built motivation.io, a site that plays random hand-pic
 ![Thor Sketch][]
 
 
+**NOTE**: motivation.io shut down years ago, and I no longer own the domain, so please don't trust whatever lives there now. The links in this post point to an archived copy of the old site.
+
 A couple of weeks ago, my friend [Alven][] and I built a small webapp together
 that I wanted to share with you today: [motivation.io][].
 
@@ -37,6 +39,6 @@ know what you think][]!
 
 [Thor Sketch]: thor-sketch.jpg "Thor Sketch"
   [Alven]: http://zaidox.com/ "Alven Diaz"
-  [motivation.io]: http://www.motivation.io/ "motivation.io - Motivational Bodybuilding Videos"
+  [motivation.io]: https://web.archive.org/web/20130413061703/http://www.motivation.io:80/ "motivation.io - Motivational Bodybuilding Videos"
   [YouTube]: http://www.youtube.com/ "YouTube"
   [let me know what you think]: mailto:r@rdegges.com "Randall Degges' Email"

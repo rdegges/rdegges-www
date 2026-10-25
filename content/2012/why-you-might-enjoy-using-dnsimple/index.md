@@ -153,8 +153,8 @@ now: [https://dnsimple.com/][DNSimple].
 
 
 [Saturn Sketch]: saturn-sketch.png "Saturn Sketch"
-  [DNSimple]: https://dnsimple.com/r/d9a8f0b92dfb78 "DNSimple"
-  [sign up here]: https://dnsimple.com/r/d9a8f0b92dfb78 "sign up here"
+  [DNSimple]: https://dnsimple.com/ "DNSimple"
+  [sign up here]: https://dnsimple.com/ "sign up here"
 [DNSimple Account]: dnsimple-account.png "DNSimple Account"
 [DNSimple Contacts]: dnsimple-contacts.png "DNSimple Contacts"
 [DNSimple Add Domain]: dnsimple-add-domain.png "DNSimple Add Domain"
@@ -172,4 +172,4 @@ now: [https://dnsimple.com/][DNSimple].
   [great tools]: http://developer.dnsimple.com/tools/ "DNSimple Tools"
   [plan page]: https://dnsimple.com/plans "DNSimple Plans"
   [TLD pricing page]: https://dnsimple.com/tld-pricing "DNSimple TLD Pricing"
-  [Iphone app]: https://itunes.apple.com/app/dnsimple-app/id507299306?mt=8 "DNSimple Iphone App"
+  [Iphone app]: https://web.archive.org/web/20130120035317/https://itunes.apple.com/app/dnsimple-app/id507299306?mt=8 "DNSimple Iphone App"

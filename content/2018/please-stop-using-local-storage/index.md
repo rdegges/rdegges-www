@@ -180,7 +180,7 @@ you're essentially using the most dangerous thing in the world to store your
 most sensitive information in the worst vault ever created: not the best idea.
 
 What the problem really boils down to is cross-site scripting attacks
-([XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))). I won't
+([XSS](https://owasp.org/www-community/attacks/xss/)). I won't
 bore you with a full explanation of XSS, but here's the high level:
 
 If an attacker can run JavaScript on your website, they can retrieve all the
@@ -292,7 +292,7 @@ If you need to store sensitive data, here's how to do it:
   for more information. He's the *man*.
 
 - Make sure that your cookie library also sets the `SameSite=strict` cookie flag
-  (to prevent [CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+  (to prevent [CSRF](https://owasp.org/www-community/attacks/csrf)
   attacks), as well as the `secure=true` flag (to ensure cookies can only be
   set over an encrypted connection).
 

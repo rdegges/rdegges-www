@@ -128,7 +128,7 @@ next 90 days, in order to share our insights, and help clarify my own thoughts
   [Django]: https://www.djangoproject.com/ "Django"
   [RabbitMQ]: http://www.rabbitmq.com/ "RabbitMQ"
   [Celery]: http://celeryproject.org/ "Celery"
-  [Puppet]: https://puppetlabs.com/ "Puppet"
+  [Puppet]: https://www.puppet.com/ "Puppet"
   [Monit]: http://mmonit.com/monit/ "Monit"
   [sentry]: https://getsentry.com/welcome/ "Sentry"
   [Github]: https://github.com/ "Github"

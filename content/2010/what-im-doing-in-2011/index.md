@@ -97,7 +97,7 @@ having fun.
 
 
 [Wolf Sketch]: wolf-sketch.png "Wolf Sketch"
-  [http://globalroute.net/]: http://globalroute.net/ "GlobalRoute"
+  [http://globalroute.net/]: https://web.archive.org/web/20101230013623/http://globalroute.net/ "GlobalRoute"
   [PostgreSQL]: http://www.postgresql.org/ "PostgreSQL"
   [Django]: http://www.djangoproject.com/ "Django"
   [OpenSIPS]: http://www.opensips.org/ "OpenSIPS"
@@ -105,6 +105,6 @@ having fun.
   [python]: http://python.org/ "Python"
   [jenkins]: http://jenkins-ci.org/ "jenkins"
   [fabric]: http://docs.fabfile.org/en/latest/ "fabric"
-  [puppet]: https://www.puppetlabs.com/ "puppe"
+  [puppet]: https://www.puppet.com/ "puppe"
   [memcached]: http://memcached.org/ "memcached"
   [celery]: http://celeryproject.org/ "celery"

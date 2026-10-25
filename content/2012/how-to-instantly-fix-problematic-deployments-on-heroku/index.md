@@ -14,6 +14,8 @@ description: "A bad deploy threw DatabaseErrors in our Django app, and one herok
 ![Broke Production][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Releases are now built into Heroku, so you don't need to install the releases add-on: `heroku releases` and `heroku rollback` work out of the box. See the [official documentation](https://devcenter.heroku.com/articles/releases) for details.
+
 **NOTE**: Have no idea what [Heroku][] is?  I feel sorry for you.  You should
 create an account with them immediately, then come back and read this post!
 
@@ -97,7 +99,7 @@ should check it out: [http://www.theherokuhackersguide.com/][]
   [Heroku]: http://www.heroku.com/ "Heroku"
   [Django]: https://www.djangoproject.com/ "Django"
   [New Relic]: http://newrelic.com/ "New Relic, the Best Fucking Application Monitoring Software Ever Written"
-  [releases]: http://addons.heroku.com/releases "Heroku Releases Addon"
+  [releases]: https://web.archive.org/web/20111227082056/http://addons.heroku.com:80/releases "Heroku Releases Addon"
 [Cheeto Hands]: cheeto-hands.png "Cheeto Hands"
   [The IT Crowd]: http://www.imdb.com/title/tt0487831/ "The IT Crowd"
 [Heroku Releases]: heroku-releases.png "Heroku Releases CLI Screen Shot"

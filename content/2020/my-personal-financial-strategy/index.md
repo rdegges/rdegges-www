@@ -200,7 +200,7 @@ Because my wife and I are both full-time employees of companies, and because our
 
 This gives us **114k** per year of tax-advantaged investments.
 
-I also own a consulting business where I occasionally do consulting work around the telephony, web security, and developer services industries. Because I run this company as a business, I'm also able to invest a portion of my net profits into a [SEP-IRA](https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-seps-establish-a-sep) (a special type of retirement account for small businesses). This plan allows me to stock away an additional 57k worth of tax-advantaged money each year.
+I also own a consulting business where I occasionally do consulting work around the telephony, web security, and developer services industries. Because I run this company as a business, I'm also able to invest a portion of my net profits into a [SEP-IRA](https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-seps) (a special type of retirement account for small businesses). This plan allows me to stock away an additional 57k worth of tax-advantaged money each year.
 
 All in all, we're able to make a total of **$183,000** worth of tax-advantaged contributions each year into our retirement accounts. That is a *massive amount* of tax-optimized investments.
 

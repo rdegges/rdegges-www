@@ -425,7 +425,7 @@ Stormpath.  So, if you're interested, be sure to follow along =)
 [Stress Sketch]: stress-sketch.jpg "Stress Sketch"
 [Speaking Sketch]: speaking-sketch.jpg "Speaking Sketch"
 [Calendar Sketch]: calendar-sketch.png "Calendar Sketch"
-  [Stormpath]: https://stormpath.com/ "Stormpath - A User Management API Service"
+  [Stormpath]: https://web.archive.org/web/20140208014550/http://stormpath.com/ "Stormpath - A User Management API Service"
   [writing]: {{< ref "2014/moving-on.md" >}} "Moving On"
   [Trello]: https://trello.com/ "Trello"
   [Flask-Stormpath]: https://github.com/stormpath/stormpath-flask "Flask-Stormpath"

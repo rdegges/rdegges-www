@@ -12,6 +12,8 @@ description: "What Heroku dynos are and why they're great: isolated process cont
 ![T-Rex Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Heroku no longer offers free dynos or free dyno hours, so the pricing I describe below is gone. The cheapest option now is Heroku's paid [Eco dynos](https://devcenter.heroku.com/articles/eco-dyno-hours) plan.
+
 **NOTE**: This article is all about [Heroku][].  If you've never heard of them,
 you may want to skip this one >:)
 

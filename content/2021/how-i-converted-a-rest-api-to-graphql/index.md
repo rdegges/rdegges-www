@@ -12,6 +12,8 @@ title: "How I Converted a REST API I Don't Control to GraphQL"
 
 ![REST API to GraphQL][]
 
+**NOTE**: I wrote this article a while back, and its content is dated. IBM acquired StepZen since then and renamed it [IBM API Connect for GraphQL](https://www.ibm.com/docs/en/apicgraphql-ipaas?topic=understanding-api-connect-graphql), so some of the links and steps below may no longer match what you see.
+
 I've been building and working with REST APIs for many years now. Recently, however, I've been spending more and more of my time working with (and building) GraphQL-based APIs.
 
 While GraphQL has generally made my life easier, especially as I've been building and consuming more data-heavy APIs, there is still one *extremely* annoying problem I've run into over and over again: lack of GraphQL support for third-party APIs I need to consume.
@@ -288,7 +290,7 @@ type Query {
 
 Using the `setters` directive, we're able to tell StepZen which fields in our `RandomUser` type can be supplied by which nested paths from the raw REST API JSON data. Neat!
 
-There are lots of other things you can define using StepZen, so even if you have an incredibly complex endpoint there are always ways to support it. To learn more about this, you might want to read through the [StepZen docs](https://stepzen.com/docs/connecting-backends/how-to-connect-a-rest-service) on the subject.
+There are lots of other things you can define using StepZen, so even if you have an incredibly complex endpoint there are always ways to support it. To learn more about this, you might want to read through the [StepZen docs](https://web.archive.org/web/20211005193431/https://stepzen.com/docs/connecting-backends/how-to-connect-a-rest-service) on the subject.
 
 
 ### Step 5: Define the API Metadata
@@ -349,19 +351,19 @@ Once you have a schema, you can easily deploy it live to the StepZen service, wh
 
 
 [REST API to GraphQL]: rest-to-graphql.gif "REST API to GraphQL GIF"
-  [StepZen]: https://stepzen.com/ "StepZen"
+  [StepZen]: https://web.archive.org/web/20210930172351/https://stepzen.com/ "StepZen"
   [Airtable]: https://www.airtable.com/ "Airtable"
   [FedEx]: https://www.fedex.com/en-us/home.html "FedEx"
-  [StepZen CLI]: https://stepzen.com/docs/cli "StepZen CLI"
+  [StepZen CLI]: https://web.archive.org/web/20211005193414/https://stepzen.com/docs/cli "StepZen CLI"
 [StepZen Query Dashboard]: stepzen-query-dashboard.png "StepZen Query Dashboard"
   [StepZen Schemas repo]: https://github.com/steprz/stepzen-schemas "StepZen Schemas on GitHub"
   [Disqus]: https://disqus.com/api/docs/ "Disqus API"
   [GitHub]: https://docs.github.com/en/rest "GitHub API"
   [Shopify]: https://shopify.dev/api/admin/rest/reference "Shopify API"
   [Random User]: https://randomuser.me/ "Random User"
-  [StepZen service]: https://stepzen.com/ "StepZen"
+  [StepZen service]: https://web.archive.org/web/20210930172351/https://stepzen.com/ "StepZen"
   [Twilio]: https://www.twilio.com/docs/usage/api "Twilio API"
   [GraphQL schema]: https://graphql.org/learn/schema/ "GraphQL Schema"
   [stepzen-schemas repo]: https://github.com/steprz/stepzen-schemas "StepZen Schemas Repo"
-  [Connecting to Your StepZen API Guide]: https://stepzen.com/docs/connecting-frontends/connecting-to-stepzen "Connecting to Your StepZen API"
+  [Connecting to Your StepZen API Guide]: https://web.archive.org/web/20211005194610/https://stepzen.com/docs/connecting-frontends/connecting-to-stepzen "Connecting to Your StepZen API"
   [publicly supported schemas]: https://github.com/steprz/stepzen-schemas "StepZen Publicly Supported Schemas"

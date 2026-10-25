@@ -12,6 +12,8 @@ description: "Introducing postgression: hit our API, no account needed, and get 
 ![Monkey Sketch][]
 
 
+**NOTE**: postgression shut down years ago, and I no longer own the postgression.com domain, so please don't trust whatever lives there now. The postgression links in this post point to archived copies of the old site.
+
 The following are some facts about me:
 
 -   I write a lot of software.
@@ -79,7 +81,7 @@ Is this the most useful service in the world?  Nope.  But I love it, I've been
 using it, and it's made my testing quite a bit simpler.
 
 Today I'm really happy to open postgression up to the public.  Alven and I have
-created some handy tools on our [GitHub page][], which make using postgression
+created some handy tools on our GitHub page, which make using postgression
 easier, and we've written some basic documentation on the
 [postgression website][postgression] to help you get started.
 
@@ -94,7 +96,6 @@ love to hear them.  I hope you'll give postgression a try!
   [Travis CI]: https://travis-ci.org/ "Travis CI"
   [PostgreSQL]: http://www.postgresql.org/ "PostgreSQL"
   [Alven]: http://zaidox.com/ "Alven Diaz"
-  [postgression]: http://www.postgression.com/ "postgression"
+  [postgression]: https://web.archive.org/web/20130125000443/http://www.postgression.com:80/ "postgression"
   [Heroku's platform]: http://www.heroku.com/ "Heroku"
   [Read my book.]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"
-  [GitHub page]: https://github.com/postgression "postgression"

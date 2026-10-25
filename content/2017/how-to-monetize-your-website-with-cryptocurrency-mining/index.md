@@ -13,6 +13,8 @@ title: "How to Monetize Your Website with Cryptocurrency Mining"
 
 ![Dwarf Miner Sketch][]
 
+**NOTE**: I wrote this article a while back, and its content is dated. coinhive, the service this whole article is built around, [shut down years ago](https://www.bleepingcomputer.com/news/security/coinhive-in-browser-cryptomining-service-shuts-down-on-march-8), so none of the steps below work anymore.
+
 I’m a big fan of cryptocurrencies and blockchain technologies. They have a
 number of interesting applications, one of which I’ll be discussing today:
 monetizing your websites.
@@ -29,7 +31,7 @@ expenses (and potentially turn a profit) can be nearly impossible.
 Integrating with an ad network like Google Adsense and showing display ads on
 your site is a losing game: people hate ads and go to extreme lengths to block
 and ignore them. I’ve been using ad blockers since 2006 and haven’t seen a
-single web ad in over 11 years. [Recent studies](https://pagefair.com/blog/2017/adblockreport/)
+single web ad in over 11 years. [Recent studies](https://web.archive.org/web/20171208221444/https://pagefair.com/blog/2017/adblockreport/)
 estimate 11% of the global population uses an ad blocker, and that number is
 likely far greater for younger generations and people in North America.
 
@@ -50,14 +52,6 @@ a future-proof way:
 
 ## Mining Cryptocurrency for Profit
 
-<script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
-<div class="coinhive-miner" style="width: 728px; height: 90px; text-align: center;" data-key="YChK05vwHZjtPThtRLWsE1fd1ece8doW" data-whitelabel="true">
-  <em>Loading...</em>
-</div>
-
-**NOTE**: Click the play button above. You may need to disable your adblocker.
-It will allow you to mine cryptocurrency as you read this article.  Neat right?
-
 Mining cryptocurrency in the browser is a relatively new strategy to monetize
 websites. It’s theoretically workable, but extremely inefficient:
 
@@ -74,7 +68,7 @@ for anonymity. Transactions are anonymous and untraceable (unlike
 
 The main reason why Monero can effectively be mined from within a browser is due
 to the hashing algorithm that powers Monero transactions:
-[CryptoNight](https://cryptonote.org/whitepaper.pdf).
+[CryptoNight](https://web.archive.org/web/20171125061320/https://cryptonote.org/whitepaper.pdf).
 
 The CryptoNight hashing algorithm is designed to run effectively on consumer
 grade CPUs (this means normal desktop and laptop computers) while running
@@ -96,7 +90,7 @@ users viewing your website to mine Monero for you via their browser.
 ![Monero Logo][]
 
 So, how exactly can you get your users to mine Monero coins for you? The short
-answer is [coinhive](https://coinhive.com/). coinhive is an API service that
+answer is [coinhive](https://web.archive.org/web/20171211055233/https://coinhive.com/). coinhive is an API service that
 allows you to embed a Monero miner into a user’s browser, which will mine coins
 and earn money for you.
 
@@ -113,7 +107,7 @@ $14,000 per coin.
 
 Monero is not nearly as mainstream. There are a number of Monero exchanges you
 can use, none of which have monopolized the space. You can find a list of all
-the current Monero exchanges [here](http://monero.org/services/exchange/). As I
+the current Monero exchanges [here](https://web.archive.org/web/20171203152942/http://monero.org/services/exchange/). As I
 write this article, the price of a single Monero coin is $230.
 
 If you were to run a website today that has around 10 - 20 active users mining
@@ -128,10 +122,10 @@ Now that we’ve covered the basics, let’s take a look at how you can actually
 start mining Monero in the browser.
 
 The first thing you’ll need to do is create a coinhive account, which you can do
-[here](https://coinhive.com/account/signup).
+[here](https://web.archive.org/web/20171119170743/https://coinhive.com/account/signup).
 
-Once you’ve created your account, you’ll want to visit the [Sites
-page](https://coinhive.com/settings/sites). This page allows you to create new
+Once you’ve created your account, you’ll want to visit the Sites
+page. This page allows you to create new
 API key pairs for each website you plan to mine on.
 
 If you want to run this Monero mining code on multiple websites, you would

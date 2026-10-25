@@ -186,7 +186,7 @@ the: `0 = ""` expression, which is *not* true.
 ## Questions?
 
 Got any questions?  Feel free to [shoot me an email][] or message me on
-[twitter][].
+twitter.
 
 
 [Stephen Colbert Sketch]: stephen-colbert-sketch.png "Stephen Colbert Sketch"
@@ -195,4 +195,3 @@ Got any questions?  Feel free to [shoot me an email][] or message me on
   [expressions]: http://www.voip-info.org/wiki/view/Asterisk+Expressions "Asterisk Expressions Wiki Page"
   [FreePBX]: http://www.freepbx.org/ "FreePBX"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"
-  [twitter]: https://twitter.com/rdegges "Randall Degges' Twitter"

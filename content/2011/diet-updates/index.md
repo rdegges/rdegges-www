@@ -66,4 +66,4 @@ to share more interesting results!
 
 [Steak Sketch]: steak-sketch.png "Steak Sketch"
   [wikipedia article]: http://en.wikipedia.org/wiki/Ketogenesis "Ketosis Wiki Page"
-  [good summary]: http://forum.bodybuilding.com/showthread.php?t=132598293 "Ketosis Summary"
+  [good summary]: https://web.archive.org/web/20110423130919/http://forum.bodybuilding.com:80/showthread.php?t=132598293 "Ketosis Summary"

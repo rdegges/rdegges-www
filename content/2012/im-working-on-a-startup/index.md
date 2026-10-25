@@ -12,6 +12,8 @@ description: "I'm building OpenCNAM with friends: a simple API that returns call
 ![Monk Sketch][]
 
 
+**NOTE**: I wrote this article years ago. OpenCNAM has since changed hands, and opencnam.com now goes to Neustar (part of TransUnion), so the free API I describe below is no longer available.
+
 For the past several months, I've been working with some really great friends
 of mine on a startup, [OpenCNAM][].  As some of you know, I have a lot of
 experience doing telephony development: primarily building large back end
