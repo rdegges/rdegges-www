@@ -282,7 +282,7 @@ twitter.
   [addon marketplace]: https://addons.heroku.com/ "Heroku Addons"
   [Postgres]: http://www.postgresql.org/ "PostgreSQL"
   [heroku-postgresql]: https://addons.heroku.com/heroku-postgresql "Heroku Postgres"
-  [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM"
+  [OpenCNAM]: https://web.archive.org/web/20140517160748/https://www.opencnam.com/ "OpenCNAM"
   [Python]: https://www.python.org/ "Python"
   [Flask]: http://flask.pocoo.org/ "Flask"
 [Angry Tiger Sketch]: angry-tiger-sketch.jpg "Angry Tiger Sketch"

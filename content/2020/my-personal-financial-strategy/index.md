@@ -148,7 +148,7 @@ I started investing when I turned 24 and started paying closer attention to my p
 
 Our strategy today is simple: we split our investable money into two asset classes: *real estate* and *index funds*. Our goal is to invest in each of these asset classes equally, but for reasons I'll explain momentarily, we haven't yet been able to achieve that.
 
-**NOTE**: If you aren't familiar with the concept of index funds, I'll explain it briefly: index funds are funds which allow you to purchase a little bit of every company in a given index. For example, you can buy a little bit of every company in the US stock market. Index fund investing has been shown to outperform more expensive, actively managed funds, in almost every scenario. If you'd like to learn more, [this article](https://www.thebalance.com/index-funds-vs-actively-managed-funds-2466445) is a great, brief introduction.
+**NOTE**: If you aren't familiar with the concept of index funds, I'll explain it briefly: index funds are funds which allow you to purchase a little bit of every company in a given index. For example, you can buy a little bit of every company in the US stock market. Index fund investing has been shown to outperform more expensive, actively managed funds, in almost every scenario. If you'd like to learn more, [this article](https://www.thebalancemoney.com/index-funds-vs-actively-managed-funds-2466445) is a great, brief introduction.
 
 Out of the 50% of our money that is invested in index funds, our allocation is as follows:
 

@@ -57,7 +57,7 @@ relaxing.
 
 **NOTE**: I didn't get any pictures of the event, but [Kenneth Reitz][] got a
 ton that totally kick ass.  I highly recommend checking out his
-[Flickr album][].  If you look close, you'll find me :)
+Flickr album.  If you look close, you'll find me :)
 
 The event started at 11am with an excellent opening talk by Adam Wiggins, CTO
 and co-founder of Heroku.  His talk was all about building excellent
@@ -139,7 +139,6 @@ I hope the Heroku guys throw another one sometime soon.
 [A Day in the Life of a Programmer]: a-day-in-the-life-of-a-programmer.png "A Day in the Life of a Programmer"
   [Yoshi's]: https://web.archive.org/web/20120103143455/http://www.yoshis.com:80/sanfrancisco "Yoshi's Jazz Club"
   [Kenneth Reitz]: http://kennethreitz.org/ "Kenneth Reitz"
-  [Flickr album]: http://www.flickr.com/photos/kennethreitz/sets/72157628841270129/ "Waza Flickr"
   [Craig Kerstiens]: http://www.craigkerstiens.com/ "Craig Kerstiens"
   [Curt Micol]: http://asenchi.com/ "Curt Micol"
   [Issac Kelly]: http://www.kellycreativetech.com/ "Issac Kelly"

@@ -100,7 +100,7 @@ miners. The remaining 70% is paid out to you directly in Monero.
 If you have Monero, how can you cash it in for USD? In the same exact way you’d
 cash Bitcoin in for USD: an exchange.
 
-Currently, [Coinbase](https://www.coinbase.com/join/51660a68c08669f6b8000046) is
+Currently, [Coinbase](https://www.coinbase.com/) is
 the most popular Bitcoin exchange around. It allows you to purchase Bitcoin,
 sell Bitcoin, etc. The going price for Bitcoin as I write this article is nearly
 $14,000 per coin.

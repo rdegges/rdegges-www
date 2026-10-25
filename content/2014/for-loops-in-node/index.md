@@ -182,4 +182,4 @@ Oh well!  Live and learn!
   [async]: https://github.com/caolan/async "asyncjs"
   [forever]: https://github.com/caolan/async#forever "asyncjs forever"
   [Robert]: http://www.robertjd.com/ "Robert"
-  [lupus]: https://www.npmjs.org/package/lupus "node-lupus"
+  [lupus]: https://www.npmjs.com/package/lupus "node-lupus"

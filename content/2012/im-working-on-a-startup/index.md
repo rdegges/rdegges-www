@@ -12,7 +12,7 @@ description: "I'm building OpenCNAM with friends: a simple API that returns call
 ![Monk Sketch][]
 
 
-**NOTE**: I wrote this article years ago. OpenCNAM has since changed hands, and opencnam.com now goes to Neustar (part of TransUnion), so the free API I describe below is no longer available.
+**NOTE**: I wrote this article years ago. OpenCNAM has since changed hands, and opencnam.com now goes to Neustar (part of TransUnion), so the free API I describe below is no longer available. The OpenCNAM links in this post point to an archived copy of the old site.
 
 For the past several months, I've been working with some really great friends
 of mine on a startup, [OpenCNAM][].  As some of you know, I have a lot of
@@ -70,6 +70,6 @@ journeys, so be sure to check back!
 
 
 [Monk Sketch]: monk-sketch.jpg "Monk Sketch"
-  [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
+  [OpenCNAM]: https://web.archive.org/web/20120503212839/http://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
 [OpenCNAM Logo]: opencnam-logo.png "OpenCNAM Logo"
   [support@opencnam.com]: mailto:support@opencnam.com "OpenCNAM Support Email"

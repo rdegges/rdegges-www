@@ -59,4 +59,4 @@ makes using SSL as easy as possible.
   [PyPI]: http://pypi.python.org/pypi "PyPI"
   [django-sslify]: https://github.com/rdegges/django-sslify "django-sslify"
   [Heroku]: http://www.heroku.com/ "Heroku"
-  [SSL endpoint]: https://devcenter.heroku.com/articles/ssl-endpoint "SSL Endpoint"
+  [SSL endpoint]: https://web.archive.org/web/20121027212640/https://devcenter.heroku.com/articles/ssl-endpoint "SSL Endpoint"

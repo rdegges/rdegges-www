@@ -23,7 +23,7 @@ Because we know (on average) [how much carbon](https://www.eia.gov/tools/faqs/fa
 1. How much energy is required to power employee devices
 2. How much carbon is being put into the atmosphere by employee devices
 
-Using this data, we could then donate money to a [carbon offsetting service](https://www.investopedia.com/best-carbon-offset-programs-5114611) to "neutralize" the impact of our employee's work devices.
+Using this data, we could then donate money to a [carbon offsetting service](https://web.archive.org/web/20220412091122/https://www.investopedia.com/best-carbon-offset-programs-5114611) to "neutralize" the impact of our employee's work devices.
 
 **PROBLEM**: Now, would this be a perfectly accurate way of measuring the true carbon impact of employees? Absolutely not -- there are obviously many things we cannot easily measure (such as the amount of energy of attached devices, work travel, food consumption, etc.), but the idea of being able to quantify the carbon impact of work laptops was still interesting enough that we decided to pursue it regardless.
 
