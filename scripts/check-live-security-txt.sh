@@ -39,7 +39,7 @@ if ! expires_at=$(date -u -d "$want" +%s); then
 fi
 days=$(( (expires_at - $(date -u +%s)) / 86400 ))
 if [ "$days" -lt 179 ]; then
-  echo "::error::the packaged security.txt expires in $days days; the template should give 180"
+  echo "::error::the packaged security.txt expires in $days days, under 179; the template gives 180 from the build, so either the template changed or this package was built more than a day ago (for example, a re-run of an old build)"
   exit 1
 fi
 

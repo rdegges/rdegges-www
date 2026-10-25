@@ -61,8 +61,9 @@ of the site.
 deploys `main`. Each build sets the Expires date in `security.txt` to 180 days
 out, so this run keeps the file valid when nothing else is merged. After every
 deploy, the `deploy` job checks that the live `security.txt` has the same
-Expires date as the package it uploaded. If the check fails, GitHub emails the
-run failure to the person who last changed the cron line.
+Expires date as the package it uploaded. If the check fails on a scheduled run,
+GitHub emails the failure to the person who last changed the cron line; on a
+push or manual run, it emails the person who started the run.
 
 GitHub turns off a public repository's schedule after 60 days with no
 repository activity. So with no merges at all, the file stays valid for about
