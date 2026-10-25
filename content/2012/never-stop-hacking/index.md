@@ -5,7 +5,7 @@ title: "Never Stop Hacking"
 date: "2012-04-16"
 tags: ["personal development", "programming"]
 slug: "never-stop-hacking"
-description: "You know what's fun?  Programming.  Don't let the passion fade."
+description: "A short note to myself: what makes programming fun isn't finishing tasks, it's the problems themselves and the process of learning. Never stop hacking."
 ---
 
 

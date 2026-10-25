@@ -5,7 +5,7 @@ title: "Hack Everything ... To Pieces!"
 date: "2012-06-12"
 tags: ["programming"]
 slug: "hack-everything-to-pieces"
-description: "Build modular, simple software!  It's simpler, more useful, and more fun!"
+description: "Over-complication is the worst problem in software. Follow the UNIX way: write small programs that do one thing well, and split big projects up."
 ---
 
 

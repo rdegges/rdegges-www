@@ -5,7 +5,7 @@ title: "Startup Mode"
 date: "2011-01-06"
 tags: ["programming", "telephony", "startups"]
 slug: "startup-mode"
-description: "STARTUP MODE!  Let's do this shit."
+description: "My telecom company has 90 days to scale its free conference lines 10x. The challenge and our stack: Python, Django, Asterisk, OpenSIPS, Puppet, and more."
 ---
 
 

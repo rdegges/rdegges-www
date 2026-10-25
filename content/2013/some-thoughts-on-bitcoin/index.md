@@ -5,7 +5,7 @@ title: "Some Thoughts on Bitcoin"
 date: "2013-04-28"
 tags: ["bitcoin"]
 slug: "some-thoughts-on-bitcoin"
-description: "I started using Bitcoin a while back, here are my thoughts."
+description: "I started using Bitcoin again: free bitcoin sites, Mt. Gox's slow verification, buying on Coinbase, building a CLI tool, and what I think comes next."
 ---
 
 

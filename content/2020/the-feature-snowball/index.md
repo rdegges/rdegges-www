@@ -2,7 +2,7 @@
 aliases:
   - "/the-feature-snowball/"
 date: "2020-05-03"
-description: "The personal productivity system I live by: the feature snowball method."
+description: "The productivity system I've used for 10 years: the feature snowball. Like the debt snowball, you do whatever takes the least time first to build momentum."
 slug: "the-feature-snowball"
 tags:
   - "productivity"

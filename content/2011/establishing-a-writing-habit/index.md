@@ -5,7 +5,7 @@ title: "Establishing a Writing Habit"
 date: "2011-12-13"
 tags: ["personal development"]
 slug: "establishing-a-writing-habit"
-description: "I'm starting a writing habit to improve my writing skills -- you should join me!"
+description: "I'm building a daily writing habit: 30 minutes a day for 21 days in a row, tracked with HabitForge. Here's how the 21 day method works, and why I write."
 ---
 
 

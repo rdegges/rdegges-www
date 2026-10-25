@@ -5,7 +5,7 @@ title: "User Authentication With Django"
 date: "2010-02-17"
 tags: ["programming", "python", "django"]
 slug: "user-authentication-with-django"
-description: "A quick guide to successfully using Django's authentication module."
+description: "A quick guide to Django's auth module: build login and logout pages, protect views with @login_required, and send users back where they were going."
 ---
 
 

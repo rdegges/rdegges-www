@@ -5,7 +5,7 @@ title: "Why I Love Basic Auth"
 date: "2015-03-23"
 slug: "why-i-love-basic-auth"
 tags: ["programming"]
-description: "I love HTTP Basic Authentication.  It's simple, secure, and a pleasure to use."
+description: "I love HTTP Basic Authentication. For REST APIs it's simple, secure over HTTPS, supported everywhere, and far less painful than OAuth for developers."
 ---
 
 

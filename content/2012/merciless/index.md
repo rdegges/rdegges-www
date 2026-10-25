@@ -5,7 +5,7 @@ title: "Merciless"
 date: "2012-02-26"
 tags: ["personal development"]
 slug: "merciless"
-description: "Be merciless with yourself if you want have no regrets."
+description: "I'm tired of being told moderation is the key to success. So I'm trying the opposite: live mercilessly, push past my limits, and leave no room for regret."
 ---
 
 

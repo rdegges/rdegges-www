@@ -5,7 +5,7 @@ title: "Successful GitHub Development"
 date: "2012-04-14"
 tags: ["programming"]
 slug: "successful-github-development"
-description: "A guide to being a successful GitHub hacker and open source developer."
+description: "GitHub best practices for open source: maintainers should write docs, use git-flow, publish test runs and use Issues; contributors, read and ask first."
 ---
 
 

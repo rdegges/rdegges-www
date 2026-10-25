@@ -5,7 +5,7 @@ title: "How Caller ID Works"
 date: "2013-12-18"
 tags: ["telephony", "programming", "startups"]
 slug: "how-caller-id-works"
-description: "An in-depth look at how Caller ID works.  TLDR: Caller ID is horribly broken and totally sucks."
+description: "How Caller ID works in NANPA countries: 15 character names stored in carrier LIDB databases, and why the whole legacy system is broken. A telephony rant."
 ---
 
 

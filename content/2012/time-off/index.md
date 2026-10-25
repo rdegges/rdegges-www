@@ -5,7 +5,7 @@ title: "Time Off"
 date: "2012-11-25"
 tags: ["personal development"]
 slug: "time-off"
-description: "A quick reflection on the time I took off for Thanksgiving this year."
+description: "I rarely go a day without coding, so over Thanksgiving I stayed off the computer for four days. By day three my brain was full of new ideas again."
 ---
 
 

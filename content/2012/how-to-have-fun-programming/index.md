@@ -5,7 +5,7 @@ title: "How to Have Fun Programming"
 date: "2012-06-02"
 tags: ["programming"]
 slug: "how-to-have-fun-programming"
-description: "Having fun programming is something that a lot of programmers forget how to do -- and that makes me sad.  Check this shit out."
+description: "What keeps programming fun for me: hard challenges, a samurai warrior mindset, open source, not conforming, technical books, and talking with hackers."
 ---
 
 

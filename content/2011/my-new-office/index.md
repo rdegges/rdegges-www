@@ -4,7 +4,7 @@ aliases:
 title: "My New Office"
 date: "2011-03-16"
 slug: "my-new-office"
-description: "Some photos of my new home office!"
+description: "Photos of my new home office coming together: clearing out the old Costco desk, building a big corner desk and new chair, and the finished space."
 ---
 
 

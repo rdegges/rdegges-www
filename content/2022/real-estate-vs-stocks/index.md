@@ -2,7 +2,7 @@
 aliases:
   - "/real-estate-vs-stocks/"
 date: "2022-04-04"
-description: "Real estate vs stocks: which is better? A discussion of my personal investing strategy."
+description: "Real estate vs stocks: which is better? How index funds and the 4% rule work, how leverage boosts rental returns, and why we split our money 50/50."
 slug: "real-estate-vs-stocks"
 tags:
   - "personal finance"

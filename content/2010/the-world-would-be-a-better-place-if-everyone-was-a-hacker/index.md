@@ -2,7 +2,7 @@
 aliases:
   - /the-world-would-be-a-better-place-if-everyone-was-a-hacker/
 date: "2010-03-15"
-description: "Hackers make the world great!  What if there were more of them?  Make a difference.  Get out there, and hack everything."
+description: "Hackers break big problems into small ones and solve them one step at a time. If more of us thought that way, our towns and the world would be better."
 slug: "the-world-would-be-a-better-place-if-everyone-was-a-hacker"
 tags: ["personal development"]
 title: "The World Would Be a Better Place if Everyone Was a Hacker"

@@ -2,7 +2,7 @@
 aliases:
   - "/the-only-type-of-api-services-ill-use/"
 date: "2020-02-17"
-description: "How you price an API service is incredibly important. In this article I'll explain what good API pricing looks like, and why."
+description: "I'll only use API services with usage-based pricing and automatic volume discounts. Why that model works, and why bucket and enterprise pricing don't."
 slug: "the-only-type-of-api-services-ill-use"
 tags:
   - "programming"

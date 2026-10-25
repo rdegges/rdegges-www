@@ -5,7 +5,7 @@ title: "Simplifying My Jenkins Work Flow"
 date: "2011-06-01"
 tags: ["devops"]
 slug: "simplifying-my-jenkins-work-flow"
-description: "A quick hack to allow Jenkins to auto-accept all new SSH keys."
+description: "Our Jenkins deploys to new servers kept failing until someone accepted each server's SSH identity by hand. The SSH config hack we used to skip that."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Ambitions"
 date: "2012-11-13"
 tags: ["personal development"]
 slug: "ambitions"
-description: "It's hard to choose between following my ambitions and just being content where I am.  Hard choices."
+description: "It's 1am and I'm torn: be content with the happy life I have, or chase my huge ambitions all-or-nothing? I lean toward the fight, but it's a hard choice."
 ---
 
 

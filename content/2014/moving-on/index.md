@@ -5,7 +5,7 @@ title: "Moving On"
 date: "2014-02-03"
 tags: ["startups", "programming", "personal development"]
 slug: "moving-on"
-description: "I'm officially moving on from my startup to do something new!  Here's my story."
+description: "I'm stepping back from my role as CTO of OpenCNAM, my telephony startup, to join Stormpath as their first Developer Evangelist. Here's my story."
 ---
 
 

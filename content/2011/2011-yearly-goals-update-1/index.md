@@ -5,7 +5,7 @@ title: "2011 Yearly Goals Update 1"
 date: "2011-04-24"
 tags: ["personal development"]
 slug: "2011-yearly-goals-update-1"
-description: "A quick update on my yearly goals."
+description: "My first 2011 goals update: a daily reading habit, CrossFit, no more soda, 30lbs lost in 16 weeks, and the goals (a paid service, a tech talk) still to do."
 ---
 
 

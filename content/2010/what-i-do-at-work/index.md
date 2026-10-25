@@ -5,7 +5,7 @@ title: "What I Do At Work"
 date: "2010-08-15"
 tags: ["programming", "telephony"]
 slug: "what-i-do-at-work"
-description: "My best attempt at explaining what I actually do at work."
+description: "What I do as lead programmer at RCG Communications: a free teleconferencing platform built on Asterisk with a new Django web portal, plus GlobalRoute VoIP."
 ---
 
 

@@ -5,7 +5,7 @@ title: "5 AM"
 date: "2013-05-22"
 tags: ["personal development"]
 slug: "5-am"
-description: "I've been waking up at 5am, trying to change things up a bit.  These are my thoughts."
+description: "I'm a lifelong night owl trying 5am wake-ups and a strict schedule: gym, side projects, then focused pomodoro work. Two weeks in, here's how it's going."
 ---
 
 

@@ -5,7 +5,7 @@ title: "My Heroku Book is Finished"
 date: "2012-09-10"
 tags: ["programming"]
 slug: "my-heroku-book-is-finished"
-description: "I just wrote a book!  On Heroku!"
+description: "I finished The Heroku Hacker's Guide, a practical book on using and understanding Heroku, out now as a PDF and paperback. Here's why I wrote it."
 ---
 
 

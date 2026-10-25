@@ -5,7 +5,7 @@ title: "Dogs Are Great Programming Companions"
 date: "2012-01-09"
 tags: ["programming"]
 slug: "dogs-are-great-programming-companions"
-description: "Dogs are a programmer's best friend.  A short dedication to my dog, Scribbles.  Love you!"
+description: "I work from home with my chihuahua, Scribbles. She keeps me sane, makes me take walks, and listens while I talk through code problems. Photos included."
 ---
 
 

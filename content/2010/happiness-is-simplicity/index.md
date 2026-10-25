@@ -2,7 +2,7 @@
 aliases:
   - /happiness-is-simplicity/
 date: "2010-09-10"
-description: "I just had a realization: what makes me happy is the simple things in life.  This is my story."
+description: "What makes me happy isn't startup money, short workweeks, or religion. It's simple things: silence, love, and nature. Here's how I figured that out."
 slug: "happiness-is-simplicity"
 tags: ["personal development"]
 title: "Happiness is Simplicity"

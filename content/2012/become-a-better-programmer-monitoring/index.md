@@ -5,7 +5,7 @@ title: "Become a Better Programmer - Monitoring"
 date: "2012-08-26"
 tags: ["programming"]
 slug: "become-a-better-programmer-monitoring"
-description: "One way to become a better programmer is to increase your usage of application monitoring software.  You'd be surprised how much you'll learn!  My suggestion: use New Relic."
+description: "Real user feedback makes you a better programmer. I use New Relic to find slow code, errors, and bottlenecks in my web apps: code, push, analyze, repeat."
 ---
 
 

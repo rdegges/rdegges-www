@@ -2,7 +2,7 @@
 aliases:
   - /transparent-telephony-part-1-an-introduction/
 date: "2009-08-31"
-description: "The first part of my new series introducing technical folk to Asterisk and telephony."
+description: "Part 1 of my Asterisk telephony series for programmers: what the PSTN is, how POTS, T1, PRI and VoIP lines connect to it, and what a PBX does."
 slug: "transparent-telephony-part-1-an-introduction"
 tags: ["programming", "telephony", "asterisk"]
 title: "Transparent Telephony - Part 1 - An Introduction"

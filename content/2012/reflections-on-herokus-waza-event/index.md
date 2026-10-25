@@ -5,7 +5,7 @@ title: "Reflections on Heroku's Waza Event"
 date: "2012-01-15"
 tags: ["programming"]
 slug: "reflections-on-herokus-waza-event"
-description: "Some reflections on Heroku's Waza conference: it was insanely awesome."
+description: "My take on Waza, Heroku's first conference: a jazz club turned Japanese village, great talks on elegant apps, Rob Pike, and the best tea I've had."
 ---
 
 

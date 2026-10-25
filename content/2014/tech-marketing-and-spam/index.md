@@ -5,7 +5,7 @@ title: "Tech Marketing and Spam"
 date: "2014-06-05"
 tags: ["programming"]
 slug: "tech-marketing-and-spam"
-description: "A story on how I unknowingly spammed Reddit, and reflections on what is and isn't considered spam in the world of tech."
+description: "How I unknowingly spammed the Flask subreddit with my Stormpath posts, what a blunt Reddit reply taught me, and where sharing ends and spam begins."
 ---
 
 

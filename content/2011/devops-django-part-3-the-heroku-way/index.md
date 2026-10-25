@@ -5,7 +5,7 @@ title: "DevOps Django - Part 3 - The Heroku Way"
 date: "2011-12-18"
 tags: ["programming", "devops", "python", "django"]
 slug: "devops-django-part-3-the-heroku-way"
-description: "The third part of my DevOps Django series.  In this article, I discuss Heroku as a best practices solution for deploying Django projects."
+description: "Part 3 of my DevOps Django series: how I ported a large Django app with celery, memcached, RabbitMQ and Postgres to Heroku in about two hours."
 ---
 
 

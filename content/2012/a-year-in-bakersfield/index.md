@@ -5,7 +5,7 @@ title: "A Year in Bakersfield"
 date: "2012-11-26"
 tags: ["reviews"]
 slug: "a-year-in-bakersfield"
-description: "A quick article discussing the past year I spent in Bakersfield, California, and how it went."
+description: "My year in Bakersfield, California after leaving LA: the bad reputation, friendly people, cheap rent, cold winters, no tech scene, and lots of focus."
 ---
 
 

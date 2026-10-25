@@ -5,7 +5,7 @@ title: "Enjoy Your Life"
 date: "2015-03-07"
 tags: ["personal development"]
 slug: "enjoy-your-life"
-description: "A bit of discussion about my mindset, and a little bit of advice for people not already enjoying their lives."
+description: "How I enjoy my life under pressure: focus on the present, be hard on yourself and light with others, have more than one passion, and read more books."
 ---
 
 

@@ -5,7 +5,7 @@ title: "DevOps Django - Part 1 - Goals"
 date: "2011-12-05"
 tags: ["programming", "devops", "python", "django"]
 slug: "devops-django-part-1-goals"
-description: "The first part of my series discussing Django deployment best practices and devops strategies."
+description: "Part 1 of my DevOps Django series: my Django deploy goals as a startup's lead dev, like one-command deploys and scaling, instant services, full logs."
 ---
 
 

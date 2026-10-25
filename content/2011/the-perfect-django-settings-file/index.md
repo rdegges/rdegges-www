@@ -5,7 +5,7 @@ title: "The Perfect Django Settings File"
 date: "2011-04-29"
 tags: ["programming", "python", "django"]
 slug: "the-perfect-django-settings-file"
-description: "There's only one way to make a perfect Django settings file -- my way >:)"
+description: "Why I swap settings.py and settings_local.py for a Django settings module: a common.py for shared settings plus one file per environment, all in Git."
 ---
 
 

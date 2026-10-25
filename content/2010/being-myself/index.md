@@ -2,7 +2,7 @@
 aliases:
   - /being-myself/
 date: "2010-12-02"
-description: "I've been pretty lame lately, constantly working to please other people.  But not anymore!"
+description: "A few years out of uni, I'm done trying to please everyone. Here's what I got wrong, and some facts about the real me: puns, shorts, beaches and more."
 slug: "being-myself"
 tags:
   - "personal development"

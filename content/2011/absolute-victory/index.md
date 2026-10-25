@@ -5,7 +5,7 @@ title: "Absolute Victory"
 date: "2011-07-17"
 tags: ["personal development"]
 slug: "absolute-victory"
-description: "Fuck mediocrity.  Go all or nothing."
+description: "A Genghis Khan biography got me thinking about absolute victory. Forget just doing your best: go all or nothing on your next project, and leave no rivals."
 ---
 
 

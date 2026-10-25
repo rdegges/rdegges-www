@@ -7,7 +7,7 @@ tags:
   - "programming"
   - "devops"
 slug: "how-to-instantly-fix-problematic-deployments-on-heroku"
-description: "Instantly fix broken Heroku deployments with the awesome rollback tool."
+description: "A bad deploy threw DatabaseErrors in our Django app, and one heroku rollback fixed it. How Heroku's releases add-on works and how to roll back further."
 ---
 
 

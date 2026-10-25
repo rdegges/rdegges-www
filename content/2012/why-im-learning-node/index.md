@@ -5,7 +5,7 @@ title: "Why I'm Learning Node"
 date: "2012-04-07"
 tags: ["programming", "javascript", "nodejs"]
 slug: "why-im-learning-node"
-description: "I'm learning node.js because not only is it awesome, but it's a great way to improve my Javascript chops while concurrently writing backend code.  It's a two for one deal."
+description: "I'm a Python guy who sucks at JavaScript, so I'm learning Node.js. I read JavaScript: The Good Parts and wrote my first Node module in under an hour."
 ---
 
 

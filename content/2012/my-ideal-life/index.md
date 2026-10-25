@@ -5,7 +5,7 @@ title: "My Ideal Life"
 date: "2012-01-18"
 tags: ["personal development"]
 slug: "my-ideal-life"
-description: "Some personal reflection on what my ideal life might look like."
+description: "My ideal day, hour by hour: 10 hours of sleep, writing, reading, exercise, open source, and only 2 hours of focused work. Here's my reasoning."
 ---
 
 

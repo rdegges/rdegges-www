@@ -5,7 +5,7 @@ title: "On Programming Deadlines"
 date: "2011-06-23"
 tags: ["programming"]
 slug: "on-programming-deadlines"
-description: "Programming deadlines are the stuff of nightmares.  Luckily, I've found some ways to make them a little less scary."
+description: "Five rules for good code on a deadline: set up continuous deployment first, write tests first, be transparent, keep daily TODO lists, do the right thing."
 ---
 
 

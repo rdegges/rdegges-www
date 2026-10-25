@@ -5,7 +5,7 @@ title: "Why Don't You Use virtualenvwrapper?"
 date: "2010-09-08"
 tags: ["programming", "python"]
 slug: "why-dont-you-use-virtualenvwrapper"
-description: "virtualenvwrapper is such an amazingly useful Python tool.  This article shows you why it rocks so hard, and why you should be using it right now."
+description: "virtualenvwrapper makes managing many Python virtualenvs easy: create, switch with workon, and delete them in one command. Here's why you should use it."
 ---
 
 

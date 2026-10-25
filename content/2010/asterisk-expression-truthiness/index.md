@@ -5,7 +5,7 @@ date: "2010-08-18"
 slug: "asterisk-expression-truthiness"
 tags: ["programming", "telephony", "asterisk"]
 title: "Asterisk Expression Truthiness"
-description: "A quick look at what Asterisk considers 'truth'.  We'll look at source code and plenty of examples."
+description: "What Asterisk dial plan expressions treat as true or false, tested with FreePBX code: unset, empty and 0 values, plus a simple truthiness table."
 ---
 
 

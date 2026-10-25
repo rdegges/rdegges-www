@@ -2,7 +2,7 @@
 aliases:
   - /python-docstring-symmetry/
 date: "2010-08-17"
-description: "A short PEP-257 rant about docstring style."
+description: "A short PEP-257 rant: I like most of its Python docstring rules, but not its multi-line format. Here's the more symmetrical docstring style I use."
 slug: "python-docstring-symmetry"
 tags: ["programming", "python"]
 title: "Python Docstring Symmetry"

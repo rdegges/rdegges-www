@@ -5,7 +5,7 @@ title: "Live Simply"
 date: "2011-09-05"
 tags: ["personal development"]
 slug: "live-simply"
-description: "Complexity is the enemy of progress.  Learn to live simply and you'll make your life a lot easier."
+description: "Complexity makes me stressed and slow to act, so I try to live simply: keep an open mind, pace myself, stay present, break hard things down, and be honest."
 ---
 
 

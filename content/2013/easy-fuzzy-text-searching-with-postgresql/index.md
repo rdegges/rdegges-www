@@ -5,7 +5,7 @@ title: "Easy Fuzzy Text Searching With PostgreSQL"
 date: "2013-06-12"
 tags: ["programming"]
 slug: "easy-fuzzy-text-searching-with-postgresql"
-description: "PostgreSQL has a really useful extension which allows you to easily do full text fuzzy search."
+description: "Use PostgreSQL's pg_trgm extension for fuzzy text search: run CREATE EXTENSION once, then use the % operator anywhere you'd use LIKE, even on arrays."
 ---
 
 

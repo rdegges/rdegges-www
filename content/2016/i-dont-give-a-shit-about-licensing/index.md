@@ -2,7 +2,7 @@
 aliases:
   - "/i-dont-give-a-shit-about-licensing/"
 date: "2016-07-14"
-description: "Software licensing is stupid. Let's take a look at why."
+description: "Software licensing is stupid. A rant on why licenses on public code don't matter to me, and why I'd release open source code into the public domain."
 slug: "i-dont-give-a-shit-about-licensing"
 tags:
   - "programming"

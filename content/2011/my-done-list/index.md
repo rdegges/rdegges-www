@@ -5,7 +5,7 @@ title: "My 'Done' List"
 date: "2011-12-25"
 tags: ["programming"]
 slug: "my-done-list"
-description: "Having a done list is a pretty great way to keep yourself on track with work and maintain a consistent level of quality."
+description: "My done list is the checklist I finish before I call code done: tracked issue, tests, code, passing tests, review, docs, deploy. It makes my code better."
 ---
 
 

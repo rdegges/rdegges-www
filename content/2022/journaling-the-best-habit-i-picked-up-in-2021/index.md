@@ -2,7 +2,7 @@
 aliases:
   - "/journaling-the-best-habit-i-picked-up-in-2021/"
 date: "2022-02-28"
-description: "How I stumbled into a journaling habit and how it changed my life for the better."
+description: "How I fell into a daily journaling habit after a health scare in 2021, the benefits I've seen, and why I use Day One to write and print my journal."
 slug: "journaling-the-best-habit-i-picked-up-in-2021"
 tags:
   - "personal development"

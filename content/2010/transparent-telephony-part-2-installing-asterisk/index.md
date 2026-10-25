@@ -2,7 +2,7 @@
 aliases:
   - /transparent-telephony-part-2-installing-asterisk/
 date: "2010-02-28"
-description: "The second part of my telephony series.  In this part, we'll install Asterisk on a Linux server."
+description: "Part 2 of my Asterisk telephony series: install DAHDI, Libpri, Asterisk and Asterisk-Addons on CentOS with Digium's yum repos, or from source on Ubuntu."
 slug: "transparent-telephony-part-2-installing-asterisk"
 tags: ["programming", "telephony", "asterisk"]
 title: "Transparent Telephony - Part 2 - Installing Asterisk"

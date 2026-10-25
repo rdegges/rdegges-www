@@ -5,7 +5,7 @@ title: "Diet Updates"
 date: "2011-05-01"
 tags: ["personal development"]
 slug: "diet-updates"
-description: "A quick update on my diet progress."
+description: "One month on a strict keto diet: under 30g of carbs a day, no cheat meals, less exercise and more calories, and I still dropped from 244 to 227.2 lbs."
 ---
 
 

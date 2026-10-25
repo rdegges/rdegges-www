@@ -5,7 +5,7 @@ title: "My Desktop Environment"
 date: "2011-02-12"
 tags: ["programming"]
 slug: "my-desktop-environment"
-description: "A quick look at my standard work environment :)"
+description: "A tour of my daily Linux setup: Kubuntu and KDE, two 26-inch monitors, Vim and my favorite plugins, GNU Screen, Chrome, Dropbox, Amarok, and IRSSI."
 ---
 
 

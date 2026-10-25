@@ -1,6 +1,6 @@
 ---
 date: "2015-12-18"
-description: "A look back on my first two years as a Developer Evangelist at Stormpath."
+description: "My first two years as a Developer Evangelist at Stormpath: why I focused on building client libraries over events, plus lessons on time and talks."
 slug: "two-years-of-evangelism"
 tags: ["personal development"]
 title: "Two Years of Evangelism"

@@ -5,7 +5,7 @@ title: "Building a Heroku Addon"
 date: "2015-04-06"
 tags: ["programming", "devops"]
 slug: "building-a-heroku-addon"
-description: "I'm buiding a Heroku addon, and you'll do it with me!  In this series we'll build a Heroku addon together!"
+description: "I'm building a Heroku addon, and you can follow along! In this series we'll build Vanity, an addon that counts your app's requests, from plan to launch."
 ---
 
 

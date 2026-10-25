@@ -5,7 +5,7 @@ title: "A Developer's Conundrum - Dev / Prod Parity"
 date: "2012-07-10"
 tags: ["programming"]
 slug: "a-developers-conundrum-dev-prod-parity"
-description: "Want to make your life easier when writing production quality software?  You should try to keep your development environment as similar to your production environment as possible."
+description: "The Twelve-Factor App says keep dev and prod alike, but running S3 and SQS on my laptop is painful. Do I chase dev/prod parity or keep separate configs?"
 ---
 
 

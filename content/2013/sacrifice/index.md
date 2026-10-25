@@ -5,7 +5,7 @@ title: "Sacrifice"
 date: "2013-03-28"
 tags: ["personal development"]
 slug: "sacrifice"
-description: "Sometimes you have to sacrifice other tasks and activities to make room for new ones."
+description: "Too many projects and not enough time? My fix is to give something up: keep an ideas list and a TODO list, then cleanly kill a project to make room."
 ---
 
 

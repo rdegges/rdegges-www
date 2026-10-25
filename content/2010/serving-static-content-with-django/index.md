@@ -2,7 +2,7 @@
 aliases:
   - /serving-static-content-with-django/
 date: "2010-07-04"
-description: "A quick article on serving static content with Django."
+description: "How to serve static content (CSS, images, JavaScript) with Django's development server: set up settings.py and urls.py, then let your web server take over."
 slug: "serving-static-content-with-django"
 tags: ["programming", "python", "django"]
 title: "Serving Static Content With Django"

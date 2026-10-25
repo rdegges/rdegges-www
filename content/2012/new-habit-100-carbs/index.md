@@ -5,7 +5,7 @@ title: "New Habit - 100 Carbs"
 date: "2012-01-03"
 slug: "new-habit-100-carbs"
 tags: ["personal development"]
-description: "I'm trying to build a new habit: eating less than 100 carbs per day."
+description: "My new habit: eat under 100 carbs a day. After losing 40 lbs on a keto diet and slipping, I'm easing back in slowly, plus some ketosis resources."
 ---
 
 

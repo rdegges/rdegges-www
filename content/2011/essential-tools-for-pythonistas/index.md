@@ -5,7 +5,7 @@ title: "Essential Tools for Pythonistas"
 date: "2011-04-17"
 tags: ["programming", "python"]
 slug: "essential-tools-for-pythonistas"
-description: "A list of essential tools that all Python programmers should be using on a daily basis."
+description: "My essential tools for Python programmers: GitHub, Vim with pyflakes for live error checking, Sphinx and Read the Docs for documentation, and virtualenv."
 ---
 
 

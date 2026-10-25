@@ -5,7 +5,7 @@ title: "Too Short"
 date: "2012-10-23"
 tags: ["personal development"]
 slug: "too-short"
-description: "Life is too short to do stuff you hate.  Use everyday wisely!"
+description: "If you're an engineer stuck on a product you hate, you have the power to choose what you build. Take a day, think it through, and make a decision."
 ---
 
 

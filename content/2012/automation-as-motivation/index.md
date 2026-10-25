@@ -5,7 +5,7 @@ title: "Automation as Motivation"
 date: "2012-05-21"
 tags: ["personal development"]
 slug: "automation-as-motivation"
-description: "The thought of automating all my work and making my life as simple as possible is really motivating to me."
+description: "Stuck in a programming slump, I remembered what drives me: building software that runs itself forever with no human help. Perfect automation motivates me."
 ---
 
 

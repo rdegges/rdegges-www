@@ -5,7 +5,7 @@ title: "Dangerous People"
 date: "2012-10-03"
 tags: ["programming"]
 slug: "dangerous-people"
-description: "Programmers are the most dangerous people on the planet: they have the power to change the world -- solo."
+description: "Pragmatic programmers are the most dangerous people on earth: with a laptop, an internet connection, and $50, one person can beat a big company."
 ---
 
 

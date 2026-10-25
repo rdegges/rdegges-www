@@ -5,7 +5,7 @@ title: "Do the Right Thing"
 date: "2012-03-20"
 tags: ["personal development"]
 slug: "do-the-right-thing"
-description: "Want to be a better person?  Do the right thing.  Have some personal integrity, and make good decisions."
+description: "Personal development boils down to one rule: do the right thing. You know who you want to be, so eat well, write more, be honest, and push through."
 ---
 
 

@@ -5,7 +5,7 @@ title: "Sometimes You've Got To Kill It"
 date: "2012-11-20"
 slug: "sometimes-youve-got-to-kill-it"
 tags: ["personal development"]
-description: "Every now and then it's good to 'let go' and give whatever you're doing everything you have.  Stay up all night, take a vacation day, whatever is needed."
+description: "Sometimes doing what you enjoy isn't enough. When that urge hits, I put in 100%: a 24 hour hackathon, a locked room until the writing is done. Kill it."
 ---
 
 

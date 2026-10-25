@@ -2,7 +2,7 @@
 aliases:
   - "/defensive-finance-in-a-downturn/"
 date: "2020-04-07"
-description: "Thoughts on maintaining economic stability in a crisis."
+description: "Playing defense with money in a downturn like the pandemic: know your burn rate, build an emergency fund, cut costs, pay off debt, and keep earning."
 slug: "defensive-finance-in-a-downturn"
 tags:
   - "personal finance"

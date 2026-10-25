@@ -5,7 +5,7 @@ title: "The Simplest Question"
 date: "2012-09-27"
 tags: ["personal development"]
 slug: "the-simplest-question"
-description: "Is what I'm about to do taking me closer to my goals, or further away?"
+description: "The most useful personal development lesson I've learned is one daily question: is what I'm about to do taking me closer to my goals, or further away?"
 ---
 
 

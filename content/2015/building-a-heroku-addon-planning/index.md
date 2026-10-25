@@ -2,7 +2,7 @@
 aliases:
   - "/building-a-heroku-addon-planning/"
 date: "2015-04-22"
-description: "In this part of the series, we'll lay out our Heroku addon plans, take a look at mockups, and cover high-level functionalities."
+description: "Part 2 of my Heroku addon series: the plan for Vanity, an addon that shows request metrics from your app's logs, with mockups, components, and pricing."
 slug: "building-a-heroku-addon-planning"
 tags:
   - "programming"

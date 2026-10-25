@@ -2,7 +2,7 @@
 aliases:
   - "/my-personal-financial-strategy/"
 date: "2020-01-17"
-description: "An in-depth look at how I manage my finances."
+description: "How my wife and I manage our money: our goals, our budget, paying off our house, a 50/50 split between index funds and real estate, and retirement."
 slug: "my-personal-financial-strategy"
 tags:
   - "personal finance"

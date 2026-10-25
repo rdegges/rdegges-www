@@ -5,7 +5,7 @@ title: "Improvement and Perfection"
 date: "2012-11-24"
 slug: "improvement-and-perfection"
 tags: ["personal development"]
-description: "Striving for perfection is the only way to become the absolute best.  You've got to keep pushing yourself if you want to improve."
+description: "Thoughts after Jiro Dreams of Sushi: daily practice makes you better, but to get great you also need high standards and a drive for perfection."
 ---
 
 

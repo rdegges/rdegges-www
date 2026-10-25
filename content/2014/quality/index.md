@@ -5,7 +5,7 @@ title: "Quality"
 date: "2014-05-30"
 tags: ["personal development", "programming"]
 slug: "quality"
-description: "Thoughts on building a life focused around quality."
+description: "I've always built lots of things fast. Now I want to be known for the quality of my work instead of the quantity, starting with a nightly check on my day."
 ---
 
 

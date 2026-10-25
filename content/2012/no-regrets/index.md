@@ -5,7 +5,7 @@ title: "No Regrets"
 date: "2012-10-10"
 tags: ["personal development"]
 slug: "no-regrets"
-description: "I can't stand the thought of doing anything less than 100%.  It's the only way I can live with myself."
+description: "I've always been an all-or-nothing person. I tried slowing down and pacing myself, but giving anything less than 100% just leaves me with regrets."
 ---
 
 

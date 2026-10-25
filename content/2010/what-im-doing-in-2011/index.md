@@ -5,7 +5,7 @@ title: "What I'm Doing in 2011"
 date: "2010-12-23"
 tags: ["personal development"]
 slug: "what-im-doing-in-2011"
-description: "My new year's post about goals and stuff."
+description: "My goals for 2011: build reading and exercise habits, quit soda, lose 1lb a week, launch a paid service, give a tech talk, and travel more."
 ---
 
 

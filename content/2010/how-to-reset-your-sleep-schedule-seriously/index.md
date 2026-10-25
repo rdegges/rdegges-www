@@ -2,7 +2,7 @@
 aliases:
   - /how-to-reset-your-sleep-schedule-seriously/
 date: "2010-09-04"
-description: "Want to reset your sleep cycle so you can wake up in the morning when the sun rises?  Try going on a camping trip!"
+description: "Most sleep hacks take too much willpower. I reset my night owl sleep schedule with a three-day camping trip; here's how sunlight, cold and quiet did it."
 slug: "how-to-reset-your-sleep-schedule-seriously"
 tags: ["life hacks"]
 title: "How to Reset Your Sleep Schedule, Seriously"

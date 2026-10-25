@@ -5,7 +5,7 @@ title: "Heroku Isn't for Idiots"
 date: "2012-06-03"
 tags: ["programming"]
 slug: "heroku-isnt-for-idiots"
-description: "A little rant about Heroku, David Cramer, and 'cloud' myths.  Heroku is awesome, learn why."
+description: "My rant on David Cramer's The Cloud is Not For You: Heroku is just Ubuntu, enforces twelve-factor apps, has New Relic, and saved my team time and money."
 ---
 
 
