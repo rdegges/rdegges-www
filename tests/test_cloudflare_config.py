@@ -21,6 +21,12 @@ class TestCloudflareConfig(unittest.TestCase):
         settings = re.findall(r"""["']?workersDev["']?\s*:\s*(\w+)""", config_code())
         self.assertEqual(settings, ["false"])
 
+    def test_preview_urls_are_off(self):
+        # cf leaves preview URLs as they are unless previewUrls says otherwise,
+        # and each one serves a whole version of the site on workers.dev.
+        settings = re.findall(r"""["']?previewUrls["']?\s*:\s*(\w+)""", config_code())
+        self.assertEqual(settings, ["false"])
+
     def test_config_lists_no_routes(self):
         # The custom domain was attached by hand, and the deploy token cannot
         # change routes or custom domains. A route here would make every

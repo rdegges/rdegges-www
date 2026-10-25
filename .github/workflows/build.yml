@@ -44,10 +44,10 @@ jobs:
       - name: Test site
         run: python3 -m unittest discover --start-directory tests --verbose
 
-      # The rest of this job stages the move to Cloudflare. It packages the
-      # public/ tested above, without a rebuild, and runs a deploy dry run.
-      # Nothing here deploys. cf loads TypeScript config files, which needs
-      # Node 22.18 or later; 24 is the current LTS.
+      # The rest of this job packages the public/ tested above, without a
+      # rebuild, and runs a deploy dry run. The deploy job below uploads it on
+      # main. cf loads TypeScript config files, which needs Node 22.18 or
+      # later; 24 is the current LTS.
       - name: Set up Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:

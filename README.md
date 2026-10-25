@@ -52,8 +52,10 @@ the build the day it appears, then runs these tests and
 [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
 serves production. After the tests pass, every push to `main` deploys to the
 Worker `rdegges-www`, which serves https://rdegges.com. The configuration is in
-`cloudflare.config.ts` and `wrangler.config.ts`. The workers.dev URL is off
-(`workersDev: false`), so the site has one public address.
+`cloudflare.config.ts` and `wrangler.config.ts`. The workers.dev URL and the
+per-version preview URLs are off (`workersDev: false`, `previewUrls: false`).
+Until Render is removed, https://rdegges-www.onrender.com also serves a copy
+of the site.
 
 The custom domain `rdegges.com` was attached to the Worker by hand.
 `cloudflare.config.ts` does not list it, so a deploy leaves it in place. A
