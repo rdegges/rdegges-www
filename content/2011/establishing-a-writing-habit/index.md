@@ -82,7 +82,7 @@ and thoughts, you can read it [right here][].
 
 
 [Feather Pen Sketch]: feather-pen-sketch.png "Feather Pen Sketch"
-  [HabitForge]: http://habitforge.com/ "HabitForge"
+  [HabitForge]: https://web.archive.org/web/20110715172539/http://habitforge.com:80/ "HabitForge"
   [break-the-chain]: http://lifehacker.com/281626/jerry-seinfelds-productivity-secret "Jerry Seinfeld's Productivity Secret"
   [Leonardo DaVinci]: http://en.wikipedia.org/wiki/Leonardo_da_Vinci "Leonardo DaVinci"
   [here]: {{< relref "2011/what-ive-learned-about-writing-so-far.md" >}} "What I've Learned About Writing (So Far)"

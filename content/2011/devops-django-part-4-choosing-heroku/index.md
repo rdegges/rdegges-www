@@ -12,6 +12,8 @@ description: "Part 4 of my DevOps Django series: why we moved from Rackspace to 
 ![Troll Sketch][]
 
 
+**NOTE**: I wrote this article years ago, and its pricing details are dated. Heroku has since ended its free dynos and free Postgres databases, and its dyno and database plans have all changed. See Heroku's [pricing page](https://www.heroku.com/pricing) for current numbers.
+
 This is the fourth article in a series I'm writing titled *DevOps Django*.  If
 you're new, you may want to read the [first part][] of the series before this
 one.  In this article I'll be continuing where I left off in the
@@ -312,15 +314,15 @@ it out.  It's called **The Heroku Hacker's Guide**, and you can buy it here:
 [Troll Sketch]: troll-sketch.png "Troll Sketch"
   [first part]: {{< relref "2011/devops-django-part-1-goals.md" >}} "DevOps Django - Part 1 - Goals"
   [previous article]: {{< relref "2011/devops-django-part-3-the-heroku-way.md" >}} "DevOps Django - Part 3 - The Heroku Way"
-  [Rackspace]: http://www.rackspacecloud.com/3149.html "Rackspace"
+  [Rackspace]: https://www.rackspace.com/ "Rackspace"
   [Heroku]: http://www.heroku.com/ "Heroku"
   [my boss]: http://www.chrisbrunner.com/ "Chris Brunner"
   [dyno]: https://devcenter.heroku.com/articles/dynos "Heroku Dyno Documentation"
   [PostgreSQL database]: https://devcenter.heroku.com/articles/heroku-postgresql "Heroku PostgreSQL Docs"
   [psql]: http://www.postgresql.org/docs/9.2/static/app-psql.html "psql"
-  [memcached]: https://addons.heroku.com/memcache "Heroku Memcached Addon"
+  [memcached]: https://web.archive.org/web/20111213180242/http://addons.heroku.com:80/memcache "Heroku Memcached Addon"
   [NewRelic]: https://addons.heroku.com/newrelic "Heroku NewRelic Addon"
-  [Redis]: https://addons.heroku.com/redistogo "Heroku Redis Addon"
+  [Redis]: https://web.archive.org/web/20111214035711/https://addons.heroku.com/redistogo "Heroku Redis Addon"
   [RabbitMQ]: https://addons.heroku.com/cloudamqp "Heroku RabbitMQ Addon"
   [fabric]: http://docs.fabfile.org/en/latest/ "python fabric"
   [apache-libcloud]: http://libcloud.apache.org/ "apache libcloud"

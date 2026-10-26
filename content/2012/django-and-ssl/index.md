@@ -12,6 +12,8 @@ description: "I couldn't find a simple way to force HTTPS in Django, so I wrote 
 ![Hooded Figure Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Django now has HTTPS redirects built in, so you don't need django-sslify: just set [`SECURE_SSL_REDIRECT = True`](https://docs.djangoproject.com/en/stable/ref/settings/#secure-ssl-redirect) in your settings.
+
 I'm a huge proponent of [encrypting everything][].  Why make it easy for the
 government (or other nasty organizations) to snoop on your personal data?  As
 such, over the past several months I've been slowly migrating all my Django
@@ -52,9 +54,9 @@ makes using SSL as easy as possible.
 
 
 [Hooded Figure Sketch]: hooded-figure-sketch.png "Hooded Figure Sketch"
-  [encrypting everything]: http://www.codinghorror.com/blog/2012/02/should-all-web-traffic-be-encrypted.html "Encrypt Everything"
+  [encrypting everything]: https://blog.codinghorror.com/should-all-web-traffic-be-encrypted/ "Encrypt Everything"
   [StackOverflow]: http://stackoverflow.com/questions/8436666/how-to-make-python-on-heroku-https-only "Django + SSL"
   [PyPI]: http://pypi.python.org/pypi "PyPI"
   [django-sslify]: https://github.com/rdegges/django-sslify "django-sslify"
   [Heroku]: http://www.heroku.com/ "Heroku"
-  [SSL endpoint]: https://devcenter.heroku.com/articles/ssl-endpoint "SSL Endpoint"
+  [SSL endpoint]: https://web.archive.org/web/20121027212640/https://devcenter.heroku.com/articles/ssl-endpoint "SSL Endpoint"

@@ -12,6 +12,8 @@ description: "GitHub best practices for open source: maintainers should write do
 ![Octocat][]
 
 
+**NOTE**: I wrote this article a while back, and parts of it are dated. Travis CI no longer offers the free open source builds I recommend below, and travis-ci.org has shut down. Today, [GitHub Actions](https://docs.github.com/en/actions) is the simplest way to run and publish tests for a GitHub project.
+
 I've been using GitHub for several years now, and it has drastically changed my
 development work flow, mindset, and collaboration efforts.  Over the time I've
 used GitHub, I've contributed to many projects, started many of my own, and had
@@ -316,9 +318,9 @@ suggestions, please leave a comment and I'll update the post as needed.
   [git-flow]: https://github.com/nvie/gitflow "git-flow"
   [http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/]: http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/ "Why Aren't You Using Git Flow?"
   [http://nvie.com/posts/a-successful-git-branching-model/]: http://nvie.com/posts/a-successful-git-branching-model/ "A Successful Git Branching Model"
-  [http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow]: http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow "A Video Introduction to Git Flow"
-  [http://codesherpas.com/screencasts/on_the_path_gitflow.mov]: http://codesherpas.com/screencasts/on_the_path_gitflow.mov "On the Path to Git Flow"
-  [read this]: http://www.codinghorror.com/blog/2006/07/i-pity-the-fool-who-doesnt-write-unit-tests.html "WRITE UNIT TESTS, FUCK!"
+  [http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow]: https://web.archive.org/web/20120118171456/http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow "A Video Introduction to Git Flow"
+  [http://codesherpas.com/screencasts/on_the_path_gitflow.mov]: https://web.archive.org/web/20110802055148/http://codesherpas.com/screencasts/on_the_path_gitflow.mov "On the Path to Git Flow"
+  [read this]: https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/ "WRITE UNIT TESTS, FUCK!"
   [Travis CI]: https://travis-ci.org/ "Travis CI"
-  [official documentation]: http://about.travis-ci.org/docs/ "Travis CI Documentation"
+  [official documentation]: https://docs.travis-ci.com/ "Travis CI Documentation"
   [Jenkins]: http://jenkins-ci.org/ "Jenkins"

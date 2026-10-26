@@ -332,7 +332,7 @@ something that we hope you will love as well.
 
 Anyhow, thanks for hearing me out. If you're interested in trying out the new
 Okta Identity Platform that I've been working on with the rest of the team,
-please [sign up today][] and [hit me up][] if you've got questions, comments,
+please [sign up today][] and hit me up if you've got questions, comments,
 or feedback.
 
 Finally, if you'd like to follow along with the Okta journey, we're doing
@@ -348,11 +348,10 @@ interesting!
   [Hacker News]: https://news.ycombinator.com/ "Hacker News"
   [passport library]: https://github.com/jaredhanson/passport "Passport.js"
   [Mailgun]: https://www.mailgun.com/ "Mailgun"
-  [Stormpath]: https://stormpath.com/ "Stormpath"
+  [Stormpath]: https://web.archive.org/web/20140208014550/http://stormpath.com/ "Stormpath"
   [Okta]: https://www.okta.com/ "Okta"
   [Okta Identity Platform]: https://developer.okta.com/ "Okta Identity Platform"
 [New Okta Developer Site]: okta-developer-screenshot.png "Okta Developer Screenshot"
   [sign up today]: https://developer.okta.com "Sign Up For Okta"
-  [hit me up]: https://twitter.com/rdegges "Randall Degges on Twitter"
   [Okta developer blog]: https://developer.okta.com/blog/ "Okta Developer Blog"
   [Okta Developer]: https://twitter.com/oktadev "Okta Developers on Twitter"

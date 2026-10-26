@@ -223,10 +223,10 @@ me was something similar to the following (your mileage may vary):
 > I'm a big fan of your company, &lt;company&gt;.  I love how you guys do &lt;something&gt;,
 > and love your product.
 >
-> I'm the CTO at a small tech startup, OpenCNAM (https://www.opencnam.com/).  We
+> I'm the CTO at a small tech startup, OpenCNAM (`https://www.opencnam.com/`).  We
 > just built an experimental new Caller ID API service.  The way it works is
 > simple: you query our public API endpoint with a phone number (ex:
-> https://api.opencnam.com/v2/+16502530000), and we'll give you back that phone's
+> `https://api.opencnam.com/v2/+16502530000`), and we'll give you back that phone's
 > Caller ID ("GOOGLE INC" in this case).
 >
 > I'd love to get your feedback on our service.  You can try it for free without
@@ -433,11 +433,11 @@ I'm probably going to be writing several follow up articles in the coming weeks
 
 
 [Cute Monster Sketch]: cute-monster-sketch.jpg "Cute Monster Sketch"
-  [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
+  [OpenCNAM]: https://web.archive.org/web/20140104082358/https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
   [this post]: {{< relref "2012/im-working-on-a-startup.md" >}} "I'm Working on a Startup"
   [drop me an email]: mailto:r@rdegges.com "Randall Degges' Email"
 [Rocket Ship Sketch]: rocket-ship-sketch.jpg "Rocket Ship Sketch"
-  [Mike]: http://michaelrwally.blogspot.com/ "Michael Wally"
+  [Mike]: https://web.archive.org/web/20140518225810/http://michaelrwally.blogspot.com/ "Michael Wally"
   [Chris]: http://www.chrisbrunner.com/ "Chris Brunner"
   [Tastypie]: http://tastypieapi.org/ "Django Tastypie"
   [ThemeForest]: http://themeforest.net/ "ThemeForest"
@@ -450,7 +450,7 @@ I'm probably going to be writing several follow up articles in the coming weeks
 [Brain Sketch]: brain-sketch.png "Brain Sketch"
 [Bee Sketch]: bee-sketch.jpg "Bee Sketch"
 [Heart Sketch]: heart-sketch.jpg "Heart Sketch"
-  [Avery Max]: https://twitter.com/averymax "Avery Max on Twitter"
+  [Avery Max]: https://web.archive.org/web/20140112181235/https://twitter.com/averymax "Avery Max on Twitter"
 [Lion Roar Sketch]: lion-roar-sketch.jpg "Lion Roar Sketch"
 [Angry Dinosaur Sketch]: angry-dinosaur-sketch.jpg "Angry Dinosaur Sketch"
   [shoot me an email]: mailto:r@rdegges.com "Randall Degges' Email"

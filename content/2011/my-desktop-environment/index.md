@@ -27,7 +27,7 @@ figured this weekend would be as good a time as any.
 -   **Amplifier**: [FIIO E9 / E7][].
 -   **Headphones**: [Sennheiser HD598][].
 -   **Reading**: [Kindle DX (latest)][].
--   **Phone**: [HTC G2][] (Android 2.2)
+-   **Phone**: HTC G2 (Android 2.2)
 
 I prefer using a desktop over a laptop.  I've never really been a fan of
 laptops.  They are annoying to carry around, I don't like plugging stuff into
@@ -277,13 +277,12 @@ separate post.
   [FIIO E9 / E7]: http://www.amazon.com/gp/product/B004M172FY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004M172FY&linkCode=as2&tag=rdegges-20 "FiiO E9 / E7"
   [Sennheiser HD598]: http://www.amazon.com/gp/product/B0042A8CW2/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0042A8CW2&linkCode=as2&tag=rdegges-20 "Sennheiser HD598"
   [Kindle DX (latest)]: http://www.amazon.com/gp/product/B002GYWHSQ/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002GYWHSQ&linkCode=as2&tag=rdegges-20 "Kindle DX"
-  [HTC G2]: http://www.amazon.com/gp/product/B004ZF0E16/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004ZF0E16&linkCode=as2&tag=rdegges-20 "HTC G2"
 [My Workspace]: my-workspace.png "My Workspace"
 [Desktop Screenshot 1]: desktop-screenshot-1.png "Desktop Screenshot 1"
 [Desktop Screenshot 2]: desktop-screenshot-2.png "Desktop Screenshot 2"
 [Desktop Screenshot 3]: desktop-screenshot-3.png "Desktop Screenshot 3"
   [Google Chrome]: http://www.google.com/chrome "Google Chrome"
-  [TweetDeck]: http://www.tweetdeck.com/ "TweetDeck"
+  [TweetDeck]: https://web.archive.org/web/20110212142813/http://www.tweetdeck.com/ "TweetDeck"
   [Adblock]: https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom "Adblock"
   [Google Voice]: https://chrome.google.com/webstore/detail/kcnhkahnjcbndmmehfkdnkjomaanaooo "Google Voice"
   [Minimalist for Gmail]: https://chrome.google.com/webstore/detail/oddhbkghjoccbljmagcgoklbfdjeiinb "Minimalist for Gmail"
@@ -304,7 +303,7 @@ separate post.
 [Vim Screenshot 2]: vim-screenshot-2.png "Vim Screenshot 2"
 [GNU Screen Screenshot]: gnu-screen-screenshot.png "GNU Screen Screenshot"
   [Dropbox]: http://db.tt/nP9tpb2 "Dropbox"
-  [Amarok]: http://amarok.kde.org/en "Amarok"
+  [Amarok]: https://amarok.kde.org/ "Amarok"
   [last.fm]: http://www.last.fm/home "last.fm"
 [Amarok Screenshot]: amarok-screenshot.jpg "Amarok Screenshot"
   [IRSSI]: http://www.irssi.org/ "IRSSI"

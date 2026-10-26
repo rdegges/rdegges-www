@@ -12,6 +12,8 @@ description: "I'm building OpenCNAM with friends: a simple API that returns call
 ![Monk Sketch][]
 
 
+**NOTE**: I wrote this article years ago. OpenCNAM has since changed hands, and opencnam.com now goes to Neustar (part of TransUnion), so the free API I describe below is no longer available. The OpenCNAM links in this post point to an archived copy of the old site.
+
 For the past several months, I've been working with some really great friends
 of mine on a startup, [OpenCNAM][].  As some of you know, I have a lot of
 experience doing telephony development: primarily building large back end
@@ -57,7 +59,7 @@ you'll be able to create an account, add some funds, and pay for exactly what
 you use (with automatic volume discounts). 
 
 **NOTE**: If you'd like to give our beta a try, send an email to
-[support@opencnam.com][] and we'll get you an API key.
+`support@opencnam.com` and we'll get you an API key.
 
 With 17,717,475 successful queries and counting, OpenCNAM is already taking
 off.  If you do any telephony development at all, I'd love to hear your
@@ -68,6 +70,5 @@ journeys, so be sure to check back!
 
 
 [Monk Sketch]: monk-sketch.jpg "Monk Sketch"
-  [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
+  [OpenCNAM]: https://web.archive.org/web/20120503212839/http://www.opencnam.com/ "OpenCNAM - A Simple Caller ID API"
 [OpenCNAM Logo]: opencnam-logo.png "OpenCNAM Logo"
-  [support@opencnam.com]: mailto:support@opencnam.com "OpenCNAM Support Email"

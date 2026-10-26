@@ -9,6 +9,8 @@ description: "Part 3 of my DevOps Django series: how I ported a large Django app
 ---
 
 
+**NOTE**: I wrote this article years ago, and its content is dated. Heroku no longer has free dynos or free databases, and many of the commands, add-ons, and settings shown here have changed since then. If you want to deploy Django on Heroku today, follow Heroku's [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python) guide instead.
+
 This article is part of a series I'm writing called *DevOps Django*, which
 explains how to best deploy modern Django sites.  If you're new, you should
 probably read the [first article][] of the series before this one.
@@ -430,17 +432,17 @@ you can do so here: [http://www.theherokuhackersguide.com/][].
   [previous installment]: {{< relref "2011/devops-django-part-2-the-pain-of-deployment.md" >}} "DevOps Django - Part 2 - The Pain of Deployment"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"
   [Heroku]: http://www.heroku.com/ "Heroku"
-  [Django tutorial]: https://devcenter.heroku.com/articles/django "Heroku Django Tutorial"
+  [Django tutorial]: https://web.archive.org/web/20111201220451/http://devcenter.heroku.com:80/articles/django "Heroku Django Tutorial"
   [pyladies]: http://www.pyladies.com/ "Python Ladies"
   [help resources]: https://devcenter.heroku.com/ "Heroku DevCenter"
   [add-ons]: https://addons.heroku.com/ "Heroku Addons"
   [PostgreSQL]: https://addons.heroku.com/heroku-postgresql "Heroku PostgreSQL Addon"
-  [Redis]: https://addons.heroku.com/redistogo "Heroku Redis Addon"
+  [Redis]: https://web.archive.org/web/20111214035711/https://addons.heroku.com/redistogo "Heroku Redis Addon"
   [cron]: https://addons.heroku.com/scheduler "Heroku Scheduler Addon"
-  [memcached]: https://addons.heroku.com/memcache "Heroku Memcached Addon"
+  [memcached]: https://web.archive.org/web/20111213180242/http://addons.heroku.com:80/memcache "Heroku Memcached Addon"
   [RabbitMQ]: https://addons.heroku.com/cloudamqp "Heroku RabbitMQ Addon"
   [Solr]: https://addons.heroku.com/websolr "Heroku Solr Addon"
-  [CLI tool]: https://toolbelt.heroku.com/ "Heroku CLI Tool"
+  [CLI tool]: https://devcenter.heroku.com/articles/heroku-cli "Heroku CLI Tool"
   [Amazon S3]: http://aws.amazon.com/s3/ "Amazon S3"
   [fabfile]: http://docs.fabfile.org/en/latest/ "Python Fabric"
   [initial article]: {{< relref "2011/deploying-django.md" >}} "Deploying Django"

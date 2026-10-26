@@ -36,10 +36,10 @@ the existing torrents would be to just loop through all integers, querying each
 one sequentially -- this is because TPB allows you to access torrents via their
 integer ID (*which is always increasing*):
 
-- http://thepiratebay.se/torrent/1
-- http://thepiratebay.se/torrent/2
-- http://thepiratebay.se/torrent/3
-- http://thepiratebay.se/torrent/...
+- `http://thepiratebay.se/torrent/1`
+- `http://thepiratebay.se/torrent/2`
+- `http://thepiratebay.se/torrent/3`
+- `http://thepiratebay.se/torrent/...`
 
 The rules are simple: if you get a 404 skip it -- if you get a 200, the torrent
 exists and can be scraped!
@@ -177,9 +177,9 @@ Oh well!  Live and learn!
 
 
 [Plague Sketch]: plague-sketch.jpg "Plague Sketch"
-  [express-stormpath]: https://docs.stormpath.com/nodejs/express/ "express-stormpath"
-  [thepiratebay]: http://thepiratebay.se "The Pirate Bay"
+  [express-stormpath]: https://web.archive.org/web/20141011213934/http://docs.stormpath.com:80/nodejs/express/ "express-stormpath"
+  [thepiratebay]: https://web.archive.org/web/20140923120130/http://thepiratebay.se/ "The Pirate Bay"
   [async]: https://github.com/caolan/async "asyncjs"
   [forever]: https://github.com/caolan/async#forever "asyncjs forever"
   [Robert]: http://www.robertjd.com/ "Robert"
-  [lupus]: https://www.npmjs.org/package/lupus "node-lupus"
+  [lupus]: https://www.npmjs.com/package/lupus "node-lupus"

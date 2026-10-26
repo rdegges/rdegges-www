@@ -12,6 +12,8 @@ title: "Transparent Telephony - Part 2 - Installing Asterisk"
 ![Telephone Sketch][]
 
 
+**NOTE**: I wrote this article years ago, and its install steps no longer work. CentOS Linux has reached end of life, the Digium package repository shown here is gone, and Asterisk-Addons is now part of Asterisk itself. To install a current version of Asterisk, follow the [official install guide](https://docs.asterisk.org/Getting-Started/Installing-Asterisk/).
+
 Welcome back to the Transparent Telephony series.  If you're new, you may
 want to check out part 1 here:
 [Transparent Telephony - Part 1 - An Introduction][].

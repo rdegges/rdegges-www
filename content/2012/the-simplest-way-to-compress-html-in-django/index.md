@@ -12,6 +12,8 @@ description: "Minify your Django site's HTML with django-htmlmin: pip install it
 ![Electron Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Django removed the `MIDDLEWARE_CLASSES` setting years ago, and django-htmlmin hasn't had a release in years, so these steps won't work as written on a modern Django project. If you want to add middleware today, consult the [official middleware documentation](https://docs.djangoproject.com/en/stable/topics/http/middleware/).
+
 **NOTE**: Since writing this post, it has been brought to my attention that as
 of 2013, there is a new potential attack vector on sites using gzip.  Please
 read this [Django security comment][] for more information after reading this

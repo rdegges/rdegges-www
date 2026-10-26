@@ -102,7 +102,7 @@ In my professional life, I also use the feature snowball method extensively, inc
 
 Of course, there are exceptions to the rule.
 
-For example, a few months ago we were preparing to launch our yearly conference, [Oktane](https://www.oktane20.com/), so I had to completely ignore my backlog and exclusively focus on Oktane-specific tasks in order to wrap things up.
+For example, a few months ago we were preparing to launch our yearly conference, [Oktane](https://web.archive.org/web/20200426171456/https://www.oktane20.com/), so I had to completely ignore my backlog and exclusively focus on Oktane-specific tasks in order to wrap things up.
 
 Were these Oktane-specific tasks always the simplest things to do? *Definitely not!* But, within the list of urgent Oktane tasks I had to attend to, I still followed the feature snowball method as much as possible.
 

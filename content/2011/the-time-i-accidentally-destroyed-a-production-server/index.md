@@ -112,5 +112,5 @@ command.
 [Horseman Sketch]: horseman-sketch.png "Horseman Sketch"
   [freeradius]: http://freeradius.org/ "FreeRADIUS"
   [Rackspace]: http://www.rackspace.com/index.php "Rackspace"
-  [puppet]: https://puppetlabs.com/ "puppet"
+  [puppet]: https://www.puppet.com/ "puppet"
   [monit]: http://mmonit.com/monit/ "monit"

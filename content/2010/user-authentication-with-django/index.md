@@ -12,6 +12,8 @@ description: "A quick guide to Django's auth module: build login and logout page
 ![Lock Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Django has since removed several of the APIs used here (like `patterns()` and `render_to_response()`), and the login view is now `LoginView`, so this code won't run on modern Django. See the [official authentication documentation](https://docs.djangoproject.com/en/stable/topics/auth/default/) instead.
+
 This article will teach you how to authenticate users with [Django][] in a
 simple, quick, and secure manner.  You'll also learn how to require
 authentication on certain pages of your website, and how to gracefully handle

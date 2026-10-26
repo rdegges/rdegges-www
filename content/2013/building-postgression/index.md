@@ -12,6 +12,8 @@ description: "How Alven and I built postgression, a free throwaway PostgreSQL da
 ![Dragon Sketch][]
 
 
+**NOTE**: postgression shut down years ago, and I no longer own the postgression.com domain, so please don't trust whatever lives there now. The postgression links in this post point to archived copies of the old site.
+
 [Last week][] my friend [Alven][] and I launched a new service for developers
 using PostgreSQL: [postgression][].  postgression is a simple web service that
 allows you (a programmer) to instantly provision a free PostgreSQL database
@@ -83,7 +85,7 @@ your applications (Python, Ruby, Java, Javascript, etc.).  We're using Heroku
 several ways to make postgression work.
 
 -   We're using Heroku to run our postgression API
-    ([http://api.postgression.com][]).  Heroku runs our Flask application that
+    (`api.postgression.com`).  Heroku runs our Flask application that
     powers the entire thing.  When users make an HTTP request to postgression's
     API, it hits Heroku's servers and stuff happens.
 -   We're using [Heroku PostgreSQL][] (the largest hosted PostgreSQL service in
@@ -256,7 +258,7 @@ shoot me an email ([r@rdegges.com][]).
 [Dragon Sketch]: dragon-sketch.png "Dragon Sketch"
   [Last week]: {{< relref "2013/postgression-a-postgresql-database-for-every-test-case.md" >}} "Postgression - a PostgreSQL Database for Every Test Case"
   [Alven]: https://twitter.com/zaidos "Alven on Twitter"
-  [postgression]: http://www.postgression.com/ "postgression"
+  [postgression]: https://web.archive.org/web/20130125000443/http://www.postgression.com:80/ "postgression"
   [last article]: /2013/postgression-a-postgresql-database-for-every-test-case/ "postgression"
   [Flask]: http://flask.pocoo.org/ "Flask"
   [Flask-Cache]: http://packages.python.org/Flask-Cache/ "Flask-Cache"
@@ -264,23 +266,22 @@ shoot me an email ([r@rdegges.com][]).
   [Flask-SQLAlchemy]: http://packages.python.org/Flask-SQLAlchemy/ "Flask-SQLAlchemy"
   [gevent]: http://www.gevent.org/ "gevent"
   [gunicorn]: http://gunicorn.org/ "gunicorn"
-  [psycopg2]: http://initd.org/psycopg/ "psycopg2"
+  [psycopg2]: https://www.psycopg.org/ "psycopg2"
   [python-dateutil]: http://labix.org/python-dateutil "python-dateutil"
   [redis]: http://redis.io/ "Redis"
   [requests]: http://docs.python-requests.org/en/latest/ "requests"
   [GitHub pages]: http://pages.github.com/ "GitHub Pages"
   [Heroku]: http://www.heroku.com/ "Heroku"
-  [ducksboard]: http://ducksboard.com/ "Ducksboard"
-  [http://api.postgression.com]: http://api.postgression.com "postgression API"
-  [Heroku PostgreSQL]: https://postgres.heroku.com/ "Heroku PostgreSQL"
-  [Heroku's API]: https://api-docs.heroku.com/ "Heroku API Docs"
+  [ducksboard]: https://web.archive.org/web/20120919213114/http://ducksboard.com/ "Ducksboard"
+  [Heroku PostgreSQL]: https://www.heroku.com/postgres "Heroku PostgreSQL"
+  [Heroku's API]: https://web.archive.org/web/20130112213449/https://api-docs.heroku.com/ "Heroku API Docs"
   [Heroku Scheduler]: https://addons.heroku.com/scheduler "Heroku Scheduler Add-on"
-  [Redis To Go]: https://addons.heroku.com/redistogo "Redistogo Add-on"
-  [DNSimple]: https://dnsimple.com/r/d9a8f0b92dfb78 "DNSimple"
+  [Redis To Go]: https://web.archive.org/web/20111214035711/https://addons.heroku.com/redistogo "Redistogo Add-on"
+  [DNSimple]: https://dnsimple.com/ "DNSimple"
   [pgbackups]: https://devcenter.heroku.com/articles/pgbackups "PGbackups Add-on"
 [postgression Core]: postgression-core.png "postgression Core"
-  [https://api-docs.heroku.com/addons]: https://api-docs.heroku.com/addons "Heroku Add-on API"
-  [https://api-docs.heroku.com/apps]: https://api-docs.heroku.com/apps "Heroku Apps API"
+  [https://api-docs.heroku.com/addons]: https://web.archive.org/web/20130112213724/https://api-docs.heroku.com/addons "Heroku Add-on API"
+  [https://api-docs.heroku.com/apps]: https://web.archive.org/web/20130112213806/https://api-docs.heroku.com/apps "Heroku Apps API"
 [postgression API]: postgression-api.png "postgression API"
 [postgression Models]: postgression-models.png "postgression Models"
 [postgression Ducksboard]: postgression-ducksboard.png "postgression Ducksboard"

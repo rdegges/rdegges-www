@@ -172,4 +172,4 @@ things, as opposed to the collection and accumulation of more.
   [HackerNews]: http://news.ycombinator.com/ "Hacker News"
   [Paul Graham]: http://www.paulgraham.com/ "Paul Graham"
   [Amazon]: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=rdegges-20 "Amazon"
-  [books I read]: http://www.amazon.com/gp/cdp/member-reviews/A3E3Y9R7W5NAI8/?ie=UTF8&camp=1789&creative=390957&linkCode=ur2&sort_by=MostRecentReview&tag=rdegges-20 "Randall Degges' Amazon Reviews"
+  [books I read]: https://web.archive.org/web/20120213110223/http://www.amazon.com:80/gp/cdp/member-reviews/A3E3Y9R7W5NAI8? "Randall Degges' Amazon Reviews"

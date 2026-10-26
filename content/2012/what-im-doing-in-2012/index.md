@@ -122,7 +122,7 @@ Here's to a having a great, happy, relaxed, and interesting 2012.
 
 
 [Dentist Wolf Meme]: dentist-wolf-meme.png "Dentist Wolf Meme"
-  [HabitForge]: http://habitforge.com/ "HabitForge"
+  [HabitForge]: https://web.archive.org/web/20110715172539/http://habitforge.com:80/ "HabitForge"
   [writing habit]: {{< relref "2011/establishing-a-writing-habit.md" >}} "Establishing a Writing Habit"
   [Gary Bernhardt]: https://www.destroyallsoftware.com/ "Gary Bernhardt"
   [vimcasts]: http://vimcasts.org/ "vimcasts"

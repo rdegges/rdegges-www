@@ -148,7 +148,7 @@ I started investing when I turned 24 and started paying closer attention to my p
 
 Our strategy today is simple: we split our investable money into two asset classes: *real estate* and *index funds*. Our goal is to invest in each of these asset classes equally, but for reasons I'll explain momentarily, we haven't yet been able to achieve that.
 
-**NOTE**: If you aren't familiar with the concept of index funds, I'll explain it briefly: index funds are funds which allow you to purchase a little bit of every company in a given index. For example, you can buy a little bit of every company in the US stock market. Index fund investing has been shown to outperform more expensive, actively managed funds, in almost every scenario. If you'd like to learn more, [this article](https://www.thebalance.com/index-funds-vs-actively-managed-funds-2466445) is a great, brief introduction.
+**NOTE**: If you aren't familiar with the concept of index funds, I'll explain it briefly: index funds are funds which allow you to purchase a little bit of every company in a given index. For example, you can buy a little bit of every company in the US stock market. Index fund investing has been shown to outperform more expensive, actively managed funds, in almost every scenario. If you'd like to learn more, [this article](https://www.thebalancemoney.com/index-funds-vs-actively-managed-funds-2466445) is a great, brief introduction.
 
 Out of the 50% of our money that is invested in index funds, our allocation is as follows:
 
@@ -200,7 +200,7 @@ Because my wife and I are both full-time employees of companies, and because our
 
 This gives us **114k** per year of tax-advantaged investments.
 
-I also own a consulting business where I occasionally do consulting work around the telephony, web security, and developer services industries. Because I run this company as a business, I'm also able to invest a portion of my net profits into a [SEP-IRA](https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-seps-establish-a-sep) (a special type of retirement account for small businesses). This plan allows me to stock away an additional 57k worth of tax-advantaged money each year.
+I also own a consulting business where I occasionally do consulting work around the telephony, web security, and developer services industries. Because I run this company as a business, I'm also able to invest a portion of my net profits into a [SEP-IRA](https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-seps) (a special type of retirement account for small businesses). This plan allows me to stock away an additional 57k worth of tax-advantaged money each year.
 
 All in all, we're able to make a total of **$183,000** worth of tax-advantaged contributions each year into our retirement accounts. That is a *massive amount* of tax-optimized investments.
 

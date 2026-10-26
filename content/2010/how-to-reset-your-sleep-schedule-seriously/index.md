@@ -188,6 +188,6 @@ for a bit, and hopefully de-stress yourself for a couple days.
 
 [Tent Sketch]: tent-sketch.png "Tent Sketch"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"
-  [Wisebread]: http://www.wisebread.com/how-to-naturally-reset-your-sleep-cycle-overnight/ "Wisebread on How to Naturally Reset Your SLeep Cycle"
-  [Gigaom]: http://gigaom.com/collaboration/how-to-reset-your-body-clock/ "Gigaom on How to Reset Your Body Clock"
-  [San Simeon]: http://www.parks.ca.gov/?page_id=590 "San Simeon State Park"
+  [Wisebread]: https://web.archive.org/web/20100910195507/http://www.wisebread.com:80/how-to-naturally-reset-your-sleep-cycle-overnight "Wisebread on How to Naturally Reset Your SLeep Cycle"
+  [Gigaom]: https://web.archive.org/web/20100907194720/http://gigaom.com:80/collaboration/how-to-reset-your-body-clock/ "Gigaom on How to Reset Your Body Clock"
+  [San Simeon]: https://www.parks.ca.gov/?page_id=590 "San Simeon State Park"

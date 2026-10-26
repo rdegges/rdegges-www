@@ -64,4 +64,4 @@ the associated risk.
 
 [Arrow Sketch]: arrow-sketch.png "Arrow Sketch"
   [Jenkins]: http://jenkins-ci.org/ "Jenkins"
-  [puppet]: https://puppetlabs.com/ "puppet"
+  [puppet]: https://www.puppet.com/ "puppet"

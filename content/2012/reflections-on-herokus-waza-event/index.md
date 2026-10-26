@@ -57,7 +57,7 @@ relaxing.
 
 **NOTE**: I didn't get any pictures of the event, but [Kenneth Reitz][] got a
 ton that totally kick ass.  I highly recommend checking out his
-[Flickr album][].  If you look close, you'll find me :)
+Flickr album.  If you look close, you'll find me :)
 
 The event started at 11am with an excellent opening talk by Adam Wiggins, CTO
 and co-founder of Heroku.  His talk was all about building excellent
@@ -134,12 +134,11 @@ I hope the Heroku guys throw another one sometime soon.
 
 [Heroku Logo]: heroku-logo.png "Heroku Logo"
   [Heroku's]: http://www.heroku.com/ "Heroku"
-  [Waza]: http://waza.heroku.com/ "Heroku Waza"
+  [Waza]: https://web.archive.org/web/20120109042729/http://waza.heroku.com:80/ "Heroku Waza"
   [Django]: https://www.djangoproject.com/ "Django"
 [A Day in the Life of a Programmer]: a-day-in-the-life-of-a-programmer.png "A Day in the Life of a Programmer"
-  [Yoshi's]: http://www.yoshis.com/sanfrancisco "Yoshi's Jazz Club"
+  [Yoshi's]: https://web.archive.org/web/20120103143455/http://www.yoshis.com:80/sanfrancisco "Yoshi's Jazz Club"
   [Kenneth Reitz]: http://kennethreitz.org/ "Kenneth Reitz"
-  [Flickr album]: http://www.flickr.com/photos/kennethreitz/sets/72157628841270129/ "Waza Flickr"
   [Craig Kerstiens]: http://www.craigkerstiens.com/ "Craig Kerstiens"
   [Curt Micol]: http://asenchi.com/ "Curt Micol"
   [Issac Kelly]: http://www.kellycreativetech.com/ "Issac Kelly"
@@ -149,6 +148,6 @@ I hope the Heroku guys throw another one sometime soon.
   [The Practice of Programming]: http://www.amazon.com/gp/product/020161586X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=020161586X&linkCode=as2&tag=rdegges-20 "The Practice of Programming"
   [The UNIX Programming Environment]: http://www.amazon.com/gp/product/013937681X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=013937681X&linkCode=as2&tag=rdegges-20 "The UNIX Programming Environment"
   [Brian Kernighan]: http://www.cs.princeton.edu/~bwk/ "Brian Kernighan"
-  [Dennis Ritchie]: http://cm.bell-labs.com/who/dmr/ "Dennis Ritchie"
+  [Dennis Ritchie]: https://www.nokia.com/bell-labs/about/dennis-m-ritchie/ "Dennis Ritchie"
 [Green Tea Leaves]: green-tea-leaves.jpg "Green Tea Leaves"
   [teance]: http://www.teance.com/ "teance"

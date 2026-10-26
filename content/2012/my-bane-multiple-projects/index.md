@@ -74,6 +74,6 @@ really meaningful to me, which is what I'm talking about in this article.
 
 
 [Bane Sketch]: bane-sketch.png "Bane Sketch"
-  [my startup]: https://www.opencnam.com/ "OpenCNAM"
+  [my startup]: https://web.archive.org/web/20120516003024/http://www.opencnam.com/ "OpenCNAM"
   [GitHub projects]: https://github.com/rdegges "GitHub"
   [my book]: http://www.theherokuhackersguide.com/ "The Heroku Hacker's Guide"

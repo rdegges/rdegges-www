@@ -12,6 +12,8 @@ description: "How to set up Jenkins CI on Ubuntu or Debian: install it, put NGIN
 ![Butler Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Jenkins now hosts its packages at pkg.jenkins.io with a new signing key, so the install commands below won't work. Follow the [official installation guide](https://www.jenkins.io/doc/book/installing/linux/) instead.
+
 At work we rely heavily on continuous integration and deployment to help us
 deliver lots of code into production and staging environments quickly.  In a
 typical day, we'll make something like 15 deployments to at least one or two of
@@ -217,7 +219,7 @@ read the [official documentation][].
 [Butler Sketch]: butler-sketch.jpg "Butler Sketch"
   [GitHub]: https://github.com/ "GitHub"
   [Jenkins CI]: http://jenkins-ci.org/ "Jenkins CI"
-  [Hudson]: http://hudson-ci.org/ "Hudson CI"
+  [Hudson]: https://web.archive.org/web/20110412122948/http://hudson-ci.org/ "Hudson CI"
   [continuous integration]: http://en.wikipedia.org/wiki/Continuous_integration "Continuous Integration Wiki Page"
 [Jenkins Configuration]: jenkins-configuration.png "Jenkins Configuration"
   [Git]: http://git-scm.com/ "Git"

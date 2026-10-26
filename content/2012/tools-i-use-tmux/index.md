@@ -163,7 +163,7 @@ terminal work.
 
 
 [Tools]: tools.png "Tools"
-  [tmux]: http://tmux.sourceforge.net/ "tmux"
+  [tmux]: https://github.com/tmux/tmux "tmux"
   [GNU screen]: http://www.gnu.org/software/screen/ "GNU screen"
 [tmux Multiple Windows]: tmux-multiple-windows.png "tmux Multiple Windows"
 [tmux Multiple Panes]: tmux-multiple-panes.png "tmux Multiple Panes"

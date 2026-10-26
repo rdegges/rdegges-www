@@ -12,6 +12,8 @@ description: "Heroku was designed with services in mind. Why its free dyno per a
 ![Large Warrior Sketch][]
 
 
+**NOTE**: I wrote this article a while back, and its content is dated. Heroku [no longer offers free dynos](https://devcenter.heroku.com/changelog-items/2502), so the main point of this article (a free dyno for every service you run) doesn't apply anymore.
+
 In the past, I've written a bit about [service oriented architecture][], what's
 great about it, what's bad about it, and how I've used it extensively in past
 ventures with incredible success.
@@ -262,7 +264,7 @@ next time you build a service oriented web app, so that you can feel the same
 joy I do.
 
 As always, if you have any questions, please hit me up by [email][] or
-[twitter][].
+twitter.
 
 -Randall
 
@@ -280,7 +282,7 @@ As always, if you have any questions, please hit me up by [email][] or
   [addon marketplace]: https://addons.heroku.com/ "Heroku Addons"
   [Postgres]: http://www.postgresql.org/ "PostgreSQL"
   [heroku-postgresql]: https://addons.heroku.com/heroku-postgresql "Heroku Postgres"
-  [OpenCNAM]: https://www.opencnam.com/ "OpenCNAM"
+  [OpenCNAM]: https://web.archive.org/web/20140517160748/https://www.opencnam.com/ "OpenCNAM"
   [Python]: https://www.python.org/ "Python"
   [Flask]: http://flask.pocoo.org/ "Flask"
 [Angry Tiger Sketch]: angry-tiger-sketch.jpg "Angry Tiger Sketch"
@@ -294,5 +296,4 @@ As always, if you have any questions, please hit me up by [email][] or
   [article]: http://blog.daviddollar.org/2011/05/06/introducing-foreman.html "Introducing Foreman"
   [David Dollar]: http://blog.daviddollar.org/ "David Dollar"
   [email]: mailto:r@rdegges.com "Randall Degges' Email"
-  [twitter]: https://twitter.com/rdegges "Randall Degges on Twitter"
 [Brain Sketch]: brain-sketch.jpg "Brain Sketch"

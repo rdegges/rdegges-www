@@ -75,5 +75,5 @@ I'll leave you all with this [awesome music video from Dead Prez][].
   [The Paleo Solution]: http://www.amazon.com/gp/product/0982565844/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0982565844&linkCode=as2&tag=rdegges-20 "The Paleo Solution"
   [Good Calories, Bad Calories]: http://www.amazon.com/gp/product/1400033462/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1400033462&linkCode=as2&tag=rdegges-20 "Good Calories, Bad Calories"
   [DailyBurn]: http://dailyburn.com/ "DailyBurn"
-  [ketosis]: http://forum.bodybuilding.com/showthread.php?t=132598293 "ketosis"
+  [ketosis]: https://web.archive.org/web/20110423130919/http://forum.bodybuilding.com:80/showthread.php?t=132598293 "ketosis"
   [awesome music video from Dead Prez]: http://www.youtube.com/watch?v=8nartK6wodo "Back on my Regimen"

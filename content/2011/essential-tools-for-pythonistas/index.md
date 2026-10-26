@@ -96,13 +96,13 @@ Ideally, you should be using `virtualenv` with the infamous
 
 
 [Python Sketch]: python-sketch.png "Python Sketch"
-  [Pythonistas]: http://python.net/~goodger/projects/pycon/2007/idiomatic/presentation.html "Code Like a Pythonista"
+  [Pythonistas]: https://web.archive.org/web/20110514033546/http://python.net/~goodger/projects/pycon/2007/idiomatic/presentation.html "Code Like a Pythonista"
   [GitHub]: https://github.com/ "GitHub"
   [Git]: http://git-scm.com/ "Git"
   [Vim]: http://www.vim.org/ "Vim"
   [pyflakes]: https://github.com/kevinw/pyflakes "pyflakes"
 [pyflakes Screenshot]: pyflakes-screenshot.png "pyflakes Screenshot"
-  [Sphinx]: http://sphinx.pocoo.org/ "Sphinx"
+  [Sphinx]: https://www.sphinx-doc.org/ "Sphinx"
   [pocoo]: http://www.pocoo.org/ "pocoo"
   [reStructuredText]: http://docutils.sourceforge.net/rst.html "reStructuredText"
   [ReadTheDocs]: http://readthedocs.org/ "readthedocs"

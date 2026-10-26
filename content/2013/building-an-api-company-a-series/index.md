@@ -185,7 +185,6 @@ announcements of when new articles in the series are added, you can keep up with
 me via:
 
 - [Email][shoot me an email]
-- [Twitter][]
 - [RSS][]
 
 *Let's do this!*
@@ -196,5 +195,4 @@ me via:
   [Twilio]: http://www.twilio.com/ "Twilio"
   [Asterisk]: http://www.asterisk.org/ "Asterisk"
   [Freeswitch]: http://freeswitch.org/ "Freeswitch"
-  [Twitter]: https://twitter.com/rdegges "Randall Degges on Twitter"
   [RSS]: /feed.xml "Randall Degges' RSS Feed"

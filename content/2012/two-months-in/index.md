@@ -48,7 +48,7 @@ have a chaotic workplace.
 
 A couple of weeks ago I was in the middle of a massive project: writing parsing
 code for enormous amounts of telephony data for one of our new projects:
-[tnapi][].  At the time, this was the number one business priority, and
+tnapi.  At the time, this was the number one business priority, and
 absolutely dwarfed the importance of all my other work--but despite this, I
 decided to spend the day hacking on some [open source projects][], as I just
 couldn't get myself into mood to write parsing code all day.
@@ -174,9 +174,8 @@ gotten a bunch of stuff done, and had a ton of fun along the way.
   [startup]: https://www.telephonyresearch.com/ "Telephony Research"
   [GitHub]: https://github.com/ "GitHub"
   [37 Signals]: http://37signals.com/ "37 Signals"
-  [tnapi]: http://tnapi.com/ "tnAPI - A simple telephony data API."
   [open source projects]: https://github.com/rdegges "Randall Degges on GitHub"
   [Twilio]: http://www.twilio.com/ "Twilio"
-  [Tropo]: https://www.tropo.com/home.jsp "Tropo"
+  [Tropo]: https://web.archive.org/web/20120723042427/https://www.tropo.com/home.jsp "Tropo"
   [Hacker News]: http://news.ycombinator.com/ "Hacker News"
   [The Pomodoro Technique]: http://www.amazon.com/gp/product/1934356506/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1934356506&linkCode=as2&tag=rdegges-20 "The Pomodoro Technique"

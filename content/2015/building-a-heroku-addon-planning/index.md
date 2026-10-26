@@ -52,7 +52,7 @@ projects, and should view it as a source of enjoyment: not dread.
 In regards to what needs to be built -- there are several components to
 consider.
 
-Firstly, I'll need to build an API service (*api.vanityaddon.com*), which runs on
+Firstly, I'll need to build an API service (`api.vanityaddon.com`), which runs on
 a Heroku dyno itself, and implements the [Heroku Addon Provider][] API
 specification.  This will allow Heroku developers to run commands like:
 
@@ -67,7 +67,7 @@ of their ID and plan information.
 
 Next up, I need to build a marketing site to advertise the addon (*primarily so
 developers searching for this thing on Google can find it*).  For this, I'll
-build a 100% static site that lives at *www.vanityaddon.com*.  I'll need to
+build a 100% static site that lives at `www.vanityaddon.com`.  I'll need to
 throw something that looks clean and simple together -- as well as generate some
 assets (*a logo, a banner, etc.*).
 

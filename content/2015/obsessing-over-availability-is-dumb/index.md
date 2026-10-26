@@ -397,4 +397,4 @@ guy, after all.
   [Twilio]: https://www.twilio.com/ "Twilio"
   [Algolia]: https://www.algolia.com/ "Algolia"
   [Pusher]: https://pusher.com/ "Pusher"
-  [read for yourself]: https://pusher.com/legal "Pusher Legal"
+  [read for yourself]: https://web.archive.org/web/20150906112619/https://pusher.com/legal "Pusher Legal"
