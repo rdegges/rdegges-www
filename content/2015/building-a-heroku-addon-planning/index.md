@@ -7,6 +7,7 @@ slug: "building-a-heroku-addon-planning"
 tags:
   - "programming"
   - "devops"
+  - "heroku"
 title: "Building a Heroku Addon - Planning"
 ---
 

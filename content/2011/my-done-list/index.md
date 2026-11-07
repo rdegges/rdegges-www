@@ -3,7 +3,7 @@ aliases:
   - /my-done-list/
 title: "My 'Done' List"
 date: "2011-12-25"
-tags: ["programming"]
+tags: ["programming", "productivity"]
 slug: "my-done-list"
 description: "My done list is the checklist I finish before I call code done: tracked issue, tests, code, passing tests, review, docs, deploy. It makes my code better."
 ---

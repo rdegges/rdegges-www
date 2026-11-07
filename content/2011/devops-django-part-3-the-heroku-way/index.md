@@ -3,7 +3,7 @@ aliases:
   - /devops-django-part-3-the-heroku-way/
 title: "DevOps Django - Part 3 - The Heroku Way"
 date: "2011-12-18"
-tags: ["programming", "devops", "python", "django"]
+tags: ["programming", "devops", "python", "django", "heroku"]
 slug: "devops-django-part-3-the-heroku-way"
 description: "Part 3 of my DevOps Django series: how I ported a large Django app with celery, memcached, RabbitMQ and Postgres to Heroku in about two hours."
 ---

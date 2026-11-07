@@ -3,7 +3,7 @@ aliases:
   - /sacrifice/
 title: "Sacrifice"
 date: "2013-03-28"
-tags: ["personal development"]
+tags: ["personal development", "productivity"]
 slug: "sacrifice"
 description: "Too many projects and not enough time? My fix is to give something up: keep an ideas list and a TODO list, then cleanly kill a project to make room."
 ---

@@ -4,7 +4,7 @@ aliases:
 date: "2010-09-04"
 description: "Most sleep hacks take too much willpower. I reset my night owl sleep schedule with a three-day camping trip; here's how sunlight, cold and quiet did it."
 slug: "how-to-reset-your-sleep-schedule-seriously"
-tags: ["life hacks"]
+tags: ["personal development"]
 title: "How to Reset Your Sleep Schedule, Seriously"
 ---
 

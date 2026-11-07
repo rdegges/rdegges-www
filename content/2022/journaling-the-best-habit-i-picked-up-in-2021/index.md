@@ -6,6 +6,7 @@ description: "How I fell into a daily journaling habit after a health scare in 2
 slug: "journaling-the-best-habit-i-picked-up-in-2021"
 tags:
   - "personal development"
+  - "writing"
 title: "Journaling: The Best Habit I Picked Up in 2021"
 ---
 

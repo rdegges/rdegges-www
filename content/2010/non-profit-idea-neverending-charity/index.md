@@ -4,7 +4,7 @@ aliases:
 date: "2010-10-15"
 description: "A non-profit idea: pool donations in high-yield savings accounts, then give the monthly interest to a charity the donors vote on, forever."
 slug: "non-profit-idea-neverending-charity"
-tags: ["ideas"]
+tags: ["personal"]
 title: "Non-Profit Idea: Neverending Charity"
 ---
 

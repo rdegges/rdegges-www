@@ -3,7 +3,7 @@ aliases:
   - /writing-is-hard/
 title: "Writing is Hard"
 date: "2010-02-12"
-tags: ["personal development"]
+tags: ["personal development", "writing"]
 slug: "writing-is-hard"
 description: "Writing is hard for me because I'm afraid my posts won't be perfect, so I quit halfway. My new rule: if I start writing something, I finish it."
 ---

@@ -3,7 +3,7 @@ aliases:
   - /my-bane-multiple-projects/
 title: "My Bane - Multiple Projects"
 date: "2012-10-13"
-tags: ["personal development"]
+tags: ["personal development", "productivity"]
 slug: "my-bane-multiple-projects"
 description: "I'm awful at juggling multiple projects. Here's why that bugs me, and why I'm letting passion and motivation pick my daily work instead of importance."
 ---

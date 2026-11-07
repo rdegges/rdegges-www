@@ -3,7 +3,7 @@ aliases:
   - /what-ive-learned-about-writing-so-far/
 title: "What I've Learned About Writing (So Far)"
 date: "2011-12-19"
-tags: ["personal development"]
+tags: ["personal development", "writing"]
 slug: "what-ive-learned-about-writing-so-far"
 description: "Ten days into a daily 30-minute writing habit: practice works, I enjoy writing more, and I've stopped polishing every sentence in my head before I type."
 ---

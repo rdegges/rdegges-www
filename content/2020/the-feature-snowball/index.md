@@ -6,8 +6,6 @@ description: "The productivity system I've used for 10 years: the feature snowba
 slug: "the-feature-snowball"
 tags:
   - "productivity"
-  - "personal"
-  - "business"
 title: "The Feature Snowball"
 ---
 

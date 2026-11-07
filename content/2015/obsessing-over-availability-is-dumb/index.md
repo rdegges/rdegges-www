@@ -2,7 +2,7 @@
 date: "2015-12-29"
 description: "Obsessing over availability is dumb for most startups. It's hard and expensive, and Heroku plus managed services get you 99.99% uptime with no ops work."
 slug: "obsessing-over-availability-is-dumb"
-tags: ["programming", "devops"]
+tags: ["programming", "devops", "heroku"]
 title: "Obsessing Over Availability is Dumb"
 ---
 

@@ -205,7 +205,7 @@ class TestStructuredData(SiteTestCase):
         # comma-joined string instead of a list of tags.
         expected = {
             "/2010/being-myself/": ["personal development"],
-            "/2012/how-to-instantly-fix-problematic-deployments-on-heroku/": ["programming", "devops"],
+            "/2012/how-to-instantly-fix-problematic-deployments-on-heroku/": ["programming", "devops", "heroku"],
         }
         by_url = {p.url: p for p in articles()}
         for url, keywords in expected.items():

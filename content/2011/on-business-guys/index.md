@@ -3,7 +3,7 @@ aliases:
   - /on-business-guys/
 title: "On Business Guys"
 date: "2011-09-18"
-tags: ["startups", "rant"]
+tags: ["startups"]
 slug: "on-business-guys"
 description: "A tech guy's rant: good engineers can learn business and marketing, so they have little reason to team up with business guys. My advice: learn to code."
 ---

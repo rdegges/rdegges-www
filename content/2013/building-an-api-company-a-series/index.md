@@ -3,7 +3,7 @@ aliases:
   - /building-an-api-company-a-series/
 title: "Building an API Company - A Series"
 date: "2013-06-29"
-tags: ["programming", "startups"]
+tags: ["programming", "startups", "apis"]
 slug: "building-an-api-company-a-series"
 description: "Kicking off a series on building an API company from the ground up. Who it's for, what you'll end up with, and why programmers make great API founders."
 ---

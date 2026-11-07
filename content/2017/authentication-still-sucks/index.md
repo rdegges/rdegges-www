@@ -5,8 +5,9 @@ date: "2017-08-29"
 description: "Authentication and authorization are still as hard as ever for developers. Why, and why I'm excited to relaunch the Okta Identity Platform."
 slug: "authentication-still-sucks"
 tags:
-  - "business"
   - "programming"
+  - "authentication"
+  - "security"
 title: "Authentication Still Sucks"
 ---
 

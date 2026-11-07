@@ -3,7 +3,7 @@ aliases:
   - /successful-github-development/
 title: "Successful GitHub Development"
 date: "2012-04-14"
-tags: ["programming"]
+tags: ["programming", "git"]
 slug: "successful-github-development"
 description: "GitHub best practices for open source: maintainers should write docs, use git-flow, publish test runs and use Issues; contributors, read and ask first."
 ---

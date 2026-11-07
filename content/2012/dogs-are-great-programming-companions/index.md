@@ -3,7 +3,7 @@ aliases:
   - /dogs-are-great-programming-companions/
 title: "Dogs Are Great Programming Companions"
 date: "2012-01-09"
-tags: ["programming"]
+tags: ["programming", "personal"]
 slug: "dogs-are-great-programming-companions"
 description: "I work from home with my chihuahua, Scribbles. She keeps me sane, makes me take walks, and listens while I talk through code problems. Photos included."
 ---

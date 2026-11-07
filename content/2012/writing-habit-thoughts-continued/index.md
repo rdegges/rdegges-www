@@ -3,7 +3,7 @@ aliases:
   - /writing-habit-thoughts-continued/
 title: "Writing Habit -- Thoughts (continued)"
 date: "2012-03-05"
-tags: ["personal development"]
+tags: ["personal development", "writing"]
 slug: "writing-habit-thoughts-continued"
 description: "Two months of writing 30 minutes a day: 18 blog posts, book chapters, new friends, and the breakthrough that writing gets easy once you just let loose."
 ---

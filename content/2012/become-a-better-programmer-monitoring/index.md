@@ -3,7 +3,7 @@ aliases:
   - /become-a-better-programmer-monitoring/
 title: "Become a Better Programmer - Monitoring"
 date: "2012-08-26"
-tags: ["programming"]
+tags: ["programming", "devops"]
 slug: "become-a-better-programmer-monitoring"
 description: "Real user feedback makes you a better programmer. I use New Relic to find slow code, errors, and bottlenecks in my web apps: code, push, analyze, repeat."
 ---
