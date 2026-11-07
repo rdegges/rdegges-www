@@ -3,7 +3,7 @@ aliases:
   - /cd/
 title: "CD"
 date: "2013-05-14"
-tags: ["programming"]
+tags: ["programming", "devops"]
 slug: "cd"
 description: "Why every programmer should use continuous delivery: it keeps the build working and kills manual deploy work. Plus options: Git hooks, Travis CI, Jenkins."
 ---

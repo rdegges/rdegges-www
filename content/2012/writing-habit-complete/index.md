@@ -3,7 +3,7 @@ aliases:
   - /writing-habit-complete/
 title: "Writing Habit -- Complete"
 date: "2012-01-02"
-tags: ["personal development"]
+tags: ["personal development", "writing"]
 slug: "writing-habit-complete"
 description: "I finished my 21-day habit of writing 30 minutes a day. What changed, and my tips: find a set time to write, use caffeine, and don't limit your topics."
 ---

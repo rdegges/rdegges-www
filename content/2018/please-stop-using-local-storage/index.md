@@ -8,6 +8,7 @@ status: draft
 tags:
   - "programming"
   - "security"
+  - "authentication"
 title: "Please Stop Using Local Storage"
 ---
 

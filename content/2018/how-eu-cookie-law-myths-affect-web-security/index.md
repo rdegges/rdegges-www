@@ -7,6 +7,7 @@ slug: "how-eu-cookie-law-myths-affect-web-security"
 tags:
   - "programming"
   - "security"
+  - "authentication"
 title: "How EU Cookie Law Myths Affect Web Security"
 ---
 

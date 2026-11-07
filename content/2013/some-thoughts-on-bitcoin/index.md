@@ -3,7 +3,7 @@ aliases:
   - /some-thoughts-on-bitcoin/
 title: "Some Thoughts on Bitcoin"
 date: "2013-04-28"
-tags: ["bitcoin"]
+tags: ["cryptocurrency"]
 slug: "some-thoughts-on-bitcoin"
 description: "I started using Bitcoin again: free bitcoin sites, Mt. Gox's slow verification, buying on Coinbase, building a CLI tool, and what I think comes next."
 ---

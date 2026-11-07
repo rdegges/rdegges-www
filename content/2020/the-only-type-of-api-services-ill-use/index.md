@@ -6,7 +6,8 @@ description: "I'll only use API services with usage-based pricing and automatic 
 slug: "the-only-type-of-api-services-ill-use"
 tags:
   - "programming"
-  - "business"
+  - "startups"
+  - "apis"
 title: "The Only Type of API Services I'll Use"
 ---
 

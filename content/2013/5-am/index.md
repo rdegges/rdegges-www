@@ -3,7 +3,7 @@ aliases:
   - /5-am/
 title: "5 AM"
 date: "2013-05-22"
-tags: ["personal development"]
+tags: ["personal development", "productivity"]
 slug: "5-am"
 description: "I'm a lifelong night owl trying 5am wake-ups and a strict schedule: gym, side projects, then focused pomodoro work. Two weeks in, here's how it's going."
 ---

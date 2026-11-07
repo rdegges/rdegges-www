@@ -3,7 +3,7 @@ aliases:
   - /reflections-on-herokus-waza-event/
 title: "Reflections on Heroku's Waza Event"
 date: "2012-01-15"
-tags: ["programming"]
+tags: ["programming", "heroku"]
 slug: "reflections-on-herokus-waza-event"
 description: "My take on Waza, Heroku's first conference: a jazz club turned Japanese village, great talks on elegant apps, Rob Pike, and the best tea I've had."
 ---

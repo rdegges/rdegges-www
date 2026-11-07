@@ -3,7 +3,7 @@ aliases:
   - /a-developers-conundrum-dev-prod-parity/
 title: "A Developer's Conundrum - Dev / Prod Parity"
 date: "2012-07-10"
-tags: ["programming"]
+tags: ["programming", "devops"]
 slug: "a-developers-conundrum-dev-prod-parity"
 description: "The Twelve-Factor App says keep dev and prod alike, but running S3 and SQS on my laptop is painful. Do I chase dev/prod parity or keep separate configs?"
 ---

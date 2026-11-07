@@ -3,7 +3,7 @@ aliases:
   - /building-a-heroku-addon/
 title: "Building a Heroku Addon"
 date: "2015-04-06"
-tags: ["programming", "devops"]
+tags: ["programming", "devops", "heroku"]
 slug: "building-a-heroku-addon"
 description: "I'm building a Heroku addon, and you can follow along! In this series we'll build Vanity, an addon that counts your app's requests, from plan to launch."
 ---

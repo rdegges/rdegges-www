@@ -3,7 +3,7 @@ aliases:
   - /why-im-learning-node/
 title: "Why I'm Learning Node"
 date: "2012-04-07"
-tags: ["programming", "javascript", "nodejs"]
+tags: ["programming", "javascript"]
 slug: "why-im-learning-node"
 description: "I'm a Python guy who sucks at JavaScript, so I'm learning Node.js. I read JavaScript: The Good Parts and wrote my first Node module in under an hour."
 ---

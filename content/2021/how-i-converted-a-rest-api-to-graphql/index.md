@@ -6,6 +6,7 @@ description: "A short guide to converting a REST API you don't control to GraphQ
 slug: "how-i-converted-a-rest-api-to-graphql"
 tags:
   - "programming"
+  - "apis"
 title: "How I Converted a REST API I Don't Control to GraphQL"
 ---
 

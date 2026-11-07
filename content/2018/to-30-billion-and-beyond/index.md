@@ -7,6 +7,8 @@ slug: "to-30-billion-and-beyond"
 tags:
   - "programming"
   - "devops"
+  - "heroku"
+  - "apis"
 title: "To 30 Billion and Beyond"
 ---
 

@@ -3,7 +3,7 @@ aliases:
   - /heroku-and-soa/
 title: "Heroku and SOA"
 date: "2014-06-04"
-tags: ["programming", "devops"]
+tags: ["programming", "devops", "heroku"]
 slug: "heroku-and-soa"
 description: "Heroku was designed with services in mind. Why its free dyno per app, lack of vendor lock-in, and Foreman make it great for service oriented apps."
 ---

@@ -3,7 +3,7 @@ aliases:
   - /my-startup-a-retrospective/
 title: "My Startup, A Retrospective"
 date: "2014-01-31"
-tags: ["startups"]
+tags: ["startups", "apis"]
 slug: "my-startup-a-retrospective"
 description: "Two years of OpenCNAM, my Caller ID API startup: the weekend MVP, the Django to Flask rewrite, the cold emails that won customers, and my mistakes."
 ---

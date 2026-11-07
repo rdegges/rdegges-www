@@ -3,7 +3,7 @@ aliases:
   - /user-authentication-with-django/
 title: "User Authentication With Django"
 date: "2010-02-17"
-tags: ["programming", "python", "django"]
+tags: ["programming", "python", "django", "authentication"]
 slug: "user-authentication-with-django"
 description: "A quick guide to Django's auth module: build login and logout pages, protect views with @login_required, and send users back where they were going."
 ---

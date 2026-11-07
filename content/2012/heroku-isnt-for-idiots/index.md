@@ -3,7 +3,7 @@ aliases:
   - /heroku-isnt-for-idiots/
 title: "Heroku Isn't for Idiots"
 date: "2012-06-03"
-tags: ["programming"]
+tags: ["programming", "heroku"]
 slug: "heroku-isnt-for-idiots"
 description: "My rant on David Cramer's The Cloud is Not For You: Heroku is just Ubuntu, enforces twelve-factor apps, has New Relic, and saved my team time and money."
 ---

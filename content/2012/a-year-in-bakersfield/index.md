@@ -3,7 +3,7 @@ aliases:
   - /a-year-in-bakersfield/
 title: "A Year in Bakersfield"
 date: "2012-11-26"
-tags: ["reviews"]
+tags: ["personal"]
 slug: "a-year-in-bakersfield"
 description: "My year in Bakersfield, California after leaving LA: the bad reputation, friendly people, cheap rent, cold winters, no tech scene, and lots of focus."
 ---

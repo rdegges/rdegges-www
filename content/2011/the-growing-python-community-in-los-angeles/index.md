@@ -3,7 +3,7 @@ aliases:
   - /the-growing-python-community-in-los-angeles/
 title: "The Growing Python Community in Los Angeles"
 date: "2011-07-24"
-tags: ["programming"]
+tags: ["programming", "python", "django"]
 slug: "the-growing-python-community-in-los-angeles"
 description: "The Python and Django scene in Los Angeles is taking off. My time at LA Django and PyLadies meetups, the people leading it, and how to get involved."
 ---

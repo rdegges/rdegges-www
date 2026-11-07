@@ -3,7 +3,7 @@ aliases:
   - /heroku-dynos-in-depth/
 title: "Heroku Dynos (in Depth)"
 date: "2013-02-10"
-tags: ["programming"]
+tags: ["programming", "heroku", "devops"]
 slug: "heroku-dynos-in-depth"
 description: "What Heroku dynos are and why they're great: isolated process containers on AWS with 512MB RAM, 750 free hours per app, and automatic load balancing."
 ---

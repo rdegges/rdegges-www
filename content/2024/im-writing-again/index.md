@@ -5,7 +5,8 @@ date: "2024-08-03"
 description: "After a 2+ year break, I'm back to writing here. Most of my writing went into a private journal, but I've missed sharing structured, thought-out articles."
 slug: "im-writing-again"
 tags:
-  - "Personal Development"
+  - "personal development"
+  - "writing"
 title: "I'm Writing Again"
 ---
 
