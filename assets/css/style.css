@@ -322,3 +322,60 @@ footer p a:visited {
     color: #b10000;
     text-decoration: underline;
 }
+
+/**
+ * About page talks timeline. Same type and the same grey as post dates.
+ * The list is data, so the rules only have to keep a long list readable.
+ */
+.article .talks p,
+.article .talks li {
+    text-align: left;
+}
+
+.article .talks h3 {
+    margin-top: 1.5em;
+}
+
+.article .talk-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.article .talk {
+    margin-bottom: 1.6em;
+}
+
+.article .talk-when,
+.article .talk-title,
+.article .talk-meta {
+    font-family: "Raleway", sans-serif;
+}
+
+.article .talk-when {
+    color: #767676;
+    font-size: 0.85em;
+    margin-bottom: 0;
+}
+
+.article .talk-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.article .talk-meta,
+.article .talk-links,
+.article .talk-caveat {
+    margin-top: 0;
+}
+
+.article .talk-caveat {
+    color: #767676;
+    font-size: 0.85em;
+}
+
+.article .talk-links a + a:before {
+    content: ", ";
+    color: #515050;
+    text-decoration: none;
+}

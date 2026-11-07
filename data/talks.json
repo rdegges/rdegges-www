@@ -1,0 +1,731 @@
+{
+  "notes": "Public talks by Randall Degges. Every entry has sources. date_kind is event (a sourced event date), month or year (the source did not pin the day), slides (the date is a Speaker Deck publish date), announced (a pre-event agenda with no recap), or unknown. Do not treat slides, announced, or unknown dates as confirmed event dates. This is not a complete list of talks he has given. His Speaker Deck profile counter says 29 decks; the public profile listing and Atom feed expose 18 recent decks, and older decks exist at their own URLs. No sourced talks were found for 2022 or 2025. A December 3, 2025 LinkedIn post from The AI Security Summit says he kicked off a workshop, but it publishes no session title and does not say whether that date was the event, so it is not listed. Sessionize lists additional talk abstracts (including Atlassian/Snyk security talks) with no event attached; those abstracts are not included. Lanyrd attendance (PyCon, NodeConf, Write the Docs, DjangoCon US 2011, and others) is not included, because attendance is not a talk. Announced talks that were never confirmed (a Rackspace SOA talk and a Rocket Space password talk mentioned as upcoming on February 22, 2014) are omitted.",
+  "talks": [
+    {
+      "title": "How to Evolve Your DevRel Team Over Time",
+      "sources": [
+        "https://nyc.devrelcon.dev/sessions/231",
+        "https://nyc.devrelcon.dev/speakers/randall_degges"
+      ],
+      "event": "DevRelCon NY 2026",
+      "location": "Industry City, Brooklyn",
+      "type": "conference talk",
+      "event_url": "https://nyc.devrelcon.dev/sessions/231",
+      "date_kind": "month",
+      "year": "2026",
+      "sort": "2026-07-23",
+      "date_label": "July 2026",
+      "date": "2026-07",
+      "caveat": "The schedule dates the conference July 22–23, 2026 at Industry City, Brooklyn, and does not say which of those days this session is."
+    },
+    {
+      "title": "Security Track Intro",
+      "event": "AI Engineer World's Fair",
+      "type": "track introduction",
+      "date_kind": "year",
+      "year": "2026",
+      "sort": "2026-07-20",
+      "date": "2026",
+      "date_label": "2026",
+      "video": "https://www.youtube.com/watch?v=2xJoimgoqBg",
+      "event_url": "https://snyk.io/lp/snyk-ai-engineer-worlds-fair/",
+      "caveat": "The Snyk page and the AI Engineer channel video describe him opening the event's first security track. The video was published July 20, 2026. A separate session day was not listed.",
+      "sources": [
+        "https://snyk.io/lp/snyk-ai-engineer-worlds-fair/",
+        "https://www.youtube.com/watch?v=2xJoimgoqBg"
+      ]
+    },
+    {
+      "title": "How to Evolve Your DevRel Team Over Time",
+      "sources": [
+        "https://nyc24.devrelcon.dev/",
+        "https://nyc.devrelcon.dev/speakers/randall_degges"
+      ],
+      "event": "DevRelCon New York 2024",
+      "location": "New York",
+      "type": "conference talk",
+      "event_url": "https://nyc24.devrelcon.dev/",
+      "date_kind": "month",
+      "year": "2024",
+      "sort": "2024-07-19",
+      "date_label": "July 18–19, 2024",
+      "date": "2024-07",
+      "caveat": "A search-engine copy of nyc24.devrelcon.dev, retrieved November 7, 2026, titles the event DevRelCon New York 2024, dates it July 18–19, and lists this talk. That URL now redirects to the 2026 site. The 2026 speaker page also lists this title under Past Talks for 2024. The session day inside the conference was not recorded."
+    },
+    {
+      "title": "Building resiliency into your DevRel program",
+      "sources": [
+        "https://developerrelations.com/talks/building-resiliency-into-your-devrel-program/",
+        "https://www.youtube.com/watch?v=XVrh5JlEC0I"
+      ],
+      "event": "DevRelCon London 2023",
+      "location": "CodeNode, London, UK",
+      "type": "conference talk",
+      "video": "https://www.youtube.com/watch?v=XVrh5JlEC0I",
+      "event_url": "https://developerrelations.com/talks/building-resiliency-into-your-devrel-program/",
+      "date_kind": "month",
+      "year": "2023",
+      "sort": "2023-09-08",
+      "date_label": "September 2023",
+      "date": "2023-09"
+    },
+    {
+      "title": "Cloud Native Security Landscape: Myths, Dragons, and Real Talk",
+      "sources": [
+        "https://confpad.io/conferences/cloudnativesecuritycon-north-america-2023/cloud-native-security-landscape-myths-dragons-and-real-talk",
+        "https://www.youtube.com/watch?v=VR8-bTACl3g"
+      ],
+      "event": "CloudNativeSecurityCon North America 2023",
+      "type": "panel",
+      "video": "https://www.youtube.com/watch?v=VR8-bTACl3g",
+      "event_url": "https://confpad.io/conferences/cloudnativesecuritycon-north-america-2023/cloud-native-security-landscape-myths-dragons-and-real-talk",
+      "date_kind": "month",
+      "year": "2023",
+      "sort": "2023-02-02",
+      "date_label": "February 2023",
+      "date": "2023-02"
+    },
+    {
+      "title": "How to Lose 500k in 5 Minutes",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/how-to-lose-500k-in-5-minutes"
+      ],
+      "type": "lightning",
+      "slides": "https://speakerdeck.com/rdegges/how-to-lose-500k-in-5-minutes",
+      "date_kind": "slides",
+      "year": "2021",
+      "sort": "2021-11-18",
+      "date_label": "Slides published November 18, 2021",
+      "date": "2021-11-18"
+    },
+    {
+      "title": "Useful Cryptography",
+      "sources": [
+        "https://devnexus.com/archive/devnexus2020/speakers/1518"
+      ],
+      "event": "DevNexus 2020",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/useful-cryptography-an-introduction",
+      "event_url": "https://devnexus.com/archive/devnexus2020/speakers/1518",
+      "date_kind": "year",
+      "year": "2020",
+      "sort": "2020-12-31",
+      "date_label": "2020",
+      "date": "2020",
+      "caveat": "The DevNexus 2020 archive lists this talk and does not give a session day. The same talk was scheduled at DevNexus on March 7, 2019, and the 2020 page does not say whether this was a second delivery."
+    },
+    {
+      "title": "A Programmer's Guide to Saving, Investing, and Retiring Early",
+      "sources": [
+        "https://confpad.io/conferences/build-stuff-2020/a-programmer-s-guide-to-saving-investing-and-retiring-early",
+        "https://confpad.io/speakers/randall-degges",
+        "https://www.youtube.com/watch?v=34K334j6gkY"
+      ],
+      "event": "Build Stuff 2020",
+      "type": "conference talk",
+      "video": "https://www.youtube.com/watch?v=34K334j6gkY",
+      "event_url": "https://confpad.io/conferences/build-stuff-2020/a-programmer-s-guide-to-saving-investing-and-retiring-early",
+      "date_kind": "month",
+      "year": "2020",
+      "sort": "2020-11-15",
+      "date_label": "November 2020",
+      "date": "2020-11"
+    },
+    {
+      "title": "12 Factors of Pain and Suffering",
+      "sources": [
+        "https://buildstuff2019.sched.com/speaker/r4",
+        "https://confpad.io/conferences/build-stuff-2019/12-factors-of-pain-and-suffering",
+        "https://www.youtube.com/watch?v=K-GmkH4DZQk",
+        "https://speakerdeck.com/rdegges/12-factors-of-pain-and-suffering"
+      ],
+      "event": "Build Stuff 2019",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/12-factors-of-pain-and-suffering",
+      "video": "https://www.youtube.com/watch?v=K-GmkH4DZQk",
+      "event_url": "https://confpad.io/conferences/build-stuff-2019/12-factors-of-pain-and-suffering",
+      "date_kind": "month",
+      "year": "2019",
+      "sort": "2019-11-15",
+      "date_label": "November 2019",
+      "date": "2019-11",
+      "caveat": "ConfPad dates the conference November 13–15, 2019. A search snippet of the Sched speaker page says Thursday, November 14. That Sched page returned 403 when fetched directly, so the day is not treated as confirmed."
+    },
+    {
+      "title": "An Introduction to PASETO Tokens",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/an-introduction-to-paseto-tokens",
+        "https://sessionize.com/rdegges/"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/an-introduction-to-paseto-tokens",
+      "date_kind": "slides",
+      "year": "2019",
+      "sort": "2019-10-14",
+      "date_label": "Slides published October 14, 2019",
+      "date": "2019-10-14"
+    },
+    {
+      "title": "Useful Cryptography, an Introduction",
+      "sources": [
+        "https://developer.okta.com/blog/2019/02/27/devnexus-2019",
+        "https://speakerdeck.com/rdegges/useful-cryptography-an-introduction"
+      ],
+      "event": "DevNexus 2019",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/useful-cryptography-an-introduction",
+      "event_url": "https://developer.okta.com/blog/2019/02/27/devnexus-2019",
+      "date_kind": "event",
+      "year": "2019",
+      "sort": "2019-03-07",
+      "date_label": "March 7, 2019",
+      "date": "2019-03-07"
+    },
+    {
+      "title": "JSON Web Tokens Suck",
+      "sources": [
+        "https://www.youtube.com/watch?v=JdGOb7AxUo0"
+      ],
+      "event": "DevNet Create 2018",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "video": "https://www.youtube.com/watch?v=JdGOb7AxUo0",
+      "date_kind": "year",
+      "year": "2018",
+      "sort": "2018-12-31",
+      "date_label": "2018",
+      "date": "2018"
+    },
+    {
+      "title": "Why JWTs Are Bad for Authentication",
+      "sources": [
+        "https://www.youtube.com/watch?v=GdJ0wFi1Jyo"
+      ],
+      "event": "SFNode Meetup",
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "video": "https://www.youtube.com/watch?v=GdJ0wFi1Jyo",
+      "date_kind": "month",
+      "year": "2018",
+      "sort": "2018-01-31",
+      "date_label": "January 2018",
+      "date": "2018-01"
+    },
+    {
+      "title": "JSON Web Tokens Suck",
+      "sources": [
+        "https://www.youtube.com/watch?v=pYeekwv3vC4"
+      ],
+      "event": "ForwardJS",
+      "location": "San Francisco, CA",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "video": "https://www.youtube.com/watch?v=pYeekwv3vC4",
+      "date_kind": "event",
+      "year": "2018",
+      "sort": "2018-01-13",
+      "date_label": "January 13, 2018",
+      "date": "2018-01-13"
+    },
+    {
+      "title": "JSON Web Tokens Suck",
+      "sources": [
+        "https://confpad.io/conferences/codemash-2018/json-web-tokens-suck",
+        "https://confpad.io/speakers/randall-degges",
+        "https://www.youtube.com/watch?v=ompl-2HGSQM"
+      ],
+      "event": "CodeMash 2018",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "video": "https://www.youtube.com/watch?v=ompl-2HGSQM",
+      "event_url": "https://confpad.io/conferences/codemash-2018/json-web-tokens-suck",
+      "date_kind": "month",
+      "year": "2018",
+      "sort": "2018-01-12",
+      "date_label": "January 2018",
+      "date": "2018-01"
+    },
+    {
+      "title": "JWTs Aren't So Great",
+      "sources": [
+        "https://siliconvalley-codecamp.com/presenter/2017/randall-degges-20985/",
+        "https://siliconvalley-codecamp.com/session/2017/jwts-arent-so-great/"
+      ],
+      "event": "Silicon Valley Code Camp 2017",
+      "location": "PayPal Town Hall",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "event_url": "https://siliconvalley-codecamp.com/session/2017/jwts-arent-so-great/",
+      "date_kind": "event",
+      "year": "2017",
+      "sort": "2017-10-08",
+      "date_label": "October 8, 2017",
+      "date": "2017-10-08"
+    },
+    {
+      "title": "Everything You Ever Wanted to Know About Web Authentication in Python",
+      "sources": [
+        "https://2017.pygotham.org/talks/everything-you-ever-wanted-to-know-about-web-authentication-in-python/",
+        "https://pyvideo.org/speaker/randall-degges.html",
+        "https://www.youtube.com/watch?v=oPIPwW7lJ0E"
+      ],
+      "event": "PyGotham 2017",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/almost-everything-you-ever-wanted-to-know-about-web-authentication-in-python",
+      "video": "https://www.youtube.com/watch?v=oPIPwW7lJ0E",
+      "event_url": "https://2017.pygotham.org/talks/everything-you-ever-wanted-to-know-about-web-authentication-in-python/",
+      "date_kind": "event",
+      "year": "2017",
+      "sort": "2017-10-06",
+      "date_label": "October 6, 2017",
+      "date": "2017-10-06"
+    },
+    {
+      "title": "Everything You Ever Wanted to Know About Web Authentication in Python",
+      "sources": [
+        "https://pyvideo.org/pybay-2017/everything-you-ever-wanted-to-know-about-web-authentication-in-python.html",
+        "https://pyvideo.org/speaker/randall-degges.html",
+        "https://web.archive.org/web/20170911160553/http://lanyrd.com/2017/py-bay/",
+        "https://www.youtube.com/watch?v=IdysobPKa6g"
+      ],
+      "event": "PyBay 2017",
+      "location": "Mission Bay Conference Center, San Francisco",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/almost-everything-you-ever-wanted-to-know-about-web-authentication-in-python",
+      "video": "https://www.youtube.com/watch?v=IdysobPKa6g",
+      "event_url": "https://pyvideo.org/pybay-2017/everything-you-ever-wanted-to-know-about-web-authentication-in-python.html",
+      "date_kind": "event",
+      "year": "2017",
+      "sort": "2017-08-12",
+      "date_label": "August 12, 2017",
+      "date": "2017-08-12"
+    },
+    {
+      "title": "JWTs Aren't So Great",
+      "sources": [
+        "https://seanode.github.io/2017/07/05/august-2017-auth-and-jwts",
+        "https://www.meetup.com/Seattle-Node-js/events/241400591/"
+      ],
+      "event": "Seattle Node.js Meetup",
+      "location": "General Assembly, 1218 3rd Avenue, Seattle, WA 98101",
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "event_url": "https://seanode.github.io/2017/07/05/august-2017-auth-and-jwts",
+      "date_kind": "announced",
+      "year": "2017",
+      "sort": "2017-08-01",
+      "date_label": "Announced for August 1, 2017",
+      "date": "2017-08-01",
+      "caveat": "A pre-event agenda lists this talk. No recording or recap confirming he spoke was found."
+    },
+    {
+      "title": "Almost Everything You Ever Wanted to Know About Web Authentication in Node",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/almost-everything-you-ever-wanted-to-know-about-web-authentication-in-node",
+        "https://www.youtube.com/watch?v=i7of02icPyQ"
+      ],
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/almost-everything-you-ever-wanted-to-know-about-web-authentication-in-node",
+      "video": "https://www.youtube.com/watch?v=i7of02icPyQ",
+      "date_kind": "slides",
+      "year": "2017",
+      "sort": "2017-06-01",
+      "date_label": "Slides published June 1, 2017",
+      "date": "2017-06-01"
+    },
+    {
+      "title": "WTF Are APIs?!",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/wtf-are-apis"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/wtf-are-apis",
+      "date_kind": "slides",
+      "year": "2016",
+      "sort": "2016-10-15",
+      "date_label": "Slides published October 15, 2016",
+      "date": "2016-10-15"
+    },
+    {
+      "title": "Fuck It: Let's Have Fun - Building a Top Torrents API",
+      "sources": [
+        "https://speakerdeck.com/rdegges/fuck-it-lets-have-fun-building-a-top-torrents-api",
+        "https://speakerdeck.com/rdegges.atom"
+      ],
+      "event": "Hack Reactor",
+      "location": "San Francisco",
+      "slides": "https://speakerdeck.com/rdegges/fuck-it-lets-have-fun-building-a-top-torrents-api",
+      "date_kind": "slides",
+      "year": "2016",
+      "sort": "2016-10-12",
+      "date_label": "Slides published October 12, 2016",
+      "date": "2016-10-12",
+      "caveat": "The deck names the event. This date is when the slides were published, not a separate event date."
+    },
+    {
+      "title": "Storing User Files with Express, Stormpath, and Amazon S3",
+      "sources": [
+        "https://speakerdeck.com/rdegges/storing-user-files-with-express-stormpath-and-amazon-s3",
+        "https://speakerdeck.com/rdegges.atom"
+      ],
+      "type": "webinar",
+      "slides": "https://speakerdeck.com/rdegges/storing-user-files-with-express-stormpath-and-amazon-s3",
+      "date_kind": "event",
+      "year": "2016",
+      "sort": "2016-10-06",
+      "date_label": "October 6, 2016",
+      "date": "2016-10-06"
+    },
+    {
+      "title": "An Introduction to Static Sites and AWS",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/an-introduction-to-static-sites-and-aws",
+      "date_kind": "slides",
+      "year": "2015",
+      "sort": "2015-11-23",
+      "date_label": "Slides published November 23, 2015",
+      "date": "2015-11-23"
+    },
+    {
+      "title": "Everything You Ever Wanted to Know About Node Authentication",
+      "sources": [
+        "https://siliconvalley-codecamp.com/presenter/2015/randall-degges-20985/",
+        "https://siliconvalley-codecamp.com/session/2015/everything-you-ever-wanted-to-know-about-node-authentication/"
+      ],
+      "event": "Silicon Valley Code Camp 2015",
+      "location": "Evergreen Valley College",
+      "type": "conference talk",
+      "event_url": "https://siliconvalley-codecamp.com/session/2015/everything-you-ever-wanted-to-know-about-node-authentication/",
+      "date_kind": "event",
+      "year": "2015",
+      "sort": "2015-10-03",
+      "date_label": "October 3, 2015",
+      "date": "2015-10-03"
+    },
+    {
+      "title": "Let's Build Some Shit",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/lets-build-some-shit",
+      "date_kind": "slides",
+      "year": "2015",
+      "sort": "2015-08-28",
+      "date_label": "Slides published August 28, 2015",
+      "date": "2015-08-28"
+    },
+    {
+      "title": "How to Build an API Service in 30 Minutes with Express.js",
+      "sources": [
+        "https://speakerdeck.com/rdegges/how-to-build-an-api-service-in-30-minutes-with-express-dot-js",
+        "https://speakerdeck.com/rdegges.atom",
+        "https://web.archive.org/web/20170913035928/http://lanyrd.com/2015/fluentconf/",
+        "https://web.archive.org/web/20170913035928/http://lanyrd.com/profile/rdegges/"
+      ],
+      "event": "O'Reilly Fluent Conference 2015",
+      "location": "San Francisco Marriott Marquis, San Francisco",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/how-to-build-an-api-service-in-30-minutes-with-express-dot-js",
+      "event_url": "https://web.archive.org/web/20170913035928/http://lanyrd.com/2015/fluentconf/",
+      "date_kind": "event",
+      "year": "2015",
+      "sort": "2015-04-21",
+      "date_label": "April 21, 2015",
+      "date": "2015-04-21"
+    },
+    {
+      "title": "Auth Best Practices - Lessons Learned Writing the Most Amazing Auth Library Ever",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/auth-best-practices-lessons-learned-writing-the-most-amazing-auth-library-ever",
+      "date_kind": "slides",
+      "year": "2015",
+      "sort": "2015-01-16",
+      "date_label": "Slides published January 16, 2015",
+      "date": "2015-01-16"
+    },
+    {
+      "title": "Everything You Ever Wanted to Know about Node Authentication",
+      "sources": [
+        "https://siliconvalley-codecamp.com/presenter/2014/randall-degges-20985/",
+        "https://siliconvalley-codecamp.com/session/2014/everything-you-ever-wanted-to-know-about-node-authentication/",
+        "https://speakerdeck.com/rdegges/everything-you-ever-wanted-to-know-about-authentication-in-node-dot-js"
+      ],
+      "event": "Silicon Valley Code Camp 2014",
+      "location": "Foothill College",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/everything-you-ever-wanted-to-know-about-authentication-in-node-dot-js",
+      "event_url": "https://siliconvalley-codecamp.com/session/2014/everything-you-ever-wanted-to-know-about-node-authentication/",
+      "date_kind": "event",
+      "year": "2014",
+      "sort": "2014-10-12",
+      "date_label": "October 12, 2014",
+      "date": "2014-10-12"
+    },
+    {
+      "title": "Architecture",
+      "sources": [
+        "https://web.archive.org/web/20151118050903/http://lanyrd.com/2014/api-strategy-practice-conference/",
+        "https://web.archive.org/web/20151118050903/http://lanyrd.com/profile/rdegges/2014/"
+      ],
+      "event": "API Strategy & Practice Conference",
+      "location": "Chicago",
+      "type": "panel",
+      "event_url": "https://web.archive.org/web/20151118050903/http://lanyrd.com/2014/api-strategy-practice-conference/",
+      "date_kind": "event",
+      "year": "2014",
+      "sort": "2014-09-25",
+      "date_label": "September 25, 2014",
+      "date": "2014-09-25"
+    },
+    {
+      "title": "Learning to Love SOA",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/learning-to-love-soa"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/learning-to-love-soa",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-09-25",
+      "date_label": "Slides published September 25, 2014",
+      "date": "2014-09-25"
+    },
+    {
+      "title": "Service Oriented Flask",
+      "sources": [
+        "https://2014.pygotham.org/talks/10.html",
+        "https://2014.pygotham.org/venue/",
+        "https://pyvideo.org/pygotham-2014/service-oriented-flask.html",
+        "https://www.youtube.com/watch?v=KkRj9DPPV0s",
+        "https://speakerdeck.com/rdegges/service-oriented-flask",
+        "https://speakerdeck.com/pygotham2014/service-oriented-flask-randall-degges"
+      ],
+      "event": "PyGotham 2014",
+      "location": "AMA Executive Conference Center, 1601 Broadway, New York, NY",
+      "type": "conference talk",
+      "slides": "https://speakerdeck.com/rdegges/service-oriented-flask",
+      "video": "https://www.youtube.com/watch?v=KkRj9DPPV0s",
+      "event_url": "https://2014.pygotham.org/talks/10.html",
+      "date_kind": "event",
+      "year": "2014",
+      "sort": "2014-08-17",
+      "date_label": "August 17, 2014",
+      "date": "2014-08-17"
+    },
+    {
+      "title": "Password Security - From Zero to Hero",
+      "sources": [
+        "https://speakerdeck.com/rdegges.atom",
+        "https://speakerdeck.com/rdegges/password-security-from-zero-to-hero-1"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/password-security-from-zero-to-hero-1",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-06-30",
+      "date_label": "Slides published June 30, 2014",
+      "date": "2014-06-30"
+    },
+    {
+      "title": "Python Packages You Should Know and Love",
+      "sources": [
+        "https://speakerdeck.com/rdegges/python-packages-you-should-know-and-love"
+      ],
+      "event": "SF Django meetup",
+      "type": "lightning",
+      "slides": "https://speakerdeck.com/rdegges/python-packages-you-should-know-and-love",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-06-25",
+      "date_label": "Slides published June 25, 2014",
+      "date": "2014-06-25",
+      "caveat": "The deck names the event. This date is when the slides were published, not a separate event date."
+    },
+    {
+      "title": "Django & Bcrypt",
+      "sources": [
+        "https://web.archive.org/web/20151118050903/http://lanyrd.com/2014/django-17-and-you/",
+        "https://web.archive.org/web/20151118050903/http://lanyrd.com/profile/rdegges/2014/",
+        "https://speakerdeck.com/rdegges/omg-crypto-securing-password-with-django"
+      ],
+      "event": "Django 1.7 And You",
+      "location": "140 New Montgomery Street, San Francisco, CA",
+      "type": "lightning",
+      "slides": "https://speakerdeck.com/rdegges/omg-crypto-securing-password-with-django",
+      "event_url": "https://web.archive.org/web/20151118050903/http://lanyrd.com/2014/django-17-and-you/",
+      "date_kind": "event",
+      "year": "2014",
+      "sort": "2014-04-30",
+      "date_label": "April 30, 2014",
+      "date": "2014-04-30"
+    },
+    {
+      "title": "Python Password Security: From Zero to Hero",
+      "sources": [
+        "https://speakerdeck.com/rdegges/python-password-security-from-zero-to-hero"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/python-password-security-from-zero-to-hero",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-03-21",
+      "date_label": "Slides published March 21, 2014",
+      "date": "2014-03-21"
+    },
+    {
+      "title": "Password Security: From Zero to Hero",
+      "sources": [
+        "https://speakerdeck.com/rdegges/password-security-from-zero-to-hero"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/password-security-from-zero-to-hero",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-03-13",
+      "date_label": "Slides published March 13, 2014",
+      "date": "2014-03-13"
+    },
+    {
+      "title": "To Infinity ... and Beyond!",
+      "sources": [
+        "https://speakerdeck.com/rdegges/to-infinity-dot-dot-dot-and-beyond"
+      ],
+      "event": "Austin Cloud Users meetup",
+      "location": "Austin",
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/to-infinity-dot-dot-dot-and-beyond",
+      "date_kind": "slides",
+      "year": "2014",
+      "sort": "2014-03-06",
+      "date_label": "Slides published March 6, 2014",
+      "date": "2014-03-06",
+      "caveat": "The deck names the event. This date is when the slides were published, not a separate event date."
+    },
+    {
+      "title": "Django → Flask → Scaling: Story of Growing a Python API Company",
+      "sources": [
+        "https://www.meetup.com/The-San-Francisco-Django-Meetup-Group/events/122041132/",
+        "https://www.yeti.co/blog/san-francisco-django-meetup-recap-1-4",
+        "https://speakerdeck.com/rdegges/building-an-api-company-from-the-ground-up"
+      ],
+      "event": "San Francisco Django Meetup",
+      "location": "Yelp Headquarters, San Francisco, CA",
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/building-an-api-company-from-the-ground-up",
+      "event_url": "https://www.meetup.com/The-San-Francisco-Django-Meetup-Group/events/122041132/",
+      "date_kind": "event",
+      "year": "2013",
+      "sort": "2013-07-02",
+      "date_label": "July 2, 2013",
+      "date": "2013-07-02"
+    },
+    {
+      "title": "OpenCNAM - How and Why We Built a Caller ID Name API",
+      "sources": [
+        "https://speakerdeck.com/rdegges/opencnam-how-and-why-we-built-a-caller-id-name-api"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/opencnam-how-and-why-we-built-a-caller-id-name-api",
+      "date_kind": "slides",
+      "year": "2012",
+      "sort": "2012-12-11",
+      "date_label": "Slides published December 11, 2012",
+      "date": "2012-12-11"
+    },
+    {
+      "title": "Bring Down the System!",
+      "sources": [
+        "https://speakerdeck.com/rdegges/bring-down-the-system-1"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/bring-down-the-system-1",
+      "date_kind": "slides",
+      "year": "2012",
+      "sort": "2012-05-02",
+      "date_label": "Slides published May 2, 2012",
+      "date": "2012-05-02"
+    },
+    {
+      "title": "Hello world? Hello? Hello?",
+      "sources": [
+        "https://speakerdeck.com/rdegges/hello-world-hello-hello"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/hello-world-hello-hello",
+      "date_kind": "slides",
+      "year": "2011",
+      "sort": "2011-10-23",
+      "date_label": "Slides published October 23, 2011",
+      "date": "2011-10-23"
+    },
+    {
+      "title": "Intro to Telephony in Django",
+      "sources": [
+        "https://speakerdeck.com/rdegges/intro-to-telephony-in-django"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/intro-to-telephony-in-django",
+      "date_kind": "slides",
+      "year": "2011",
+      "sort": "2011-10-23",
+      "date_label": "Slides published October 23, 2011",
+      "date": "2011-10-23"
+    },
+    {
+      "title": "Running Django Apps on Heroku",
+      "sources": [
+        "https://speakerdeck.com/rdegges/running-django-apps-on-heroku"
+      ],
+      "slides": "https://speakerdeck.com/rdegges/running-django-apps-on-heroku",
+      "date_kind": "slides",
+      "year": "2011",
+      "sort": "2011-10-23",
+      "date_label": "Slides published October 23, 2011",
+      "date": "2011-10-23"
+    },
+    {
+      "title": "12 Factors of Pain and Suffering for Developers",
+      "sources": [
+        "https://snyk.io/blog/stress-free-security-for-devs-and-ops-on-aws/"
+      ],
+      "event": "Stress-Free Security for Devs and Ops on AWS",
+      "type": "keynote",
+      "slides": "https://speakerdeck.com/rdegges/12-factors-of-pain-and-suffering",
+      "event_url": "https://snyk.io/blog/stress-free-security-for-devs-and-ops-on-aws/",
+      "date_kind": "unknown",
+      "year": "Date unknown",
+      "sort": "0000-06-01",
+      "date_label": "Date not recorded",
+      "caveat": "Snyk's recap, published April 3, 2023, calls this the opening keynote of a half-day virtual event hosted recently. The event date is not on the page."
+    },
+    {
+      "title": "JWTs Suck (and Are Stupid)",
+      "sources": [
+        "https://www.youtube.com/watch?v=GrLtOjCTB1s"
+      ],
+      "event": "Denver Node.js meetup",
+      "location": "Denver",
+      "type": "meetup",
+      "slides": "https://speakerdeck.com/rdegges/jwts-suck",
+      "video": "https://www.youtube.com/watch?v=GrLtOjCTB1s",
+      "date_kind": "unknown",
+      "year": "Date unknown",
+      "sort": "0000-05-01",
+      "date_label": "Date not recorded",
+      "caveat": "The video title names the meetup and the speaker. No date was found."
+    },
+    {
+      "title": "One-time pad encryption",
+      "event": "High school computer club",
+      "type": "school presentation",
+      "date_kind": "unknown",
+      "year": "Date unknown",
+      "sort": "0000-01-01",
+      "date_label": "Date not recorded",
+      "event_url": "https://www.rdegges.com/2011/i-want-to-be-a-renaissance-man/",
+      "caveat": "In a 2011 post he says this was his first technical presentation, to his high school computer club, with a C implementation. He does not give the year.",
+      "sources": [
+        "https://www.rdegges.com/2011/i-want-to-be-a-renaissance-man/"
+      ]
+    }
+  ]
+}

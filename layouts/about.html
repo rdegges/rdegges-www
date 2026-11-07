@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <div class="container article">
+            <div class="row">
+                <main
+                    class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8"
+                >
+                    <article>
+                        <header>
+                            <h1>{{ .Title }}</h1>
+                        </header>
+                        {{ .Content }}
+                        <section class="subscribe">
+                            <p>
+                                More of his writing is on the
+                                <a
+                                    href="/"
+                                    hreflang="{{ .Site.Language.Locale }}"
+                                    title="{{ .Site.Title }} - Home"
+                                    type="text/html"
+                                    >home page</a
+                                >. You can also follow him on
+                                <a
+                                    href="https://github.com/rdegges"
+                                    hreflang="{{ .Site.Language.Locale }}"
+                                    target="_blank"
+                                    title="Randall Degges on Github"
+                                    type="text/html"
+                                    >GitHub</a
+                                >
+                                or subscribe via
+                                <a
+                                    href="/feed.xml"
+                                    type="application/atom+xml"
+                                    target="_blank"
+                                    title="Randall Degges' Atom feed"
+                                    >RSS</a
+                                >
+                                and email below.
+                            </p>
+                            {{ partial "email-subscribe.html" . }}
+                        </section>
+                    </article>
+                </main>
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+    </body>
+</html>

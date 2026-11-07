@@ -39,6 +39,19 @@
 {{- $graph := slice -}}
 {{- if .IsHome -}}
   {{- $graph = slice $website $person -}}
+{{- else if eq .Layout "about" -}}
+  {{- /* An about page is not a blog post. ProfilePage points at the same
+         Person the rest of the site already describes. */ -}}
+  {{- $profile := dict
+        "@type" "ProfilePage"
+        "@id" (print .Permalink "#profile")
+        "url" .Permalink
+        "name" .Title
+        "description" (.Description | default site.Params.description)
+        "inLanguage" "en-US"
+        "mainEntity" (dict "@id" (print $home "#person"))
+        "isPartOf" (dict "@id" (print $home "#website")) -}}
+  {{- $graph = slice $profile $website $person -}}
 {{- else if .IsPage -}}
   {{- $post := dict
         "@type" "BlogPosting"

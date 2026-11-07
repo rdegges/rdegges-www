@@ -1,0 +1,49 @@
+{{- /*
+  Timeline for data/talks.json. The file is the record. This shortcode only
+  prints it, newest first, using the date labels already stored there.
+*/ -}}
+{{- $talks := sort hugo.Data.talks.talks "sort" "desc" -}}
+{{- $years := slice -}}
+{{- range $talks -}}
+  {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end -}}
+{{- end -}}
+<section class="talks">
+    {{- range $years -}}
+    {{- $year := . -}}
+    <h3>{{ $year }}</h3>
+    <ol class="talk-list">
+        {{- range $talks -}}
+        {{- if eq .year $year -}}
+        {{- $talk := . -}}
+        <li class="talk talk-{{ $talk.date_kind }}">
+            <p class="talk-when">{{ $talk.date_label }}</p>
+            <p class="talk-title">{{ $talk.title }}</p>
+            {{- $bits := slice -}}
+            {{- with $talk.event }}{{ $bits = $bits | append . }}{{ end -}}
+            {{- with $talk.location }}{{ $bits = $bits | append . }}{{ end -}}
+            {{- with $talk.type }}{{ $bits = $bits | append . }}{{ end -}}
+            {{- with $bits }}
+            <p class="talk-meta">{{ delimit . " · " }}</p>
+            {{- end -}}
+            {{- if or $talk.slides $talk.video $talk.event_url }}
+            <p class="talk-links">
+                {{- with $talk.slides -}}
+                <a href="{{ . }}" hreflang="{{ site.Language.Locale }}" target="_blank" title="{{ $talk.title }} - Slides" type="text/html">Slides</a>
+                {{- end -}}
+                {{- with $talk.video -}}
+                <a href="{{ . }}" hreflang="{{ site.Language.Locale }}" target="_blank" title="{{ $talk.title }} - Video" type="text/html">Video</a>
+                {{- end -}}
+                {{- with $talk.event_url -}}
+                <a href="{{ . }}" hreflang="{{ site.Language.Locale }}" target="_blank" title="{{ $talk.title }} - Event" type="text/html">Event</a>
+                {{- end -}}
+            </p>
+            {{- end -}}
+            {{- with $talk.caveat }}
+            <p class="talk-caveat">{{ . }}</p>
+            {{- end }}
+        </li>
+        {{- end -}}
+        {{- end }}
+    </ol>
+    {{- end }}
+</section>

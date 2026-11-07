@@ -19,6 +19,7 @@ Every post is also available as Markdown: replace a post's trailing slash with /
 - {{ .title }}: {{ .url }}
 {{- end }}
 {{- end }}
+- About: {{ "about/" | absURL }}
 
 ## Posts
 {{ range site.RegularPages }}
