@@ -2,6 +2,7 @@
 
 import html
 import os
+import re
 import unittest
 from html.parser import HTMLParser
 
@@ -190,6 +191,33 @@ class TestAbout(SiteTestCase):
         css = open(public_file(href), encoding="utf-8").read()
         self.assertIn("aspect-ratio:1/1", css.replace(" ", ""))
         self.assertIn("object-fit:cover", css.replace(" ", ""))
+
+    def test_photos_stack_through_tablet_width(self):
+        """The float has to turn off for a phone and a 768px tablet.
+
+        Bootstrap's sm column is only ~500px, and a media query is matched
+        against the viewport including the scrollbar. A 600px cutoff left
+        both of those floated.
+        """
+        href = self.page.find("link", rel="stylesheet")[0]["href"]
+        css = open(public_file(href), encoding="utf-8").read()
+        blocks = re.findall(
+            r"@media\s*\(\s*max-width:\s*(\d+)px\s*\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}",
+            css,
+        )
+        stacking = [
+            (int(width), body)
+            for width, body in blocks
+            if ".article .float-right" in body and re.search(r"float\s*:\s*none", body)
+        ]
+        self.assertEqual(len(stacking), 1)
+        width, body = stacking[0]
+        self.assertGreaterEqual(width, 991)
+        self.assertIn(".article .float-left", body)
+        self.assertRegex(body, r"width\s*:\s*70%")
+        # The desktop rule is still the 220px right float, outside that query.
+        self.assertRegex(css, r"\.article \.float-right\s*\{[^}]*float\s*:\s*right")
+        self.assertIn("220px", css)
 
 
 if __name__ == "__main__":

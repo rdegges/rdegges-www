@@ -436,7 +436,13 @@ footer p a:visited {
     display: flow-root;
 }
 
-@media (max-width: 600px) {
+/* Stack below Bootstrap's md breakpoint (992px). From 768px to 991px the
+   container is 750px and this column is col-sm-8, about 500px, so a 236px
+   mat floats beside a squeezed paragraph. The old 600px cutoff missed that,
+   and it also missed a window whose content is just under 600px: the media
+   query uses the viewport including the scrollbar (~15px), so a 591px-wide
+   page was still laid out with the float. */
+@media (max-width: 991px) {
     .article .float-right,
     .article .float-left {
         float: none;
