@@ -11,13 +11,19 @@
                     <article>
                         <header>
                             <h1>{{ .Title }}</h1>
+                            {{- /* Standalone pages such as About set showDate
+                                   to false. Posts leave it unset and keep the
+                                   dateline. */ -}}
+                            {{- if ne .Params.showDate false }}
                             <p class="post-date">
                                 <time datetime="{{ .Date.Format "2006-01-02" }}"
                                     >{{ .Date.Format "January 2, 2006" }}</time
                                 >
                             </p>
+                            {{- end }}
                         </header>
                         {{ .Content }}
+                        {{- if ne .Params.showSubscribe false }}
                         <section class="subscribe">
                             <p>
                                 <b>PS</b>: If you read this far, you might want
@@ -54,6 +60,7 @@
                             </p>
                             {{ partial "email-subscribe.html" . }}
                         </section>
+                        {{- end }}
                     </article>
                 </main>
             </div>

@@ -17,8 +17,11 @@
   Every image this hook emits is wrapped so the print mat's padding sits
   outside the image (padding on the img itself would shrink it). A source
   wider than the content column links to the original (a.img-full).
-  Everything else, including GIFs and files the column already shows at
-  full size, is span.img-mat: the mat, and no zoom affordance.
+  A page may also set linkOriginals when the picture on the page is a CSS
+  crop of a file the column already fits: the About photos do, so the
+  square still opens the uncropped original. Everything else, including
+  GIFs and files the column already shows at full size, is span.img-mat:
+  the mat, and no zoom affordance.
 */ -}}
 
 {{- $dest := .Destination -}}
@@ -55,8 +58,16 @@
   {{- $processable := and (eq $image.ResourceType "image") (not (in (slice "gif" "svg") $sub)) -}}
 
   {{- /* The first image on a page is almost always the LCP element: fetch it
-         eagerly and at high priority. Everything below it can wait. */ -}}
+         eagerly and at high priority. Everything below it can wait.
+         RenderString (how the About photos are drawn) restarts Ordinal at
+         zero, so a page that links originals counts its own images. */ -}}
   {{- $lcp := eq .Ordinal 0 -}}
+  {{- if eq .Page.Params.linkOriginals true -}}
+    {{- $n := 0 -}}
+    {{- with .Page.Store.Get "linkOriginalOrdinal" }}{{ $n = . }}{{ end -}}
+    {{- .Page.Store.Set "linkOriginalOrdinal" (add $n 1) -}}
+    {{- $lcp = eq $n 0 -}}
+  {{- end -}}
   {{- $loadAttrs := "loading=\"lazy\" decoding=\"async\"" -}}
   {{- if $lcp }}{{ $loadAttrs = "loading=\"eager\" fetchpriority=\"high\" decoding=\"async\"" }}{{ end -}}
 
@@ -101,14 +112,17 @@
     {{- /* Link when the original is wider than the on-page column. A file
            the column already shows at its own size is not a link. This is
            not the srcset cap: a 1024px file is still served inline, and it
-           is also a link, because the page displays it at $column. */ -}}
+           is also a link, because the page displays it at $column.
+           linkOriginals is the About exception: those squares are CSS crops,
+           so a 600px stage frame still links to the uncropped file. */ -}}
     {{- $widerThanColumn := gt $image.Width $column -}}
-    {{- if $widerThanColumn -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
+    {{- $linkOriginal := or $widerThanColumn (eq .Page.Params.linkOriginals true) -}}
+    {{- if $linkOriginal -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
     <img src="{{ $fallback.RelPermalink }}"
       {{- /* A one-entry srcset says nothing that src does not. */ -}}
       {{- if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
       width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
       alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
-    {{- if $widerThanColumn -}}</a>{{ else -}}</span>{{ end -}}
+    {{- if $linkOriginal -}}</a>{{ else -}}</span>{{ end -}}
   {{- end -}}
 {{- end -}}

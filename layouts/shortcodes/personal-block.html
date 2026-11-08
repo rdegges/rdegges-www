@@ -1,0 +1,9 @@
+<div id="personal-block">
+{{- partial "about-photo.html" (dict
+      "page" .Page
+      "src" (.Get "src")
+      "alt" (.Get "alt")
+      "align" "left"
+      "caption" (.Get "caption")) -}}
+{{ .Page.RenderString (dict "display" "block") (.Inner | strings.TrimSpace) }}
+</div>

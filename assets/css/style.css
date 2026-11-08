@@ -362,3 +362,92 @@ footer p a:visited {
     color: #b10000;
     text-decoration: underline;
 }
+
+/* About page photos. The square is a CSS crop of the original file. The
+   caption uses the same grey Raleway as a post date, not a block quote.
+   The shared print mat is width:fit-content with 2.5em auto margins so a
+   post image centers in the column. Inside these floats that margin would
+   sit between the crop and its caption, so the mat margin is cleared and
+   the figure shrink-wraps the mat. The image itself stays 220px or 200px. */
+.article figure.about-photo {
+    margin: 2.5em auto;
+    text-align: center;
+}
+
+.article figure.about-photo figcaption {
+    font-family: raleway, sans-serif;
+    font-size: 0.7em;
+    color: #767676;
+    margin-top: 0.7em;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.article .float-right {
+    float: right;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0.4em 0 1em 1.6em !important;
+}
+
+.article .float-left {
+    float: left;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0.4em 1.6em 1em 0 !important;
+}
+
+.article .float-right a.img-full,
+.article .float-left a.img-full {
+    margin: 0;
+}
+
+.article .float-right img {
+    width: 220px;
+    border-radius: 4px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.article .float-left img {
+    width: 200px;
+    border-radius: 4px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.article .float-right figcaption,
+.article .float-left figcaption {
+    font-family: raleway, sans-serif;
+    font-size: 0.7em;
+    color: #767676;
+    margin-top: 0.6em;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+#personal-block {
+    display: flow-root;
+}
+
+@media (max-width: 600px) {
+    .article .float-right,
+    .article .float-left {
+        float: none;
+        width: 70%;
+        margin: 1.5em auto !important;
+    }
+
+    .article .float-right a.img-full,
+    .article .float-left a.img-full {
+        width: 100%;
+    }
+
+    .article .float-right img,
+    .article .float-left img {
+        width: 100%;
+    }
+}

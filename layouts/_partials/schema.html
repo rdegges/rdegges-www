@@ -39,6 +39,20 @@
 {{- $graph := slice -}}
 {{- if .IsHome -}}
   {{- $graph = slice $website $person -}}
+{{- else if and .IsPage (eq .Params.showDate false) -}}
+  {{- /* A standalone page such as About is not a post and shows no date, so
+         it must not be a BlogPosting with a publish time. */ -}}
+  {{- $about := dict
+        "@type" "AboutPage"
+        "@id" (print .Permalink "#webpage")
+        "url" .Permalink
+        "name" .Title
+        "description" (.Description | default site.Params.description)
+        "inLanguage" "en-US"
+        "about" (dict "@id" (print $home "#person"))
+        "mainEntity" (dict "@id" (print $home "#person"))
+        "isPartOf" (dict "@id" (print $home "#website")) -}}
+  {{- $graph = slice $about $website $person -}}
 {{- else if .IsPage -}}
   {{- $post := dict
         "@type" "BlogPosting"

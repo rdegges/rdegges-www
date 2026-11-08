@@ -51,6 +51,10 @@ subtitle = "Random Thoughts of a Happy Programmer"
 emailSubscriptionFormAction = "https://buttondown.com/api/emails/embed-subscribe/rdegges"
 
 [[params.navLinks]]
+title = "About"
+url = "/about/"
+
+[[params.navLinks]]
 title = "Bluesky"
 url = "https://bsky.app/profile/rdegges.com"
 
