@@ -33,6 +33,14 @@ resampleFilter = "lanczos"
 # SSIMULACRA2 (visually lossless) while 75 is visibly softer.
 quality = 85
 
+[imaging.webp]
+# Lossy WebP for photographs. 85 matches the JPEG quality above. q80 encodes
+# were smaller in file-size samples, but this stays at the quality already
+# measured for the site's photos. Screenshots do not use this default: the
+# image hook passes `lossless` and keeps the WebP only when it is smaller.
+quality = 85
+hint = "photo"
+
 [services]
   [services.rss]
     # The feed carried all 168 posts in full: 2,077,488 bytes, and every
