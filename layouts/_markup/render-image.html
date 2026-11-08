@@ -13,6 +13,12 @@
 
   Animated GIFs pass through untouched -- Hugo's image processing flattens them
   to a single frame. SVG cannot be processed at all.
+
+  Every image this hook emits is wrapped so the print mat's padding sits
+  outside the image (padding on the img itself would shrink it). A source
+  wider than the cap is still the only case that links to the original
+  (a.img-full). Everything else, including GIFs and other files with no
+  larger original, is span.img-mat: the mat, and no zoom affordance.
 */ -}}
 
 {{- $dest := .Destination -}}
@@ -27,14 +33,14 @@
 {{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") (hasPrefix $dest "data:") -}}
 
 {{- if $isRemote -}}
-  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  <span class="img-mat"><img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"></span>
 {{- else if hasPrefix $dest "/" -}}
   {{- /* Absolute path into static/. Kept as a build-time link check: a broken
          image reference fails CI rather than shipping a 404. */ -}}
   {{- if not (fileExists (printf "static%s" $dest)) -}}
     {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
   {{- end -}}
-  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  <span class="img-mat"><img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"></span>
 {{- else -}}
   {{- $image := .Page.Resources.GetMatch $dest -}}
   {{- if not $image -}}
@@ -51,8 +57,8 @@
   {{- if $lcp }}{{ $loadAttrs = "loading=\"eager\" fetchpriority=\"high\" decoding=\"async\"" }}{{ end -}}
 
   {{- if not $processable -}}
-    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
-      {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
+    <span class="img-mat"><img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
+      {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}></span>
   {{- else -}}
     {{- $cap := cond (gt $image.Width $maxWidth) $maxWidth $image.Width -}}
 
@@ -90,14 +96,14 @@
 
     {{- /* Link to the original only when it actually holds more detail than
            anything in the srcset. A link to the same file is noise for keyboard
-           and screen-reader users. */ -}}
+           and screen-reader users. The other branch is the same mat, unlinked. */ -}}
     {{- $hasMore := gt $image.Width $cap -}}
-    {{- if $hasMore -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ end -}}
+    {{- if $hasMore -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
     <img src="{{ $fallback.RelPermalink }}"
       {{- /* A one-entry srcset says nothing that src does not. */ -}}
       {{- if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
       width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
       alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
-    {{- if $hasMore -}}</a>{{ end -}}
+    {{- if $hasMore -}}</a>{{ else -}}</span>{{ end -}}
   {{- end -}}
 {{- end -}}
