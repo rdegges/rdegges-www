@@ -278,17 +278,57 @@ footer p a:visited {
        phones, where the column is narrowest. */
     height: auto;
     margin: auto;
-    margin-bottom: 2.5em !important;
-    margin-top: 2.5em !important;
     max-width: 100%;
 }
 
-/* Images whose original is larger than anything we serve link to the full
-   resolution file. The anchor has to be a block so it does not add inline
-   leading below the image it wraps. */
-.article a.img-full {
+/* Print mat for every article image. The 2.5em of vertical space that used
+   to live on the img sits on the wrapper, and the image's own margin is
+   zeroed, so the 8px white padding hugs the photo instead of the column.
+   width:fit-content keeps a narrow image from stretching to the column.
+
+   Only a source wider than the content column is a link (a.img-full). That
+   anchor is display:block so it does not add inline leading under the
+   image, and it carries the corner expand mark. Everything else is
+   span.img-mat: the same mat, no mark, and the default cursor. */
+.article a.img-full,
+.article .img-mat {
     display: block;
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    margin: 2.5em auto;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 0 0 1px #d0d0d0;
+    box-sizing: border-box;
+}
+
+.article a.img-full {
     cursor: zoom-in;
+}
+
+.article a.img-full img,
+.article .img-mat img {
+    margin: 0 !important;
+}
+
+.article a.img-full::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    background: rgba(255,255,255,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23515050' stroke-width='1.4' stroke-linecap='round'%3E%3Cpath d='M9.5 2.5h4v4M13.5 2.5l-4.5 4.5M6.5 13.5h-4v-4M2.5 13.5l4.5-4.5'/%3E%3C/svg%3E") center/14px no-repeat;
+    opacity: .45;
+    transition: opacity .2s ease, background-color .2s ease;
+}
+
+.article a.img-full:hover::after,
+.article a.img-full:focus-visible::after {
+    opacity: 1;
+    background-color: rgba(255,255,255,.95);
 }
 
 .article blockquote,

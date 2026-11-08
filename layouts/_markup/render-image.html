@@ -13,28 +13,38 @@
 
   Animated GIFs pass through untouched -- Hugo's image processing flattens them
   to a single frame. SVG cannot be processed at all.
+
+  Every image this hook emits is wrapped so the print mat's padding sits
+  outside the image (padding on the img itself would shrink it). A source
+  wider than the content column links to the original (a.img-full).
+  Everything else, including GIFs and files the column already shows at
+  full size, is span.img-mat: the mat, and no zoom affordance.
 */ -}}
 
 {{- $dest := .Destination -}}
 {{- $alt := .PlainText | default "" -}}
 {{- $title := .Title | default "" -}}
 
-{{- /* Widths worth generating. The content column tops out at 750 CSS px, so
-       1500 covers a 2x display; beyond that nobody sees the extra pixels. */ -}}
-{{- $ladder := slice 480 750 1125 -}}
+{{- /* Widths worth generating. The content column tops out at $column CSS
+       px, so 1500 covers a 2x display; beyond that nobody sees the extra
+       pixels. $column is also the desktop slot in sizes and the width an
+       original has to beat before we link to it. The inline srcset still
+       stops at $maxWidth either way. */ -}}
+{{- $column := 750 -}}
+{{- $ladder := slice 480 $column 1125 -}}
 {{- $maxWidth := 1500 -}}
 
 {{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") (hasPrefix $dest "data:") -}}
 
 {{- if $isRemote -}}
-  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  <span class="img-mat"><img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"></span>
 {{- else if hasPrefix $dest "/" -}}
   {{- /* Absolute path into static/. Kept as a build-time link check: a broken
          image reference fails CI rather than shipping a 404. */ -}}
   {{- if not (fileExists (printf "static%s" $dest)) -}}
     {{- errorf "Image not found: %s (page: %s)" $dest .Page.File.Path -}}
   {{- end -}}
-  <img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  <span class="img-mat"><img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"></span>
 {{- else -}}
   {{- $image := .Page.Resources.GetMatch $dest -}}
   {{- if not $image -}}
@@ -51,8 +61,8 @@
   {{- if $lcp }}{{ $loadAttrs = "loading=\"eager\" fetchpriority=\"high\" decoding=\"async\"" }}{{ end -}}
 
   {{- if not $processable -}}
-    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
-      {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
+    <span class="img-mat"><img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
+      {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}></span>
   {{- else -}}
     {{- $cap := cond (gt $image.Width $maxWidth) $maxWidth $image.Width -}}
 
@@ -80,7 +90,7 @@
     {{- /* Rendered width at each Bootstrap breakpoint, capped by the image's
            own size -- an image narrower than the column renders at its natural
            width, so claiming the full column would fetch a variant too large. */ -}}
-    {{- $lg := cond (gt $image.Width 750) 750 $image.Width -}}
+    {{- $lg := cond (gt $image.Width $column) $column $image.Width -}}
     {{- $md := cond (gt $image.Width 616) 616 $image.Width -}}
     {{- $sm := cond (gt $image.Width 470) 470 $image.Width -}}
     {{- /* When the image is narrower than every breakpoint it renders at one
@@ -88,16 +98,17 @@
     {{- $sizes := printf "(min-width: 1200px) %dpx, (min-width: 992px) %dpx, (min-width: 768px) %dpx, 83vw" $lg $md $sm -}}
     {{- if and (eq $lg $md) (eq $md $sm) }}{{ $sizes = printf "(min-width: 768px) %dpx, 83vw" $lg }}{{ end -}}
 
-    {{- /* Link to the original only when it actually holds more detail than
-           anything in the srcset. A link to the same file is noise for keyboard
-           and screen-reader users. */ -}}
-    {{- $hasMore := gt $image.Width $cap -}}
-    {{- if $hasMore -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ end -}}
+    {{- /* Link when the original is wider than the on-page column. A file
+           the column already shows at its own size is not a link. This is
+           not the srcset cap: a 1024px file is still served inline, and it
+           is also a link, because the page displays it at $column. */ -}}
+    {{- $widerThanColumn := gt $image.Width $column -}}
+    {{- if $widerThanColumn -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
     <img src="{{ $fallback.RelPermalink }}"
       {{- /* A one-entry srcset says nothing that src does not. */ -}}
       {{- if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
       width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
       alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
-    {{- if $hasMore -}}</a>{{ end -}}
+    {{- if $widerThanColumn -}}</a>{{ else -}}</span>{{ end -}}
   {{- end -}}
 {{- end -}}
