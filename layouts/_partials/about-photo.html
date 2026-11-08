@@ -1,0 +1,12 @@
+{{- /*
+  Square photo on the About page. RenderString runs the image through the
+  render hook, so it gets the same srcset, dimensions, and full-size link as
+  every other photo. The hook returns a paragraph; the figure wants the
+  image itself.
+*/ -}}
+{{- $html := .page.RenderString (printf "![%s](%s)" .alt .src) -}}
+{{- $html = replaceRE `(?s)^\s*<p>(.*)</p>\s*$` "$1" $html -}}
+<figure class="about-photo float-{{ .align }}">
+{{ $html | safeHTML }}
+<figcaption>{{ .caption }}</figcaption>
+</figure>

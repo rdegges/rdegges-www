@@ -133,8 +133,9 @@ class TestImages(SiteTestCase):
 
     def test_the_mat_does_not_wrap_the_avatar(self):
         # The avatar, favicons, and other chrome are not article images.
+        # /about/ is a page, not a post, but its photos use the same mat.
         for page in pages():
-            if page in articles():
+            if page in articles() or page.url == "/about/":
                 continue
             for img, ancestors in images_in(page):
                 with self.subTest(page=page.url, img=img.get("src")):
