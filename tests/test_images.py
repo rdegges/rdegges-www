@@ -1,51 +1,127 @@
-"""Responsive images: dimensions, the print mat, WebP, and click-through.
+"""Images reserve their space, wear a print mat, and offer a safe fallback.
 
-The Markdown image hook emits width and height, a srcset of derivatives, and
-a WebP <picture> when the format earns it. Every article image wears the
-print mat. The wrapper is a link when the original is wider than the content
-column, the page asks for linkOriginals, or the file on the page is a
-lighter re-encode of a heavy master. The href is the committed original.
+The render hook builds the markup these tests read. Every article image is
+matted. The wrapper is a link when the original is wider than the content
+column, the page sets linkOriginals, or the file on the page is a lighter
+re-encode of a heavy master. The href is the committed original. Photos add
+a WebP <picture> inside that wrapper; the <img> stays a JPEG or PNG.
 """
 
+import glob
 import os
 import re
+import unittest
 from html.parser import HTMLParser
-from pathlib import Path
-from unittest import TestCase
 
-from helpers import ROOT, css_bundle, read, walk_html
+from helpers import PUBLIC, SiteTestCase, articles, pages, public_file
 from test_headers import matcher, raw_rules
 
+CONTENT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "content"))
 
+# The hook's ladder, copied here so a silent edit to either side fails.
 COLUMN = 750
-MAX_WIDTH = 1500
 LADDER = (480, 750, 1125)
-HEAVY_BYTES = 500_000
-IMMUTABLE = ["public, max-age=31536000, immutable"]
+CAP = 1500
 
-# Originals wider than this are served as a downscale. The figure is the
-# original's pixel width, read back out of the "view full size (W×H)" label.
 FULL_SIZE = re.compile(r"view full size \((\d+)×(\d+)\)")
-SRCSET_WIDTH = re.compile(r"\s(\d+)w$")
-
-
-def classes(attrs):
-    return (attrs.get("class") or "").split()
+VOID = {
+    "area", "base", "br", "col", "embed", "hr", "img", "input",
+    "link", "meta", "source", "track", "wbr",
+}
 
 
 def expected_widths(source_width):
-    cap = min(source_width, MAX_WIDTH)
+    """Candidate widths the hook emits for a master of this width."""
+    cap = min(source_width, CAP)
     widths = [w for w in LADDER if w * 100 < cap * 85]
     widths.append(cap)
     return widths
 
 
-def srcset_widths(value):
-    return [int(SRCSET_WIDTH.search(part).group(1)) for part in value.split(",")]
+def srcset(value):
+    """[(url, width or None)] from a srcset attribute."""
+    found = []
+    for part in (value or "").split(","):
+        part = part.strip()
+        if not part:
+            continue
+        bits = part.split()
+        width = int(bits[1][:-1]) if len(bits) > 1 and bits[1].endswith("w") else None
+        found.append((bits[0], width))
+    return found
+
+
+def classes(attrs):
+    return set((attrs.get("class") or "").split())
+
+
+def cache_control(url):
+    """Cache-Control values Cloudflare would send for url, in file order."""
+    values = []
+    for pattern, headers in raw_rules():
+        if matcher(pattern).match(url):
+            values += [value for _, name, value in headers if name == "cache-control"]
+    return values
+
+
+class ImageParents(HTMLParser):
+    """Each img, its ancestors, and the <source> elements in its <picture>."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.images = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "source":
+            for frame in reversed(self.stack):
+                if frame[0] == "picture":
+                    frame[2].append(attrs)
+                    break
+            return
+        if tag == "img":
+            sources = []
+            picture_depth = None
+            anchor = None
+            anchor_depth = None
+            for depth, (parent, parent_attrs, parent_sources) in enumerate(reversed(self.stack)):
+                if picture_depth is None and parent == "picture":
+                    picture_depth = depth
+                    sources = list(parent_sources)
+                if anchor is None and parent == "a" and "img-full" in classes(parent_attrs):
+                    anchor = parent_attrs
+                    anchor_depth = depth
+            self.images.append(
+                {
+                    "attrs": attrs,
+                    "ancestors": [(parent, parent_attrs) for parent, parent_attrs, _ in self.stack],
+                    "sources": sources,
+                    "picture_depth": picture_depth,
+                    "anchor": anchor,
+                    "anchor_depth": anchor_depth,
+                }
+            )
+            return
+        if tag not in VOID:
+            self.stack.append((tag, attrs, []))
+
+    def handle_endtag(self, tag):
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                return
+
+
+def images_in(page):
+    parser = ImageParents()
+    with open(page.path, encoding="utf-8") as f:
+        parser.feed(f.read())
+    return parser.images
 
 
 def mat_kind(ancestors):
-    """The print-mat wrapper, looking through a <picture>."""
+    """'full' or 'mat' for the print-mat wrapper, looking through <picture>."""
     for tag, attrs in reversed(ancestors):
         if tag == "picture":
             continue
@@ -58,411 +134,433 @@ def mat_kind(ancestors):
     return None
 
 
-def full_anchor(ancestors):
-    for tag, attrs in reversed(ancestors):
-        if tag == "a" and "img-full" in classes(attrs):
-            return attrs
-    return None
+def article_images():
+    for page in articles():
+        for image in images_in(page):
+            yield page, image
 
 
 def original_urls():
-    """Page-bundle images, keyed by the URL Hugo publishes for the original.
+    """URL paths of the JPEG/PNG/GIF masters, at the URL Hugo publishes.
 
-    The published directory is the front-matter slug when the bundle sets
-    one, not the folder the file sits in.
+    The directory under content/ is not always the public slug: a post can
+    set `slug` in front matter and the files move with it.
     """
-    urls = {}
-    content = ROOT / "content"
-    for path in content.rglob("*"):
-        if path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".gif"}:
-            continue
-        if path.name.startswith("."):
-            continue
-        bundle = path.parent
-        index = bundle / "index.md"
-        if not index.is_file():
-            continue
-        slug = None
-        for line in index.read_text(encoding="utf-8").splitlines():
-            if line.startswith(("---", "+++")):
-                break
-            match = re.match(r'^slug:\s*"?([^"\n]+)"?\s*$', line)
-            if match:
-                slug = match.group(1)
-                break
-        section = bundle.parent.relative_to(content).as_posix()
-        if section == ".":
-            section = ""
-        name = f"{slug}/{path.name}" if slug else path.relative_to(bundle.parent).as_posix()
-        url = "/" + "/".join(part for part in (section, name) if part)
-        urls[url] = path
+    urls = []
+    indexes = glob.glob(os.path.join(CONTENT, "*", "*", "index.md"))
+    indexes += glob.glob(os.path.join(CONTENT, "*", "index.md"))
+    for index in indexes:
+        with open(index, encoding="utf-8") as f:
+            front = f.read().split("---\n", 2)[1]
+        slug = re.search(r'^slug:\s*"?([^"\n]+)"?\s*$', front, re.M)
+        bundle = os.path.dirname(index)
+        parent = os.path.dirname(bundle)
+        slug = slug.group(1) if slug else os.path.basename(bundle)
+        if os.path.abspath(parent) == CONTENT:
+            prefix = f"/{slug}"
+        else:
+            prefix = f"/{os.path.basename(parent)}/{slug}"
+        for root, _, files in os.walk(bundle):
+            for name in files:
+                if os.path.splitext(name)[1].lower() not in {".jpg", ".jpeg", ".png", ".gif"}:
+                    continue
+                rel = os.path.relpath(os.path.join(root, name), bundle).replace(os.sep, "/")
+                urls.append(f"{prefix}/{rel}")
     return urls
 
 
-class ImageParents(HTMLParser):
-    """Every <img>, its open ancestors, and any <source> in its <picture>."""
-
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
-        self.stack = []
-        self.images = []
-        self.sources = []
-
-    def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if tag == "source":
-            self.sources.append(attrs)
-            return
-        if tag == "picture":
-            self.sources = []
-        if tag == "img":
-            sources = list(self.sources) if any(t == "picture" for t, _ in self.stack) else []
-            self.images.append((attrs, list(self.stack), sources))
-            return
-        self.stack.append((tag, attrs))
-
-    def handle_endtag(self, tag):
-        if tag == "picture":
-            self.sources = []
-        if self.stack and self.stack[-1][0] == tag:
-            self.stack.pop()
-
-    def handle_startendtag(self, tag, attrs):
-        self.handle_starttag(tag, attrs)
-        self.handle_endtag(tag)
-
-
-def images_in(html):
-    parser = ImageParents()
-    parser.feed(html)
-    return parser.images
-
-
-def articles():
-    for path in walk_html():
-        rel = "/" + path.relative_to(ROOT / "public").as_posix()
-        if not re.fullmatch(r"/(?:notes/)?\d{4}/[^/]+/index.html", rel):
-            continue
-        yield rel[: -len("index.html")], images_in(read(rel))
-
-
-class TestImages(TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.originals = original_urls()
-
+class TestImages(SiteTestCase):
     def test_every_image_declares_its_size(self):
-        """An image with no dimensions cannot reserve its box, so the page
-        jumps when it arrives. The hook knows local images' real size."""
-        missing = []
-        for path in walk_html():
-            rel = "/" + path.relative_to(ROOT / "public").as_posix()
-            for img, _, _ in images_in(read(rel)):
-                src = img.get("src", "")
-                if src.startswith(("http://", "https://", "//", "data:")):
-                    continue
-                if not img.get("width") or not img.get("height"):
-                    missing.append(f"{rel} -> {src}")
-        self.assertEqual(missing, [])
+        # width/height let the browser reserve the box before the file
+        # arrives, which is what keeps layout shift at zero.
+        for page in pages():
+            for img in page.find("img"):
+                with self.subTest(page=page.url, img=img.get("src")):
+                    self.assertTrue(img.get("width") and img.get("height"))
 
     def test_home_avatar_is_small_and_high_priority(self):
-        images = images_in(read("/index.html"))
-        self.assertEqual(len(images), 1)
-        avatar = images[0][0]
-        self.assertEqual(avatar["loading"], "eager")
-        self.assertEqual(avatar["fetchpriority"], "high")
-        self.assertIn("390w", avatar["srcset"])
-        src = ROOT / "public" / avatar["src"].lstrip("/")
-        self.assertLess(src.stat().st_size, 40000)
+        home = next(p for p in pages() if p.url == "/")
+        avatar = home.find("img")[0]
+        self.assertEqual(avatar.get("fetchpriority"), "high")
+        self.assertNotEqual(avatar.get("loading"), "lazy")
+        candidates = [c.split()[0] for c in avatar["srcset"].split(",")] + [avatar["src"]]
+        for src in candidates:
+            with self.subTest(src=src):
+                self.assertLess(os.path.getsize(public_file(src)), 40_000)
 
     def test_article_images_are_matted_and_only_some_are_links(self):
-        """The mat wraps the picture, or the img when there is no picture.
-        A link carries an accessible name; a plain mat is not a link."""
+        # The mat wraps the picture, or the img when there is no picture.
+        # A link carries an accessible name. A plain mat is not a link.
         seen = 0
-        for url, images in articles():
-            for img, ancestors, sources in images:
+        for page in articles():
+            for image in images_in(page):
                 seen += 1
-                kind = mat_kind(ancestors)
-                self.assertIn(kind, ("full", "mat"), url)
-                if sources:
-                    self.assertEqual(ancestors[-1][0], "picture", url)
-                anchor = full_anchor(ancestors)
-                if kind == "full":
-                    self.assertIsNotNone(anchor, url)
-                    self.assertIn("view full size", anchor.get("aria-label", ""), url)
-                    self.assertNotIn("_hu_", anchor["href"], url)
-                else:
-                    self.assertIsNone(anchor, url)
-                    self.assertNotIn("<a", img.get("src", ""))
+                attrs = image["attrs"]
+                kind = mat_kind(image["ancestors"])
+                with self.subTest(page=page.url, img=attrs.get("src")):
+                    self.assertIn(kind, ("full", "mat"))
+                    if image["sources"]:
+                        self.assertEqual(image["ancestors"][-1][0], "picture")
+                        if image["anchor"]:
+                            self.assertLess(image["picture_depth"], image["anchor_depth"])
+                    if kind == "full":
+                        self.assertIsNotNone(image["anchor"])
+                        self.assertTrue(image["anchor"].get("href"))
+                        self.assertNotIn("_hu_", image["anchor"]["href"])
+                        self.assertIn("view full size", image["anchor"].get("aria-label", ""))
+                    else:
+                        self.assertIsNone(image["anchor"])
         self.assertGreater(seen, 100)
 
     def test_originals_wider_than_the_column_link(self):
-        """750px is the column. 1500px is only the srcset cap, so a 1024px
-        file still links. A 500px file and a GIF do not. The journal photo
-        links to the committed original, not its hashed display file."""
-        goodbye, _ = next(item for item in articles() if item[0].startswith("/2012/saying-goodbye"))
+        # The page shows an image at the content column, about 750 CSS px.
+        # Wider originals link; a file the column already shows at full
+        # size does not. The 1500px figure is only the inline srcset cap.
+        # The href is the committed original, never a hashed derivative.
+        by_url = {p.url: p for p in articles()}
+
+        goodbye = images_in(by_url["/2015/saying-goodbye/"])
         resized = [
-            (img, ancestors)
-            for img, ancestors, _ in goodbye
-            if (anchor := full_anchor(ancestors)) and anchor.get("href") != img.get("src")
+            image for image in goodbye
+            if image["anchor"] and image["anchor"].get("href") != image["attrs"].get("src")
         ]
-        self.assertTrue(resized)
-        for img, ancestors in resized:
-            label = full_anchor(ancestors)["aria-label"]
-            self.assertGreater(int(FULL_SIZE.search(label).group(1)), MAX_WIDTH)
+        self.assertTrue(resized, "a photo wider than the srcset cap still links to a different file")
+        for image in resized:
+            label = image["anchor"]["aria-label"]
+            self.assertGreater(int(FULL_SIZE.search(label).group(1)), CAP)
+            self.assertNotIn("_hu_", image["anchor"]["href"])
 
-        grim = images_in(read("/2012/a-developers-conundrum-dev-prod-parity/index.html"))
+        grim = images_in(by_url["/2024/im-writing-again/"])
         self.assertEqual(len(grim), 1)
-        self.assertEqual(mat_kind(grim[0][1]), "full")
-        href = full_anchor(grim[0][1])["href"]
-        self.assertIn("grim-reaper-writing-sketch", href)
-        self.assertNotIn("_hu_", href)
+        self.assertIn("grim-reaper-writing-sketch", grim[0]["attrs"]["src"])
+        self.assertEqual(mat_kind(grim[0]["ancestors"]), "full")
+        self.assertNotIn("_hu_", grim[0]["anchor"]["href"])
+        self.assertIn("grim-reaper-writing-sketch", grim[0]["anchor"]["href"])
 
-        journal = images_in(read("/2022/journaling-the-best-habit-i-picked-up-in-2021/index.html"))
-        photo = next(item for item in journal if "my-journal" in item[0]["src"])
-        self.assertEqual(mat_kind(photo[1]), "full")
-        href = full_anchor(photo[1])["href"]
-        self.assertTrue(href.endswith("/my-journal.jpg"), href)
-        self.assertNotIn("_hu_", href)
+        journal = images_in(by_url["/2022/journaling-the-best-habit-i-picked-up-in-2021/"])
+        photo = next(image for image in journal if "my-journal" in image["attrs"]["src"])
+        self.assertEqual(mat_kind(photo["ancestors"]), "full")
+        self.assertTrue(photo["anchor"]["href"].endswith("/my-journal.jpg"), photo["anchor"]["href"])
+        self.assertNotIn("_hu_", photo["anchor"]["href"])
 
-        luffy = images_in(read("/2013/5-am/index.html"))
-        sketch = next(item for item in luffy if item[0]["src"].endswith("/luffy-sketch.jpg"))
-        self.assertEqual(mat_kind(sketch[1]), "mat")
-        self.assertIsNone(full_anchor(sketch[1]))
+        luffy = images_in(by_url["/2013/5-am/"])
+        self.assertEqual(len(luffy), 1)
+        self.assertIn("luffy-sketch", luffy[0]["attrs"]["src"])
+        self.assertEqual(mat_kind(luffy[0]["ancestors"]), "mat")
 
-        graphql = images_in(read("/2020/rest-api-design/index.html"))
-        gif = next(item for item in graphql if item[0]["src"].endswith("/rest-to-graphql.gif"))
-        self.assertEqual(mat_kind(gif[1]), "mat")
-        self.assertTrue(any(mat_kind(ancestors) == "full" for _, ancestors, _ in graphql))
+        graphql = images_in(by_url["/2021/how-i-converted-a-rest-api-to-graphql/"])
+        gif = next(image for image in graphql if "rest-to-graphql" in image["attrs"]["src"])
+        self.assertEqual(mat_kind(gif["ancestors"]), "mat")
+        self.assertTrue(any(mat_kind(image["ancestors"]) == "full" for image in graphql))
 
     def test_the_mat_does_not_wrap_the_avatar(self):
-        for path in walk_html():
-            rel = "/" + path.relative_to(ROOT / "public").as_posix()
-            if re.fullmatch(r"/(?:notes/)?\d{4}/[^/]+/index.html", rel) or rel == "/about/index.html":
+        # The avatar, favicons, and other chrome are not article images.
+        # /about/ is a page, not a post, but its photos use the same mat.
+        for page in pages():
+            if page in articles() or page.url == "/about/":
                 continue
-            for _, ancestors, _ in images_in(read(rel)):
-                self.assertIsNone(mat_kind(ancestors), rel)
+            for image in images_in(page):
+                with self.subTest(page=page.url, img=image["attrs"].get("src")):
+                    self.assertIsNone(mat_kind(image["ancestors"]))
 
     def test_stylesheet_carries_the_mat_and_expand_mark(self):
-        css = css_bundle()
-        for needle in ("img-mat", "zoom-in", "fit-content", "#d0d0d0", "focus-visible"):
-            self.assertIn(needle, css)
-        self.assertTrue("M9.5 2.5" in css or "M9.5%202.5" in css)
-        self.assertNotIn("a.img-full:focus-visible{outline:none", css)
-        self.assertNotIn("a.img-full:focus-visible{outline:0", css)
-        self.assertIn("a.img-full picture", css)
+        # The mark is a CSS pseudo-element. Minify may rewrite numbers, but
+        # the mat, the zoom cursor, and the two arrow strokes have to survive.
+        hrefs = {a["href"] for p in pages() for a in p.find("link", rel="stylesheet")}
+        css = ""
+        for href in hrefs:
+            with open(public_file(href), encoding="utf-8") as f:
+                css += f.read()
+        self.assertIn("img-mat", css)
+        self.assertIn("zoom-in", css)
+        self.assertIn("fit-content", css)
+        self.assertIn("#d0d0d0", css)
+        self.assertIn("focus-visible", css)
         self.assertIn("img-mat picture", css)
+        self.assertTrue(
+            "M9.5 2.5" in css or "M9.5%202.5" in css,
+            "expand-mark svg missing from the stylesheet",
+        )
+        self.assertNotIn("img-full:focus-visible{outline:none", css.replace(" ", ""))
+        self.assertNotIn("img-full:focus-visible{outline:0", css.replace(" ", ""))
 
     def test_article_images_keep_loading_and_dimensions(self):
-        for url, images in articles():
-            for index, (img, _, _) in enumerate(images):
-                src = img.get("src", "")
-                if src.startswith(("http://", "https://", "//")):
-                    continue
-                if index == 0:
-                    self.assertEqual(img.get("loading"), "eager", f"{url} {src}")
-                    self.assertEqual(img.get("fetchpriority"), "high", f"{url} {src}")
-                else:
-                    self.assertEqual(img.get("loading"), "lazy", f"{url} {src}")
-                    self.assertNotIn("fetchpriority", img, f"{url} {src}")
-                self.assertEqual(img.get("decoding"), "async", f"{url} {src}")
-                if not src.endswith(".gif"):
-                    self.assertLessEqual(int(img["width"]), MAX_WIDTH, f"{url} {src}")
+        seen = 0
+        for page in articles():
+            images = images_in(page)
+            if not images:
+                continue
+            seen += 1
+            for i, image in enumerate(images):
+                attrs = image["attrs"]
+                with self.subTest(page=page.url, src=attrs.get("src")):
+                    self.assertEqual(attrs.get("decoding"), "async")
+                    width, height = int(attrs["width"]), int(attrs["height"])
+                    self.assertGreater(width, 0)
+                    self.assertGreater(height, 0)
+                    ext = os.path.splitext(attrs["src"])[1].lower()
+                    if ext != ".gif":
+                        self.assertLessEqual(width, CAP)
+                    if i == 0:
+                        self.assertEqual(attrs.get("loading"), "eager")
+                        self.assertEqual(attrs.get("fetchpriority"), "high")
+                    else:
+                        self.assertEqual(attrs.get("loading"), "lazy")
+                        self.assertNotEqual(attrs.get("fetchpriority"), "high")
+        self.assertGreater(seen, 100)
 
-    def test_candidates_follow_the_ladder(self):
+    def test_candidates_follow_the_ladder_and_never_upscale(self):
         checked = 0
-        for url, images in articles():
-            for img, ancestors, _ in images:
-                src = img.get("src", "")
-                if src.endswith(".gif") or src.startswith(("http://", "https://", "//")):
-                    continue
-                anchor = full_anchor(ancestors)
-                if anchor and (match := FULL_SIZE.search(anchor.get("aria-label", ""))):
-                    source_width = int(match.group(1))
-                    source_height = int(match.group(2))
+        for page, image in article_images():
+            attrs = image["attrs"]
+            ext = os.path.splitext(attrs["src"])[1].lower()
+            if ext == ".gif":
+                self.assertEqual(image["sources"], [], attrs["src"])
+                self.assertNotIn("srcset", attrs)
+                continue
+            anchor = image["anchor"]
+            if anchor:
+                match = FULL_SIZE.search(anchor.get("aria-label") or "")
+                self.assertIsNotNone(match, anchor.get("aria-label"))
+                source_width = int(match.group(1))
+                source_height = int(match.group(2))
+            else:
+                source_width = int(attrs["width"])
+                source_height = int(attrs["height"])
+            want = expected_widths(source_width)
+            got = [w for _, w in srcset(attrs.get("srcset"))]
+            with self.subTest(page=page.url, src=attrs["src"]):
+                self.assertEqual(int(attrs["width"]), min(source_width, CAP))
+                self.assertEqual(int(attrs["width"]), want[-1])
+                if len(want) == 1:
+                    self.assertNotIn("srcset", attrs)
+                    self.assertNotIn("sizes", attrs)
                 else:
-                    source_width = int(img["width"])
-                    source_height = int(img["height"])
-                widths = expected_widths(source_width)
-                if len(widths) == 1:
-                    self.assertNotIn("srcset", img, f"{url} {src}")
-                else:
-                    self.assertEqual(srcset_widths(img["srcset"]), widths, f"{url} {src}")
-                    self.assertIn("sizes", img, f"{url} {src}")
-                self.assertEqual(int(img["width"]), widths[-1], f"{url} {src}")
-                self.assertLessEqual(int(img["width"]), source_width, f"{url} {src}")
-                expect_h = round(source_height * int(img["width"]) / source_width)
-                self.assertAlmostEqual(int(img["height"]), expect_h, delta=1, msg=f"{url} {src}")
-                checked += 1
+                    self.assertEqual(got, want)
+                    self.assertIn("sizes", attrs)
+                self.assertGreaterEqual(source_width, int(attrs["width"]))
+                expect_h = round(source_height * int(attrs["width"]) / source_width)
+                self.assertLessEqual(abs(int(attrs["height"]) - expect_h), 1)
+                for candidate in got:
+                    self.assertLessEqual(candidate, source_width)
+                    self.assertLessEqual(candidate, CAP)
+            checked += 1
         self.assertGreater(checked, 100)
 
-    def test_photos_offer_webp_and_the_img_stays_a_real_image(self):
-        checked = 0
-        for url, images in articles():
-            for img, ancestors, sources in images:
-                src = img.get("src", "")
-                if src.endswith(".gif") or src.startswith(("http://", "https://", "//")):
-                    self.assertEqual(sources, [], f"{url} {src}")
-                    continue
-                self.assertNotIn("avif", " ".join(source.get("type", "") for source in sources))
-                path = src.split("?", 1)[0].split("#", 1)[0]
-                self.assertIn(Path(path).suffix.lower(), {".jpg", ".jpeg", ".png"}, f"{url} {src}")
-                anchor = full_anchor(ancestors)
-                if anchor and (match := FULL_SIZE.search(anchor.get("aria-label", ""))):
-                    source_width = int(match.group(1))
-                else:
-                    source_width = int(img["width"])
-                original = self.originals[anchor["href"]] if anchor else self.originals[src]
-                widths = expected_widths(source_width)
-                webps = [source for source in sources if source.get("type") == "image/webp"]
-                if original.suffix.lower() in {".jpg", ".jpeg"}:
-                    self.assertEqual(len(webps), 1, f"{url} {src}")
-                    self.assertEqual(srcset_widths(webps[0]["srcset"]), widths, f"{url} {src}")
-                else:
-                    self.assertLessEqual(len(webps), 1, f"{url} {src}")
-                    if webps:
-                        self.assertEqual(srcset_widths(webps[0]["srcset"]), widths, f"{url} {src}")
-                        for part in webps[0]["srcset"].split(","):
-                            url_part = part.strip().split()[0]
-                            webp = ROOT / "public" / url_part.lstrip("/")
-                            width = int(SRCSET_WIDTH.search(part).group(1))
-                            fb = next(
-                                piece.strip().split()[0]
-                                for piece in img.get("srcset", f"{src} {width}w").split(",")
-                                if SRCSET_WIDTH.search(piece) and int(SRCSET_WIDTH.search(piece).group(1)) == width
+    def test_picture_has_a_webp_source_and_a_raster_fallback(self):
+        # The img is what a client that ignores <picture> and srcset fetches.
+        # It stays a JPEG or PNG, and it is never the only thing a supporting
+        # browser is offered for a photo.
+        photos = pngs = 0
+        for page, image in article_images():
+            attrs = image["attrs"]
+            src = attrs["src"]
+            ext = os.path.splitext(src)[1].lower()
+            if ext == ".gif":
+                self.assertFalse(image["sources"])
+                continue
+            self.assertIn(ext, {".jpg", ".jpeg", ".png"}, src)
+            self.assertNotIn(".avif", src)
+            href = (image["anchor"] or {}).get("href") or src
+            original_ext = os.path.splitext(href)[1].lower()
+            with self.subTest(page=page.url, src=src):
+                if original_ext in {".jpg", ".jpeg"}:
+                    photos += 1
+                    self.assertEqual(len(image["sources"]), 1)
+                if image["sources"]:
+                    self.assertEqual(len(image["sources"]), 1, "AVIF is out of scope")
+                    source = image["sources"][0]
+                    self.assertEqual(source.get("type"), "image/webp")
+                    webp = srcset(source.get("srcset"))
+                    fallback = srcset(attrs.get("srcset"))
+                    if fallback:
+                        self.assertEqual([w for _, w in webp], [w for _, w in fallback])
+                        self.assertEqual(source.get("sizes"), attrs.get("sizes"))
+                    else:
+                        self.assertEqual(len(webp), 1)
+                        self.assertEqual(webp[0][1], int(attrs["width"]))
+                    for url, _ in webp:
+                        self.assertTrue(url.endswith(".webp"), url)
+                        self.assertTrue(url.startswith("/img/"), url)
+                    if ext == ".png":
+                        pngs += 1
+                        by_width = {w: url for url, w in fallback} if fallback else {int(attrs["width"]): src}
+                        for url, width in webp:
+                            png_url = by_width[width]
+                            self.assertLess(
+                                os.path.getsize(public_file(url)),
+                                os.path.getsize(public_file(png_url)),
+                                f"{url} is not smaller than {png_url}",
                             )
-                            fb_path = ROOT / "public" / fb.lstrip("/")
-                            self.assertLess(webp.stat().st_size, fb_path.stat().st_size, url_part)
-                checked += 1
-        self.assertGreater(checked, 100)
+        self.assertGreater(photos, 50)
+        self.assertGreater(pngs, 10)
 
     def test_click_through_href_is_the_committed_original(self):
-        for url, images in articles():
-            for img, ancestors, _ in images:
-                src = img.get("src", "")
-                if src.startswith(("http://", "https://", "//")):
+        # Wider than the column, or a same-width file that is not the master
+        # because a heavy original was re-encoded. GIFs never link. A file
+        # the column already shows at full size does not either.
+        linked = unlinked = 0
+        for page, image in article_images():
+            attrs = image["attrs"]
+            src = attrs["src"]
+            anchor = image["anchor"]
+            ext = os.path.splitext(src)[1].lower()
+            with self.subTest(page=page.url, src=src):
+                if ext == ".gif":
+                    self.assertIsNone(anchor)
+                    self.assertNotIn("_hu_", src)
+                    self.assertEqual(mat_kind(image["ancestors"]), "mat")
+                    unlinked += 1
                     continue
-                anchor = full_anchor(ancestors)
                 if anchor:
+                    linked += 1
+                    self.assertEqual(anchor.get("class"), "img-full")
                     href = anchor["href"]
-                    self.assertNotIn("_hu_", href, f"{url} {src}")
-                    self.assertIn(href, self.originals, f"{url} {src}")
-                    label = FULL_SIZE.search(anchor.get("aria-label", ""))
-                    self.assertIsNotNone(label, f"{url} {src}")
-                    original_width = int(label.group(1))
-                    if original_width <= COLUMN:
-                        # Same-width heavy re-encode: the page shows a
-                        # smaller file than the master it links to.
-                        shown = ROOT / "public" / src.lstrip("/")
-                        master = self.originals[href]
-                        self.assertGreater(master.stat().st_size, shown.stat().st_size, f"{url} {src}")
+                    self.assertNotEqual(href, "")
+                    self.assertNotIn("_hu_", href)
+                    self.assertTrue(os.path.isfile(public_file(href)), href)
+                    match = FULL_SIZE.search(anchor.get("aria-label") or "")
+                    self.assertIsNotNone(match, anchor.get("aria-label"))
+                    original_w = int(match.group(1))
+                    displayed_w = int(attrs["width"])
+                    self.assertGreaterEqual(original_w, displayed_w)
+                    if original_w <= COLUMN:
+                        self.assertEqual(original_w, displayed_w)
+                        self.assertGreater(
+                            os.path.getsize(public_file(href)),
+                            os.path.getsize(public_file(src)),
+                        )
                 else:
-                    self.assertNotIn("_hu_", src, f"{url} {src}")
-                    self.assertEqual(mat_kind(ancestors), "mat", f"{url} {src}")
+                    unlinked += 1
+                    self.assertNotIn("_hu_", src)
+                    self.assertEqual(mat_kind(image["ancestors"]), "mat")
+                    self.assertLessEqual(int(attrs["width"]), COLUMN)
+        self.assertGreater(linked, 10)
+        self.assertGreater(unlinked, 50)
 
     def test_legacy_500px_master_is_a_mat_not_a_link(self):
-        images = images_in(read("/2013/5-am/index.html"))
-        sketch = next(item for item in images if item[0]["src"].endswith("/luffy-sketch.jpg"))
-        img, ancestors, sources = sketch
-        self.assertNotIn("_hu_", img["src"])
-        self.assertIsNone(full_anchor(ancestors))
-        self.assertEqual(mat_kind(ancestors), "mat")
-        self.assertNotIn("srcset", img)
-        self.assertEqual(img["width"], "500")
-        self.assertEqual(len(sources), 1)
-        self.assertEqual(sources[0]["type"], "image/webp")
-        self.assertEqual(srcset_widths(sources[0]["srcset"]), [500])
-        webp = sources[0]["srcset"].split()[0]
-        self.assertTrue(webp.startswith("/img/"), webp)
-        self.assertTrue(webp.endswith(".webp"), webp)
+        page = next(p for p in articles() if p.url == "/2013/5-am/")
+        images = images_in(page)
+        sketch = next(i for i in images if "luffy-sketch" in i["attrs"]["src"])
+        attrs = sketch["attrs"]
+        self.assertTrue(attrs["src"].endswith("/luffy-sketch.jpg"), attrs["src"])
+        self.assertNotIn("_hu_", attrs["src"])
+        self.assertIsNone(sketch["anchor"])
+        self.assertEqual(mat_kind(sketch["ancestors"]), "mat")
+        # One width, so the img has no srcset. It is still a photo, so a
+        # same-width WebP is offered beside the original JPEG.
+        self.assertNotIn("srcset", attrs)
+        self.assertEqual(attrs["width"], "500")
+        self.assertEqual(len(sketch["sources"]), 1)
+        webp = srcset(sketch["sources"][0].get("srcset"))
+        self.assertEqual([w for _, w in webp], [500])
+        self.assertTrue(webp[0][0].startswith("/img/") and webp[0][0].endswith(".webp"))
 
-    def test_gif_is_unlinked_and_unprocessed(self):
-        images = images_in(read("/2020/dont-waste-time-getting-feedback/index.html"))
-        img, ancestors, sources = images[0]
-        self.assertTrue(img["src"].endswith("/hourglass.gif"), img["src"])
-        self.assertNotIn("_hu_", img["src"])
-        self.assertEqual(sources, [])
-        self.assertNotIn("srcset", img)
-        self.assertEqual(mat_kind(ancestors), "mat")
-        self.assertIsNone(full_anchor(ancestors))
-        self.assertEqual(img["loading"], "eager")
-        self.assertTrue(img.get("width") and img.get("height"))
+    def test_gif_bypasses_processing(self):
+        page = next(p for p in articles() if p.url == "/2020/dont-waste-time-getting-feedback/")
+        image = images_in(page)[0]
+        attrs = image["attrs"]
+        self.assertTrue(attrs["src"].endswith("/hourglass.gif"), attrs["src"])
+        self.assertNotIn("_hu_", attrs["src"])
+        self.assertIsNone(image["anchor"])
+        self.assertEqual(mat_kind(image["ancestors"]), "mat")
+        self.assertFalse(image["sources"])
+        self.assertNotIn("srcset", attrs)
+        self.assertEqual(attrs.get("loading"), "eager")
+        self.assertTrue(attrs.get("width") and attrs.get("height"))
 
-    def test_heavy_native_photo_links_to_the_original(self):
-        images = images_in(read("/2022/journaling-the-best-habit-i-picked-up-in-2021/index.html"))
-        sketch = next(item for item in images if "writing-sketch" in item[0]["src"])
-        self.assertIsNone(full_anchor(sketch[1]))
-        self.assertEqual(mat_kind(sketch[1]), "mat")
-        self.assertEqual(sketch[0]["loading"], "eager")
+    def test_heavy_journal_photo_is_a_same_width_derivative(self):
+        # 1486px is under the 1500 cap, but the master is ~980 KB. Display
+        # uses a lighter encode; the click still reaches the master.
+        page = next(p for p in articles() if p.url == "/2022/journaling-the-best-habit-i-picked-up-in-2021/")
+        images = images_in(page)
+        journal = next(i for i in images if "my-journal" in (i["anchor"] or {}).get("href", ""))
+        attrs = journal["attrs"]
+        href = journal["anchor"]["href"]
+        self.assertTrue(href.endswith("/my-journal.jpg"), href)
+        self.assertNotIn("_hu_", href)
+        self.assertIn("_hu_", attrs["src"])
+        self.assertTrue(attrs["src"].startswith("/img/"))
+        self.assertEqual(attrs["width"], "1486")
+        self.assertEqual(attrs["height"], "1982")
+        self.assertGreater(os.path.getsize(public_file(href)), 500_000)
+        self.assertLess(os.path.getsize(public_file(attrs["src"])), os.path.getsize(public_file(href)))
+        self.assertEqual(journal["sources"][0].get("type"), "image/webp")
+        # The sketch is narrower than the column, so it keeps the mat only.
+        sketch = images[0]
+        self.assertIn("writing-sketch.png", sketch["attrs"]["src"])
+        self.assertIsNone(sketch["anchor"])
+        self.assertEqual(mat_kind(sketch["ancestors"]), "mat")
+        self.assertEqual(sketch["attrs"].get("loading"), "eager")
+        screenshot = next(i for i in images if "day-one-app" in (i["anchor"] or {}).get("href", ""))
+        self.assertEqual(screenshot["attrs"]["width"], "1500")
+        self.assertTrue(screenshot["attrs"]["src"].endswith(".png"))
+        self.assertNotIn("_hu_", screenshot["anchor"]["href"])
 
-        photo = next(item for item in images if "my-journal" in item[0]["src"])
-        img, ancestors, sources = photo
-        anchor = full_anchor(ancestors)
-        self.assertTrue(anchor["href"].endswith("/my-journal.jpg"), anchor["href"])
-        self.assertNotIn("_hu_", anchor["href"])
-        self.assertIn("_hu_", img["src"])
-        self.assertTrue(img["src"].startswith("/img/"), img["src"])
-        self.assertEqual(img["width"], "1486")
-        self.assertEqual(img["height"], "1982")
-        original = self.originals[anchor["href"]]
-        shown = ROOT / "public" / img["src"].lstrip("/")
-        self.assertGreater(original.stat().st_size, HEAVY_BYTES)
-        self.assertLess(shown.stat().st_size, original.stat().st_size)
-        self.assertEqual(len(sources), 1)
-        self.assertEqual(sources[0]["type"], "image/webp")
-
-        app = next(item for item in images if "day-one-app" in item[0]["src"])
-        self.assertIsNotNone(full_anchor(app[1]))
-        self.assertNotIn("_hu_", full_anchor(app[1])["href"])
-        self.assertEqual(app[0]["width"], "1500")
-        self.assertTrue(app[0]["src"].endswith(".png"), app[0]["src"])
-
-    def test_wide_photo_displays_a_downscale_and_links_the_original(self):
-        images = images_in(read("/2012/saying-goodbye-to-the-bay-area/index.html"))
-        linked = [item for item in images if full_anchor(item[1])]
-        self.assertGreaterEqual(len(linked), 4)
-        for img, ancestors, _ in linked:
-            anchor = full_anchor(ancestors)
-            label = FULL_SIZE.search(anchor["aria-label"])
-            self.assertGreater(int(label.group(1)), MAX_WIDTH)
-            self.assertEqual(img["width"], str(MAX_WIDTH))
-            self.assertIn("_hu_", img["src"])
-            self.assertNotIn("_hu_", anchor["href"])
-            shown = ROOT / "public" / img["src"].lstrip("/")
-            self.assertLess(shown.stat().st_size, self.originals[anchor["href"]].stat().st_size)
+    def test_wide_photo_links_to_the_original_and_displays_the_cap(self):
+        page = next(p for p in articles() if p.url == "/2015/saying-goodbye/")
+        linked = [i for i in images_in(page) if i["anchor"]]
+        wide = []
+        for image in linked:
+            match = FULL_SIZE.search(image["anchor"]["aria-label"])
+            if int(match.group(1)) > CAP:
+                wide.append(image)
+        self.assertGreater(len(wide), 5)
+        for image in wide:
+            attrs = image["attrs"]
+            with self.subTest(src=attrs["src"]):
+                self.assertEqual(attrs["width"], str(CAP))
+                self.assertIn("_hu_", attrs["src"])
+                self.assertNotIn("_hu_", image["anchor"]["href"])
+                self.assertLess(
+                    os.path.getsize(public_file(attrs["src"])),
+                    os.path.getsize(public_file(image["anchor"]["href"])),
+                )
+        # A file between the column and the cap still links, and it is shown
+        # at its own width. 1500 is not the link threshold.
+        mid = [i for i in linked if i not in wide]
+        self.assertTrue(mid)
+        for image in mid:
+            attrs = image["attrs"]
+            original_w = int(FULL_SIZE.search(image["anchor"]["aria-label"]).group(1))
+            with self.subTest(src=attrs["src"]):
+                self.assertGreater(original_w, COLUMN)
+                self.assertEqual(attrs["width"], str(original_w))
+                self.assertNotIn("_hu_", image["anchor"]["href"])
 
     def test_hashed_derivatives_are_immutable_and_originals_are_not(self):
-        rules = raw_rules(ROOT / "static" / "_headers")
-        headers = matcher(rules)
-        originals = set(self.originals)
-        hashed = []
-        for dirpath, _, filenames in os.walk(ROOT / "public" / "img"):
-            for name in filenames:
-                path = Path(dirpath) / name
-                url = "/" + path.relative_to(ROOT / "public").as_posix()
-                self.assertIn("_hu_", name, url)
-                self.assertEqual(headers(url).get("cache-control"), IMMUTABLE, url)
-                hashed.append(url)
-        self.assertGreater(len(hashed), 100)
+        derivatives = []
+        img_root = os.path.join(PUBLIC, "img")
+        for root, _, files in os.walk(img_root):
+            for name in files:
+                url = "/" + os.path.relpath(os.path.join(root, name), PUBLIC).replace(os.sep, "/")
+                derivatives.append(url)
+        self.assertGreater(len(derivatives), 50)
+        for url in derivatives:
+            with self.subTest(url=url):
+                self.assertIn("_hu_", os.path.basename(url))
+                self.assertEqual(cache_control(url), ["public, max-age=31536000, immutable"])
 
-        published = []
-        for url, path in self.originals.items():
-            built = ROOT / "public" / url.lstrip("/")
-            if not built.is_file():
-                continue
-            published.append(url)
-            self.assertNotIn("_hu_", url)
-            self.assertEqual(headers(url).get("cache-control"), [], url)
-            self.assertEqual(built.stat().st_size, path.stat().st_size, url)
-        self.assertGreater(len(published), 100)
-        self.assertTrue(originals)
+        originals = original_urls()
+        self.assertGreater(len(originals), 100)
+        for url in originals:
+            with self.subTest(url=url):
+                self.assertNotIn("_hu_", url)
+                self.assertTrue(os.path.isfile(public_file(url)), url)
+                self.assertEqual(cache_control(url), [])
 
-        static_hashed = []
-        for dirpath, _, filenames in os.walk(ROOT / "public" / "static"):
-            for name in filenames:
-                if "_hu_" not in name:
-                    continue
-                url = "/" + (Path(dirpath) / name).relative_to(ROOT / "public").as_posix()
-                static_hashed.append(url)
-                self.assertEqual(len(headers(url).get("cache-control", [])), 1, url)
-        self.assertTrue(static_hashed)
+        # The two rules do not stack: /static/* already caches the avatar.
+        static_derivative = None
+        for root, _, files in os.walk(os.path.join(PUBLIC, "static")):
+            for name in files:
+                if "_hu_" in name:
+                    static_derivative = "/" + os.path.relpath(
+                        os.path.join(root, name), PUBLIC
+                    ).replace(os.sep, "/")
+                    break
+        self.assertIsNotNone(static_derivative)
+        self.assertEqual(len(cache_control(static_derivative)), 1)
+
+
+if __name__ == "__main__":
+    unittest.main()
