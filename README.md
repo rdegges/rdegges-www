@@ -115,7 +115,7 @@ directory. Nobody runs the `wrangler` CLI directly.
 `docker-compose.yml`:
 
 ```yaml
-image: ghcr.io/gohugoio/hugo:v0.168.0
+image: ghcr.io/gohugoio/hugo:v0.169.0
 ```
 
 Local dev and CI use that image directly. Production reads the same tag:
