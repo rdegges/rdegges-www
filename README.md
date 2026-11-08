@@ -31,6 +31,49 @@ hugo server
 Hugo Extended is required.
 
 
+## Images
+
+Put the full-resolution JPEG or PNG in the post's folder, next to `index.md`.
+Do not export a 500px copy by hand. A file that was already saved at 500px
+stays 500px: resizing cannot put back detail the file never had.
+
+Reference it with ordinary Markdown and write the alt text:
+
+```markdown
+![The workbench in the shop](workbench.jpg)
+```
+
+The build makes the sizes the page shows. The candidates are 480, 750, and
+1125 pixels wide, plus the image's own width capped at 1500. Nothing is
+scaled up, nothing is cropped, and a candidate almost as wide as the cap is
+skipped. Resizing uses Lanczos. JPEGs are quality 85.
+
+Say what the image is when the default would be wrong. In the post's front
+matter:
+
+```yaml
+resources:
+  - src: workbench.png
+    params:
+      kind: photo
+```
+
+`kind` is `photo`, `screenshot`, or `illustration`. A JPEG is a photo unless
+you mark it: the page offers a lossy WebP at quality 85 and a JPEG of the
+same widths. A PNG is a screenshot unless you mark it `photo`: a lossless
+WebP is offered only when it is smaller than the PNG, and the PNG stays as
+the fallback. An illustration takes that same lossless path. Use `photo` for
+a PNG photograph, and `screenshot` for a JPEG that is mostly UI or text.
+
+The `<img>` itself is always a JPEG or PNG, so a feed or mail client that
+ignores `<picture>` still gets a real image, sized for the page rather than
+the multi-megabyte original. The image links to the committed original when
+the master is wider than the content column (about 750px), when the page
+sets `linkOriginals` (the About photos do, because the squares are a CSS
+crop), or when a heavy master was re-encoded for display. A file the column
+already shows at full size is not a link. A GIF is left as it is.
+
+
 ## Testing
 
 ```bash
@@ -105,6 +148,12 @@ Response headers live in two files: `render.yaml` for Render and
 `static/_headers` for Cloudflare. `tests/test_headers.py` fails when the two
 files differ. The exceptions are Content-Type and Link, which only Cloudflare
 sets. Link names the HTML post as the canonical URL of its Markdown copy.
+
+`/static/*` is cached for a year because those filenames are fingerprinted.
+`/img/*` is the same rule for image derivatives: every file there has Hugo's
+`_hu_` processing hash in its name. The original image next to a post is not
+covered by either rule, so replacing that file does not leave a year-old
+copy in the browser.
 
 `package.json` exists only for this Cloudflare tooling. It pins `cf` and
 `wrangler` to exact versions. `cf` hands static-asset packaging to the

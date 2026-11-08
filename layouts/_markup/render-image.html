@@ -1,27 +1,43 @@
 {{- /*
-  Image render hook: geometry only.
+  Image render hook.
 
-  This resizes images and emits a responsive srcset. It deliberately does NOT
-  convert formats. Format choice depends on whether an image is continuous-tone
-  (photos, scans) or discrete-tone (screenshots, line art), and the two want
-  opposite treatment -- measured on this site's own images, a lossy re-encode of
-  a screenshot scores 59 on SSIMULACRA2, which is visibly damaged, while the
-  same setting is fine on a photo. Nothing in a Hugo template can tell the two
-  apart: it can compare encoded sizes but cannot score quality. So format
-  negotiation belongs at the CDN, where it is per-browser, reversible, and
-  improves without a rebuild.
+  Page-bundle images get a responsive srcset and, when it pays, a WebP
+  alongside a JPEG or PNG fallback. Format is not guessed from the pixels: a
+  lossy re-encode of a screenshot on this site scored 59 on SSIMULACRA2,
+  which is visibly damaged text, while the same setting is fine on a photo.
+  Authors set the resource param `kind` to photo, screenshot, or illustration.
+  With no kind, a JPEG is a photo and anything else (PNG) takes the lossless
+  path.
 
-  Animated GIFs pass through untouched -- Hugo's image processing flattens them
+  Photos are lossy WebP at q85, the same fidelity as the JPEG derivatives,
+  with a JPEG <img> so a feed or mail client that ignores <picture> still
+  gets a real image. Screenshots and illustrations keep a PNG <img>, and a
+  lossless WebP is emitted only when every candidate is smaller than that PNG.
+  A partial WebP srcset would make a browser upscale the small file instead
+  of using the PNG.
+
+  Derivatives are published under /img/. Their filenames carry Hugo's
+  processing hash (_hu_), which is what makes the one-year immutable cache
+  header honest. The original stays at its page-bundle URL and is not cached
+  that way.
+
+  The <img src> is the largest display candidate, never a multi-megabyte
+  original: the cap below already stops display files at 1500px, and a
+  native-width master heavier than half a megabyte is re-encoded at the same
+  width when that file is smaller. That href is always the committed
+  original, never a hashed derivative.
+
+  Every image is wrapped so the print mat's padding sits outside the image
+  (padding on the img itself would shrink it). The wrapper is a.img-full,
+  with the expand mark, when the original is wider than the content column,
+  the page sets linkOriginals (the About squares are CSS crops), or the file
+  on the page is a lighter re-encode of a heavy master. Everything else,
+  including GIFs and files the column already shows at full size, is
+  span.img-mat: the mat, and no zoom affordance. A <picture> sits inside
+  that wrapper when a WebP is offered.
+
+  Animated GIFs pass through untouched. Hugo's image processing flattens them
   to a single frame. SVG cannot be processed at all.
-
-  Every image this hook emits is wrapped so the print mat's padding sits
-  outside the image (padding on the img itself would shrink it). A source
-  wider than the content column links to the original (a.img-full).
-  A page may also set linkOriginals when the picture on the page is a CSS
-  crop of a file the column already fits: the About photos do, so the
-  square still opens the uncropped original. Everything else, including
-  GIFs and files the column already shows at full size, is span.img-mat:
-  the mat, and no zoom affordance.
 */ -}}
 
 {{- $dest := .Destination -}}
@@ -36,6 +52,12 @@
 {{- $column := 750 -}}
 {{- $ladder := slice 480 $column 1125 -}}
 {{- $maxWidth := 1500 -}}
+
+{{- /* Native-width masters heavier than this are re-encoded for display when
+       the result is actually smaller. The journal photo (~980 KB at 1486px)
+       is the one; every smaller master on the site is left as-is, and a
+       re-encode that grows the file is discarded. */ -}}
+{{- $heavyBytes := 500000 -}}
 
 {{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") (hasPrefix $dest "//") (hasPrefix $dest "data:") -}}
 
@@ -75,6 +97,37 @@
     <span class="img-mat"><img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}
       {{- if eq $sub "gif" }} width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}></span>
   {{- else -}}
+    {{- $pagePath := .Page.File.Path -}}
+    {{- $dir := .Page.File.Dir -}}
+    {{- $kind := "" -}}
+    {{- with $image.Params.kind -}}
+      {{- $kind = lower (printf "%s" .) -}}
+    {{- end -}}
+    {{- if and $kind (not (in (slice "photo" "screenshot" "illustration") $kind)) -}}
+      {{- errorf "Image kind must be photo, screenshot, or illustration, not %q: %s (page: %s)" $kind $dest $pagePath -}}
+    {{- end -}}
+    {{- if not $kind -}}
+      {{- $kind = cond (eq $sub "jpeg") "photo" "screenshot" -}}
+    {{- end -}}
+    {{- $photo := eq $kind "photo" -}}
+    {{- /* Lossless WebP's hint is a compressor preset. Text for UI and
+           screenshots, drawing for line art. Photos stay on the lossy path. */ -}}
+    {{- $hint := cond (eq $kind "illustration") "drawing" "text" -}}
+    {{- $jpegSource := eq $sub "jpeg" -}}
+    {{- $pngSource := eq $sub "png" -}}
+    {{- /* The fallback bytes have to be the source format, or a deliberate
+           conversion: photos become JPEG (white behind any transparency),
+           everything else stays PNG. A JPEG marked screenshot is a PNG. */ -}}
+    {{- $fallbackIsSource := or (and $photo $jpegSource) (and (not $photo) $pngSource) -}}
+
+    {{- $srcPath := path.Join "content" $dir $dest -}}
+    {{- $origBytes := 0 -}}
+    {{- with os.Stat $srcPath -}}
+      {{- $origBytes = int .Size -}}
+    {{- else -}}
+      {{- errorf "Image file not on disk: %s (page: %s)" $srcPath $pagePath -}}
+    {{- end -}}
+
     {{- $cap := cond (gt $image.Width $maxWidth) $maxWidth $image.Width -}}
 
     {{- /* Only ladder steps meaningfully smaller than the cap: emitting 480w
@@ -85,18 +138,73 @@
     {{- end -}}
     {{- $widths = $widths | append $cap -}}
 
-    {{- /* Only ever resize DOWN. Re-encoding an image at its own size is pure
-           loss: Hugo's PNG encoder produces a larger file than the original for
-           the flat-colour screenshots on this site, so an untouched original is
-           both smaller and faster to build. */ -}}
-    {{- $srcset := slice -}}
-    {{- range $widths -}}
-      {{- $r := $image -}}
-      {{- if lt . $image.Width }}{{ $r = $image.Resize (printf "%dx" .) }}{{ end -}}
-      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+    {{- /* Resize a copy whose target lives under /img/, so the hashed
+           derivative -- and not the original -- is what /img/* caches.
+           The copy itself is never published; only RelPermalink publishes. */ -}}
+    {{- $baseKey := printf "img-base:%s" $dest -}}
+    {{- $base := .Page.Store.Get $baseKey -}}
+    {{- if not $base -}}
+      {{- $base = resources.Copy (path.Join "img" $dir $dest) $image -}}
+      {{- .Page.Store.Set $baseKey $base -}}
     {{- end -}}
-    {{- $fallback := $image -}}
-    {{- if lt $cap $image.Width }}{{ $fallback = $image.Resize (printf "%dx" $cap) }}{{ end -}}
+
+    {{- $cands := slice -}}
+    {{- range $widths -}}
+      {{- $w := . -}}
+      {{- $spec := printf "%dx" $w -}}
+      {{- if $photo -}}
+        {{- if $jpegSource -}}
+          {{- $spec = printf "%dx jpeg q85" $w -}}
+        {{- else -}}
+          {{- $spec = printf "%dx jpeg q85 #ffffff" $w -}}
+        {{- end -}}
+      {{- else if not $pngSource -}}
+        {{- $spec = printf "%dx png" $w -}}
+      {{- end -}}
+
+      {{- $isOriginal := false -}}
+      {{- $res := $image -}}
+      {{- if or (lt $w $image.Width) (not $fallbackIsSource) -}}
+        {{- /* Downscale, or change format. Never upscale, never crop. */ -}}
+        {{- $res = $base.Resize $spec -}}
+      {{- else if ge $origBytes $heavyBytes -}}
+        {{- $encoded := $base.Resize $spec -}}
+        {{- if lt (len $encoded.Content) $origBytes -}}
+          {{- $res = $encoded -}}
+        {{- else -}}
+          {{- $isOriginal = true -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $isOriginal = true -}}
+      {{- end -}}
+      {{- $cands = $cands | append (dict "res" $res "original" $isOriginal "width" $w) -}}
+    {{- end -}}
+
+    {{- /* Photos always get a matching lossy WebP. Lossless WebP is kept
+           only when it wins at every width; one larger candidate would make
+           the browser pick WebP and upscale it. */ -}}
+    {{- $useWebp := true -}}
+    {{- $webps := slice -}}
+    {{- range $cands -}}
+      {{- $spec := printf "%dx webp q85 photo" .width -}}
+      {{- if not $photo -}}
+        {{- $spec = printf "%dx webp lossless %s" .width $hint -}}
+      {{- end -}}
+      {{- $wr := $base.Resize $spec -}}
+      {{- if ne $wr.Width .width -}}
+        {{- errorf "WebP width %d does not match %d: %s (page: %s)" $wr.Width .width $dest $pagePath -}}
+      {{- end -}}
+      {{- if not $photo -}}
+        {{- $fbSize := $origBytes -}}
+        {{- if not .original }}{{ $fbSize = len .res.Content }}{{ end -}}
+        {{- if ge (len $wr.Content) $fbSize }}{{ $useWebp = false }}{{ end -}}
+      {{- end -}}
+      {{- $webps = $webps | append $wr -}}
+    {{- end -}}
+
+    {{- $displayed := index $cands (sub (len $cands) 1) -}}
+    {{- $disp := $displayed.res -}}
+    {{- $multi := gt (len $cands) 1 -}}
 
     {{- /* Rendered width at each Bootstrap breakpoint, capped by the image's
            own size -- an image narrower than the column renders at its natural
@@ -109,20 +217,28 @@
     {{- $sizes := printf "(min-width: 1200px) %dpx, (min-width: 992px) %dpx, (min-width: 768px) %dpx, 83vw" $lg $md $sm -}}
     {{- if and (eq $lg $md) (eq $md $sm) }}{{ $sizes = printf "(min-width: 768px) %dpx, 83vw" $lg }}{{ end -}}
 
-    {{- /* Link when the original is wider than the on-page column. A file
-           the column already shows at its own size is not a link. This is
-           not the srcset cap: a 1024px file is still served inline, and it
-           is also a link, because the page displays it at $column.
-           linkOriginals is the About exception: those squares are CSS crops,
-           so a 600px stage frame still links to the uncropped file. */ -}}
-    {{- $widerThanColumn := gt $image.Width $column -}}
-    {{- $linkOriginal := or $widerThanColumn (eq .Page.Params.linkOriginals true) -}}
-    {{- if $linkOriginal -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
-    <img src="{{ $fallback.RelPermalink }}"
+    {{- $fallbackSet := slice -}}
+    {{- $webpSet := slice -}}
+    {{- range $i, $c := $cands -}}
+      {{- $fallbackSet = $fallbackSet | append (printf "%s %dw" $c.res.RelPermalink $c.res.Width) -}}
+      {{- if $useWebp -}}
+        {{- $wr := index $webps $i -}}
+        {{- $webpSet = $webpSet | append (printf "%s %dw" $wr.RelPermalink $wr.Width) -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- /* Wider than the column, an About-style linkOriginals page, or a
+           heavy master we replaced with a lighter same-width file. The href
+           is the committed original. 1500 is only the srcset cap. */ -}}
+    {{- $link := or (gt $image.Width $column) (eq .Page.Params.linkOriginals true) (not $displayed.original) -}}
+    {{- if $link -}}<a class="img-full" href="{{ $image.RelPermalink }}" aria-label="{{ with $alt }}{{ . }} &ndash; {{ end }}view full size ({{ $image.Width }}&times;{{ $image.Height }})">{{ else -}}<span class="img-mat">{{ end -}}
+    {{- if $useWebp -}}<picture><source type="image/webp" srcset="{{ delimit $webpSet ", " }}"{{ if $multi }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
+    <img src="{{ $disp.RelPermalink }}"
       {{- /* A one-entry srcset says nothing that src does not. */ -}}
-      {{- if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
-      width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+      {{- if $multi }} srcset="{{ delimit $fallbackSet ", " }}" sizes="{{ $sizes }}"{{ end }}
+      width="{{ $disp.Width }}" height="{{ $disp.Height }}"
       alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} {{ $loadAttrs | safeHTMLAttr }}>
-    {{- if $linkOriginal -}}</a>{{ else -}}</span>{{ end -}}
+    {{- if $useWebp -}}</picture>{{ end -}}
+    {{- if $link -}}</a>{{ else -}}</span>{{ end -}}
   {{- end -}}
 {{- end -}}

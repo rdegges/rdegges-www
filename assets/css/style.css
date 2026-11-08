@@ -286,9 +286,9 @@ footer p a:visited {
    zeroed, so the 8px white padding hugs the photo instead of the column.
    width:fit-content keeps a narrow image from stretching to the column.
 
-   Only a source wider than the content column is a link (a.img-full). That
-   anchor is display:block so it does not add inline leading under the
-   image, and it carries the corner expand mark. Everything else is
+   A link (a.img-full) is a source wider than the content column, a page
+   that sets linkOriginals, or a heavy master replaced by a lighter file.
+   That anchor carries the corner expand mark. Everything else is
    span.img-mat: the same mat, no mark, and the default cursor. */
 .article a.img-full,
 .article .img-mat {
@@ -310,6 +310,13 @@ footer p a:visited {
 .article a.img-full img,
 .article .img-mat img {
     margin: 0 !important;
+}
+
+/* WebP is a <picture> inside the mat. It has to be a block, or it leaves a
+   gap under the image and a floated About square no longer hugs the mat. */
+.article a.img-full picture,
+.article .img-mat picture {
+    display: block;
 }
 
 .article a.img-full::after {
