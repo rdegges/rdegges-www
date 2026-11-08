@@ -11,7 +11,7 @@
 
 services:
   hugo:
-    image: ghcr.io/gohugoio/hugo:v0.168.0
+    image: ghcr.io/gohugoio/hugo:v0.169.0
     container_name: rdegges-www
     ports:
       - "1313:1313"
