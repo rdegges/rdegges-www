@@ -366,9 +366,9 @@ footer p a:visited {
 /* About page photos. The square is a CSS crop of the original file. The
    caption uses the same grey Raleway as a post date, not a block quote.
    The shared print mat is width:fit-content with 2.5em auto margins so a
-   post image centers in the column. Inside these floats that margin would
-   sit between the crop and its caption, so the mat margin is cleared and
-   the figure shrink-wraps the mat. The image itself stays 220px or 200px. */
+   post image centers in the column. Inside these floats that margin is
+   cleared, and the figure is the square plus the 8px mat on each side, so
+   the caption wraps under the mat instead of widening the float. */
 .article figure.about-photo {
     margin: 2.5em auto;
     text-align: center;
@@ -385,20 +385,23 @@ footer p a:visited {
 
 .article .float-right {
     float: right;
-    width: fit-content;
+    /* 220px square plus the 8px mat on each side. A fit-content float
+       would grow to the caption's unwrapped line. */
+    width: calc(220px + 16px);
     max-width: 100%;
     margin: 0.4em 0 1em 1.6em !important;
 }
 
 .article .float-left {
     float: left;
-    width: fit-content;
+    width: calc(200px + 16px);
     max-width: 100%;
     margin: 0.4em 1.6em 1em 0 !important;
 }
 
 .article .float-right a.img-full,
 .article .float-left a.img-full {
+    width: 100%;
     margin: 0;
 }
 
