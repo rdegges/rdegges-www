@@ -81,8 +81,9 @@ class TestImages(SiteTestCase):
 
     def test_article_images_are_matted_and_only_larger_originals_link(self):
         # The mat is the wrapper, not padding on the img. A link exists only
-        # when the render hook already decided the original is wider than
-        # the 1500px cap; that link is the expand-mark target.
+        # when the original is wider than the content column; that link is
+        # the expand-mark target. The inline file may be that same original
+        # when it is under the 1500px srcset cap.
         for page in articles():
             for img, ancestors in images_in(page):
                 with self.subTest(page=page.url, img=img.get("src")):
@@ -91,24 +92,33 @@ class TestImages(SiteTestCase):
                     linked = [a for tag, a in ancestors if tag == "a"]
                     if kind == "full":
                         self.assertEqual(len(linked), 1)
-                        self.assertNotEqual(linked[0].get("href"), img.get("src"))
+                        self.assertTrue(linked[0].get("href"))
                         self.assertIn("view full size", linked[0].get("aria-label", ""))
                     else:
                         self.assertEqual(linked, [])
 
-    def test_wide_originals_link_and_small_ones_do_not(self):
-        # saying-goodbye photos are wider than 1500px. The grim reaper
-        # sketch is 1024px and the luffy sketch is 500px, so neither has a
-        # larger original. The GraphQL gif is not resized at all.
+    def test_originals_wider_than_the_column_link(self):
+        # The page shows an image at the content column, about 750 CSS px.
+        # Wider originals link; a file the column already shows at full
+        # size does not. The 1500px figure is only the inline srcset cap.
         by_url = {p.url: p for p in articles()}
 
         goodbye = images_in(by_url["/2015/saying-goodbye/"])
-        self.assertTrue(any(mat_kind(a) == "full" for _, a in goodbye))
+        resized = [
+            (img, ancestors) for img, ancestors in goodbye
+            if mat_kind(ancestors) == "full" and ancestors[-1][1].get("href") != img.get("src")
+        ]
+        self.assertTrue(resized, "a photo wider than the srcset cap still links to a different file")
 
         grim = images_in(by_url["/2024/im-writing-again/"])
         self.assertEqual(len(grim), 1)
         self.assertIn("grim-reaper-writing-sketch", grim[0][0]["src"])
-        self.assertEqual(mat_kind(grim[0][1]), "mat")
+        self.assertEqual(mat_kind(grim[0][1]), "full")
+
+        journal = images_in(by_url["/2022/journaling-the-best-habit-i-picked-up-in-2021/"])
+        photo = next((img, ancestors) for img, ancestors in journal if "my-journal" in img["src"])
+        self.assertEqual(mat_kind(photo[1]), "full")
+        self.assertIn("my-journal.jpg", photo[1][-1][1]["href"])
 
         luffy = images_in(by_url["/2013/5-am/"])
         self.assertEqual(len(luffy), 1)

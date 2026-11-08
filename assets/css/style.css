@@ -286,7 +286,7 @@ footer p a:visited {
    zeroed, so the 8px white padding hugs the photo instead of the column.
    width:fit-content keeps a narrow image from stretching to the column.
 
-   Only a source wider than the srcset cap is a link (a.img-full). That
+   Only a source wider than the content column is a link (a.img-full). That
    anchor is display:block so it does not add inline leading under the
    image, and it carries the corner expand mark. Everything else is
    span.img-mat: the same mat, no mark, and the default cursor. */
