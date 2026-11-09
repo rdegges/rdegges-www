@@ -10,7 +10,7 @@ outputs:
   - HTML
 ---
 
-{{< about-photo align="right" src="ai-engineer-worlds-fair-2026.jpg" alt="Randall Degges speaking on stage at AI Engineer World's Fair 2026" caption="On stage at AI Engineer World's Fair, San Francisco, 2026" >}}
+{{< about-photo align="right" src="ai-engineer-worlds-fair-2026.jpg" alt="Me speaking on stage at AI Engineer World's Fair 2026" caption="On stage at AI Engineer World's Fair, San Francisco, 2026" >}}
 
 I'm just a happy programmer that likes to hack stuff. I'm Randall Degges, and today I'm VP of AI Engineering at [Snyk](https://snyk.io).
 
@@ -32,7 +32,7 @@ A lot of my favorite work has been open source or free for developers to use. I 
 
 I started a computer science degree at UC Santa Cruz in 2006. I was a terrible student and dropped out after two years. Almost everything I know about programming I taught myself.
 
-{{< personal-block src="samantha-and-dandelion-patio.jpg" alt="Dandelion and Samantha" caption="Dandelion and Samantha" >}}
+{{< personal-block src="samantha-and-dandelion-patio.jpg" alt="My wife Samantha holding our dog Dandelion on a patio" caption="Dandelion and Samantha" >}}
 I live in Bend, Oregon these days, though I still spend a lot of time in San Francisco and traveling for work. I'm married to my wife [Samantha](https://hardlyfunny.com), and we have a super cute dog named Dandelion.
 {{< /personal-block >}}
 

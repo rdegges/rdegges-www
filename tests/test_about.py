@@ -183,7 +183,13 @@ class TestAbout(SiteTestCase):
 
         alts = [img.get("alt") for img in self.page.find("img")]
         # The render hook's typographer curls the apostrophe in alt text.
-        self.assertEqual(alts, ["Randall Degges speaking on stage at AI Engineer World\u2019s Fair 2026", "Dandelion and Samantha"])
+        self.assertEqual(
+            alts,
+            [
+                "Me speaking on stage at AI Engineer World\u2019s Fair 2026",
+                "My wife Samantha holding our dog Dandelion on a patio",
+            ],
+        )
         # The stage photo is the one above the fold.
         imgs = self.page.find("img")
         self.assertEqual(imgs[0].get("loading"), "eager")
