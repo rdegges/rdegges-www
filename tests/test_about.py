@@ -185,6 +185,25 @@ class TestAbout(SiteTestCase):
         self.assertEqual(imgs[0].get("fetchpriority"), "high")
         self.assertEqual(imgs[1].get("loading"), "lazy")
 
+    def test_is_in_the_sitemap(self):
+        # build.list "never" keeps About out of the post list, the feed and
+        # llms.txt's Posts -- and out of Hugo's sitemap too, so search engines
+        # only found it by following the nav link.
+        import xml.etree.ElementTree as ET
+
+        root = ET.parse(public_file("/sitemap.xml")).getroot()
+        locs = [loc.text for loc in root.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+        self.assertEqual(locs.count("https://rdegges.com/about/"), 1)
+
+    def test_is_linked_from_llms_txt(self):
+        with open(public_file("/llms.txt"), encoding="utf-8") as f:
+            text = f.read()
+        self.assertIn("- About: https://rdegges.com/about/\n", text)
+
+    def test_share_title_names_the_person(self):
+        # An unfurl that just says "About" does not say about whom.
+        self.assertEqual(self.page.meta("og:title"), "About - Randall Degges")
+
     def test_stylesheet_crops_the_photos_square(self):
         href = self.page.find("link", rel="stylesheet")[0]["href"]
         css = open(public_file(href), encoding="utf-8").read()

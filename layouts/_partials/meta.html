@@ -20,7 +20,9 @@
   {{- end }}
   <meta property="og:site_name" content="{{ site.Title }}">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="{{ .Title | default site.Title }}">
+  {{- /* A post's title stands on its own. A standalone page's ("About")
+         does not say whose it is, so it gets the site name like <title>. */}}
+  <meta property="og:title" content="{{ if and .IsPage (eq .Params.showDate false) }}{{ .Title }} - {{ site.Title }}{{ else }}{{ .Title | default site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $description }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ $image.url }}">

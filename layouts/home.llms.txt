@@ -12,6 +12,9 @@
 Every post is also available as Markdown: replace a post's trailing slash with /index.md. The full text of the latest posts is in the Atom feed.
 
 - Website: {{ site.Home.Permalink }}
+{{- with site.GetPage "/about" }}
+- About: {{ .Permalink }}
+{{- end }}
 - Feed: {{ "feed.xml" | absURL }}
 - Email: {{ site.Params.email }}
 {{- range site.Params.navLinks }}
