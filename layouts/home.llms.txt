@@ -1,7 +1,8 @@
 {{- /*
   /llms.txt, per https://llmstxt.org: who the site is about, then every
   post with a one-line summary, linking to its Markdown version so a model
-  can fetch clean text.
+  can fetch clean text. Standalone pages (About) are listed under Pages,
+  linking their HTML: they have no Markdown copy.
 */ -}}
 # {{ site.Title }}
 
@@ -12,9 +13,6 @@
 Every post is also available as Markdown: replace a post's trailing slash with /index.md. The full text of the latest posts is in the Atom feed.
 
 - Website: {{ site.Home.Permalink }}
-{{- with site.GetPage "/about" }}
-- About: {{ .Permalink }}
-{{- end }}
 - Feed: {{ "feed.xml" | absURL }}
 - Email: {{ site.Params.email }}
 {{- range site.Params.navLinks }}
@@ -23,8 +21,13 @@ Every post is also available as Markdown: replace a post's trailing slash with /
 {{- end }}
 {{- end }}
 
+## Pages
+{{ range where site.RegularPages "Params.showDate" "eq" false }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
+
 ## Posts
-{{ range site.RegularPages }}
+{{ range partial "posts.html" . }}
 {{- $post := . }}
 {{- with .OutputFormats.Get "markdown" }}
 - [{{ $post.Title }}]({{ .Permalink }}) ({{ $post.Date.Format "2006-01-02" }}){{ with $post.Description }}: {{ . }}{{ end }}

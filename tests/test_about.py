@@ -209,7 +209,20 @@ class TestAbout(SiteTestCase):
     def test_is_linked_from_llms_txt(self):
         with open(public_file("/llms.txt"), encoding="utf-8") as f:
             text = f.read()
-        self.assertIn("- About: https://rdegges.com/about/\n", text)
+        pages = text.split("\n## Pages\n", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("- [About](https://rdegges.com/about/): ", pages)
+
+    def test_is_not_listed_as_a_post(self):
+        # About is in Hugo's page collections now, so the post list, the feed
+        # and llms.txt's Posts each have to leave it out themselves.
+        with open(public_file("/index.html"), encoding="utf-8") as f:
+            # The nav links /about/; the post list uses absolute permalinks.
+            # (The Person schema's photo lives under /about/, so match the page URL only.)
+            self.assertNotRegex(f.read(), r"https://rdegges\.com/about/(?![\w.-])")
+        with open(public_file("/feed.xml"), encoding="utf-8") as f:
+            self.assertNotIn("https://rdegges.com/about/", f.read())
+        with open(public_file("/llms.txt"), encoding="utf-8") as f:
+            self.assertNotIn("/about/", f.read().split("\n## Posts\n", 1)[1])
 
     def test_share_title_names_the_person(self):
         # An unfurl that just says "About" does not say about whom.

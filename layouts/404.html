@@ -32,7 +32,7 @@
                    contain <li>, and datetime wants ISO 8601, not the display
                    string. home.html has the same markup and the same two
                    faults -- not fixed here to keep this change scoped. */}}
-            {{ range first 8 .Site.RegularPages }}
+            {{ range first 8 (partial "posts.html" .) }}
               <li>
                 <time
                   class="visible-xs visible-sm visible-md"

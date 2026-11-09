@@ -40,7 +40,7 @@
                    contain <li>. datetime carries ISO 8601, which is what the
                    attribute is defined to hold -- the human-readable form is
                    the element's text. */}}
-            {{ range .Site.RegularPages }}
+            {{ range partial "posts.html" . }}
               <li>
                 <time class="visible-xs visible-sm visible-md" datetime="{{ .Date.Format "2006-01-02" }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
                 <a href="{{ .Permalink }}" hreflang="{{ $.Site.Language.Locale }}" title="{{ .LinkTitle }}" type="text/html">{{ upper .LinkTitle }}</a>

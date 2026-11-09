@@ -36,6 +36,19 @@ class TestSitemap(SiteTestCase):
                 self.assertTrue(os.path.isfile(public_file(loc.removeprefix("https://rdegges.com"))))
 
 
+    def test_every_page_is_in_the_sitemap(self):
+        # A page that is built but missing here is one crawlers can only find
+        # by following links. About was, because it hid itself from Hugo's
+        # page collections; this catches the next page that does.
+        root = ET.parse(os.path.join(PUBLIC, "sitemap.xml")).getroot()
+        locs = {loc.text for loc in root.iter(SITEMAP + "loc")}
+        for page in pages():
+            if page.url == "/404.html":
+                continue
+            with self.subTest(page=page.url):
+                self.assertIn("https://rdegges.com" + page.url, locs)
+
+
 class TestFeed(SiteTestCase):
     def test_feed_is_well_formed_atom_with_entries(self):
         root = ET.parse(os.path.join(PUBLIC, "feed.xml")).getroot()

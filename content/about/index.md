@@ -4,8 +4,6 @@ description: "Randall Degges is VP of AI Engineering at Snyk and a self-taught p
 linkOriginals: true
 showDate: false
 showSubscribe: false
-build:
-  list: never
 outputs:
   - HTML
 ---

@@ -56,6 +56,19 @@ class TestLlmsTxt(SiteTestCase):
         self.text = read(os.path.join(PUBLIC, "llms.txt"))
         self.posts_section = self.text.split("\n## Posts\n", 1)[1]
 
+    def test_every_page_in_the_sitemap_is_linked(self):
+        # Posts link their Markdown copy, standalone pages (About) their HTML.
+        # Either way, nothing a search engine is told about is hidden from AI.
+        import xml.etree.ElementTree as ET
+
+        root = ET.parse(public_file("/sitemap.xml")).getroot()
+        for loc in root.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc"):
+            url = loc.text
+            if url == SITE + "/":
+                continue
+            with self.subTest(url=url):
+                self.assertTrue(f"]({url})" in self.text or f"]({url}index.md)" in self.text, url)
+
     def test_follows_the_llmstxt_shape(self):
         # https://llmstxt.org: an H1 name, then a blockquote summary.
         lines = self.text.splitlines()
