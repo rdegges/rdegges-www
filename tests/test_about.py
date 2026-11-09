@@ -69,7 +69,11 @@ class TestAbout(SiteTestCase):
     def test_is_its_own_page(self):
         self.assertTrue(os.path.isfile(self.page.path))
         self.assertEqual(self.page.title, "About - Randall Degges")
-        self.assertEqual(self.page.meta("description"), "I'm just a happy programmer that likes to hack stuff.")
+        self.assertEqual(
+            self.page.meta("description"),
+            "Randall Degges is VP of AI Engineering at Snyk and a self-taught programmer."
+            " Previously Okta and Stormpath; creator of ipify.",
+        )
         h1 = [text for tag, _, text in Text(self.page.path).parts if tag == "h1"]
         self.assertEqual(h1, ["About"])
         # No dateline, and it is not offered as a Markdown post.
@@ -112,7 +116,7 @@ class TestAbout(SiteTestCase):
         # Compare the text a reader sees, not the encoded source.
         text = html.unescape(self.html).replace("\u2019", "'").replace("\u2013", "--")
         for phrase in (
-            "as VP of AI Engineering",
+            "today I'm VP of AI Engineering",
             "https://snyk.io",
             "https://workos.com",
             "https://www.arcade.dev",
@@ -178,7 +182,8 @@ class TestAbout(SiteTestCase):
                 self.assertEqual(published, original)
 
         alts = [img.get("alt") for img in self.page.find("img")]
-        self.assertEqual(alts, ["Randall Degges", "Dandelion and Samantha"])
+        # The render hook's typographer curls the apostrophe in alt text.
+        self.assertEqual(alts, ["Randall Degges speaking on stage at AI Engineer World\u2019s Fair 2026", "Dandelion and Samantha"])
         # The stage photo is the one above the fold.
         imgs = self.page.find("img")
         self.assertEqual(imgs[0].get("loading"), "eager")
