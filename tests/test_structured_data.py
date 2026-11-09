@@ -96,6 +96,16 @@ class TestStructuredData(SiteTestCase):
         # The home page describes the site, not a post.
         self.assertEqual(sorted(n["@type"] for n in nodes.values()), ["Person", "WebSite"])
 
+    def test_person_has_a_photo_and_topics(self):
+        # image and knowsAbout are what an answer engine quotes when asked
+        # who Randall Degges is; the photo must be a file the build wrote.
+        person = graph(home())[PERSON]
+        url = urlparse(person["image"])
+        self.assertEqual(url.scheme, "https")
+        self.assertTrue(os.path.isfile(public_file(url.path)))
+        self.assertIsInstance(person["knowsAbout"], list)
+        self.assertGreater(len(person["knowsAbout"]), 2)
+
     def test_profiles_are_distinct_https_urls(self):
         same_as = graph(home())[PERSON]["sameAs"]
         self.assertEqual(len(same_as), len(set(same_as)))

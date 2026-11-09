@@ -27,6 +27,8 @@
     {{- $person = merge $person (dict "worksFor" $org) -}}
   {{- end -}}
   {{- with .sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
+  {{- with .image }}{{ $person = merge $person (dict "image" (absURL .)) }}{{ end -}}
+  {{- with .knowsAbout }}{{ $person = merge $person (dict "knowsAbout" .) }}{{ end -}}
 {{- end -}}
 {{- $website := dict
       "@type" "WebSite"

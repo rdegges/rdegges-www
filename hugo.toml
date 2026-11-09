@@ -160,6 +160,19 @@ tabWidth = 4
 jobTitle = "VP, AI Engineering"
 worksFor = "Snyk"
 worksForURL = "https://snyk.io"
+# A photo of the person (the generated avatar is an illustration, not a
+# face), so answer engines and knowledge panels can show who this is.
+image = "/about/ai-engineer-worlds-fair-2026.jpg"
+# Topics the About page says he works on and writes about.
+knowsAbout = [
+  "Software engineering",
+  "AI agents",
+  "Developer relations",
+  "Application security",
+  "Web authentication",
+  "Cryptography",
+  "APIs",
+]
 sameAs = [
   "https://github.com/rdegges",
   "https://bsky.app/profile/rdegges.com",

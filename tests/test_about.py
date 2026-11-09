@@ -69,7 +69,11 @@ class TestAbout(SiteTestCase):
     def test_is_its_own_page(self):
         self.assertTrue(os.path.isfile(self.page.path))
         self.assertEqual(self.page.title, "About - Randall Degges")
-        self.assertEqual(self.page.meta("description"), "I'm just a happy programmer that likes to hack stuff.")
+        self.assertEqual(
+            self.page.meta("description"),
+            "Randall Degges is VP of AI Engineering at Snyk and a self-taught programmer."
+            " Previously Okta and Stormpath; creator of ipify.",
+        )
         h1 = [text for tag, _, text in Text(self.page.path).parts if tag == "h1"]
         self.assertEqual(h1, ["About"])
         # No dateline, and it is not offered as a Markdown post.
@@ -112,7 +116,7 @@ class TestAbout(SiteTestCase):
         # Compare the text a reader sees, not the encoded source.
         text = html.unescape(self.html).replace("\u2019", "'").replace("\u2013", "--")
         for phrase in (
-            "as VP of AI Engineering",
+            "today I'm VP of AI Engineering",
             "https://snyk.io",
             "https://workos.com",
             "https://www.arcade.dev",
@@ -178,12 +182,51 @@ class TestAbout(SiteTestCase):
                 self.assertEqual(published, original)
 
         alts = [img.get("alt") for img in self.page.find("img")]
-        self.assertEqual(alts, ["Randall Degges", "Dandelion and Samantha"])
+        # The render hook's typographer curls the apostrophe in alt text.
+        self.assertEqual(
+            alts,
+            [
+                "Me speaking on stage at AI Engineer World\u2019s Fair 2026",
+                "My wife Samantha holding our dog Dandelion on a patio",
+            ],
+        )
         # The stage photo is the one above the fold.
         imgs = self.page.find("img")
         self.assertEqual(imgs[0].get("loading"), "eager")
         self.assertEqual(imgs[0].get("fetchpriority"), "high")
         self.assertEqual(imgs[1].get("loading"), "lazy")
+
+    def test_is_in_the_sitemap(self):
+        # build.list "never" keeps About out of the post list, the feed and
+        # llms.txt's Posts -- and out of Hugo's sitemap too, so search engines
+        # only found it by following the nav link.
+        import xml.etree.ElementTree as ET
+
+        root = ET.parse(public_file("/sitemap.xml")).getroot()
+        locs = [loc.text for loc in root.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+        self.assertEqual(locs.count("https://rdegges.com/about/"), 1)
+
+    def test_is_linked_from_llms_txt(self):
+        with open(public_file("/llms.txt"), encoding="utf-8") as f:
+            text = f.read()
+        pages = text.split("\n## Pages\n", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("- [About](https://rdegges.com/about/): ", pages)
+
+    def test_is_not_listed_as_a_post(self):
+        # About is in Hugo's page collections now, so the post list, the feed
+        # and llms.txt's Posts each have to leave it out themselves.
+        with open(public_file("/index.html"), encoding="utf-8") as f:
+            # The nav links /about/; the post list uses absolute permalinks.
+            # (The Person schema's photo lives under /about/, so match the page URL only.)
+            self.assertNotRegex(f.read(), r"https://rdegges\.com/about/(?![\w.-])")
+        with open(public_file("/feed.xml"), encoding="utf-8") as f:
+            self.assertNotIn("https://rdegges.com/about/", f.read())
+        with open(public_file("/llms.txt"), encoding="utf-8") as f:
+            self.assertNotIn("/about/", f.read().split("\n## Posts\n", 1)[1])
+
+    def test_share_title_names_the_person(self):
+        # An unfurl that just says "About" does not say about whom.
+        self.assertEqual(self.page.meta("og:title"), "About - Randall Degges")
 
     def test_stylesheet_crops_the_photos_square(self):
         href = self.page.find("link", rel="stylesheet")[0]["href"]

@@ -1,0 +1,10 @@
+{{- /*
+  The posts: every regular page except standalone ones such as About,
+  which set showDate to false (the same flag that drops their dateline and
+  makes their structured data an AboutPage, not a BlogPosting).
+
+  Standalone pages stay in Hugo's page collections, so the sitemap, the
+  redirects and anything else that ranges over site.Pages include them
+  without being told. Only templates that mean "posts" call this.
+*/ -}}
+{{- return where site.RegularPages "Params.showDate" "ne" false -}}
