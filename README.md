@@ -28,9 +28,8 @@ brew install hugo
 hugo server
 ```
 
-Hugo Extended is required up to v0.169.x. Hugo v0.170.0 dropped the separate
-extended edition (the single `hugo` binary replaces it, and Sass now needs
-Dart Sass), and this site uses no Sass, so either edition builds it.
+The standard Hugo binary is enough; this site uses no Sass. (Hugo v0.170.0
+removed the separate extended edition; earlier extended builds work too.)
 
 
 ## Images
@@ -177,9 +176,10 @@ merge it and local dev, CI and production all move together.
 
 The build script exists because Render's static-site image ships its own pinned
 Hugo (0.124.x) and ignores `HUGO_VERSION`; setting that variable has no effect
-on which binary `hugo` resolves to. The script downloads the `hugo_extended_*`
-archive; from v0.170.0 Hugo publishes that name only as a compatibility alias,
-so switch the script to the plain `hugo_*` archive if the alias ever goes away.
+on which binary `hugo` resolves to. The script downloads the plain `hugo_*`
+archive, not `hugo_extended_*` (which v0.170.0 keeps only as an alias), and
+checks it against the SHA-256 in Hugo's published checksums file before
+running it. The plain archive builds this site identically on v0.169.0.
 
 `hugo.toml` also sets `[module.hugoVersion] min`, but that's the *oldest* Hugo
 the layouts support rather than the version we pin — it stays put when you
