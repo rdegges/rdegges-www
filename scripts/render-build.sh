@@ -35,11 +35,15 @@ curl -sSfL "${base}/${archive}" -o "${workdir}/${archive}"
 curl -sSfL "${base}/hugo_${version}_checksums.txt" -o "${workdir}/checksums.txt"
 
 echo "==> Verifying checksum"
-if [ "$(grep -c " ${archive}\$" "${workdir}/checksums.txt")" != 1 ]; then
+# Match the archive name literally: the dots are escaped so they cannot match
+# other characters, and the name must end the line so hugo_..._linux-amd64.tar.gz
+# cannot match a longer name such as one ending in .sig.
+archive_re="${archive//./\\.}"
+if [ "$(grep -c -E " ${archive_re}\$" "${workdir}/checksums.txt")" != 1 ]; then
   echo "error: expected exactly one checksum for ${archive} in Hugo's checksums file" >&2
   exit 1
 fi
-(cd "$workdir" && grep " ${archive}\$" checksums.txt | sha256sum -c -)
+(cd "$workdir" && grep -E " ${archive_re}\$" checksums.txt | sha256sum -c -)
 
 tar -xzf "${workdir}/${archive}" -C "$workdir" hugo
 export PATH="${workdir}:${PATH}"

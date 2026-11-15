@@ -85,6 +85,8 @@ The tests in `tests/` check the *built* site in `./public` rather than the
 templates: every internal link and image resolves, every page has a title,
 description and language, every sitemap URL exists, and the feed is valid
 Atom. They use only Python's standard library, so there's nothing to install.
+`tests/test_render_build.py` is the exception to "built site": it exercises
+`scripts/render-build.sh` against a stubbed download and needs no build.
 
 CI runs the same build with `--panicOnWarning`, so a Hugo deprecation fails
 the build the day it appears, then runs these tests and
@@ -168,9 +170,12 @@ directory. Nobody runs the `wrangler` CLI directly.
 image: ghcr.io/gohugoio/hugo:v0.169.0
 ```
 
-Local dev and CI use that image directly. Production reads the same tag:
-`scripts/render-build.sh` parses the version out of `docker-compose.yml`,
-downloads that Hugo (verifying its checksum) and builds with it. So upgrading
+Local dev (`make dev`, `make build`) uses that image directly. CI and
+production both run `scripts/render-build.sh`, which parses the same tag out of
+`docker-compose.yml`, downloads that Hugo (verifying its checksum) and builds
+with it. `tests/test_render_build.py` covers the script's download, checksum and
+cleanup behaviour, including that a changed tag changes the version it
+downloads. So upgrading
 Hugo means editing one line, and Dependabot's weekly Docker PR does it for you —
 merge it and local dev, CI and production all move together.
 

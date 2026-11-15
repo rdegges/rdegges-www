@@ -213,6 +213,33 @@ class TestRenderBuild(unittest.TestCase):
         self.assertIn(f"Downloading Hugo {VERSION}", result.stdout)
         self.assertNotIn("0.124.0", " ".join(self.log("curl.log")))
 
+    def test_a_bumped_docker_compose_tag_changes_the_downloaded_version(self):
+        # What Dependabot does: edit the image tag in docker-compose.yml and
+        # nothing else. The script must follow it, with no second copy of the
+        # version anywhere that also needs editing.
+        bumped = "0.987.6"
+        compose = os.path.join(self.root, "docker-compose.yml")
+        with open(compose, encoding="utf-8") as f:
+            text = f.read()
+        with open(compose, "w", encoding="utf-8") as f:
+            f.write(text.replace(f"hugo:v{VERSION}", f"hugo:v{bumped}"))
+        archive = f"hugo_{bumped}_linux-amd64.tar.gz"
+        base = f"https://github.com/gohugoio/hugo/releases/download/v{bumped}"
+        self.serve(archive, self.archive)
+        self.serve(f"hugo_{bumped}_checksums.txt", checksums(*sibling_lines(), f"{sha256(self.archive)}  {archive}"))
+        result = self.run_script()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn(f"Downloading Hugo {bumped}", result.stdout)
+        self.assertEqual(self.log("curl.log"), [f"{base}/{archive}", f"{base}/hugo_{bumped}_checksums.txt"])
+
+    def test_dependabot_watches_the_file_the_script_reads(self):
+        with open(os.path.join(ROOT, ".github", "dependabot.yml"), encoding="utf-8") as f:
+            config = f.read()
+        block = re.search(r"- package-ecosystem: docker-compose\n(.*?)(?=\n  - package-ecosystem:|\Z)", config, re.S)
+        self.assertIsNotNone(block, "dependabot.yml must have a docker-compose ecosystem")
+        self.assertRegex(block[1], r"directory:\s*/\s*\n")
+        self.assertRegex(block[1], r"interval:\s*weekly")
+
     def test_hugo_failure_fails_the_build_and_cleans_up(self):
         self.env["FAKE_HUGO_EXIT"] = "3"
         result = self.run_script()
@@ -299,6 +326,8 @@ class TestRenderBuild(unittest.TestCase):
             f"{ARCHIVE}.sig",
             f"x{ARCHIVE}",
             f"prefix/{ARCHIVE}",
+            # Same length, with each dot replaced by another character.
+            ARCHIVE.replace(".", "x"),
         )
         for name in impostors:
             with self.subTest(name=name):
