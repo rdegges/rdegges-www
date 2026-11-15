@@ -28,7 +28,8 @@ brew install hugo
 hugo server
 ```
 
-Hugo Extended is required.
+The standard Hugo binary is enough; this site uses no Sass. (Hugo v0.170.0
+removed the separate extended edition; earlier extended builds work too.)
 
 
 ## Images
@@ -84,6 +85,8 @@ The tests in `tests/` check the *built* site in `./public` rather than the
 templates: every internal link and image resolves, every page has a title,
 description and language, every sitemap URL exists, and the feed is valid
 Atom. They use only Python's standard library, so there's nothing to install.
+`tests/test_render_build.py` is the exception to "built site": it exercises
+`scripts/render-build.sh` against a stubbed download and needs no build.
 
 CI runs the same build with `--panicOnWarning`, so a Hugo deprecation fails
 the build the day it appears, then runs these tests and
@@ -167,15 +170,21 @@ directory. Nobody runs the `wrangler` CLI directly.
 image: ghcr.io/gohugoio/hugo:v0.169.0
 ```
 
-Local dev and CI use that image directly. Production reads the same tag:
-`scripts/render-build.sh` parses the version out of `docker-compose.yml`,
-downloads that Hugo (verifying its checksum) and builds with it. So upgrading
+Local dev (`make dev`, `make build`) uses that image directly. CI and
+production both run `scripts/render-build.sh`, which parses the same tag out of
+`docker-compose.yml`, downloads that Hugo (verifying its checksum) and builds
+with it. `tests/test_render_build.py` covers the script's download, checksum and
+cleanup behaviour, including that a changed tag changes the version it
+downloads. So upgrading
 Hugo means editing one line, and Dependabot's weekly Docker PR does it for you —
 merge it and local dev, CI and production all move together.
 
 The build script exists because Render's static-site image ships its own pinned
 Hugo (0.124.x) and ignores `HUGO_VERSION`; setting that variable has no effect
-on which binary `hugo` resolves to.
+on which binary `hugo` resolves to. The script downloads the plain `hugo_*`
+archive, not `hugo_extended_*` (which v0.170.0 keeps only as an alias), and
+checks it against the SHA-256 in Hugo's published checksums file before
+running it. The plain archive builds this site identically on v0.169.0.
 
 `hugo.toml` also sets `[module.hugoVersion] min`, but that's the *oldest* Hugo
 the layouts support rather than the version we pin — it stays put when you

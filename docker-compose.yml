@@ -6,7 +6,7 @@
 # production build use the same Hugo, and a Dependabot bump here upgrades all
 # of them at once.
 #
-# This is Hugo's official image (extended edition, amd64 and arm64). Its
+# This is Hugo's official image (amd64 and arm64). Its
 # entrypoint runs hugo, so commands are hugo subcommands: `server`, `build`.
 
 services:

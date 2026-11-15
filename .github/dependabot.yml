@@ -14,10 +14,12 @@ updates:
     # from reaching the build in the meantime.
     cooldown:
       default-days: 7
-    # One PR for all action bumps in a given week instead of one each.
+    # One PR for all minor and patch action bumps in a given week instead of
+    # one each. Majors stay separate PRs so each gets its own review.
     groups:
       actions:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
     commit-message:
       prefix: "ci"
 
@@ -27,6 +29,11 @@ updates:
       interval: weekly
     cooldown:
       default-days: 7
+    # Minor and patch Hugo bumps are grouped; a Hugo major stays its own PR.
+    groups:
+      hugo:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
     commit-message:
       prefix: "build"
 
@@ -40,5 +47,6 @@ updates:
     groups:
       npm:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
     commit-message:
       prefix: "build"
