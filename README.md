@@ -94,6 +94,16 @@ Atom. They use only Python's standard library, so there's nothing to install.
 `tests/test_render_build.py` is the exception to "built site": it exercises
 `scripts/render-build.sh` against a stubbed download and needs no build.
 
+A change that affects how a page looks has to be checked at three widths
+before it merges: a phone (about 390px), a tablet (about 768px), and a
+desktop (about 1280px). The stylesheet follows Bootstrap's breakpoints, and
+a media query sees the viewport *including* the scrollbar, about 15px wider
+than the page in a screenshot. The About photos are the case this caught.
+They float beside the text from Bootstrap's `md` breakpoint (992px) up, and
+below that they stack and center. `tests/test_about.py` checks that the
+stacking rule covers a tablet width. The test does not replace looking at
+the three widths.
+
 CI runs the same build with `--panicOnWarning`, so a Hugo deprecation fails
 the build the day it appears, then runs these tests and
 [zizmor](https://docs.zizmor.sh) over the workflows.
