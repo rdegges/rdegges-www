@@ -28,8 +28,14 @@ brew install hugo
 hugo server
 ```
 
-The standard Hugo binary is enough; this site uses no Sass. (Hugo v0.170.0
-removed the separate extended edition; earlier extended builds work too.)
+The pinned Hugo is v0.170.0 (see "Hugo version" below). There is only one Hugo
+binary now: v0.170.0 removed the separate *extended* edition along with
+LibSass, its only reason to exist.
+This site has no Sass or SCSS (its CSS is plain `.css` in `assets/css/`, joined
+with `resources.Concat`), so nothing else needs installing. Dart Sass is not
+needed and is not installed. If Sass is ever added, use `css.Sass` with
+Dart Sass, and install Dart Sass in `scripts/render-build.sh` the same way Hugo
+is: pinned and checked against the published SHA-256.
 
 
 ## Images
@@ -167,7 +173,7 @@ directory. Nobody runs the `wrangler` CLI directly.
 `docker-compose.yml`:
 
 ```yaml
-image: ghcr.io/gohugoio/hugo:v0.169.0
+image: ghcr.io/gohugoio/hugo:v0.170.0
 ```
 
 Local dev (`make dev`, `make build`) uses that image directly. CI and
@@ -184,7 +190,9 @@ Hugo (0.124.x) and ignores `HUGO_VERSION`; setting that variable has no effect
 on which binary `hugo` resolves to. The script downloads the plain `hugo_*`
 archive, not `hugo_extended_*` (which v0.170.0 keeps only as an alias), and
 checks it against the SHA-256 in Hugo's published checksums file before
-running it. The plain archive builds this site identically on v0.169.0.
+running it. The site has never needed the extended edition: v0.169.0 and
+v0.170.0 build it to identical output, apart from the Hugo version in the
+`generator` tag and feed.
 
 `hugo.toml` also sets `[module.hugoVersion] min`, but that's the *oldest* Hugo
 the layouts support rather than the version we pin — it stays put when you
