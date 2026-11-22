@@ -45,6 +45,13 @@ updates:
     cooldown:
       default-days: 7
     groups:
+      # cf requires a minimum wrangler version, so the two move in one PR. A
+      # PR that bumps only one of them fails CI. cf is a prerelease (1.0.0-beta.N),
+      # which an update-types filter of minor and patch does not match, so this
+      # group has no update-types filter. It is listed first because a package
+      # joins the first group it matches.
+      cloudflare:
+        patterns: ["cf", "wrangler"]
       npm:
         patterns: ["*"]
         update-types: ["minor", "patch"]
